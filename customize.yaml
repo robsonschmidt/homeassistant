@@ -178,8 +178,6 @@ input_text.quartos_tiles:
   custom_ui_state_card: state-card-tiles
   config:
     columns: 3
-#    cell_height: 100px
-#    cell_width: 100px
     color: blue
     color_on: "#006437"
     color_off: "#404040"
@@ -187,6 +185,20 @@ input_text.quartos_tiles:
     row_height: 75px    # optional
     entities:
       - entity: input_boolean.hall_light
+        image: /local/hall.png
+        column: 1
+        row: 1
+input_text.tv_sala_tiles:
+  custom_ui_state_card: state-card-tiles
+  config:
+    columns: 3
+    color: blue
+    color_on: "#006437"
+    color_off: "#404040"
+    column_width: 75px  # optional
+    row_height: 75px    # optional
+    entities:
+      - entity: switch.power_net_sala
         image: /local/hall.png
         column: 1
         row: 1

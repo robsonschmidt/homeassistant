@@ -4,3 +4,5 @@
     name: fundos
   quartos_tiles:
     name: quartos
+  tv_sala_tiles:
+    name: tv_sala
