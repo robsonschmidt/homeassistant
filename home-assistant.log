@@ -1,5 +1,250 @@
-2017-12-24 16:13:33 WARNING (MainThread) [homeassistant.setup] Setup of sensor is taking over 10 seconds.
-2017-12-24 16:13:33 WARNING (MainThread) [homeassistant.setup] Setup of media_player is taking over 10 seconds.
-2017-12-24 16:13:33 WARNING (MainThread) [homeassistant.setup] Setup of camera is taking over 10 seconds.
-2017-12-24 16:13:33 WARNING (MainThread) [homeassistant.setup] Setup of light is taking over 10 seconds.
-2017-12-24 16:13:33 WARNING (MainThread) [homeassistant.setup] Setup of switch is taking over 10 seconds.
+2017-12-25 12:17:07 WARNING (MainThread) [homeassistant.setup] Setup of sensor is taking over 10 seconds.
+2017-12-25 12:17:09 WARNING (MainThread) [homeassistant.setup] Setup of media_player is taking over 10 seconds.
+2017-12-25 12:17:10 WARNING (MainThread) [homeassistant.setup] Setup of camera is taking over 10 seconds.
+2017-12-25 12:17:10 WARNING (MainThread) [homeassistant.setup] Setup of switch is taking over 10 seconds.
+2017-12-25 12:17:10 WARNING (MainThread) [homeassistant.setup] Setup of light is taking over 10 seconds.
+2017-12-25 12:17:11 WARNING (MainThread) [homeassistant.setup] Setup of tts is taking over 10 seconds.
+2017-12-25 12:17:24 WARNING (MainThread) [homeassistant.components.media_player] Setup of platform cast is taking over 10 seconds.
+2017-12-25 12:17:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:18:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:18:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:18:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:18:32 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:18:42 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:18:52 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:19:02 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:19:12 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:19:22 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:19:32 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:19:42 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:19:52 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:20:02 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:20:12 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:20:22 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:20:32 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:20:42 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:20:52 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:21:02 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:21:12 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:21:22 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:21:32 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:21:42 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:21:52 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:22:02 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:22:12 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:22:22 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:22:32 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:22:42 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:22:52 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:23:02 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:23:12 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:23:22 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:23:32 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:23:42 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:23:52 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:24:02 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:24:12 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:24:22 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:24:32 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:24:42 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:24:52 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:25:02 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:25:12 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:25:22 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:25:32 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:25:42 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:25:52 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:26:02 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:26:03 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:26:12 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:26:22 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:26:32 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:26:42 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:26:52 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:27:02 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:27:12 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:27:22 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:27:32 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 12:43:24 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+OSError: [Errno 113] Host is unreachable
+2017-12-25 12:43:24 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/websocket_api.py", line 328, in handle
+    msg = yield from wsock.receive_json()
+  File "/usr/lib/python3.6/site-packages/aiohttp/web_ws.py", line 335, in receive_json
+    data = yield from self.receive_str(timeout=timeout)
+  File "/usr/lib/python3.6/site-packages/aiohttp/web_ws.py", line 317, in receive_str
+    msg = yield from self.receive(timeout)
+  File "/usr/lib/python3.6/site-packages/aiohttp/web_ws.py", line 280, in receive
+    msg = yield from self._reader.read()
+  File "/usr/lib/python3.6/site-packages/aiohttp/streams.py", line 672, in read
+    return (yield from super().read())
+  File "/usr/lib/python3.6/site-packages/aiohttp/streams.py", line 554, in read
+    yield from self._waiter
+  File "/usr/lib/python3.6/asyncio/futures.py", line 332, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 250, in _wakeup
+    future.result()
+  File "/usr/lib/python3.6/asyncio/futures.py", line 237, in result
+    raise CancelledError
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/aiohttp/web_protocol.py", line 410, in start
+    resp = yield from self._request_handler(request)
+  File "/usr/lib/python3.6/site-packages/aiohttp/web.py", line 325, in _handle
+    resp = yield from handler(request)
+  File "/usr/lib/python3.6/site-packages/aiohttp/web_middlewares.py", line 93, in impl
+    return (yield from handler(request))
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/http/ban.py", line 58, in ban_middleware
+    return (yield from handler(request))
+  File "/usr/lib/python3.6/asyncio/coroutines.py", line 213, in coro
+    res = yield from res
+  File "/usr/lib/python3.6/asyncio/coroutines.py", line 213, in coro
+    res = yield from res
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/http/__init__.py", line 430, in handle
+    result = yield from result
+  File "/usr/lib/python3.6/asyncio/coroutines.py", line 213, in coro
+    res = yield from res
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/websocket_api.py", line 390, in handle
+    yield from self._writer_task
+  File "/usr/lib/python3.6/asyncio/futures.py", line 334, in __iter__
+    return self.result()  # May raise too.
+  File "/usr/lib/python3.6/asyncio/futures.py", line 245, in result
+    raise self._exception
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 182, in _step
+    result = coro.throw(exc)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/websocket_api.py", line 239, in _writer
+    yield from self.wsock.send_json(message, dumps=JSON_DUMP)
+  File "/usr/lib/python3.6/site-packages/aiohttp/http_writer.py", line 125, in drain
+    yield from self._protocol._drain_helper()
+  File "/usr/lib/python3.6/asyncio/streams.py", line 211, in _drain_helper
+    yield from waiter
+  File "/usr/lib/python3.6/asyncio/futures.py", line 332, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 250, in _wakeup
+    future.result()
+  File "/usr/lib/python3.6/asyncio/futures.py", line 245, in result
+    raise self._exception
+OSError: [Errno 113] Host is unreachable
+2017-12-25 13:06:34 WARNING (SyncWorker_0) [homeassistant.components.sensor.google_wifi] Unable to fetch data from Google Wifi
+2017-12-25 13:10:42 WARNING (SyncWorker_15) [homeassistant.components.sensor.google_wifi] Unable to fetch data from Google Wifi
+2017-12-25 14:02:36 ERROR (MainThread) [homeassistant.helpers.entity] Update for media_player.spotify fails
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3.6/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.6/socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Try again
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.6/site-packages/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x6f133970>: Failed to establish a new connection: [Errno -3] Try again
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.spotify.com', port=443): Max retries exceeded with url: /v1/me/player/devices (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x6f133970>: Failed to establish a new connection: [Errno -3] Try again',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 199, in async_update_ha_state
+    yield from self.async_device_update()
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 306, in async_device_update
+    yield from self.hass.async_add_job(self.update)
+  File "/usr/lib/python3.6/asyncio/futures.py", line 332, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 250, in _wakeup
+    future.result()
+  File "/usr/lib/python3.6/asyncio/futures.py", line 245, in result
+    raise self._exception
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/media_player/spotify.py", line 172, in update
+    player_devices = self._player.devices()
+  File "/usr/lib/python3.6/site-packages/spotipy/client.py", line 848, in devices
+    return self._get("me/player/devices")
+  File "/usr/lib/python3.6/site-packages/spotipy/client.py", line 148, in _get
+    return self._internal_call('GET', url, payload, kwargs)
+  File "/usr/lib/python3.6/site-packages/spotipy/client.py", line 110, in _internal_call
+    r = self._session.request(method, url, headers=headers, proxies=self.proxies, **args)
+  File "/usr/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.spotify.com', port=443): Max retries exceeded with url: /v1/me/player/devices (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x6f133970>: Failed to establish a new connection: [Errno -3] Try again',))
+2017-12-25 14:15:43 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.pws_precip_today_metric is taking over 10 seconds
+2017-12-25 14:15:43 ERROR (SyncWorker_16) [homeassistant.components.sensor.wunderground] Error fetching WUnderground data: ReadTimeout(ReadTimeoutError("HTTPConnectionPool(host='api.wunderground.com', port=80): Read timed out. (read timeout=10)",),)
+2017-12-25 15:06:49 WARNING (SyncWorker_6) [homeassistant.components.sensor.google_wifi] Unable to fetch data from Google Wifi
+2017-12-25 16:17:07 ERROR (MainThread) [homeassistant.helpers.entity] Update for media_player.spotify fails
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/spotipy/client.py", line 121, in _internal_call
+    r.raise_for_status()
+  File "/usr/lib/python3.6/site-packages/requests/models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.spotify.com/v1/me/player/devices
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 199, in async_update_ha_state
+    yield from self.async_device_update()
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 306, in async_device_update
+    yield from self.hass.async_add_job(self.update)
+  File "/usr/lib/python3.6/asyncio/futures.py", line 332, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 250, in _wakeup
+    future.result()
+  File "/usr/lib/python3.6/asyncio/futures.py", line 245, in result
+    raise self._exception
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/media_player/spotify.py", line 172, in update
+    player_devices = self._player.devices()
+  File "/usr/lib/python3.6/site-packages/spotipy/client.py", line 848, in devices
+    return self._get("me/player/devices")
+  File "/usr/lib/python3.6/site-packages/spotipy/client.py", line 148, in _get
+    return self._internal_call('GET', url, payload, kwargs)
+  File "/usr/lib/python3.6/site-packages/spotipy/client.py", line 125, in _internal_call
+    -1, '%s:\n %s' % (r.url, r.json()['error']['message']),
+  File "/usr/lib/python3.6/site-packages/requests/models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2017-12-25 18:00:03 ERROR (SyncWorker_13) [homeassistant.components.sensor.speedtest] Error executing speedtest: Command '['/usr/bin/python3', '/usr/lib/python3.6/site-packages/speedtest.py', '--simple']' returned non-zero exit status 1.
+2017-12-25 18:05:18 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 18:05:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 18:05:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 18:05:28 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 18:05:38 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 18:05:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2017-12-25 18:05:42 WARNING (MainThread) [homeassistant.components.cloud.iot] Connection closed: Connection cancelled.

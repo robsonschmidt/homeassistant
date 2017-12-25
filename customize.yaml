@@ -138,8 +138,6 @@ input_text.fundos_tiles:
   custom_ui_state_card: state-card-tiles
   config:
     columns: 3
-#    cell_height: 275px
-#    cell_width: 100px
     column_width: 75px  # optional
     row_height: 75px    # optional
     color: blue
@@ -199,6 +197,148 @@ input_text.tv_sala_tiles:
     row_height: 75px    # optional
     entities:
       - entity: switch.power_net_sala
-        image: /local/hall.png
+        image: /local/net.png
         column: 1
         row: 1
+      - entity: switch.power_tv_sala
+        image: /local/tv.png
+        column: 2/
+        row: 1
+      - entity: switch.source_tv_sala
+        image: /local/source.png
+        column: 3
+        row: 1
+      - entity: switch.vol_cima_tv_sala
+        image: /local/VolMais.png
+        column: 1
+        row: 2
+      - entity: switch.cima_tv_sala
+        image: /local/cima.png
+        column: 2
+        row: 2
+      - entity: switch.canal_cima_net_sala
+        image: /local/CHMais.png
+        column: 3
+        row: 2
+      - entity: switch.esquerda_tv_sala
+        image: /local/esquerda.png
+        column: 1
+        row: 3
+      - entity: switch.ok_tv_sala
+        image: /local/ok.png
+        column: 2
+        row: 3
+      - entity: switch.direita_tv_sala
+        image: /local/direita.png
+        column: 3
+        row: 3
+      - entity: switch.vol_baixo_tv_sala
+        image: /local/VolMenos.png
+        column: 1
+        row: 4
+      - entity: switch.baixo_tv_sala
+        image: /local/baixo.png
+        column: 2
+        row: 4
+      - entity: switch.canal_baixo_net_sala
+        image: /local/CHMenos.png
+        column: 3
+        row: 4
+input_text.tv_quarto_tiles:
+  custom_ui_state_card: state-card-tiles
+  config:
+    columns: 3
+    color: blue
+    color_on: "#006437"
+    color_off: "#404040"
+    column_width: 75px  # optional
+    row_height: 75px    # optional
+    entities:
+      - entity: switch.power_net_quarto
+        image: /local/net.png
+        column: 1
+        row: 1
+      - entity: switch.power_tv_quarto
+        image: /local/tv.png
+        column: 2
+        row: 1        
+      - entity: switch.source_tv_quarto
+        image: /local/source.png
+        column: 3
+        row: 1
+      - entity: switch.vol_cima_tv_quarto
+        image: /local/VolMais.png
+        column: 1
+        row: 2
+      - entity: switch.cima_tv_quarto
+        image: /local/cima.png
+        column: 2
+        row: 2
+      - entity: switch.canal_cima_net_quarto
+        image: /local/CHMais.png
+        column: 3
+        row: 2
+      - entity: switch.esquerda_tv_quarto
+        image: /local/esquerda.png
+        column: 1
+        row: 3
+      - entity: switch.ok_tv_quarto
+        image: /local/ok.png
+        column: 2
+        row: 3
+      - entity: switch.direita_tv_quarto
+        image: /local/direita.png
+        column: 3
+        row: 3
+      - entity: switch.vol_baixo_tv_quarto
+        image: /local/VolMenos.png
+        column: 1
+        row: 4
+      - entity: switch.baixo_tv_quarto
+        image: /local/baixo.png
+        column: 2
+        row: 4
+      - entity: switch.canal_baixo_net_quarto
+        image: /local/CHMenos.png
+        column: 3
+        row: 4
+      - entity: switch.1_net_quarto
+        image: /local/1.png
+        column: 1
+        row: 5
+      - entity: switch.2_net_quarto
+        image: /local/2.png
+        column: 2
+        row: 5
+      - entity: switch.3_net_quarto
+        image: /local/3.png
+        column: 3
+        row: 5
+      - entity: switch.4_net_quarto
+        image: /local/4.png
+        column: 1
+        row: 6
+      - entity: switch.5_net_quarto
+        image: /local/5.png
+        column: 2
+        row: 6
+      - entity: switch.6_net_quarto
+        image: /local/6.png
+        column: 3
+        row: 6
+      - entity: switch.7_net_quarto
+        image: /local/7.png
+        column: 1
+        row: 7
+      - entity: switch.8_net_quarto
+        image: /local/8.png
+        column: 2
+        row: 7
+      - entity: switch.9_net_quarto
+        image: /local/9.png
+        column: 3
+        row: 7
+      - entity: switch.0_net_quarto
+        image: /local/0.png
+        column: 2
+        row: 8

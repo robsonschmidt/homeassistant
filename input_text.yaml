@@ -6,3 +6,5 @@
     name: quartos
   tv_sala_tiles:
     name: tv_sala
+  tv_quarto_tiles:
+    name: tv_quarto    

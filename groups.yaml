@@ -11,7 +11,6 @@ default_view:
   - group.configuracao
   - group.fundos_tiles
   - group.quartos_tiles
-  - group.tv_sala_tiles
   name: 'Tela Inicial'
 tempo:
   name: Temperatura
@@ -56,13 +55,9 @@ quarto:
   view: yes
   icon: mdi:lamp
   entities:
-  - script.tv_quarto
-  - script.chrome
-  - script.net
-  - switch.liga_net
-  - switch.liga_tv
   - media_player.quarto
   - group.quarto_luz
+  - group.tv_quarto_tiles
 quarto_luz:
   name: 'Iluminação'
   entities:
@@ -74,12 +69,8 @@ sala:
   entities:
   - media_player.tv_sala
   - media_player.sala
-  - script.tv_sala_off
-  - script.tv_sala_source
-  - script.tv_sala_volume_up
-  - script.tv_sala_volume_down
-  - script.tv_sala_mute
   - camera.interna
+  - group.tv_sala_tiles
 frente:
   name: Frente
   view: yes
@@ -162,3 +153,7 @@ tv_sala_tiles:
     name: 'TV Sala'
     entities:
       - input_text.tv_sala_tiles
+tv_quarto_tiles:
+    name: 'TV Quarto'
+    entities:
+      - input_text.tv_quarto_tiles
