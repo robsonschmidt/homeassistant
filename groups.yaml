@@ -6,7 +6,7 @@ default_view:
   - group.churrasqueira
   - group.quarto
   - group.sala
-  - group.frente
+  - group.camera
   - group.geral
   - group.configuracao
   - group.fundos_tiles
@@ -51,32 +51,29 @@ cervejeira:
   entities:
   - input_boolean.beer_fridge
 quarto:
-  name: Quartos
+  name: Quarto
   view: yes
   icon: mdi:lamp
   entities:
   - media_player.quarto
-  - group.quarto_luz
+  - group.quartos_tiles
   - group.tv_quarto_tiles
-quarto_luz:
-  name: 'Iluminação'
-  entities:
-  - input_boolean.hall_light
 sala:
   name: Sala
   view: yes
   icon: mdi:sofa
   entities:
-  - media_player.tv_sala
   - media_player.sala
   - camera.interna
   - group.tv_sala_tiles
-frente:
-  name: Frente
+camera:
+  name: Cameras
   view: yes
   icon: mdi:cctv
   entities:
+  - camera.interna
   - camera.frente
+  - camera.fundos
 geral:
   name: Geral
   view: yes
@@ -142,11 +139,11 @@ fundos_tiles:
     name: Térreo
     entities:
       - input_text.fundos_tiles
-      - camera.frente
+      - camera.frente_onvif
       - camera.fundos
       - camera.interna
 quartos_tiles:
-    name: Quartos
+    name: Quarto
     entities:
       - input_text.quartos_tiles
 tv_sala_tiles:
