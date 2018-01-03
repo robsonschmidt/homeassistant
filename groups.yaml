@@ -140,6 +140,7 @@ fundos_tiles:
     entities:
       - input_text.fundos_tiles
       - camera.frente_onvif
+      - camera.frente_onvif2
       - camera.fundos
       - camera.interna
 quartos_tiles:

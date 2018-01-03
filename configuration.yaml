@@ -122,6 +122,13 @@ camera:
     host: 192.168.86.57
     username: admin
     password: 2350
+    port: 8099
+  - platform: onvif
+    name: frente_onvif2
+    host: 192.168.86.57
+    username: admin
+    password: 2350
+    port: 554
 
 #vacuum:
 #  - platform: roomba

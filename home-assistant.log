@@ -1,88 +1,9 @@
-2018-01-03 20:55:21 ERROR (SyncWorker_17) [homeassistant.components.sensor.wunderground] Check WUnderground API ('Expecting value: line 1 column 1 (char 0)',)
-2018-01-03 20:55:21 WARNING (MainThread) [homeassistant.components.sensor] Platform wunderground not ready yet. Retrying in 30 seconds.
-2018-01-03 20:55:30 WARNING (MainThread) [homeassistant.setup] Setup of sensor is taking over 10 seconds.
-2018-01-03 20:55:31 WARNING (MainThread) [homeassistant.setup] Setup of camera is taking over 10 seconds.
-2018-01-03 20:55:31 WARNING (MainThread) [homeassistant.setup] Setup of media_player is taking over 10 seconds.
-2018-01-03 20:55:32 WARNING (MainThread) [homeassistant.setup] Setup of switch is taking over 10 seconds.
-2018-01-03 20:55:32 WARNING (MainThread) [homeassistant.setup] Setup of light is taking over 10 seconds.
-2018-01-03 20:55:38 WARNING (MainThread) [homeassistant.setup] Setup of tts is taking over 10 seconds.
-2018-01-03 20:55:46 WARNING (MainThread) [homeassistant.components.media_player] Setup of platform cast is taking over 10 seconds.
-2018-01-03 20:56:56 ERROR (MainThread) [homeassistant.components.camera] Error while setting up platform onvif
-Traceback (most recent call last):
-  File "/usr/lib/python3.6/urllib/request.py", line 1318, in do_open
-    encode_chunked=req.has_header('Transfer-encoding'))
-  File "/usr/lib/python3.6/http/client.py", line 1239, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.6/http/client.py", line 1285, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.6/http/client.py", line 1234, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.6/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.6/http/client.py", line 964, in send
-    self.connect()
-  File "/usr/lib/python3.6/http/client.py", line 936, in connect
-    (self.host,self.port), self.timeout, self.source_address)
-  File "/usr/lib/python3.6/socket.py", line 724, in create_connection
-    raise err
-  File "/usr/lib/python3.6/socket.py", line 713, in create_connection
-    sock.connect(sa)
-ConnectionRefusedError: [Errno 111] Connection refused
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/lib/python3.6/site-packages/onvif/client.py", line 34, in wrapped
-    return func(*args, **kwargs)
-  File "/usr/lib/python3.6/site-packages/onvif/client.py", line 201, in wrapped
-    return call(params, callback)
-  File "/usr/lib/python3.6/site-packages/onvif/client.py", line 191, in call
-    ret = func(**params)
-  File "/usr/lib/python3.6/site-packages/suds/client.py", line 559, in __call__
-    return client.invoke(args, kwargs)
-  File "/usr/lib/python3.6/site-packages/suds/client.py", line 618, in invoke
-    result = self.send(soapenv)
-  File "/usr/lib/python3.6/site-packages/suds/client.py", line 652, in send
-    reply = transport.send(request)
-  File "/usr/lib/python3.6/site-packages/suds/transport/http.py", line 178, in send
-    return HttpTransport.send(self, request)
-  File "/usr/lib/python3.6/site-packages/suds/transport/http.py", line 78, in send
-    fp = self.u2open(u2request)
-  File "/usr/lib/python3.6/site-packages/suds/transport/http.py", line 119, in u2open
-    return url.open(u2request, timeout=tm)
-  File "/usr/lib/python3.6/urllib/request.py", line 526, in open
-    response = self._open(req, data)
-  File "/usr/lib/python3.6/urllib/request.py", line 544, in _open
-    '_open', req)
-  File "/usr/lib/python3.6/urllib/request.py", line 504, in _call_chain
-    result = func(*args)
-  File "/usr/lib/python3.6/urllib/request.py", line 1346, in http_open
-    return self.do_open(http.client.HTTPConnection, req)
-  File "/usr/lib/python3.6/urllib/request.py", line 1320, in do_open
-    raise URLError(err)
-urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity_component.py", line 171, in _async_setup_platform
-    SLOW_SETUP_MAX_WAIT, loop=self.hass.loop)
-  File "/usr/lib/python3.6/asyncio/tasks.py", line 358, in wait_for
-    return fut.result()
-  File "/usr/lib/python3.6/asyncio/futures.py", line 245, in result
-    raise self._exception
-  File "/usr/lib/python3.6/asyncio/tasks.py", line 180, in _step
-    result = coro.send(None)
-  File "/usr/lib/python3.6/asyncio/coroutines.py", line 210, in coro
-    res = func(*args, **kw)
-  File "/usr/lib/python3.6/site-packages/homeassistant/components/camera/onvif.py", line 49, in async_setup_platform
-    async_add_devices([ONVIFCamera(hass, config)])
-  File "/usr/lib/python3.6/site-packages/homeassistant/components/camera/onvif.py", line 70, in __init__
-    self._input = media.GetStreamUri().Uri
-  File "/usr/lib/python3.6/site-packages/onvif/client.py", line 36, in wrapped
-    raise ONVIFError(err)
-onvif.exceptions.ONVIFError: Unknown error: <urlopen error [Errno 111] Connection refused>
-2018-01-03 20:56:58 ERROR (SyncWorker_3) [homeassistant.components.sensor.wunderground] Check WUnderground API ('Expecting value: line 1 column 1 (char 0)',)
-2018-01-03 20:56:58 WARNING (MainThread) [homeassistant.components.sensor] Platform wunderground not ready yet. Retrying in 60 seconds.
-2018-01-03 20:57:58 ERROR (SyncWorker_12) [homeassistant.components.sensor.wunderground] Check WUnderground API ('Expecting value: line 2 column 1 (char 1)',)
-2018-01-03 20:57:58 WARNING (MainThread) [homeassistant.components.sensor] Platform wunderground not ready yet. Retrying in 90 seconds.
+2018-01-03 21:10:07 ERROR (SyncWorker_8) [homeassistant.components.sensor.wunderground] Check WUnderground API ('Expecting value: line 2 column 1 (char 1)',)
+2018-01-03 21:10:08 WARNING (MainThread) [homeassistant.components.sensor] Platform wunderground not ready yet. Retrying in 30 seconds.
+2018-01-03 21:10:13 WARNING (MainThread) [homeassistant.setup] Setup of sensor is taking over 10 seconds.
+2018-01-03 21:10:16 WARNING (MainThread) [homeassistant.setup] Setup of camera is taking over 10 seconds.
+2018-01-03 21:10:16 WARNING (MainThread) [homeassistant.setup] Setup of media_player is taking over 10 seconds.
+2018-01-03 21:10:17 WARNING (MainThread) [homeassistant.setup] Setup of switch is taking over 10 seconds.
+2018-01-03 21:10:17 WARNING (MainThread) [homeassistant.setup] Setup of light is taking over 10 seconds.
+2018-01-03 21:10:20 WARNING (MainThread) [homeassistant.setup] Setup of tts is taking over 10 seconds.
+2018-01-03 21:10:31 WARNING (MainThread) [homeassistant.components.media_player] Setup of platform cast is taking over 10 seconds.
