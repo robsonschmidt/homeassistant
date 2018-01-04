@@ -108,27 +108,20 @@ input_boolean:
 #      - 328083280
 
 camera:
-#  - platform: ffmpeg
-#    name: frente
-#    input: -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.57/ /config/camera/Frente/frente%d.jpg  
   - platform: ffmpeg
     name: fundos
-    input: -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.75/ /config/camera/Fundos/fundos%d.jpg
+    input: -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.87/live0.264 /config/camera/fundos/fundos%d.jpg
+  - platform: ffmpeg
+    name: frente
+    input: -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.57/live0.264 /config/camera/frente/frente%d.jpg  
   - platform: ffmpeg
     name: interna
-    input: -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.76/ /config/camera/Interna/interna%d.jpg
-  - platform: onvif
-    name: frente_onvif
-    host: 192.168.86.57
-    username: admin
-    password: 2350
-    port: 8099
-  - platform: onvif
-    name: frente_onvif2
-    host: 192.168.86.57
-    username: admin
-    password: 2350
-    port: 554
+    input: -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.82/live0.264 /config/camera/interna/interna%d.jpg
+#  - platform: onvif
+#    name: fundos_onvif
+#    host: 192.168.86.79
+#    username: admin
+#    password: 2350
 
 #vacuum:
 #  - platform: roomba

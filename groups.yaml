@@ -64,7 +64,7 @@ sala:
   icon: mdi:sofa
   entities:
   - media_player.sala
-  - camera.interna
+#  - camera.interna
   - group.tv_sala_tiles
 camera:
   name: Cameras
@@ -139,10 +139,8 @@ fundos_tiles:
     name: Térreo
     entities:
       - input_text.fundos_tiles
-      - camera.frente_onvif
-      - camera.frente_onvif2
       - camera.fundos
-      - camera.interna
+#      - camera.interna
 quartos_tiles:
     name: Quarto
     entities:

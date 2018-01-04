@@ -1,9 +1,6 @@
-2018-01-03 21:10:07 ERROR (SyncWorker_8) [homeassistant.components.sensor.wunderground] Check WUnderground API ('Expecting value: line 2 column 1 (char 1)',)
-2018-01-03 21:10:08 WARNING (MainThread) [homeassistant.components.sensor] Platform wunderground not ready yet. Retrying in 30 seconds.
-2018-01-03 21:10:13 WARNING (MainThread) [homeassistant.setup] Setup of sensor is taking over 10 seconds.
-2018-01-03 21:10:16 WARNING (MainThread) [homeassistant.setup] Setup of camera is taking over 10 seconds.
-2018-01-03 21:10:16 WARNING (MainThread) [homeassistant.setup] Setup of media_player is taking over 10 seconds.
-2018-01-03 21:10:17 WARNING (MainThread) [homeassistant.setup] Setup of switch is taking over 10 seconds.
-2018-01-03 21:10:17 WARNING (MainThread) [homeassistant.setup] Setup of light is taking over 10 seconds.
-2018-01-03 21:10:20 WARNING (MainThread) [homeassistant.setup] Setup of tts is taking over 10 seconds.
-2018-01-03 21:10:31 WARNING (MainThread) [homeassistant.components.media_player] Setup of platform cast is taking over 10 seconds.
+2018-01-03 22:22:04 WARNING (MainThread) [homeassistant.setup] Setup of sensor is taking over 10 seconds.
+2018-01-03 22:22:04 WARNING (MainThread) [homeassistant.setup] Setup of media_player is taking over 10 seconds.
+2018-01-03 22:22:05 WARNING (MainThread) [homeassistant.setup] Setup of camera is taking over 10 seconds.
+2018-01-03 22:22:05 WARNING (MainThread) [homeassistant.setup] Setup of switch is taking over 10 seconds.
+2018-01-03 22:22:05 WARNING (MainThread) [homeassistant.setup] Setup of light is taking over 10 seconds.
+2018-01-03 22:22:07 WARNING (MainThread) [homeassistant.setup] Setup of tts is taking over 10 seconds.
