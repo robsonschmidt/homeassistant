@@ -34,7 +34,7 @@ tempo_hoje:
 churrasqueira:
   name: Churrasqueira
   view: yes
-  icon: mdi:beer
+  icon: mdi:radiator
   entities:
   - group.churrasqueira_luz
   - group.cervejeira
@@ -53,7 +53,7 @@ cervejeira:
 quarto:
   name: Quarto
   view: yes
-  icon: mdi:lamp
+  icon: mdi:hotel
   entities:
   - media_player.quarto
   - group.quartos_tiles

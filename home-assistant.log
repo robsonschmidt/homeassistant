@@ -1,6 +1,84 @@
-2018-01-03 22:22:04 WARNING (MainThread) [homeassistant.setup] Setup of sensor is taking over 10 seconds.
-2018-01-03 22:22:04 WARNING (MainThread) [homeassistant.setup] Setup of media_player is taking over 10 seconds.
-2018-01-03 22:22:05 WARNING (MainThread) [homeassistant.setup] Setup of camera is taking over 10 seconds.
-2018-01-03 22:22:05 WARNING (MainThread) [homeassistant.setup] Setup of switch is taking over 10 seconds.
-2018-01-03 22:22:05 WARNING (MainThread) [homeassistant.setup] Setup of light is taking over 10 seconds.
-2018-01-03 22:22:07 WARNING (MainThread) [homeassistant.setup] Setup of tts is taking over 10 seconds.
+2018-01-04 00:49:09 WARNING (MainThread) [homeassistant.setup] Setup of sensor is taking over 10 seconds.
+2018-01-04 00:49:10 WARNING (MainThread) [homeassistant.setup] Setup of camera is taking over 10 seconds.
+2018-01-04 00:49:10 WARNING (MainThread) [homeassistant.setup] Setup of media_player is taking over 10 seconds.
+2018-01-04 00:49:12 WARNING (MainThread) [homeassistant.setup] Setup of light is taking over 10 seconds.
+2018-01-04 00:49:12 WARNING (MainThread) [homeassistant.setup] Setup of switch is taking over 10 seconds.
+2018-01-04 00:49:20 WARNING (MainThread) [homeassistant.setup] Setup of tts is taking over 10 seconds.
+2018-01-04 00:49:26 WARNING (MainThread) [homeassistant.components.media_player] Setup of platform cast is taking over 10 seconds.
+2018-01-04 00:50:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:50:52 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:50:52 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:50:52 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:50:54 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:50:54 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:50:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:02 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:06 WARNING (MainThread) [haffmpeg.core] Timeout while waiting of FFmpeg
+2018-01-04 00:51:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:12 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:14 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:22 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:24 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:24 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:30 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:32 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:34 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:34 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:42 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:44 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:44 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:52 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:51:56 WARNING (MainThread) [haffmpeg.core] Timeout while waiting of FFmpeg
+2018-01-04 00:52:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:02 WARNING (MainThread) [haffmpeg.core] Timeout while waiting of FFmpeg
+2018-01-04 00:52:04 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:13 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:57 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:57 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:52:57 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:53:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:54:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:54:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:54:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:54:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:54:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-04 00:54:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
