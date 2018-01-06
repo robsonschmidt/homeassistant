@@ -2,8 +2,8 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: FRIS
   # Location required to calculate the time the sun rises and sets
-  latitude: -25.451
-  longitude: -49.343
+  latitude: -25.451756
+  longitude: -49.343350
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 905
   # metric for Metric, imperial for Imperial
@@ -68,6 +68,12 @@ map:
 # Track the sun
 sun:
 
+logger:
+  default: warning
+  logs:
+    homeassistant.components.camera: debug
+    homeassistant.components.image_processing: debug
+
 # Weather prediction
 #sensor:
 #  - platform: yr
@@ -101,31 +107,57 @@ input_boolean:
     name: Partão
     initial: off
     
-#telegram_bot:
-#  - platform: polling
-#    api_key: 362729958:AAEovrEKEa88VlU5iC6Mbm7A2_pZJUf5brI 
-#    allowed_chat_ids:
-#      - 328083280
+telegram_bot:
+  - platform: polling
+    api_key: 362729958:AAEovrEKEa88VlU5iC6Mbm7A2_pZJUf5brI 
+    allowed_chat_ids:
+      - 328083280
+      
+weblink:
+  entities:
+    - name: Spotify Rock
+      url: https://open.spotify.com/user/12175389811/playlist/6T2oElw93xmSRRpyBx1EcA
+    - name: Spotify Others
+      url: https://open.spotify.com/user/12175389811/playlist/7tZCnbcEtYn6Mp17EBAKzP
+    - name: Spotify Isabelle
+      url: https://open.spotify.com/user/12163156038/playlist/5AY8U80s1JcmuCTk16LbCe
+    - name: Spotify Alternatives
+      url: https://open.spotify.com/user/12175389811/playlist/4I9kDCL5jwQ0iJFOsOZLpZ
 
 camera:
   - platform: ffmpeg
     name: fundos
-    input: -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.87:554/live0.264 /config/camera/fundos%d.jpg
+    input: -y -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.87:554/live0.264 -r 0.5 -ignore_unknown /config/camera/fundos%d.jpg
+    extra_arguments: -pred 1    
   - platform: ffmpeg
     name: frente
-    input: -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.57:554/live0.264 /config/camera/frente%d.jpg  
+    input: -y -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.57:554/live0.264 -r 0.5 -ignore_unknown /config/camera/frente%d.jpg
   - platform: ffmpeg
     name: interna
-    input: -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.88:554/live0.264 /config/camera/interna%d.jpg
+    input: -y -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.88:554/live0.264 -r 0.5 -ignore_unknown /config/camera/interna%d.jpg
   - platform: local_file
     name: interna_local
-    file_path: /config/camera/interna.jpg
-#image_processing:
-# - platform: openalpr_local
-#   region: br
-#   source:
-#    - entity_id: camera.frente
+    file_path: /config/camera/interna1.jpg
+  - platform: local_file
+    name: frente_local
+    file_path: /config/camera/frente1.jpg
+  - platform: local_file
+    name: fundos_local
+    file_path: /config/camera/fundos1.jpg
 
+#image_processing:
+#  - platform: opencv
+#    name: Garage Person
+#    source:
+#      - entity_id: camera.frente_local
+#    classifier:
+#      mom: /config/haarcascade_fullbody.xml
+#  - platform: opencv
+#    name: Garage Plate
+#    source:
+#       - entity_id: camera.frente_local
+#    classifier:
+#      mom: /config/haarcascade_licence_plate_rus_16stages.xml
 #vacuum:
 #  - platform: roomba
 #    host: 192.168.86.38

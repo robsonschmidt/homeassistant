@@ -19,7 +19,7 @@ light.luz_central:
   show_last_changed: true
   slider_theme:
     min: 10
-    max: 200
+    max: 255
     pin: true
     off_when_min: false
     report_when_not_changed: false
@@ -38,7 +38,7 @@ light.luz_esquerda:
   show_last_changed: true
   slider_theme:
     min: 10
-    max: 200
+    max: 255
     pin: true
     off_when_min: false
     report_when_not_changed: false
@@ -57,7 +57,7 @@ light.luz_direita:
   show_last_changed: true
   slider_theme:
     min: 10
-    max: 200
+    max: 255
     pin: true
     off_when_min: false
     report_when_not_changed: false

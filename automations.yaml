@@ -50,3 +50,15 @@
     from: 'on'
     platform: state
     to: 'off'
+- action:
+  - data:
+      message: Pessoa na frente de casa
+      target: 328083280
+    service: telegram_bot.send_message
+  alias: Front House Person
+  condition: []
+  id: '1515208447850'
+  trigger:
+  - entity_id: image_processing.opencv_frente_local
+    from: '0'
+    platform: state

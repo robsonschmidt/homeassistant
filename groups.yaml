@@ -7,7 +7,6 @@ default_view:
   - group.quarto
   - group.sala
   - group.camera
-  - group.geral
   - group.configuracao
   - group.fundos_tiles
   - group.quartos_tiles
@@ -37,7 +36,16 @@ churrasqueira:
   icon: mdi:radiator
   entities:
   - group.churrasqueira_luz
-  - group.cervejeira
+  - camera.fundos_local
+  - group.spotify
+spotify:
+  name: Spotify Playlists
+  entities:
+  - media_player.spotify
+  - weblink.spotify_rock
+  - weblink.spotify_others
+  - weblink.spotify_alternatives
+  - weblink.spotify_isabelle
 churrasqueira_luz:
   name: 'Iluminação'
   entities:
@@ -46,9 +54,6 @@ churrasqueira_luz:
   - light.luz_esquerda
   - light.luz_central
   - light.luz_direita
-cervejeira:
-  name: Cervejeira
-  entities:
   - input_boolean.beer_fridge
 quarto:
   name: Quarto
@@ -64,22 +69,16 @@ sala:
   icon: mdi:sofa
   entities:
   - media_player.sala
-#  - camera.interna
+  - camera.interna_local
   - group.tv_sala_tiles
 camera:
   name: Cameras
   view: yes
   icon: mdi:cctv
   entities:
-  - camera.interna
-  - camera.frente
-  - camera.fundos
-geral:
-  name: Geral
-  view: yes
-  icon: mdi:spotify
-  entities:
-  - media_player.spotify
+  - camera.interna_local
+  - camera.frente_local
+  - camera.fundos_local
 tempo_amanha:
   name: 'Previsão Amanhã'
   entities:
@@ -109,6 +108,7 @@ configuracao:
   - group.servidor
   - group.teste_velocidade
   - group.google_wifi
+  - group.cameras_ffmpeg
 servidor:
   name: Servidor
   entities:
@@ -139,8 +139,9 @@ fundos_tiles:
     name: Térreo
     entities:
       - input_text.fundos_tiles
-      - camera.fundos
-#      - camera.interna
+      - camera.frente_local
+      - camera.fundos_local
+      - camera.interna_local
 quartos_tiles:
     name: Quarto
     entities:
@@ -153,3 +154,9 @@ tv_quarto_tiles:
     name: 'TV Quarto'
     entities:
       - input_text.tv_quarto_tiles
+cameras_ffmpeg:
+    name: 'Cameras'
+    entities:
+      - camera.frente
+      - camera.fundos
+      - camera.interna
