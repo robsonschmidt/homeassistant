@@ -1,0 +1,175 @@
+#
+# Main arguments, all optional
+#
+title: FRIS - Terreo
+widget_dimensions: [110, 110]
+widget_margins: [3, 3]
+columns: 9
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+clock:
+    widget_type: clock
+    widget_style: "background: #006437"
+    date_style: "color: white"
+    time_style: "color: white"
+    
+tablet:
+    title: FRIS
+    icon_inactive: mdi-home-assistant
+    widget_type: navigate
+    widget_style: "background: #006437"
+    dashboard: Tablet
+
+cameras:
+    title: Cameras
+    icon_inactive: mdi-cctv
+    widget_style: "background: #006437"
+    widget_type: navigate
+    dashboard: CamerasT
+    
+weather:
+    widget_type: weather
+    units: "&deg;F"
+    
+power_net_sala:
+    widget_type: switch
+    entity: switch.power_net_sala
+    icon_on: mdi-boombox
+    icon_off: mdi-boombox
+
+power_tv_sala:
+    widget_type: switch
+    entity: switch.power_tv_sala
+    icon_on: mdi-television-classic
+    icon_off: mdi-television-classic
+
+vol_cima_tv_sala:
+    title: Volume
+    widget_type: switch
+    entity: switch.vol_cima_tv_sala
+    icon_on: mdi-plus-box
+    icon_off: mdi-plus-box
+
+vol_baixo_tv_sala:
+    title: Volume
+    widget_type: switch
+    entity: switch.vol_baixo_tv_sala
+    icon_on: mdi-minus-box
+    icon_off: mdi-minus-box
+
+cima_tv_sala:
+    widget_type: switch
+    entity: switch.cima_tv_sala
+    icon_on: mdi-arrow-up-bold-box
+    icon_off: mdi-arrow-up-bold-box
+
+baixo_tv_sala:
+    widget_type: switch
+    entity: switch.baixo_tv_sala
+    icon_on: mdi-arrow-down-bold-box
+    icon_off: mdi-arrow-down-bold-box
+
+canal_cima_net_sala:
+    title: Canal
+    widget_type: switch
+    entity: switch.canal_cima_net_sala
+    icon_on: mdi-plus-box
+    icon_off: mdi-plus-box
+
+canal_baixo_net_sala:
+    title: Canal
+    widget_type: switch
+    entity: switch.canal_baixo_net_sala
+    icon_on: mdi-minus-box
+    icon_off: mdi-minus-box
+
+1_net_sala:
+    widget_type: switch
+    entity: switch.1_net_sala
+    icon_on: mdi-numeric-1-box
+    icon_off: mdi-numeric-1-box
+
+2_net_sala:
+    widget_type: switch
+    entity: switch.2_net_sala
+    icon_on: mdi-numeric-2-box
+    icon_off: mdi-numeric-2-box
+
+3_net_sala:
+    widget_type: switch
+    entity: switch.3_net_sala
+    icon_on: mdi-numeric-3-box
+    icon_off: mdi-numeric-3-box
+
+4_net_sala:
+    widget_type: switch
+    entity: switch.4_net_sala
+    icon_on: mdi-numeric-4-box
+    icon_off: mdi-numeric-4-box
+
+5_net_sala:
+    widget_type: switch
+    entity: switch.5_net_sala
+    icon_on: mdi-numeric-5-box
+    icon_off: mdi-numeric-5-box
+
+6_net_sala:
+    widget_type: switch
+    entity: switch.6_net_sala
+    icon_on: mdi-numeric-6-box
+    icon_off: mdi-numeric-6-box
+
+7_net_sala:
+    widget_type: switch
+    entity: switch.7_net_sala
+    icon_on: mdi-numeric-7-box
+    icon_off: mdi-numeric-7-box
+
+8_net_sala:
+    widget_type: switch
+    entity: switch.8_net_sala
+    icon_on: mdi-numeric-8-box
+    icon_off: mdi-numeric-8-box
+
+9_net_sala:
+    widget_type: switch
+    entity: switch.9_net_sala
+    icon_on: mdi-numeric-9-box
+    icon_off: mdi-numeric-9-box
+
+0_net_sala:
+    widget_type: switch
+    entity: switch.0_net_sala
+    icon_on: mdi-numeric-0-box
+    icon_off: mdi-numeric-0-box
+
+mute_tv_sala:
+    widget_type: switch
+    entity: switch.mute_tv_sala
+    icon_on: mdi-volume-off
+    icon_off: mdi-volume-off
+
+ok_tv_sala:
+    widget_type: switch
+    entity: switch.ok_tv_sala
+    icon_on: mdi-image-filter-center-focus
+    icon_off: mdi-image-filter-center-focus
+
+source_tv_sala:
+    widget_type: switch
+    entity: switch.source_tv_sala
+    icon_on: mdi-source-branch
+    icon_off: mdi-source-branch
+
+layout:
+    - clock(2x1),               sensor.pws_temp_c,          sensor.pws_feelslike_c, sensor.pws_relative_humidity,   sensor.pws_temp_low_1d_c,   sensor.pws_temp_high_1d_c,  sensor.pws_precip_1d,       sensor.pws_precip_today_metric
+    - tablet, cameras,          light.luz_esquerda,         light.luz_central,      light.luz_direita,              switch.display,             switch.garden_light,        input_boolean.beer_fridge,  input_boolean.gate
+    - power_net_sala,           vol_cima_tv_sala,           cima_tv_sala,           canal_cima_net_sala,            media_player.spotify(2x2),                              media_player.sala(2x2)
+    - power_tv_sala,            vol_baixo_tv_sala,          baixo_tv_sala,          canal_baixo_net_sala
+    - source_tv_sala,           1_net_sala,                 2_net_sala,             3_net_sala
+    - ok_tv_sala,               4_net_sala,                 5_net_sala,             6_net_sala
+    - mute_tv_sala,             7_net_sala,                 8_net_sala,             9_net_sala
+    - 0_net_sala

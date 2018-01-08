@@ -1,0 +1,28 @@
+#
+# Main arguments, all optional
+#
+title: Assistente Residencial
+widget_dimensions: [120, 120]
+widget_margins: [5, 5]
+columns: 8
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+label:
+    widget_type: label
+    text: FRIS Home Assistant
+
+clock:
+    widget_type: clock
+    
+weather_widget:
+    widget_type: weather
+    units: "&deg;C"    
+    
+layout:
+    - clock(2x1), weather(2x2), side_temperature(1x1), side_humidity(1x1)
+    -
+    - switch.display, switch.garden_light, input_boolean.beer_fridge
+    - light.luz_esquerda, light.luz_central, light.luz_direita, weather_widget

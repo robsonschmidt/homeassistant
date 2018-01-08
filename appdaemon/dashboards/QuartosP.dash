@@ -1,0 +1,37 @@
+#
+# Main arguments, all optional
+#
+title: FRIS - Quartos
+widget_dimensions: [120, 110]
+widget_margins: [3, 3]
+columns: 3
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+clock:
+    widget_type: clock
+    widget_style: "background: #006437"
+    date_style: "color: white"
+    time_style: "color: white"
+
+phone:
+    title: FRIS
+    icon_inactive: mdi-home-assistant
+    widget_type: navigate
+    widget_style: "background: #006437"
+    dashboard: Phone
+
+controle:
+    title: Controle
+    icon_inactive: mdi-television-classic
+    widget_type: navigate
+    widget_style: "background: #006437"
+    dashboard: ControleQuartoP
+
+layout:
+    - phone, controle, input_boolean.hall_light
+    - media_player.quarto(3x2)
+    -
+    - media_player.quarto_isabelle(3x2)

@@ -1,0 +1,38 @@
+#
+# Main arguments, all optional
+#
+title: FRIS - Terreo
+widget_dimensions: [120, 110]
+widget_margins: [3, 3]
+columns: 3
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+phone:
+    title: FRIS
+    icon_inactive: mdi-home-assistant
+    widget_type: navigate
+    widget_style: "background: #006437"
+    dashboard: Phone
+
+controle:
+    title: Controle
+    icon_inactive: mdi-television-classic
+    widget_style: "background: #006437"
+    widget_type: navigate
+    dashboard: ControleSalaP
+
+cameras:
+    title: Cameras
+    icon_inactive: mdi-cctv
+    widget_style: "background: #006437"
+    widget_type: navigate
+    dashboard: CamerasP
+
+layout:
+    - phone, controle, cameras
+    - light.luz_esquerda, light.luz_central, light.luz_direita
+    - switch.display, switch.garden_light, input_boolean.beer_fridge
+    - input_boolean.gate

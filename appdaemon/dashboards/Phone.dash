@@ -1,0 +1,44 @@
+#
+# Main arguments, all optional
+#
+title: FRIS
+widget_dimensions: [120, 110]
+widget_margins: [3, 3]
+columns: 3
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+terreo:
+    title: Térreo
+    icon_inactive: mdi-home
+    widget_type: navigate
+    widget_style: "background: #006437"
+    dashboard: TerreoP
+
+quartos:
+    title: Quartos
+    icon_inactive: mdi-hotel
+    widget_style: "background: #006437"
+    widget_type: navigate
+    dashboard: QuartosP
+
+cameras:
+    title: Cameras
+    icon_inactive: mdi-cctv
+    widget_style: "background: #006437"
+    widget_type: navigate
+    dashboard: CamerasP
+
+weather:
+    widget_type: weather
+    units: "&deg;F"
+
+layout:
+    - terreo,                       cameras,                        quartos
+    - sensor.pws_temp_c,            sensor.pws_temp_low_1d_c,       sensor.pws_temp_high_1d_c
+    - sensor.pws_relative_humidity, sensor.pws_precip_today_metric, sensor.pws_precip_1d
+    - light.luz_esquerda,           light.luz_central,              light.luz_direita
+    - switch.display,               switch.garden_light,            input_boolean.beer_fridge
+    - input_boolean.gate,           input_boolean.hall_light

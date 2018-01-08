@@ -1,0 +1,60 @@
+#
+# Main arguments, all optional
+#
+title: FRIS - Cameras
+widget_dimensions: [120, 110]
+widget_margins: [3, 3]
+columns: 3
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+    
+clock:
+    widget_type: clock
+    widget_style: "background: #006437"
+    date_style: "color: white"
+    time_style: "color: white"
+    
+phone:
+    title: FRIS
+    icon_inactive: mdi-home-assistant
+    widget_type: navigate
+    widget_style: "background: #006437"
+    dashboard: Phone
+
+terreo:
+    title: Terreo
+    icon_inactive: mdi-home
+    widget_type: navigate
+    widget_style: "background: #006437"
+    dashboard: TerreoP
+
+frente:
+  widget_type: camera
+  title: Frente
+  refresh: 1
+  entity_picture: 
+    - http://192.168.86.72:8123/api/camera_proxy/camera.frente_local?&api_password=14253678
+
+interna:
+  widget_type: camera
+  title: Interna
+  refresh: 1
+  entity_picture: 
+    - http://192.168.86.72:8123/api/camera_proxy/camera.interna_local?&api_password=14253678
+
+fundos:
+  widget_type: camera
+  title: Fundos
+  refresh: 1
+  entity_picture: 
+    - http://192.168.86.72:8123/api/camera_proxy/camera.fundos_local?&api_password=14253678
+
+layout:
+    - phone, terreo
+    - frente (3x2)
+    -
+    - interna (3x2)
+    -
+    - fundos (3x2)
