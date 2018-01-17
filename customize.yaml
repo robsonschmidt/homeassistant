@@ -25,7 +25,7 @@ light.luz_central:
     report_when_not_changed: false
   extra_badge:
     entity_id: sensor.luz_central_watts  # Will take precedence over attribute and unit below.
-    attribute: power_consumption
+    attribute: power_consumption 
     unit: kW
     blacklist_states: 0
 light.luz_esquerda:
@@ -79,7 +79,7 @@ sensor.pws_feelslike_c:
 sensor.pws_temp_high_1d_c:
   friendly_name: Máxima
   state_card_mode: badges
-#  theme: theme.green
+  theme: theme.green
 sensor.pws_temp_high_2d_c:
   friendly_name: Máxima
   state_card_mode: badges

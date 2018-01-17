@@ -108,7 +108,7 @@ configuracao:
   - group.servidor
   - group.teste_velocidade
   - group.google_wifi
-  - group.cameras_ffmpeg
+  - group.conf_weblinks
 servidor:
   name: Servidor
   entities:
@@ -156,7 +156,14 @@ tv_quarto_tiles:
       - input_text.tv_quarto_tiles
 cameras_ffmpeg:
     name: 'Cameras'
+    view: yes
+    icon: mdi:camera-iris
     entities:
       - camera.frente
       - camera.fundos
       - camera.interna
+conf_weblinks:
+    name: 'Links'
+    entities:
+      - weblink.terminal
+      - weblink.file_editor

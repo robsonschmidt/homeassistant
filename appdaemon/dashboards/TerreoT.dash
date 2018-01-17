@@ -10,12 +10,6 @@ global_parameters:
     precision: 1
     use_hass_icon: 1
 
-clock:
-    widget_type: clock
-    widget_style: "background: #006437"
-    date_style: "color: white"
-    time_style: "color: white"
-    
 tablet:
     title: FRIS
     icon_inactive: mdi-home-assistant
@@ -165,7 +159,7 @@ source_tv_sala:
     icon_off: mdi-source-branch
 
 layout:
-    - clock(2x1),               sensor.pws_temp_c,          sensor.pws_feelslike_c, sensor.pws_relative_humidity,   sensor.pws_temp_low_1d_c,   sensor.pws_temp_high_1d_c,  sensor.pws_precip_1d,       sensor.pws_precip_today_metric
+    - include: TitleT
     - tablet, cameras,          light.luz_esquerda,         light.luz_central,      light.luz_direita,              switch.display,             switch.garden_light,        input_boolean.beer_fridge,  input_boolean.gate
     - power_net_sala,           vol_cima_tv_sala,           cima_tv_sala,           canal_cima_net_sala,            media_player.spotify(2x2),                              media_player.sala(2x2)
     - power_tv_sala,            vol_baixo_tv_sala,          baixo_tv_sala,          canal_baixo_net_sala

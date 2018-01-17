@@ -2,12 +2,12 @@
   host: 192.168.86.27
   friendly_name: 'display'
   username: robsonschmidt@gmail.com
-  password: 14253678
+  password: !secret http_password
 - platform: tplink
   host: 192.168.86.41
   friendly_name: 'garden_light'
   username: robsonschmidt@gmail.com
-  password: 14253678
+  password: !secret http_password
 - platform: broadlink
   host: 192.168.86.43
   mac: '34:EA:34:B3:00:CB'
@@ -21,8 +21,8 @@
       command_off: 'JgBQAAABJZIXMhY0FzIWDhUQExEUERYzFg8WMxYzFjMVNRMREzYTEhMSFTQWDhYRFDMWDxYOFRAROBMSEzYTNhMSEzYTNhU0FgAE7QABKEYWAA0FAAAAAAAAAAA='
     power_tv_q:
       friendly_name: 'Power TV Quarto'
-      command_on: 'JgBUAA0AAakAASaSFw0WDxYOFRAUERMRExIVDxYzFzMWMxM2EzYUNRYPFjMXMhY0FBATEhcOFQ8WEBIRExITERM2EzcXMhYzFzIUNRMABTkAASVKEwANBQAAAAA='
-      command_off: 'JgBUAA0AAakAASaSFw0WDxYOFRAUERMRExIVDxYzFzMWMxM2EzYUNRYPFjMXMhY0FBATEhcOFQ8WEBIRExITERM2EzcXMhYzFzIUNRMABTkAASVKEwANBQAAAAA='
+      command_on: 'JgBUAA4AAagAASiQFQ8TEhMRFRAWDxYQExAVERM0FzMUNRQ1EzYWMxYPFjMWMxQ2Fg4WERQOFRAWEBIRExITERU0FjQWNRQ1FDUXMhYABTYAAShHFgANBQAAAAA='
+      command_off: 'JgBUAA4AAagAASiQFQ8TEhMRFRAWDxYQExAVERM0FzMUNRQ1EzYWMxYPFjMWMxQ2Fg4WERQOFRAWEBIRExITERU0FjQWNRQ1FDUXMhYABTYAAShHFgANBQAAAAA='
     source_tv_q:
       friendly_name: 'Source TV Quarto'
       command_on: 'JgBQAAABJZETEhURFg8VEBUQFREVEBUSFDQSNxM3EzYTMxk0Fg8TNhMTFDUTNhQ2EjcTExISFhASNxYRFRETEhMQFTUWMxM2FAAFPgABJEoSAA0FAAAAAAAAAAA='

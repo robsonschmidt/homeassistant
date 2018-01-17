@@ -31,6 +31,16 @@ cloud:
         - light
         - switch
 
+panel_iframe:
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: http://hassio.local:3218
+  terminal:
+    title: Terminal
+    icon: mdi:console
+    url: http://hassio.local:7682
+
 customizer:
   custom_ui: local
 
@@ -73,6 +83,7 @@ logger:
   logs:
     homeassistant.components.camera: debug
     homeassistant.components.image_processing: debug
+#    homeassistant.components.sensor.snmp: debug
 
 # Weather prediction
 #sensor:
@@ -94,7 +105,7 @@ input_text: !include input_text.yaml
 device_tracker: !include device_tracker.yaml
 
 ifttt:
-  key: hXuh11X9L13EexMBNYO2JGDS4mbMMqmWPdbbK2YaWvj
+  key: !secret ifttt
 
 input_boolean:
   hall_light:
@@ -104,12 +115,12 @@ input_boolean:
     name: Cervejeira
     initial: off
   gate:
-    name: Partão
+    name: Portão
     initial: off
     
 telegram_bot:
   - platform: polling
-    api_key: 362729958:AAEovrEKEa88VlU5iC6Mbm7A2_pZJUf5brI 
+    api_key: !secret api_key 
     allowed_chat_ids:
       - 328083280
       
@@ -123,6 +134,10 @@ weblink:
       url: https://open.spotify.com/user/12163156038/playlist/5AY8U80s1JcmuCTk16LbCe
     - name: Spotify Alternatives
       url: https://open.spotify.com/user/12175389811/playlist/4I9kDCL5jwQ0iJFOsOZLpZ
+    - name: Terminal
+      url: http://hassio.local:7681/
+    - name: File Editor
+      url: http://hassio.local:3218/
 
 camera:
   - platform: ffmpeg

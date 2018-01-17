@@ -1,0 +1,15 @@
+clock:
+    widget_type: clock
+    widget_style: "background: #006437"
+    date_style: "color: white"
+    time_style: "color: white"
+    time_format: 24hr
+    
+weather:
+    widget_type: iframe
+    url_list:
+      - http://hassio.local:8123/local/weather_line.html
+
+layout:
+    - clock(3x1)
+    - weather (3x2)

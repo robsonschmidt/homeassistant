@@ -1,0 +1,16 @@
+AppDaemon:
+  logfile: STDOUT
+  errorfile: STDERR
+  threads: 10
+  app_dir: /config/appdaemon/apps
+HASS:
+  ha_url: http://192.168.86.72:8123
+  ha_key: '14253678'
+HADashboard:
+  dash_url: http://127.17.0.1:5050
+  dash_dir: /config/appdaemon/dashboards
+
+# Apps
+start_page:
+  module: start
+  class: startPage

@@ -10,12 +10,6 @@ global_parameters:
     precision: 1
     use_hass_icon: 1
 
-clock:
-    widget_type: clock
-    widget_style: "background: #006437"
-    date_style: "color: white"
-    time_style: "color: white"
-    
 terreo:
     title: Térreo
     icon_inactive: mdi-home
@@ -36,21 +30,17 @@ cameras:
     widget_style: "background: #006437"
     widget_type: navigate
     dashboard: CamerasT
-    
-foscam:
-  widget_type: camera
-  title: Surveillance Cam
-  refresh: 1
-  entity_picture: 
-    - http://192.168.1.22:8123/api/camera_proxy/camera.foscam_camera?token=0fef1c273a888bc64c71295b66ab506f6f51213bc1a9a7fe7df8efc36a02f4cb&api_password=xxxxx
 
+display:
+    title: Schmidt's Bar
+    widget_type: switch
+    entity: switch.display
+#    icon_on: mdi-source-branch
+#    icon_off: mdi-source-branch
 
-weather:
-    widget_type: weather
-    units: "&deg;F"
 
 layout:
-    - clock(2x1), sensor.pws_temp_c, sensor.pws_feelslike_c, sensor.pws_relative_humidity, sensor.pws_temp_low_1d_c, sensor.pws_temp_high_1d_c, sensor.pws_precip_1d, sensor.pws_precip_today_metric
-    - terreo, cameras, light.luz_esquerda, light.luz_central, light.luz_direita, switch.display, switch.garden_light, input_boolean.beer_fridge, input_boolean.gate
+    - include: TitleT
+    - terreo, cameras, light.luz_esquerda, light.luz_central, light.luz_direita, display, switch.garden_light, input_boolean.beer_fridge, input_boolean.gate
     - quartos, input_boolean.hall_light
     - media_player.spotify(2x2), media_player.quarto(2x2), media_player.sala(2x2), media_player.quarto_isabelle(2x2)

@@ -1,5 +1,5 @@
 - platform: wunderground
-  api_key: af39e8e94f6eae72
+  api_key: !secret wu_api_key
   monitored_conditions:
      - location
      - feelslike_c
@@ -39,6 +39,9 @@
      - type: processor_use
      - type: last_boot
 - platform: google_wifi
+#- platform: snmp
+#  host: 192.168.68.98
+#  baseoid: 1.1
 - platform: template
   sensors:
     luz_central_amps:
