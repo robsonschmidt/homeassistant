@@ -228,3 +228,371 @@
 2018-01-16 23:00:05 WARNING (SyncWorker_5) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_2d_c Attr: date Error: IndexError('list index out of range',)
 2018-01-16 23:00:05 WARNING (SyncWorker_11) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d Attr: value Error: IndexError('list index out of range',)
 2018-01-16 23:00:05 WARNING (SyncWorker_11) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:00:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:00:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:00:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:00:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:00:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:00:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:00:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:00:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:00:36 WARNING (SyncWorker_5) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_5) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_19) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_19) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_11) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_1d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_11) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_1d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_2) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_2) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_13) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_13) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_4d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_17) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_17) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_14) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_14) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_0) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_0) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_7) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_7) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_4) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_4) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_18) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_18) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_16) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_16) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_15) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_15) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_4d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_5) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:00:36 WARNING (SyncWorker_5) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:00:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:00:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:00:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:00:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:00:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:00:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:07 WARNING (SyncWorker_5) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_5) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_6) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_6) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_10) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_10) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_11) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_11) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_2) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_2) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_13) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_13) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_17) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_17) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_0) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_1d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_0) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_1d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_14) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_14) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_4) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_4) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_3) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_3) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_7) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_7) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_4d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_12) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_12) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_16) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:07 WARNING (SyncWorker_16) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_4d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:38 WARNING (SyncWorker_10) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_10) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_11) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_11) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_15) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_15) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_6) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_6) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_4d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_7) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_7) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_13) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_13) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_8) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_1d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_8) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_1d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_19) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_19) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_0) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_0) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_14) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_14) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_4d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_18) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_18) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_4) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_4) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_12) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_12) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_10) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:01:38 WARNING (SyncWorker_10) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:01:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:01:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:02:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:03:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:04:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:05:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:06:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:07:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:07:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:07:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:07:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:07:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:07:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:07:20 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:20 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:20 WARNING (SyncWorker_10) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:20 WARNING (SyncWorker_10) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:20 WARNING (SyncWorker_11) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:20 WARNING (SyncWorker_11) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:20 WARNING (SyncWorker_7) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:20 WARNING (SyncWorker_7) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:20 WARNING (SyncWorker_17) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_1d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:20 WARNING (SyncWorker_17) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_1d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:20 WARNING (SyncWorker_9) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:20 WARNING (SyncWorker_9) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:20 WARNING (SyncWorker_3) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:20 WARNING (SyncWorker_3) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:20 WARNING (SyncWorker_15) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:21 WARNING (SyncWorker_15) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_4d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:21 WARNING (SyncWorker_8) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:21 WARNING (SyncWorker_8) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:21 WARNING (SyncWorker_14) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:21 WARNING (SyncWorker_14) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:21 WARNING (SyncWorker_5) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:21 WARNING (SyncWorker_5) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:21 WARNING (SyncWorker_13) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:21 WARNING (SyncWorker_13) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_4d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:21 WARNING (SyncWorker_4) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:21 WARNING (SyncWorker_4) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:21 WARNING (SyncWorker_12) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:21 WARNING (SyncWorker_12) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:21 WARNING (SyncWorker_7) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:21 WARNING (SyncWorker_7) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:07:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:07:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-01-16 23:07:50 WARNING (SyncWorker_9) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_9) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_3) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_3) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_8) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_8) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_4d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_6) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_6) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_14) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_14) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_19) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_19) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_5) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_5) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_1d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_1d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_4) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_4) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_12) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_12) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_18) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_18) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_16) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_16) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_4d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_0) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_0) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_17) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_17) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_9) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:07:50 WARNING (SyncWorker_9) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_12) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_12) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_18) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_18) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_16) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_16) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_17) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_17) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_3) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_3) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_15) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_15) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_8) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_8) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_4d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_2) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_2) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_6) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_6) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_14) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_14) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_4d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_5) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_5) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_19) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_19) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_10) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_1d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_10) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_1d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_4) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_4) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:21 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_13) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_13) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_11) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_11) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_12) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_12) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_7) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_7) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_18) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_18) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_4d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_16) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_16) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_17) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_17) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_0) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_0) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_15) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_15) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_2) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_1d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_2) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_1d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_6) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_6) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_4d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_8) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_8) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_14) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_14) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_19) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:08:52 WARNING (SyncWorker_19) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_0) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_0) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_3) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_3) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_15) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_15) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_2) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_2) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_4d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_6) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_6) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_19) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_3d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_19) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_3d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_5) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_1d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_5) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_1d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_4) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_4) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_10) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_2d Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_10) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_2d Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_1d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_1) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_1d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_12) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: precip_4d_mm Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_12) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: precip_4d_mm Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_7) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_7) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_11) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_low_2d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_11) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_low_2d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_16) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_3d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_16) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_3d_c Attr: date Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_0) [homeassistant.components.sensor.wunderground] Failed to expand cfg from WU API. Condition: temp_high_4d_c Attr: value Error: IndexError('list index out of range',)
+2018-01-16 23:09:23 WARNING (SyncWorker_0) [homeassistant.components.sensor.wunderground] Failed to update attrs from WU API. Condition: temp_high_4d_c Attr: date Error: IndexError('list index out of range',)
