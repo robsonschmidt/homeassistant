@@ -1,4 +1,4 @@
 home-assistant.log
 home-assistant_v2.db
 secrets.yaml
-.spotify_token_cache
+.spotify-token-cache
