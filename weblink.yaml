@@ -1,0 +1,13 @@
+  entities:
+    - name: Spotify Rock
+      url: https://open.spotify.com/user/12175389811/playlist/6T2oElw93xmSRRpyBx1EcA
+    - name: Spotify Others
+      url: https://open.spotify.com/user/12175389811/playlist/7tZCnbcEtYn6Mp17EBAKzP
+    - name: Spotify Isabelle
+      url: https://open.spotify.com/user/12163156038/playlist/5AY8U80s1JcmuCTk16LbCe
+    - name: Spotify Alternatives
+      url: https://open.spotify.com/user/12175389811/playlist/4I9kDCL5jwQ0iJFOsOZLpZ
+    - name: Terminal
+      url: http://hassio.local:7681/
+    - name: File Editor
+      url: http://hassio.local:3218/

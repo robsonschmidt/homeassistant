@@ -10,6 +10,7 @@ default_view:
   - group.configuracao
   - group.fundos_tiles
   - group.quartos_tiles
+  - group.music_spotify
   name: 'Tela Inicial'
 tempo:
   name: Temperatura
@@ -38,6 +39,7 @@ churrasqueira:
   - group.churrasqueira_luz
   - camera.fundos_local
   - group.spotify
+  - input_text.dummy_player_mini
 spotify:
   name: Spotify Playlists
   entities:
@@ -167,3 +169,10 @@ conf_weblinks:
     entities:
       - weblink.terminal
       - weblink.file_editor
+music_spotify:
+  name: Music 
+  entities:
+  - input_select.spotify_playlist
+  - input_select.spotify_source
+  - script.spotify_music
+  - input_number.spotify_volume

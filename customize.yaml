@@ -374,3 +374,18 @@ input_text.tv_quarto_tiles:
         image: /local/0.png
         column: 3
         row: 6
+input_text.dummy_player_mini:
+  icon: mdi:cast
+  custom_ui_state_card: state-card-mini-media-player
+  config:
+    player: media_player.quarto
+    buttons:
+      - name: Main
+        icon: mdi:music-note
+        script: script.play_rautemusik_main
+      - name: Rock
+        icon: mdi:music-note
+        script: script.play_rautemusik_rock
+script.spotify_music:
+  friendly_name: 'Spotify'
+  icon: mdi:play

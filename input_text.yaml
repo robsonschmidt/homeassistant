@@ -8,3 +8,5 @@
     name: tv_sala
   tv_quarto_tiles:
     name: tv_quarto    
+  dummy_player_mini:
+    name: Mini

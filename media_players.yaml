@@ -2,3 +2,8 @@
  - platform: spotify
    client_id: !secret spotify_client_id
    client_secret: !secret spotify_client_secret
+   aliases:
+     bf339f16c604d47c19ba6d81951bbd9208165c00: 'Echo Dot'
+     1b377ae9dfd7477b8fc26e9b25cb0d61: 'Quarto'
+     7a308738954241a9a76cd67e16e5f195: 'Sala'
+     442cb8deb2d440d0a351d6b069f4d9b2: 'Churrasqueira'

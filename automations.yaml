@@ -62,3 +62,14 @@
   - entity_id: image_processing.opencv_frente_local
     from: '0'
     platform: state
+- action:
+  - data_template:
+      entity_id: media_player.spotify
+      volume_level: '{{(states(''input_number.spotify_volume'') | float) / 100}}'
+    service: media_player.volume_set
+  alias: Spotify Volume
+  condition: []
+  id: '1516578173919'
+  trigger:
+  - entity_id: input_number.spotify_volume
+    platform: state

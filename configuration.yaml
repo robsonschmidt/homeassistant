@@ -31,15 +31,7 @@ cloud:
         - light
         - switch
 
-panel_iframe:
-  configurator:
-    title: Configurator
-    icon: mdi:wrench
-    url: http://hassio.local:3218
-  terminal:
-    title: Terminal
-    icon: mdi:console
-    url: http://hassio.local:7682
+panel_iframe: !include panel_iframe.yaml
 
 customizer:
   custom_ui: local
@@ -83,7 +75,7 @@ logger:
   logs:
     homeassistant.components.camera: debug
     homeassistant.components.image_processing: debug
-#    homeassistant.components.sensor.snmp: debug
+    homeassistant.components.media_player: debug
 
 # Weather prediction
 #sensor:
@@ -100,66 +92,24 @@ switch: !include switches.yaml
 light: !include lights.yaml
 media_player: !include media_players.yaml
 sensor: !include sensors.yaml
-variable: !include variables.yaml
+#variable: !include variables.yaml
 input_text: !include input_text.yaml
 device_tracker: !include device_tracker.yaml
+input_boolean: !include input_boolean.yaml
+camera: !include camera.yaml
+input_number: !include input_number.yaml
+input_select: !include input_select.yaml
+weblink: !include weblink.yaml
 
 ifttt:
   key: !secret ifttt
 
-input_boolean:
-  hall_light:
-    name: Luz Hall
-    initial: off
-  beer_fridge:
-    name: Cervejeira
-    initial: off
-  gate:
-    name: Portão
-    initial: off
-    
 telegram_bot:
   - platform: polling
     api_key: !secret api_key 
     allowed_chat_ids:
       - 328083280
       
-weblink:
-  entities:
-    - name: Spotify Rock
-      url: https://open.spotify.com/user/12175389811/playlist/6T2oElw93xmSRRpyBx1EcA
-    - name: Spotify Others
-      url: https://open.spotify.com/user/12175389811/playlist/7tZCnbcEtYn6Mp17EBAKzP
-    - name: Spotify Isabelle
-      url: https://open.spotify.com/user/12163156038/playlist/5AY8U80s1JcmuCTk16LbCe
-    - name: Spotify Alternatives
-      url: https://open.spotify.com/user/12175389811/playlist/4I9kDCL5jwQ0iJFOsOZLpZ
-    - name: Terminal
-      url: http://hassio.local:7681/
-    - name: File Editor
-      url: http://hassio.local:3218/
-
-camera:
-  - platform: ffmpeg
-    name: fundos
-    input: -y -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.87:554/live0.264 -r 0.5 -ignore_unknown /config/camera/fundos%d.jpg
-    extra_arguments: -pred 1    
-  - platform: ffmpeg
-    name: frente
-    input: -y -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.57:554/live0.264 -r 0.5 -ignore_unknown /config/camera/frente%d.jpg
-  - platform: ffmpeg
-    name: interna
-    input: -y -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.88:554/live0.264 -r 0.5 -ignore_unknown /config/camera/interna%d.jpg
-  - platform: local_file
-    name: interna_local
-    file_path: /config/camera/interna1.jpg
-  - platform: local_file
-    name: frente_local
-    file_path: /config/camera/frente1.jpg
-  - platform: local_file
-    name: fundos_local
-    file_path: /config/camera/fundos1.jpg
-
 #image_processing:
 #  - platform: opencv
 #    name: Garage Person

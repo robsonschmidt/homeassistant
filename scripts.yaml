@@ -1,3 +1,44 @@
 beer_fridge:
   sequence:
     service: input_boolean.beer_fridge
+spotify_music:
+  alias: spotify_music
+  sequence:
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.spotify
+      volume_level: '0.40'
+  - service: media_player.select_source
+    data_template: 
+      entity_id: media_player.spotify
+      source: >
+        {% if is_state("input_select.spotify_source", "Churrasqueira") %} Churrasqueira
+        {% elif is_state("input_select.spotify_source", "Sala") %} Sala
+        {% elif is_state("input_select.spotify_source", "Quarto") %} Quarto
+        {% elif is_state("input_select.spotify_source", "Echo Dot") %} Robson's Echo Dot
+        {% endif %}
+  - service: media_player.play_media
+    data_template:
+      entity_id: media_player.spotify
+      media_content_type: playlist
+      media_content_id: >
+        {% if is_state("input_select.spotify_playlist", "Rock") %} spotify:user:spotify:playlist:6T2oElw93xmSRRpyBx1EcA
+        {% elif is_state("input_select.spotify_playlist", "Susse") %} spotify:user:spotify:playlist:7tZCnbcEtYn6Mp17EBAKzP
+        {% elif is_state("input_select.spotify_playlist", "Isabelle") %} spotify:user:12131571557:playlist:5AY8U80s1JcmuCTk16LbCe
+        {% endif %}
+play_rautemusik_main:
+  sequence:
+    service: media_player.play_media
+    data:
+      media_content_id: http://main-high.rautemusik.fm/stream.mp3
+      media_content_type: MUSIC
+    data_template:
+      entity_id: "{{ entity_id }}"
+play_rautemusik_rock:
+  sequence:
+    service: media_player.play_media
+    data:
+      media_content_id: http://rock-high.rautemusik.fm/stream.mp3
+      media_content_type: MUSIC
+    data_template:
+      entity_id: "{{ entity_id }}"        

@@ -1,0 +1,9 @@
+  hall_light:
+    name: Luz Hall
+    initial: off
+  beer_fridge:
+    name: Cervejeira
+    initial: off
+  gate:
+    name: Portão
+    initial: off
