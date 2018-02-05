@@ -41,6 +41,6 @@ display:
 
 layout:
     - include: TitleT
-    - terreo, cameras, light.luz_esquerda, light.luz_central, light.luz_direita, display, switch.garden_light, input_boolean.beer_fridge, input_boolean.gate
+    - terreo, cameras, light.luz_esquerda, light.luz_central, light.luz_direita, display, switch.garden_light, input_boolean.beer_fridge, switch.portao
     - quartos, input_boolean.hall_light
     - media_player.spotify(2x2), media_player.quarto(2x2), media_player.sala(2x2), media_player.quarto_isabelle(2x2)

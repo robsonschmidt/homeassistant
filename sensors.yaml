@@ -79,4 +79,10 @@
       unit_of_measurement: 'kW'
     luz_direita_volts:
       value_template: '{{ states.light.luz_direita.attributes["voltage"] | replace(" V", "") | float }}'
-      unit_of_measurement: 'V'      
+      unit_of_measurement: 'V'
+- platform: command_line
+  name: CPU Temperature
+  command: "cat /sys/class/thermal/thermal_zone0/temp"
+  # If errors occur, remove degree symbol below
+  unit_of_measurement: "°C"
+  value_template: '{{ value | multiply(0.001) | round(1) }}'  

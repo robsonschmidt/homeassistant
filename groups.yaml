@@ -37,7 +37,7 @@ churrasqueira:
   icon: mdi:radiator
   entities:
   - group.churrasqueira_luz
-  - camera.fundos_local
+  - camera.fundos
   - group.spotify
   - input_text.dummy_player_mini
 spotify:
@@ -71,16 +71,16 @@ sala:
   icon: mdi:sofa
   entities:
   - media_player.sala
-  - camera.interna_local
+  - camera.interna
   - group.tv_sala_tiles
 camera:
   name: Cameras
   view: yes
   icon: mdi:cctv
   entities:
-  - camera.interna_local
-  - camera.frente_local
-  - camera.fundos_local
+  - camera.interna
+  - camera.frente
+  - camera.fundos
 tempo_amanha:
   name: 'Previsão Amanhã'
   entities:
@@ -122,6 +122,7 @@ servidor:
   - sensor.average_load_15m
   - sensor.cpu_used
   - sensor.last_boot
+  - sensor.cpu_temperature
 teste_velocidade:
   name: 'Teste de Velocidade'
   entities:
@@ -141,9 +142,10 @@ fundos_tiles:
     name: Térreo
     entities:
       - input_text.fundos_tiles
-      - camera.frente_local
-      - camera.fundos_local
-      - camera.interna_local
+      - camera.frente
+      - camera.fundos
+      - camera.interna
+      - switch.rest_power_net_sala
 quartos_tiles:
     name: Quarto
     entities:
@@ -156,14 +158,6 @@ tv_quarto_tiles:
     name: 'TV Quarto'
     entities:
       - input_text.tv_quarto_tiles
-cameras_ffmpeg:
-    name: 'Cameras'
-    view: yes
-    icon: mdi:camera-iris
-    entities:
-      - camera.frente
-      - camera.fundos
-      - camera.interna
 conf_weblinks:
     name: 'Links'
     entities:

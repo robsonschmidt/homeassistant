@@ -1,19 +1,39 @@
   - platform: ffmpeg
     name: fundos
-    input: -y -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.87:554/live0.264 -r 0.5 -ignore_unknown /config/camera/fundos%d.jpg
-    extra_arguments: -pred 1    
+    input: !secret camera_fundos
+#    extra_arguments: -r 0.5 -ignore_unknown /config/camera/fundos%d.jpg   
   - platform: ffmpeg
     name: frente
-    input: -y -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.57:554/live0.264 -r 0.5 -ignore_unknown /config/camera/frente%d.jpg
+    input: !secret camera_frente
+#    extra_arguments: -r 0.5 -ignore_unknown /config/camera/frente%d.jpg
   - platform: ffmpeg
     name: interna
-    input: -y -rtsp_transport tcp -i rtsp://admin:2350@192.168.86.88:554/live0.264 -r 0.5 -ignore_unknown /config/camera/interna%d.jpg
-  - platform: local_file
-    name: interna_local
-    file_path: /config/camera/interna1.jpg
-  - platform: local_file
-    name: frente_local
-    file_path: /config/camera/frente1.jpg
-  - platform: local_file
-    name: fundos_local
-    file_path: /config/camera/fundos1.jpg
+    input: !secret camera_interna
+#    extra_arguments: -r 0.5 -ignore_unknown /config/camera/interna%d.jpg
+#  - platform: local_file
+#    name: interna_local
+#    file_path: /config/camera/interna1.jpg
+#  - platform: local_file
+#    name: frente_local
+#    file_path: /config/camera/frente1.jpg
+#  - platform: local_file
+#    name: fundos_local
+#    file_path: /config/camera/fundos1.jpg
+#  - platform: onvif
+#    name: teste
+#    host: 192.168.86.87
+#    username: admin
+#    password: 2350
+#    port: 80
+#  - platform: onvif
+#    name: teste2
+#    host: 192.168.86.57
+#    username: admin
+#    password: 2350
+#    port: 80
+#  - platform: onvif
+#    name: teste3
+#    host: 192.168.86.88
+#    username: admin
+#    password: 2350
+#    port: 80

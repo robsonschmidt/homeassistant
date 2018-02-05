@@ -1,14 +1,20 @@
 input_boolean.beer_fridge:
   icon: mdi:glass-mug
   show_last_changed: true
+  homebridge_visible: true
+  homebridge_name: Cervejeira
 switch.display:
   friendly_name: Schmidt's Bar & Grill
   icon: mdi:flag-variant
   show_last_changed: true
+  homebridge_visible: true
+  homebridge_name: Display
 switch.garden_light:
   friendly_name: Spot Jardim
   icon: mdi:flower
   show_last_changed: true
+  homebridge_visible: true
+  homebridge_name: Luz Jardim
 light.luz_central:
   friendly_name: Luz Central
   icon: mdi:lightbulb-outline
@@ -28,6 +34,8 @@ light.luz_central:
     attribute: power_consumption 
     unit: kW
     blacklist_states: 0
+  homebridge_visible: true
+  homebridge_name: Luz Central
 light.luz_esquerda:
   friendly_name: Luz Esquerda
   icon: mdi:lightbulb-outline
@@ -47,6 +55,8 @@ light.luz_esquerda:
     attribute: power_consumption
     unit: kW
     blacklist_states: 0
+  homebridge_visible: true
+  homebridge_name: Luz Esquerda
 light.luz_direita:
   friendly_name: Luz Direita
   icon: mdi:lightbulb-outline
@@ -66,9 +76,13 @@ light.luz_direita:
     attribute: power_consumption
     unit: kW
     blacklist_states: 0
+  homebridge_visible: true
+  homebridge_name: Luz Direita
 input_boolean.hall_light:
   icon: mdi:lightbulb-outline
   show_last_changed: true
+  homebridge_visible: true
+  homebridge_name: Luz Corredor
 sensor.pws_feelslike_c:
   friendly_name: Sensação Térmica
   state_card_mode: badges
@@ -128,12 +142,18 @@ sensor.pws_precip_4d_mm:
 sensor.pws_precip_today_metric:
   friendly_name: Int. de Chuva
   state_card_mode: badges
+  homebridge_visible: true
+  homebridge_name: Precipitção de Chuva
 sensor.pws_relative_humidity:
   friendly_name: Humidade Relativa
   state_card_mode: badges
+  homebridge_visible: true
+  homebridge_name: Humidade Relativa
 sensor.pws_temp_c:
   friendly_name: Temp.
   state_card_mode: badges
+  homebridge_visible: true
+  homebridge_name: Temperatura
 input_text.fundos_tiles:
   custom_ui_state_card: state-card-tiles
   config:
@@ -156,7 +176,7 @@ input_text.fundos_tiles:
         image: /local/luz_direita.png
         column: 3
         row: 1
-      - entity: input_boolean.gate
+      - entity: switch.portao
         image: /local/gate.png
         column: 4
         row: 1
@@ -389,3 +409,25 @@ input_text.dummy_player_mini:
 script.spotify_music:
   friendly_name: 'Spotify'
   icon: mdi:play
+switch.portao:
+  homebridge_visible: true
+  homebridge_name: Portão
+switch.power_net_sala:
+  homebridge_visible: true
+  homebridge_name: Net Sala
+switch.power_tv_sala:
+  homebridge_visible: true
+  homebridge_name: TV Sala
+switch.mute_tv_sala:
+  homebridge_visible: true
+  homebridge_name: Mute TV Sala
+switch.power_net_quarto:
+  homebridge_visible: true
+  homebridge_name: Net Quarto
+switch.power_tv_quarto:
+  homebridge_visible: true
+  homebridge_name: TV Quarto
+switch.mute_tv_quarto:
+  homebridge_visible: true
+  homebridge_name: Mute TV Quarto
+  

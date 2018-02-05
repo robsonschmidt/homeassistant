@@ -3,7 +3,7 @@
       event: hall_light_on
       value1: 'on'
     service: ifttt.trigger
-  alias: Hall Light On
+  alias: Luz Corredor On
   condition: []
   id: '1513562930930'
   trigger:
@@ -16,7 +16,7 @@
       event: hall_light_off
       value1: 'off'
     service: ifttt.trigger
-  alias: Hall Light Off
+  alias: Luz Corredor Off
   condition: []
   id: '1513562995349'
   trigger:
@@ -29,7 +29,7 @@
       event: beer_fridge_on
       value1: 'on'
     service: ifttt.trigger
-  alias: Beer Fridge On
+  alias: Cervejeira On
   condition: []
   id: '1513563051024'
   trigger:
@@ -42,7 +42,7 @@
       event: beer_fridge_off
       value1: 'off'
     service: ifttt.trigger
-  alias: Beer Fridge Off
+  alias: Cervejeira Off
   condition: []
   id: '1513563084506'
   trigger:
@@ -50,18 +50,6 @@
     from: 'on'
     platform: state
     to: 'off'
-- action:
-  - data:
-      message: Pessoa na frente de casa
-      target: 328083280
-    service: telegram_bot.send_message
-  alias: Front House Person
-  condition: []
-  id: '1515208447850'
-  trigger:
-  - entity_id: image_processing.opencv_frente_local
-    from: '0'
-    platform: state
 - action:
   - data_template:
       entity_id: media_player.spotify
@@ -73,3 +61,263 @@
   trigger:
   - entity_id: input_number.spotify_volume
     platform: state
+- action:
+  - data:
+      data:
+        inline_keyboard: Task 1:/command1
+      message: Teste mensagem
+      title: Teste Título
+    service: telegram_bot.send_message
+  alias: Telegram
+  condition: []
+  id: '1517179988518'
+  trigger: []
+- action:
+  - data:
+      message: pong
+    service: telegram_bot.send_message
+  alias: pingpong
+  hide_entity: true
+  condition: []
+  id: '1517189180038'
+  trigger:
+  - event_data:
+      command: /ping
+    event_type: telegram_command
+    platform: event
+- action:
+  - data:
+      message: Temperatura do CPU alta - {{ states("sensor.cpu_temperature") }} ºC
+    service: notify.telegram_bot
+  alias: CPU Alta
+  condition: []
+  id: '1517266230635'
+  trigger:
+  - above: '60'
+    entity_id: sensor.cpu_temperature
+    platform: numeric_state
+- action:
+  - alias: ''
+    data_template:
+      entity: '{{ trigger.entity_id }}'
+    service: python_script.set_state
+  alias: Broadlink ONOFF
+  condition: []
+  id: '1517777081947'
+  trigger:
+  - entity_id: switch.0_net_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.0_net_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.1_net_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.1_net_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.2_net_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.2_net_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.3_net_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.3_net_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.4_net_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.4_net_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.5_net_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.5_net_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.6_net_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.6_net_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.7_net_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.7_net_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.8_net_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.8_net_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.9_net_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.9_net_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.baixo_tv_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.baixo_tv_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.canal_baixo_net_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.canal_baixo_net_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.canal_cima_net_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.canal_cima_net_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.cima_tv_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.cima_tv_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.direita_tv_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.direita_tv_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.esquerda_tv_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.esquerda_tv_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.mute_tv_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.mute_tv_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.ok_tv_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.ok_tv_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.portao
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.power_net_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.power_net_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.power_tv_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.power_tv_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.source_tv_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.source_tv_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.vol_baixo_tv_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.vol_baixo_tv_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.vol_cima_tv_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.vol_cima_tv_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - data_template:
+      message: 'Hassio FRIS: {{ trigger.event }}'
+    service: telegram_bot.send_message
+  alias: FRIS Start/Stop
+  condition: []
+  id: '1517794305968'
+  trigger:
+  - event: start
+    platform: homeassistant
+  - event: shutdown
+    platform: homeassistant
+- action:
+  - data:
+      message: Portão abrindo ou fechando.
+    service: telegram_bot.send_message
+  alias: Portão ON/OFF
+  condition: []
+  id: '1517794695771'
+  trigger:
+  - entity_id: switch.portao
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.portao
+    from: 'on'
+    platform: state
+    to: 'off'

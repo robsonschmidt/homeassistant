@@ -41,4 +41,4 @@ layout:
     - terreo,                       cameras,                        quartos
     - light.luz_esquerda,           light.luz_central,              light.luz_direita
     - switch.display,               switch.garden_light,            input_boolean.beer_fridge
-    - input_boolean.gate,           input_boolean.hall_light
+    - switch.portao,                input_boolean.hall_light

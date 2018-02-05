@@ -160,7 +160,7 @@ source_tv_sala:
 
 layout:
     - include: TitleT
-    - tablet, cameras,          light.luz_esquerda,         light.luz_central,      light.luz_direita,              switch.display,             switch.garden_light,        input_boolean.beer_fridge,  input_boolean.gate
+    - tablet, cameras,          light.luz_esquerda,         light.luz_central,      light.luz_direita,              switch.display,             switch.garden_light,        input_boolean.beer_fridge,  switch.portao
     - power_net_sala,           vol_cima_tv_sala,           cima_tv_sala,           canal_cima_net_sala,            media_player.spotify(2x2),                              media_player.sala(2x2)
     - power_tv_sala,            vol_baixo_tv_sala,          baixo_tv_sala,          canal_baixo_net_sala
     - source_tv_sala,           1_net_sala,                 2_net_sala,             3_net_sala

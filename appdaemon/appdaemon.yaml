@@ -11,4 +11,3 @@ HASS:
 HADashboard:
   dash_url: http://127.17.0.1:5050
   dash_dir: /config/appdaemon/dashboards
-  dash_password: !secret http_password

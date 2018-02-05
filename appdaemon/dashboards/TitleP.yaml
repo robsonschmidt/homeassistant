@@ -8,7 +8,7 @@ clock:
 weather:
     widget_type: iframe
     url_list:
-      - http://hassio.local:8123/local/weather_line.html
+      - http://192.168.86.72:8123/local/weather_line.html
 
 layout:
     - clock(3x1)

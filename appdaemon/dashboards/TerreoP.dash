@@ -35,4 +35,4 @@ layout:
     - phone, controle, cameras
     - light.luz_esquerda, light.luz_central, light.luz_direita
     - switch.display, switch.garden_light, input_boolean.beer_fridge
-    - input_boolean.gate
+    - switch.portao

@@ -15,7 +15,10 @@ homeassistant:
   customize_glob: !include customize_glob.yaml
   customize_domain: !include customize_domain.yaml
   
+  whitelist_external_dirs: /config/camera
+
 frontend: !include frontend.yaml
+
   
 # Show links to resources in log and frontend
 # introduction:
@@ -23,18 +26,18 @@ frontend: !include frontend.yaml
 # Enables configuration UI
 config:
 
-cloud:
-  alexa:
-    filter:
-      include_domains:
-        - scripts
-        - light
-        - switch
+#cloud:
+#  alexa:
+#    filter:
+#      include_domains:
+#        - scripts
+#        - light
+#        - switch
 
 panel_iframe: !include panel_iframe.yaml
 
-customizer:
-  custom_ui: local
+#customizer:
+#  custom_ui: local
 
 http:
   # Secrets are defined in the file secrets.yaml
@@ -76,6 +79,9 @@ logger:
     homeassistant.components.camera: debug
     homeassistant.components.image_processing: debug
     homeassistant.components.media_player: debug
+    homeassistant.components.automation: warning
+    homeassistant.components.telegram_bot: debug
+    homeassistant.components.telegram_bot.polling: debug
 
 # Weather prediction
 #sensor:
@@ -109,7 +115,20 @@ telegram_bot:
     api_key: !secret api_key 
     allowed_chat_ids:
       - 328083280
+      - -301349283
       
+notify:
+  - name: telegram_bot
+    platform: telegram
+    chat_id: 328083280
+  - name: telegram_group
+    platform: telegram
+    chat_id: -301349283
+    
+ffmpeg:
+
+python_script:
+
 #image_processing:
 #  - platform: opencv
 #    name: Garage Person
