@@ -6,3 +6,13 @@ sensor.pws_feelslike_c:
   state_card_mode: badges  
 sensor.pws_relative_humidity:
   state_card_mode: badges
+sensor.pws_temp_low_1d_c:
+  state_card_mode: badges
+sensor.pws_temp_high_1d_c:
+  state_card_mode: badges
+sensor.pws_precip_1d:
+  state_card_mode: badges
+sensor.pws_precip_today_metric:
+  state_card_mode: badges
+group.tempo_amanha:
+  state_card_mode: badges

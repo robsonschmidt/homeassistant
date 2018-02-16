@@ -18,12 +18,14 @@ tablet:
     dashboard: Tablet
 
 power_net_quarto:
+    title: NET
     widget_type: switch
     entity: switch.power_net_quarto
     icon_on: mdi-boombox
     icon_off: mdi-boombox
 
 power_tv_quarto:
+    title: TV
     widget_type: switch
     entity: switch.power_tv_quarto
     icon_on: mdi-television-classic
@@ -136,12 +138,14 @@ mute_tv_quarto:
     icon_off: mdi-volume-off
 
 ok_tv_quarto:
+    title: OK
     widget_type: switch
     entity: switch.ok_tv_quarto
     icon_on: mdi-image-filter-center-focus
     icon_off: mdi-image-filter-center-focus
 
 source_tv_quarto:
+    title: Source
     widget_type: switch
     entity: switch.source_tv_quarto
     icon_on: mdi-source-branch

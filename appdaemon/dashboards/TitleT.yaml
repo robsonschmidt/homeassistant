@@ -10,7 +10,7 @@ weather:
     title: Weather
     refresh: 60
     url_list:
-      - http://192.168.86.72:8123/local/weather_line.html
+      - https://fris.duckdns.org:8123/local/weather_line.html
 
 layout:
     - clock(2x1), weather (7x1)

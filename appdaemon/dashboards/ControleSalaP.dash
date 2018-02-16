@@ -31,12 +31,14 @@ terreo:
     dashboard: TerreoP
 
 power_net_sala:
+    title: NET
     widget_type: switch
     entity: switch.power_net_sala
     icon_on: mdi-boombox
     icon_off: mdi-boombox
 
 power_tv_sala:
+    title: TV
     widget_type: switch
     entity: switch.power_tv_sala
     icon_on: mdi-television-classic
@@ -149,12 +151,14 @@ mute_tv_sala:
     icon_off: mdi-volume-off
 
 ok_tv_sala:
+    title: OK
     widget_type: switch
     entity: switch.ok_tv_sala
     icon_on: mdi-image-filter-center-focus
     icon_off: mdi-image-filter-center-focus
 
 source_tv_sala:
+    title: Source
     widget_type: switch
     entity: switch.source_tv_sala
     icon_on: mdi-source-branch

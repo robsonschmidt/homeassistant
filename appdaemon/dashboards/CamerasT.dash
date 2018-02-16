@@ -22,23 +22,30 @@ frente:
   title: Frente
   refresh: 1
   entity_picture: 
-    - http://192.168.86.72:8123/api/camera_proxy/camera.frente?&api_password=14253678
+    - !secret camera_frente
 
 interna:
   widget_type: camera
   title: Interna
   refresh: 1
   entity_picture: 
-    - http://192.168.86.72:8123/api/camera_proxy/camera.interna?&api_password=14253678
+    - !secret camera_interna
 
 fundos:
   widget_type: camera
   title: Fundos
   refresh: 1
   entity_picture: 
-    - http://192.168.86.72:8123/api/camera_proxy/camera.fundos?&api_password=14253678
+    - !secret camera_fundos
 
+portao:
+  widget_type: switch
+  title: Portão
+  entity: switch.portao
+  icon_on: mdi-gate
+  icon_off: mdi-gate
+  
 layout:
     - include: TitleT
-    - tablet, switch.portao
+    - tablet, portao
     - frente (3x2), interna (3x2), fundos (3x2)

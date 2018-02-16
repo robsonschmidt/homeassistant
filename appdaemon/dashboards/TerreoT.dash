@@ -29,12 +29,14 @@ weather:
     units: "&deg;F"
     
 power_net_sala:
+    title: NET
     widget_type: switch
     entity: switch.power_net_sala
     icon_on: mdi-boombox
     icon_off: mdi-boombox
 
 power_tv_sala:
+    title: TV
     widget_type: switch
     entity: switch.power_tv_sala
     icon_on: mdi-television-classic
@@ -147,20 +149,29 @@ mute_tv_sala:
     icon_off: mdi-volume-off
 
 ok_tv_sala:
+    title: OK
     widget_type: switch
     entity: switch.ok_tv_sala
     icon_on: mdi-image-filter-center-focus
     icon_off: mdi-image-filter-center-focus
 
 source_tv_sala:
+    title: Source
     widget_type: switch
     entity: switch.source_tv_sala
     icon_on: mdi-source-branch
     icon_off: mdi-source-branch
 
+portao:
+  widget_type: switch
+  title: Portão
+  entity: switch.portao
+  icon_on: mdi-gate
+  icon_off: mdi-gate
+  
 layout:
     - include: TitleT
-    - tablet, cameras,          light.luz_esquerda,         light.luz_central,      light.luz_direita,              switch.display,             switch.garden_light,        input_boolean.beer_fridge,  switch.portao
+    - tablet, cameras,          light.luz_esquerda,         light.luz_central,      light.luz_direita,              switch.display,             switch.garden_light,        input_boolean.beer_fridge,  portao
     - power_net_sala,           vol_cima_tv_sala,           cima_tv_sala,           canal_cima_net_sala,            media_player.spotify(2x2),                              media_player.sala(2x2)
     - power_tv_sala,            vol_baixo_tv_sala,          baixo_tv_sala,          canal_baixo_net_sala
     - source_tv_sala,           1_net_sala,                 2_net_sala,             3_net_sala

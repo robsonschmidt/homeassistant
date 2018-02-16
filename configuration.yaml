@@ -19,7 +19,6 @@ homeassistant:
 
 frontend: !include frontend.yaml
 
-  
 # Show links to resources in log and frontend
 # introduction:
 
@@ -42,6 +41,9 @@ panel_iframe: !include panel_iframe.yaml
 http:
   # Secrets are defined in the file secrets.yaml
    api_password: !secret http_password
+   base_url: https://fris.duckdns.org:8123
+   ssl_certificate: /ssl/fullchain.pem
+   ssl_key: /ssl/privkey.pem   
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   # base_url: example.duckdns.org:8123
   # server_host: 2001:1284:f016:a059:ba27:ebff:fe86:e896
@@ -78,10 +80,6 @@ logger:
   logs:
     homeassistant.components.camera: debug
     homeassistant.components.image_processing: debug
-    homeassistant.components.media_player: debug
-    homeassistant.components.automation: warning
-    homeassistant.components.telegram_bot: debug
-    homeassistant.components.telegram_bot.polling: debug
 
 # Weather prediction
 #sensor:
@@ -129,7 +127,22 @@ ffmpeg:
 
 python_script:
 
-#image_processing:
+image_processing:
+  - platform: openalpr_local
+    region: br
+    source:
+    - entity_id: camera.frente
+#  - platform: dlib_face_detect
+#    source:
+#      - entity_id: camera.frente
+#      - entity_id: camera.interna
+#  - platform: dlib_face_identify
+#    source:
+#      - entity_id: camera.frente
+#      - entity_id: camera.interna
+#    faces:
+#      Robson: /config/Robson.jpg
+#      Flavia: /config/Flavia.jpg
 #  - platform: opencv
 #    name: Garage Person
 #    source:

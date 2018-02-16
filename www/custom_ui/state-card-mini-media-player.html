@@ -1,6 +1,6 @@
 <!--
 https://github.com/c727/home-assistant-mini-media-player
-version: 20180122
+version: 20180129.2
 -->
 <dom-module id='state-card-mini-media-player'>
   <template>
@@ -26,6 +26,7 @@ version: 20180122
         padding: 20px 8px;
         border-radius: 2px;
         font-weight: 500;
+        min-width: 500px;
       }
       @media screen and (max-width: 600px) {
         paper-dialog {
@@ -88,10 +89,9 @@ version: 20180122
             <paper-icon-button icon='mdi:skip-forward' on-tap='handleNextTap'></paper-icon-button>
           </div>
         </div>
-      </template>
-
-      <template is='dom-if' if='[[config.buttons]]'>
-        <paper-dialog id='infoCard'>
+      </template>      
+      <paper-dialog id='infoCard'>
+        <template is='dom-if' if='[[config.buttons]]'>
           Choose a playlist for [[computeStateName(playerObj)]]:        
           <paper-button-group>
             <template is='dom-repeat' items='[[config.buttons]]'>
@@ -103,18 +103,12 @@ version: 20180122
               </paper-button>
             </template>
           </paper-button-group>
-          <div hidden$='[[!computeTTSLoaded(hass)]]' class='layout horizontal end'>
-            <paper-input
-              id='ttsInput'
-              label='Text to speak'
-              class='flex'
-              value='{{ttsMessage}}'
-              on-keydown='ttsCheckForEnter'
-            ></paper-input>
-            <paper-icon-button icon='mdi:send' on-tap='sendTTS'></paper-icon-button>
-          </div>
-        </paper-dialog>
-      </template>
+        </template>
+        <more-info-media_player
+          hass='[[hass]]'
+          state-obj='[[playerObj]]'
+        ></more-info-media_player>
+      </paper-dialog>
     </template>
   </template>
 </dom-module>
@@ -133,11 +127,7 @@ class StateCardMiniMediaPlayer extends Polymer.Element {
       },
       playerObj: {
         type: Object,
-        computed: 'computePlayerObj(hass)',
-      },
-      ttsMessage: {
-        type: String,
-        value: '',
+        computed: 'computePlayerObj(hass, config)',
       },
       dialog: {
         type: Boolean,
@@ -145,11 +135,13 @@ class StateCardMiniMediaPlayer extends Polymer.Element {
       },
     };
   }
+
   computeConfig(stateObj) {     
     return stateObj.attributes.config;
   }
-  computePlayerObj(hass) {
-    if (hass.states[this.config.player]) {
+
+  computePlayerObj(hass, config) {
+    if (config && config.player && hass.states[this.config.player]) {
       var playerObj = hass.states[this.config.player];
       playerObj.isOff = playerObj.state === 'off';
       playerObj.isPlaying = playerObj.state === 'playing';
@@ -167,31 +159,39 @@ class StateCardMiniMediaPlayer extends Polymer.Element {
     }
     return null;
   }
+
   computeStateName(stateObj) {
     return window.hassUtil.computeStateName(stateObj);
   }
+
   handlePreviousTap(ev) {
     ev.stopPropagation();
     this.callService('media_previous_track');
   }
+
   handlePlayPauseTap(ev) {
     ev.stopPropagation();
     this.callService('media_play_pause');
   }
+
   handleNextTap(ev) {
     ev.stopPropagation();
     this.callService('media_next_track');
   }
+
   handlePowerTap(ev) {
     ev.stopPropagation();
     this.callService('toggle');
   }
+
   callService(service) {
     this.hass.callService('media_player', service, { 'entity_id': this.playerObj.entity_id });
   }
+
   fireScript(ev) {      
     this.hass.callService('script', ev.model.item.script.split('.')[1], { 'entity_id': this.playerObj.entity_id });
   }
+
   handleVolumeTap() {
     this.hass.callService('media_player', 'volume_mute', { 'entity_id': this.playerObj.entity_id, 'is_volume_muted': !this.playerObj.isMuted });
   }
@@ -201,35 +201,9 @@ class StateCardMiniMediaPlayer extends Polymer.Element {
     var vol = volPercentage > 0 ? volPercentage / 100 : 0;
     this.hass.callService('media_player', 'volume_set', { 'entity_id': this.playerObj.entity_id, 'volume_level': vol });
   }
+
   openInfoCard() {
-    if (this.config.buttons) this.root.getElementById('infoCard').open();
-  }
-  computeTTSLoaded(hass) {
-    return window.hassUtil.isComponentLoaded(hass, 'tts');
-  }
-  ttsCheckForEnter(ev) {
-    if (ev.keyCode === 13) this.sendTTS();
-  }
-  sendTTS() {
-    var services = this.hass.config.services.tts;
-    var serviceKeys = Object.keys(services).sort();
-    var service;
-    var i;
-    for (i = 0; i < serviceKeys.length; i++) {
-      if (serviceKeys[i].indexOf('_say') !== -1) {
-        service = serviceKeys[i];
-        break;
-      }
-    }
-    if (!service) {
-      return;
-    }
-    this.hass.callService('tts', service, {
-      entity_id: this.playerObj.entity_id,
-      message: this.ttsMessage,
-    });
-    this.ttsMessage = '';
-    this.$.ttsInput.focus();
+    this.root.getElementById('infoCard').open();
   }
 }
 customElements.define(StateCardMiniMediaPlayer.is, StateCardMiniMediaPlayer);

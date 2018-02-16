@@ -34,6 +34,13 @@ cameras:
 weather:
     widget_type: weather
     units: "&deg;F"
+    
+portao:
+  widget_type: switch
+  title: Portão
+  entity: switch.portao
+  icon_on: mdi-gate
+  icon_off: mdi-gate
 
 layout:
     - include: TitleP
@@ -41,4 +48,4 @@ layout:
     - terreo,                       cameras,                        quartos
     - light.luz_esquerda,           light.luz_central,              light.luz_direita
     - switch.display,               switch.garden_light,            input_boolean.beer_fridge
-    - switch.portao,                input_boolean.hall_light
+    - portao,                       input_boolean.hall_light

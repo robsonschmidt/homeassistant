@@ -31,8 +31,15 @@ cameras:
     widget_type: navigate
     dashboard: CamerasP
 
+portao:
+  widget_type: switch
+  title: Portão
+  entity: switch.portao
+  icon_on: mdi-gate
+  icon_off: mdi-gate
+
 layout:
     - phone, controle, cameras
     - light.luz_esquerda, light.luz_central, light.luz_direita
     - switch.display, switch.garden_light, input_boolean.beer_fridge
-    - switch.portao
+    - portao

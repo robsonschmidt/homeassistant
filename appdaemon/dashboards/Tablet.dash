@@ -38,9 +38,15 @@ display:
 #    icon_on: mdi-source-branch
 #    icon_off: mdi-source-branch
 
+portao:
+  widget_type: switch
+  title: Portão
+  entity: switch.portao
+  icon_on: mdi-gate
+  icon_off: mdi-gate
 
 layout:
     - include: TitleT
-    - terreo, cameras, light.luz_esquerda, light.luz_central, light.luz_direita, display, switch.garden_light, input_boolean.beer_fridge, switch.portao
+    - terreo, cameras, light.luz_esquerda, light.luz_central, light.luz_direita, display, switch.garden_light, input_boolean.beer_fridge, portao
     - quartos, input_boolean.hall_light
     - media_player.spotify(2x2), media_player.quarto(2x2), media_player.sala(2x2), media_player.quarto_isabelle(2x2)

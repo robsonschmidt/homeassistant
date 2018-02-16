@@ -11,7 +11,7 @@
     {
       "platform": "HomeAssistant",
       "name": "HomeAssistant",
-      "host": "http://192.168.86.72:8123",
+      "host": "https://fris.duckdns.org:8123",
       "password": "14253678",
       "default_visibility": "hidden",
       "supported_types": [
@@ -34,7 +34,7 @@
         "vacuum"
       ],
       "logging": true,
-      "verify_ssl": true
+      "verify_ssl": false
     }
   ]
 }

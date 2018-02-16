@@ -110,17 +110,17 @@ configuracao:
   - group.servidor
   - group.teste_velocidade
   - group.google_wifi
-  - group.conf_weblinks
+#  - group.conf_weblinks
 servidor:
   name: Servidor
   entities:
-  - sensor.ram_used
-  - sensor.disk_used_
+  - sensor.memory_use_percent
+  - sensor.disk_use_percent
   - sensor.process
-  - sensor.swap_used
-  - sensor.average_load_1m
-  - sensor.average_load_15m
-  - sensor.cpu_used
+  - sensor.swap_use_percent
+  - sensor.load_1m
+  - sensor.load_15m
+  - sensor.processor_use
   - sensor.last_boot
   - sensor.cpu_temperature
 teste_velocidade:

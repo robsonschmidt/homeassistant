@@ -410,24 +410,46 @@ script.spotify_music:
   friendly_name: 'Spotify'
   icon: mdi:play
 switch.portao:
+  friendly_name: Portão
   homebridge_visible: true
   homebridge_name: Portão
 switch.power_net_sala:
+  friendly_name: NET
   homebridge_visible: true
   homebridge_name: Net Sala
 switch.power_tv_sala:
+  friendly_name: TV
   homebridge_visible: true
   homebridge_name: TV Sala
 switch.mute_tv_sala:
+  friendly_name: Mute
   homebridge_visible: true
   homebridge_name: Mute TV Sala
 switch.power_net_quarto:
+  friendly_name: NET
   homebridge_visible: true
   homebridge_name: Net Quarto
 switch.power_tv_quarto:
+  friendly_name: TV
   homebridge_visible: true
   homebridge_name: TV Quarto
 switch.mute_tv_quarto:
+  friendly_name: Mute
   homebridge_visible: true
   homebridge_name: Mute TV Quarto
-  
+switch.ok_tv_quarto:
+  friendly_name: OK
+switch.ok_tv_sala:
+  friendly_name: OK
+sensor.google_wifi_current_version:
+  friendly_name: Versão Atual 
+sensor.google_wifi_last_restart:
+  friendly_name: Ultimo Reinício 
+sensor.google_wifi_local_ip:
+  friendly_name: IP Local 
+sensor.google_wifi_new_version:
+  friendly_name: Nova Versão 
+sensor.google_wifi_status:
+  friendly_name: Status 
+sensor.google_wifi_uptime:
+  friendly_name: Tempo Ativo

@@ -51,43 +51,9 @@
     platform: state
     to: 'off'
 - action:
-  - data_template:
-      entity_id: media_player.spotify
-      volume_level: '{{(states(''input_number.spotify_volume'') | float) / 100}}'
-    service: media_player.volume_set
-  alias: Spotify Volume
-  condition: []
-  id: '1516578173919'
-  trigger:
-  - entity_id: input_number.spotify_volume
-    platform: state
-- action:
   - data:
-      data:
-        inline_keyboard: Task 1:/command1
-      message: Teste mensagem
-      title: Teste Título
-    service: telegram_bot.send_message
-  alias: Telegram
-  condition: []
-  id: '1517179988518'
-  trigger: []
-- action:
-  - data:
-      message: pong
-    service: telegram_bot.send_message
-  alias: pingpong
-  hide_entity: true
-  condition: []
-  id: '1517189180038'
-  trigger:
-  - event_data:
-      command: /ping
-    event_type: telegram_command
-    platform: event
-- action:
-  - data:
-      message: Temperatura do CPU alta - {{ states("sensor.cpu_temperature") }} ºC
+      message: 'Hassio FRIS: Temp. CPU Alta - {{ states(''sensor.cpu_temperature'')
+        }} ºC'
     service: notify.telegram_bot
   alias: CPU Alta
   condition: []
@@ -97,11 +63,22 @@
     entity_id: sensor.cpu_temperature
     platform: numeric_state
 - action:
+  - data:
+      message: 'Hassio FRIS: Temp. CPU Multo Alta - {{ states(''sensor.cpu_temperature'')
+        }} ºC'
+    service: notify.telegram_bot
+  alias: CPU Muito Alta
+  condition: []
+  trigger:
+  - above: '70'
+    entity_id: sensor.cpu_temperature
+    platform: numeric_state
+- action:
   - alias: ''
     data_template:
       entity: '{{ trigger.entity_id }}'
     service: python_script.set_state
-  alias: Broadlink ONOFF
+  alias: Broadlink Always OFF
   condition: []
   id: '1517777081947'
   trigger:
@@ -307,7 +284,7 @@
     platform: homeassistant
 - action:
   - data:
-      message: Portão abrindo ou fechando.
+      message: Portão acionado.
     service: telegram_bot.send_message
   alias: Portão ON/OFF
   condition: []
@@ -321,3 +298,24 @@
     from: 'on'
     platform: state
     to: 'off'
+- action:
+  - data:
+      message: 'Hassio FRIS: Placa encontrada.'
+    service: notify.telegram_bot
+  alias: Placa carro
+  condition: []
+  id: '1518651715891'
+  trigger:
+  - event_data:
+      entity_id: image_processing.openalpr_frente
+      plate: ASC8060
+    event_type: image_processing.found_plate
+    platform: event
+  - event_data:
+      entity_id: image_processing.openalpr_frente
+      plate: OXI5924
+    event_type: image_processing.found_plate
+    platform: event
+  - event_data: {}
+    event_type: image_processing.found_plate
+    platform: event

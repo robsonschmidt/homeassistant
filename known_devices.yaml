@@ -1,9 +1,17 @@
-
-iphone_de_robson:
+iphonederobsonlan:
   hide_if_away: false
   icon:
-  mac:
-  name: iphone de robson
+  mac: D0:33:11:5F:63:74
+  name: iphonederobson
   picture:
   track: true
-  vendor:
+  vendor: unknown
+
+iphonedeflavialan:
+  hide_if_away: false
+  icon:
+  mac: 8C:8E:F2:E1:19:31
+  name: iphonedeflavia.lan
+  picture:
+  track: true
+  vendor: Apple, Inc.
