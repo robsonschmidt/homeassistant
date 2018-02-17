@@ -10,7 +10,6 @@ default_view:
   - group.configuracao
   - group.fundos_tiles
   - group.quartos_tiles
-  - group.music_spotify
   name: 'Tela Inicial'
 tempo:
   name: Temperatura
@@ -38,16 +37,7 @@ churrasqueira:
   entities:
   - group.churrasqueira_luz
   - camera.fundos
-  - group.spotify
-  - input_text.dummy_player_mini
-spotify:
-  name: Spotify Playlists
-  entities:
-  - media_player.spotify
-  - weblink.spotify_rock
-  - weblink.spotify_others
-  - weblink.spotify_alternatives
-  - weblink.spotify_isabelle
+  - input_text.churrasqueira_spotify_player
 churrasqueira_luz:
   name: 'Iluminação'
   entities:
@@ -65,6 +55,7 @@ quarto:
   - media_player.quarto
   - group.quartos_tiles
   - group.tv_quarto_tiles
+  - input_text.quarto_spotify_player
 sala:
   name: Sala
   view: yes
@@ -73,6 +64,7 @@ sala:
   - media_player.sala
   - camera.interna
   - group.tv_sala_tiles
+  - input_text.sala_spotify_player
 camera:
   name: Cameras
   view: yes
@@ -163,10 +155,3 @@ conf_weblinks:
     entities:
       - weblink.terminal
       - weblink.file_editor
-music_spotify:
-  name: Music 
-  entities:
-  - input_select.spotify_playlist
-  - input_select.spotify_source
-  - script.spotify_music
-  - input_number.spotify_volume

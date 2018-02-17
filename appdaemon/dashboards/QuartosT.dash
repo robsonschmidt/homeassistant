@@ -150,13 +150,27 @@ source_tv_quarto:
     entity: switch.source_tv_quarto
     icon_on: mdi-source-branch
     icon_off: mdi-source-branch
+    
+source_chromecast_quarto:
+    title: Chromecast
+    widget_type: script
+    entity: script.source_chromecast_quarto
+    icon_on: mdi-google-chrome
+    icon_off: mdi-google-chrome
+
+source_net_quarto:
+    title: Net
+    widget_type: script
+    entity: script.source_net_quarto
+    icon_on: mdi-boombox
+    icon_off: mdi-boombox
 
 layout:
     - include: TitleT
-    - tablet, input_boolean.hall_light
-    - power_net_quarto, vol_cima_tv_quarto, cima_tv_quarto, canal_cima_net_quarto, media_player.quarto(2x2),media_player.quarto_isabelle(2x2)
-    - power_tv_quarto, vol_baixo_tv_quarto, baixo_tv_quarto, canal_baixo_net_quarto
-    - source_tv_quarto, 1_net_quarto, 2_net_quarto, 3_net_quarto
-    - ok_tv_quarto, 4_net_quarto, 5_net_quarto, 6_net_quarto
-    - mute_tv_quarto, 7_net_quarto, 8_net_quarto, 9_net_quarto
-    - 0_net_quarto
+    - tablet                    , input_boolean.hall_light
+    - power_net_quarto          , source_net_quarto             , 1_net_quarto              , 2_net_quarto                , 3_net_quarto            , media_player.quarto(2x2)    , media_player.quarto_isabelle(2x2)
+    - power_tv_quarto           , source_chromecast_quarto      , 4_net_quarto              , 5_net_quarto                , 6_net_quarto
+    - canal_cima_net_quarto     , canal_baixo_net_quarto        , 7_net_quarto              , 8_net_quarto                , 9_net_quarto
+    - vol_cima_tv_quarto        , vol_baixo_tv_quarto           , mute_tv_quarto            , 0_net_quarto
+    - cima_tv_quarto            , baixo_tv_quarto
+    - ok_tv_quarto              , source_tv_quarto

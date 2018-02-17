@@ -209,7 +209,7 @@ input_text.quartos_tiles:
 input_text.tv_sala_tiles:
   custom_ui_state_card: state-card-tiles
   config:
-    columns: 4
+    columns: 5
     color: blue
     color_on: "#006437"
     color_off: "#404040"
@@ -220,90 +220,106 @@ input_text.tv_sala_tiles:
         image: /local/net.png
         column: 1
         row: 1
-      - entity: switch.vol_cima_tv_sala
-        image: /local/VolMais.png
+      - entity: script.source_net_sala
+        image: /local/net_source.png
         column: 2
-        row: 1
-      - entity: switch.cima_tv_sala
-        image: /local/cima.png
-        column: 3
-        row: 1
-      - entity: switch.canal_cima_net_sala
-        image: /local/CHMais.png
-        column: 4
         row: 1
       - entity: switch.power_tv_sala
         image: /local/tv.png
         column: 1
         row: 2
+      - entity: script.source_chromecast_sala
+        image: /local/chromecast.png
+        column: 2
+        row: 2
+      - entity: switch.power_dvd_sala
+        image: /local/dvd.png
+        column: 1
+        row: 3
+      - entity: switch.source_dvd_sala
+        image: /local/dvd_source.png
+        column: 2
+        row: 3
+      - entity: switch.canal_cima_net_sala
+        image: /local/CHMais.png
+        column: 1
+        row: 4
+      - entity: switch.canal_baixo_net_sala
+        image: /local/CHMenos.png
+        column: 2
+        row: 4
+      - entity: switch.vol_cima_tv_sala
+        image: /local/VolMais.png
+        column: 1
+        row: 5
       - entity: switch.vol_baixo_tv_sala
         image: /local/VolMenos.png
         column: 2
-        row: 2
+        row: 5
+      - entity: switch.mute_tv_sala
+        image: /local/mute.png
+        column: 3
+        row: 5
+      - entity: switch.cima_tv_sala
+        image: /local/cima.png
+        column: 1
+        row: 6
       - entity: switch.baixo_tv_sala
         image: /local/baixo.png
-        column: 3
-        row: 2
-      - entity: switch.canal_baixo_net_sala
-        image: /local/CHMenos.png
-        column: 4
-        row: 2
-      - entity: switch.source_tv_sala
-        image: /local/source.png
-        column: 1
-        row: 3
-      - entity: switch.1_net_sala
-        image: /local/1.png
         column: 2
-        row: 3
-      - entity: switch.2_net_sala
-        image: /local/2.png
-        column: 3
-        row: 3
-      - entity: switch.3_net_sala
-        image: /local/3.png
-        column: 4
-        row: 3
+        row: 6
       - entity: switch.ok_tv_sala
         image: /local/ok.png
         column: 1
-        row: 4
+        row: 7
+      - entity: switch.source_tv_sala
+        image: /local/source.png
+        column: 2
+        row: 7
+      - entity: switch.1_net_sala
+        image: /local/1.png
+        column: 3
+        row: 1
+      - entity: switch.2_net_sala
+        image: /local/2.png
+        column: 4
+        row: 1
+      - entity: switch.3_net_sala
+        image: /local/3.png
+        column: 5
+        row: 1
       - entity: switch.4_net_sala
         image: /local/4.png
-        column: 2
-        row: 4
+        column: 3
+        row: 2
       - entity: switch.5_net_sala
         image: /local/5.png
-        column: 3
-        row: 4
+        column: 4
+        row: 2
       - entity: switch.6_net_sala
         image: /local/6.png
-        column: 4
-        row: 4
-      - entity: switch.mute_tv_sala
-        image: /local/mute.png
-        column: 1
-        row: 5
+        column: 5
+        row: 2
       - entity: switch.7_net_sala
         image: /local/7.png
-        column: 2
-        row: 5
+        column: 3
+        row: 3
       - entity: switch.8_net_sala
         image: /local/8.png
-        column: 3
-        row: 5
+        column: 4
+        row: 3
       - entity: switch.9_net_sala
         image: /local/9.png
-        column: 4
-        row: 5
+        column: 5
+        row: 3
       - entity: switch.0_net_sala
         image: /local/0.png
-        column: 3
-        row: 6        
+        column: 4
+        row: 4    
 input_text.tv_quarto_tiles:
   custom_ui_state_card: state-card-tiles
   config:
-    columns: 4
+    columns: 6
     color: blue
     color_on: "#006437"
     color_off: "#404040"
@@ -314,101 +330,139 @@ input_text.tv_quarto_tiles:
         image: /local/net.png
         column: 1
         row: 1
-      - entity: switch.vol_cima_tv_quarto
-        image: /local/VolMais.png
+      - entity: script.source_net_quarto
+        image: /local/net_source.png
         column: 2
-        row: 1
-      - entity: switch.cima_tv_quarto
-        image: /local/cima.png
-        column: 3
-        row: 1
-      - entity: switch.canal_cima_net_quarto
-        image: /local/CHMais.png
-        column: 4
         row: 1
       - entity: switch.power_tv_quarto
         image: /local/tv.png
         column: 1
         row: 2
+      - entity: script.source_chromecast_quarto
+        image: /local/chromecast.png
+        column: 2
+        row: 2
+      - entity: switch.canal_cima_net_quarto
+        image: /local/CHMais.png
+        column: 1
+        row: 3
+      - entity: switch.canal_baixo_net_quarto
+        image: /local/CHMenos.png
+        column: 2
+        row: 3
+      - entity: switch.vol_cima_tv_quarto
+        image: /local/VolMais.png
+        column: 1
+        row: 4
       - entity: switch.vol_baixo_tv_quarto
         image: /local/VolMenos.png
         column: 2
-        row: 2
-      - entity: switch.baixo_tv_quarto
-        image: /local/baixo.png
-        column: 3
-        row: 2
-      - entity: switch.canal_baixo_net_quarto
-        image: /local/CHMenos.png
-        column: 4
-        row: 2
-      - entity: switch.source_tv_quarto
-        image: /local/source.png
-        column: 1
-        row: 3
-      - entity: switch.1_net_quarto
-        image: /local/1.png
-        column: 2
-        row: 3
-      - entity: switch.2_net_quarto
-        image: /local/2.png
-        column: 3
-        row: 3
-      - entity: switch.3_net_quarto
-        image: /local/3.png
-        column: 4
-        row: 3
-      - entity: switch.ok_tv_quarto
-        image: /local/ok.png
-        column: 1
-        row: 4
-      - entity: switch.4_net_quarto
-        image: /local/4.png
-        column: 2
-        row: 4
-      - entity: switch.5_net_quarto
-        image: /local/5.png
-        column: 3
-        row: 4
-      - entity: switch.6_net_quarto
-        image: /local/6.png
-        column: 4
         row: 4
       - entity: switch.mute_tv_quarto
         image: /local/mute.png
+        column: 3
+        row: 4
+      - entity: switch.cima_tv_quarto
+        image: /local/cima.png
         column: 1
         row: 5
-      - entity: switch.7_net_quarto
-        image: /local/7.png
+      - entity: switch.baixo_tv_quarto
+        image: /local/baixo.png
         column: 2
         row: 5
+      - entity: switch.ok_tv_quarto
+        image: /local/ok.png
+        column: 1
+        row: 6
+      - entity: switch.source_tv_quarto
+        image: /local/source.png
+        column: 2
+        row: 6
+      - entity: switch.1_net_quarto
+        image: /local/1.png
+        column: 3
+        row: 1
+      - entity: switch.2_net_quarto
+        image: /local/2.png
+        column: 4
+        row: 1
+      - entity: switch.3_net_quarto
+        image: /local/3.png
+        column: 5
+        row: 1
+      - entity: switch.4_net_quarto
+        image: /local/4.png
+        column: 3
+        row: 2
+      - entity: switch.5_net_quarto
+        image: /local/5.png
+        column: 4
+        row: 2
+      - entity: switch.6_net_quarto
+        image: /local/6.png
+        column: 5
+        row: 2
+      - entity: switch.7_net_quarto
+        image: /local/7.png
+        column: 3
+        row: 3
       - entity: switch.8_net_quarto
         image: /local/8.png
-        column: 3
-        row: 5
+        column: 4
+        row: 3
       - entity: switch.9_net_quarto
         image: /local/9.png
-        column: 4
-        row: 5
+        column: 5
+        row: 3
       - entity: switch.0_net_quarto
         image: /local/0.png
-        column: 3
-        row: 6
-input_text.dummy_player_mini:
+        column: 4
+        row: 4    
+input_text.churrasqueira_spotify_player:
+  icon: mdi:cast
+  custom_ui_state_card: state-card-mini-media-player
+  config:
+    player: media_player.churrasqueira
+    buttons:
+      - name: Rock
+        icon: mdi:music-note
+        script: script.play_spotify_rock
+      - name: Susse
+        icon: mdi:music-note
+        script: script.play_spotify_susse
+      - name: Isabelle
+        icon: mdi:music-note
+        script: script.play_spotify_isabelle
+input_text.sala_spotify_player:
+  icon: mdi:cast
+  custom_ui_state_card: state-card-mini-media-player
+  config:
+    player: media_player.sala
+    buttons:
+      - name: Rock
+        icon: mdi:music-note
+        script: script.play_spotify_rock
+      - name: Susse
+        icon: mdi:music-note
+        script: script.play_spotify_susse
+      - name: Isabelle
+        icon: mdi:music-note
+        script: script.play_spotify_isabelle
+input_text.quarto_spotify_player:
   icon: mdi:cast
   custom_ui_state_card: state-card-mini-media-player
   config:
     player: media_player.quarto
     buttons:
-      - name: Main
-        icon: mdi:music-note
-        script: script.play_rautemusik_main
       - name: Rock
         icon: mdi:music-note
-        script: script.play_rautemusik_rock
-script.spotify_music:
-  friendly_name: 'Spotify'
-  icon: mdi:play
+        script: script.play_spotify_rock
+      - name: Susse
+        icon: mdi:music-note
+        script: script.play_spotify_susse
+      - name: Isabelle
+        icon: mdi:music-note
+        script: script.play_spotify_isabelle
 switch.portao:
   friendly_name: Portão
   homebridge_visible: true

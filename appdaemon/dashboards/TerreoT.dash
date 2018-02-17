@@ -168,13 +168,42 @@ portao:
   entity: switch.portao
   icon_on: mdi-gate
   icon_off: mdi-gate
-  
+
+source_net_sala:
+    title: Source NET
+    widget_type: switch
+    entity: switch.source_net_sala
+    icon_on: mdi-boombox
+    icon_off: mdi-boombox
+
+source_chromecast_sala:
+    title: Source Chromecast
+    widget_type: switch
+    entity: switch.source_chromecast_sala
+    icon_on: mdi-google-chrome
+    icon_off: mdi-google-chrome
+
+source_dvd_sala:
+    title: Source DVD
+    widget_type: switch
+    entity: switch.source_dvd_sala
+    icon_on: mdi-arrow-up-drop-circle
+    icon_off: mdi-arrow-up-drop-circle
+
+power_dvd_sala:
+    title: Power DVD
+    widget_type: switch
+    entity: switch.power_dvd_sala
+    icon_on: mdi-arrow-up-drop-circle
+    icon_off: mdi-arrow-up-drop-circle
+
 layout:
     - include: TitleT
-    - tablet, cameras,          light.luz_esquerda,         light.luz_central,      light.luz_direita,              switch.display,             switch.garden_light,        input_boolean.beer_fridge,  portao
-    - power_net_sala,           vol_cima_tv_sala,           cima_tv_sala,           canal_cima_net_sala,            media_player.spotify(2x2),                              media_player.sala(2x2)
-    - power_tv_sala,            vol_baixo_tv_sala,          baixo_tv_sala,          canal_baixo_net_sala
-    - source_tv_sala,           1_net_sala,                 2_net_sala,             3_net_sala
-    - ok_tv_sala,               4_net_sala,                 5_net_sala,             6_net_sala
-    - mute_tv_sala,             7_net_sala,                 8_net_sala,             9_net_sala
-    - 0_net_sala
+    - tablet                , cameras                   , light.luz_esquerda    , light.luz_central         , light.luz_direita     , switch.display            , switch.garden_light,        input_boolean.beer_fridge,  portao
+    - power_net_sala        , source_net_sala           , 1_net_sala            , 2_net_sala                , 3_net_sala            , media_player.sala(2x2)    , media_player.spotify(2x2)
+    - power_tv_sala         , source_chromecast_sala    , 4_net_sala            , 5_net_sala                , 6_net_sala
+    - power_dvd_sala        , source_dvd_sala           , 7_net_sala            , 8_net_sala                , 9_net_sala
+    - vol_cima_tv_sala      , vol_baixo_tv_sala         , mute_tv_sala          , 0_net_sala
+    - canal_cima_net_sala   , canal_baixo_net_sala
+    - cima_tv_sala          , baixo_tv_sala
+    - ok_tv_sala            , source_tv_sala

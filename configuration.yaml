@@ -44,10 +44,10 @@ http:
    base_url: https://fris.duckdns.org:8123
    ssl_certificate: /ssl/fullchain.pem
    ssl_key: /ssl/privkey.pem   
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  # base_url: example.duckdns.org:8123
-  # server_host: 2001:1284:f016:a059:ba27:ebff:fe86:e896
-
+   trusted_networks:
+     - 127.0.0.1
+     - 192.168.86.0/24
+   
 # Checks for available updates
 # Note: This component will send some information about your system to
 # the developers to assist with development of Home Assistant.
@@ -80,6 +80,7 @@ logger:
   logs:
     homeassistant.components.camera: debug
     homeassistant.components.image_processing: debug
+    homeassistant.components.media_player: debug
 
 # Weather prediction
 #sensor:
@@ -101,8 +102,8 @@ input_text: !include input_text.yaml
 device_tracker: !include device_tracker.yaml
 input_boolean: !include input_boolean.yaml
 camera: !include camera.yaml
-input_number: !include input_number.yaml
-input_select: !include input_select.yaml
+#input_number: !include input_number.yaml
+#input_select: !include input_select.yaml
 weblink: !include weblink.yaml
 
 ifttt:
@@ -127,11 +128,14 @@ ffmpeg:
 
 python_script:
 
-image_processing:
-  - platform: openalpr_local
-    region: br
-    source:
-    - entity_id: camera.frente
+recorder:
+  purge_keep_days: 5
+
+#image_processing:
+#  - platform: openalpr_local
+#    region: br
+#    source:
+#    - entity_id: camera.frente
 #  - platform: dlib_face_detect
 #    source:
 #      - entity_id: camera.frente

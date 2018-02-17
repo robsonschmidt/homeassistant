@@ -1,9 +1,23 @@
  - platform: cast
+   host: 192.168.86.30
+ - platform: cast
+   host: 192.168.86.86
+ - platform: cast
+   host: 192.168.86.91
+ - platform: cast
+   host: 192.168.86.31
  - platform: spotify
    client_id: !secret spotify_client_id
    client_secret: !secret spotify_client_secret
    aliases:
-     bf339f16c604d47c19ba6d81951bbd9208165c00: 'Echo Dot'
+     a3201c775e2fc7f4bac720b2fdee6974d0d08fab: 'Robson''s Echo Dot'
      1b377ae9dfd7477b8fc26e9b25cb0d61: 'Quarto'
      7a308738954241a9a76cd67e16e5f195: 'Sala'
      442cb8deb2d440d0a351d6b069f4d9b2: 'Churrasqueira'
+     9655b4bbcd738dab6d6457a5ae80d56e105a64db: 'iPhone de Robson'
+# - platform: broadlink
+#   name: Sala TV
+#   host: 192.168.86.37
+#   mac: '34:ea:34:b5:32:c5'
+#   ircodes_ini: 'broadlink_media_codes/samsung.ini'
+#  ping_host: 192.168.1.7

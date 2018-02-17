@@ -60,6 +60,7 @@
   id: '1517266230635'
   trigger:
   - above: '60'
+    below: '70'
     entity_id: sensor.cpu_temperature
     platform: numeric_state
 - action:
@@ -270,6 +271,30 @@
     from: 'off'
     platform: state
     to: 'on'
+  - entity_id: switch.source_chromecast_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.source_net_sala
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: switch.source_dvd_sala
+    from: 'off'
+    platform: state
+    to: 'on'   
+  - entity_id: switch.power_dvd_sala
+    from: 'off'
+    platform: state
+    to: 'on' 
+  - entity_id: script.source_chromecast_quarto
+    from: 'off'
+    platform: state
+    to: 'on' 
+  - entity_id: script.source_net_quarto
+    from: 'off'
+    platform: state
+    to: 'on' 
 - action:
   - data_template:
       message: 'Hassio FRIS: {{ trigger.event }}'
@@ -319,3 +344,15 @@
   - event_data: {}
     event_type: image_processing.found_plate
     platform: event
+- alias: Backup diário as 3:00
+  trigger:
+    platform: time
+    at: '3:00:00'
+  action:
+  - service: hassio.snapshot_full
+    data_template:
+      name: Backup Automático {{ now().strftime('%Y-%m-%d') }}
+  - service: notify.telegram_bot
+    data_template:
+      message: Creating backup named "Automated Backup {{ now().strftime('%Y-%m-%d')
+        }}"

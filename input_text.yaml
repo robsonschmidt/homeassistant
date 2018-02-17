@@ -8,5 +8,12 @@
     name: tv_sala
   tv_quarto_tiles:
     name: tv_quarto    
-  dummy_player_mini:
-    name: Mini
+  sala_spotify_player:
+    name: Sala Spotify Player
+    initial: Spotify TV Sala
+  quarto_spotify_player:
+    name: Quarto Spotify Player
+    initial: Spotify TV Quarto
+  churrasqueira_spotify_player:
+    name: Churrasqueira Spotify Player
+    initial: Spotify Churrasqueira
