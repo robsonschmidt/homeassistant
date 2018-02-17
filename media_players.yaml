@@ -11,9 +11,9 @@
    client_secret: !secret spotify_client_secret
    aliases:
      a3201c775e2fc7f4bac720b2fdee6974d0d08fab: 'Robson''s Echo Dot'
-     1b377ae9dfd7477b8fc26e9b25cb0d61: 'Quarto'
-     7a308738954241a9a76cd67e16e5f195: 'Sala'
-     442cb8deb2d440d0a351d6b069f4d9b2: 'Churrasqueira'
+     0568d8d6a4f06465d3f1cc0921ce5f0f: 'Quarto'
+     7f53f138d32720396167f6e706667479: 'Sala'
+     d8853bdab4078fbd52b122fbd80c83e1: 'Churrasqueira'
      9655b4bbcd738dab6d6457a5ae80d56e105a64db: 'iPhone de Robson'
 # - platform: broadlink
 #   name: Sala TV

@@ -16,20 +16,21 @@ tempo:
   view: yes
   icon: mdi:weather-sunny
   entities:
-   - sensor.pws_relative_humidity
-   - sensor.pws_feelslike_c
-   - sensor.pws_temp_c
-   - group.tempo_hoje
-   - group.tempo_amanha
-   - group.tempo_2dias
-   - group.tempo_3dias
-tempo_hoje:
-  name: 'Previsão de Hoje'
-  entities:
-   - sensor.pws_temp_low_1d_c
-   - sensor.pws_temp_high_1d_c
-   - sensor.pws_precip_1d
-   - sensor.pws_precip_today_metric
+   - group.weather_card_forecast
+#   - sensor.pws_relative_humidity
+#   - sensor.pws_feelslike_c
+#   - sensor.pws_temp_c
+#   - group.tempo_hoje
+#   - group.tempo_amanha
+#   - group.tempo_2dias
+#   - group.tempo_3dias
+#tempo_hoje:
+#  name: 'Previsão de Hoje'
+#  entities:
+#   - sensor.pws_temp_low_1d_c
+#   - sensor.pws_temp_high_1d_c
+#   - sensor.pws_precip_1d
+#   - sensor.pws_precip_today_metric
 churrasqueira:
   name: Churrasqueira
   view: yes
@@ -37,7 +38,7 @@ churrasqueira:
   entities:
   - group.churrasqueira_luz
   - camera.fundos
-  - input_text.churrasqueira_spotify_player
+  - group.churrasqueira_spotify
 churrasqueira_luz:
   name: 'Iluminação'
   entities:
@@ -47,6 +48,10 @@ churrasqueira_luz:
   - light.luz_central
   - light.luz_direita
   - input_boolean.beer_fridge
+churrasqueira_spotify:
+  name: 'Spotify'
+  entities:
+  - input_text.churrasqueira_spotify_player
 quarto:
   name: Quarto
   view: yes
@@ -55,6 +60,10 @@ quarto:
   - media_player.quarto
   - group.quartos_tiles
   - group.tv_quarto_tiles
+  - group.quarto_spotify
+quarto_spotify:
+  name: Spotify
+  entities:
   - input_text.quarto_spotify_player
 sala:
   name: Sala
@@ -64,6 +73,10 @@ sala:
   - media_player.sala
   - camera.interna
   - group.tv_sala_tiles
+  - group.sala_spotify
+sala_spotify:
+  name: Spotify
+  entities:
   - input_text.sala_spotify_player
 camera:
   name: Cameras
@@ -73,27 +86,27 @@ camera:
   - camera.interna
   - camera.frente
   - camera.fundos
-tempo_amanha:
-  name: 'Previsão Amanhã'
-  entities:
-   - sensor.pws_temp_low_2d_c
-   - sensor.pws_temp_high_2d_c
-   - sensor.pws_precip_2d
-   - sensor.pws_precip_2d_mm
-tempo_2dias:
-  name: 'Previsão 2 dias'
-  entities:
-   - sensor.pws_temp_low_3d_c
-   - sensor.pws_temp_high_3d_c
-   - sensor.pws_precip_3d
-   - sensor.pws_precip_3d_mm
-tempo_3dias:
-  name: 'Previsão 3 dias'
-  entities:
-   - sensor.pws_temp_low_4d_c
-   - sensor.pws_temp_high_4d_c
-   - sensor.pws_precip_4d
-   - sensor.pws_precip_4d_mm
+#tempo_amanha:
+#  name: 'Previsão Amanhã'
+#  entities:
+#   - sensor.pws_temp_low_2d_c
+#   - sensor.pws_temp_high_2d_c
+#   - sensor.pws_precip_2d
+#   - sensor.pws_precip_2d_mm
+#tempo_2dias:
+#  name: 'Previsão 2 dias'
+#  entities:
+#   - sensor.pws_temp_low_3d_c
+#   - sensor.pws_temp_high_3d_c
+#   - sensor.pws_precip_3d
+#   - sensor.pws_precip_3d_mm
+#tempo_3dias:
+#  name: 'Previsão 3 dias'
+#  entities:
+#   - sensor.pws_temp_low_4d_c
+#   - sensor.pws_temp_high_4d_c
+#   - sensor.pws_precip_4d
+#   - sensor.pws_precip_4d_mm
 configuracao:
   name: 'Configuração'
   view: yes
@@ -155,3 +168,16 @@ conf_weblinks:
     entities:
       - weblink.terminal
       - weblink.file_editor
+weather_card_forecast:
+  name: Previsão de Tempo
+  view: no
+  icon: mdi:sun
+  entities:
+   - sensor.forecast_0
+   - sensor.forecast_1
+   - sensor.forecast_2
+   - sensor.forecast_3
+   - sensor.forecast_4
+   - sensor.forecast_5
+   - sensor.forecast_6
+   - sensor.forecast_7

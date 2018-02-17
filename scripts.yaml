@@ -4,23 +4,37 @@ beer_fridge:
 play_spotify_rock:
   sequence:
     - service: media_player.play_media
-      data_template:
-        entity_id: media_player.sala
-        media_content_id: 'spotify:user:12131571557:playlist:6T2oElw93xmSRRpyBx1EcA'
+      data:
+        entity_id: media_player.churrasqueira
+        media_content_id: 'spotify:user:spotify:playlist:6T2oElw93xmSRRpyBx1EcA'
+        media_content_type: playlist
+play_spotify_rock_quarto:
+  sequence:
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.quarto
+        media_content_id: 'spotify:user:12175389811:playlist:6T2oElw93xmSRRpyBx1EcA'
+        media_content_type: playlist
+play_spotify_rock_churrasqueira:
+  sequence:
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.churrasqueira
+        media_content_id: 'spotify:user:12175389811:playlist:6T2oElw93xmSRRpyBx1EcA'
         media_content_type: playlist
 play_spotify_susse:
   sequence:
     - service: media_player.play_media
       data_template:
         entity_id: media_player.sala
-        media_content_id: 'spotify:user:12131571557:playlist:7tZCnbcEtYn6Mp17EBAKzP'
+        media_content_id: 'spotify:user:12175389811:playlist:7tZCnbcEtYn6Mp17EBAKzP'
         media_content_type: playlist    
 play_spotify_isabelle:
   sequence:
     - service: media_player.play_media
       data_template:
         entity_id: media_player.sala
-        media_content_id: 'spotify:user:12131571557:playlist:5AY8U80s1JcmuCTk16LbCe'
+        media_content_id: 'spotify:user:12175389811:playlist:5AY8U80s1JcmuCTk16LbCe'
         media_content_type: playlist    
 source_chromecast_quarto:
   sequence:

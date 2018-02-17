@@ -421,6 +421,7 @@ input_text.tv_quarto_tiles:
 input_text.churrasqueira_spotify_player:
   icon: mdi:cast
   custom_ui_state_card: state-card-mini-media-player
+  friendly_name: Spotify Churrasqueira
   config:
     player: media_player.churrasqueira
     buttons:
@@ -436,6 +437,7 @@ input_text.churrasqueira_spotify_player:
 input_text.sala_spotify_player:
   icon: mdi:cast
   custom_ui_state_card: state-card-mini-media-player
+  friendly_name: Spotify Sala
   config:
     player: media_player.sala
     buttons:
@@ -451,6 +453,7 @@ input_text.sala_spotify_player:
 input_text.quarto_spotify_player:
   icon: mdi:cast
   custom_ui_state_card: state-card-mini-media-player
+  friendly_name: Spotify Quarto
   config:
     player: media_player.quarto
     buttons:

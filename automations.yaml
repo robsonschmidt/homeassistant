@@ -282,19 +282,19 @@
   - entity_id: switch.source_dvd_sala
     from: 'off'
     platform: state
-    to: 'on'   
+    to: 'on'
   - entity_id: switch.power_dvd_sala
     from: 'off'
     platform: state
-    to: 'on' 
+    to: 'on'
   - entity_id: script.source_chromecast_quarto
     from: 'off'
     platform: state
-    to: 'on' 
+    to: 'on'
   - entity_id: script.source_net_quarto
     from: 'off'
     platform: state
-    to: 'on' 
+    to: 'on'
 - action:
   - data_template:
       message: 'Hassio FRIS: {{ trigger.event }}'
@@ -319,10 +319,6 @@
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.portao
-    from: 'on'
-    platform: state
-    to: 'off'
 - action:
   - data:
       message: 'Hassio FRIS: Placa encontrada.'
@@ -356,3 +352,20 @@
     data_template:
       message: Creating backup named "Automated Backup {{ now().strftime('%Y-%m-%d')
         }}"
+- id: update_friendly_names
+  alias: Update friendly names
+  initial_state: 'on'
+  trigger:
+  - platform: state
+    entity_id:
+    - sensor.forecast_1
+    - sensor.forecast_2
+    - sensor.forecast_3
+    - sensor.forecast_4
+    - sensor.forecast_5
+    - sensor.forecast_6
+    - sensor.forecast_7
+  action:
+  - service: python_script.dark_sky_friendly_names
+    data_template:
+      entityid: '{{trigger.entity_id}}'

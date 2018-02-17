@@ -1,26 +1,26 @@
-- platform: wunderground
-  api_key: !secret wu_api_key
-  monitored_conditions:
-     - location
-     - feelslike_c
-     - precip_today_metric
-     - temp_c
-     - relative_humidity
-     - temp_high_1d_c
-     - temp_low_1d_c
-     - precip_1d
-     - temp_high_2d_c
-     - temp_low_2d_c
-     - precip_2d
-     - precip_2d_mm
-     - temp_high_3d_c
-     - temp_low_3d_c
-     - precip_3d
-     - precip_3d_mm
-     - temp_high_4d_c
-     - temp_low_4d_c
-     - precip_4d
-     - precip_4d_mm
+#- platform: wunderground
+#  api_key: !secret wu_api_key
+#  monitored_conditions:
+#     - location
+#     - feelslike_c
+#     - precip_today_metric
+#     - temp_c
+#     - relative_humidity
+#     - temp_high_1d_c
+#     - temp_low_1d_c
+#     - precip_1d
+#     - temp_high_2d_c
+#     - temp_low_2d_c
+#     - precip_2d
+#     - precip_2d_mm
+#     - temp_high_3d_c
+#     - temp_low_3d_c
+#     - precip_3d
+#     - precip_3d_mm
+#     - temp_high_4d_c
+#     - temp_low_4d_c
+#     - precip_4d
+#     - precip_4d_mm
 - platform: speedtest
   minute:
      - 0
@@ -86,3 +86,75 @@
   # If errors occur, remove degree symbol below
   unit_of_measurement: "°C"
   value_template: '{{ value | multiply(0.001) | round(1) }}'  
+- platform: darksky
+  api_key: c96f80d478f6e3c254f3d7d1863f7241
+  forecast:
+   - 1
+   - 2
+   - 3
+   - 4
+   - 5
+   - 6
+   - 7
+  monitored_conditions:
+   - summary
+   - precip_probability
+   - wind_speed
+   - cloud_cover
+   - icon
+   - temperature_min
+   - temperature_max
+   - daily_summary
+   - humidity
+- platform: season
+- platform: template
+  sensors:
+    forecast_0:
+      friendly_name: "Hoje"
+      value_template: >
+       Max: {{states.sensor.dark_sky_daily_high_temperature.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity.state|round(0)}}%
+      entity_picture_template: >-
+        {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon.state ~ '.png'}}
+
+    forecast_1:
+      friendly_name: "Amanhã"
+      value_template: >
+       Max: {{states.sensor.dark_sky_daily_high_temperature_1.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature_1.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability_1.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_1.state|round(0)}}%
+      entity_picture_template: >-
+        {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_1.state ~ '.png'}}
+
+    forecast_2:
+      value_template: >
+       Max: {{states.sensor.dark_sky_daily_high_temperature_2.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature_2.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability_2.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_2.state|round(0)}}%
+      entity_picture_template: >-
+        {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_2.state ~ '.png'}}
+
+    forecast_3:
+      value_template: >
+       Max: {{states.sensor.dark_sky_daily_high_temperature_3.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature_3.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability_3.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_3.state|round(0)}}%
+      entity_picture_template: >-
+        {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_3.state ~ '.png'}}
+
+    forecast_4:
+      value_template: >
+       Max: {{states.sensor.dark_sky_daily_high_temperature_4.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature_4.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability_4.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_4.state|round(0)}}%
+      entity_picture_template: >-
+        {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_4.state ~ '.png'}}
+
+    forecast_5:
+      value_template: >
+       Max: {{states.sensor.dark_sky_daily_high_temperature_5.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature_5.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability_5.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_5.state|round(0)}}%
+      entity_picture_template: >-
+        {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_5.state ~ '.png'}}
+
+    forecast_6:
+      value_template: >
+       Max: {{states.sensor.dark_sky_daily_high_temperature_6.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature_6.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability_6.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_6.state|round(0)}}%
+      entity_picture_template: >-
+        {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_6.state ~ '.png'}}
+
+    forecast_7:
+      value_template: >
+       Max: {{states.sensor.dark_sky_daily_high_temperature_7.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature_7.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability_7.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_7.state|round(0)}}%
+      entity_picture_template: >-
+        {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_7.state ~ '.png'}}
