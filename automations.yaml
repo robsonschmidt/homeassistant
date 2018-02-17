@@ -353,19 +353,24 @@
       message: Creating backup named "Automated Backup {{ now().strftime('%Y-%m-%d')
         }}"
 - id: update_friendly_names
-  alias: Update friendly names
+  alias: 'Atualiza Nomes Previsão '
   initial_state: 'on'
   trigger:
-  - platform: state
-    entity_id:
-    - sensor.forecast_1
-    - sensor.forecast_2
-    - sensor.forecast_3
-    - sensor.forecast_4
-    - sensor.forecast_5
-    - sensor.forecast_6
-    - sensor.forecast_7
+  - entity_id: sensor.forecast_1
+    platform: state
+  - entity_id: sensor.forecast_2
+    platform: state
+  - entity_id: sensor.forecast_3
+    platform: state
+  - entity_id: sensor.forecast_4
+    platform: state
+  - entity_id: sensor.forecast_5
+    platform: state
+  - entity_id: sensor.forecast_6
+    platform: state
+  - entity_id: sensor.forecast_7
+    platform: state
   action:
-  - service: python_script.dark_sky_friendly_names
-    data_template:
+  - data_template:
       entityid: '{{trigger.entity_id}}'
+    service: python_script.dark_sky_friendly_names

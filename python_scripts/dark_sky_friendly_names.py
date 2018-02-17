@@ -21,7 +21,7 @@ if triggeredEntity is None:
         forecastdays = int(entity_id.split('_')[1])
         day = datetime.timedelta(days = forecastdays)
         forecastdate = now + day
-        newEntityPicture = state.attributes.get('icon')
+        newEntityPicture = state.attributes.get('entity_picture')
         if today + forecastdays > 6:
             newDay = days[today + forecastdays - 7]
         else:
@@ -29,7 +29,7 @@ if triggeredEntity is None:
         # Set states
         hass.states.set(entity_id, newState, {
             'friendly_name': "{} ({}/{})".format(newDay, forecastdate.day, forecastdate.month),
-            'icon': newEntityPicture,
+            'entity_picture': newEntityPicture,
         })
 else:
     state = hass.states.get(triggeredEntity)
@@ -37,7 +37,7 @@ else:
     forecastdays = int(triggeredEntity.split('_')[1])
     day = datetime.timedelta(days = forecastdays)
     forecastdate = now + day
-    newEntityPicture = state.attributes.get('icon')
+    newEntityPicture = state.attributes.get('entity_picture')
     if today + forecastdays > 6:
         newDay = days[today + forecastdays - 7]
     else:
@@ -45,5 +45,5 @@ else:
     # Set states
     hass.states.set(triggeredEntity, newState, {
         'friendly_name': "{} ({}/{})".format(newDay, forecastdate.day, forecastdate.month),
-        'icon': newEntityPicture,
+        'entity_picture': newEntityPicture,
     })
