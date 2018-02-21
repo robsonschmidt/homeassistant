@@ -158,3 +158,6 @@
        Max: {{states.sensor.dark_sky_daily_high_temperature_7.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature_7.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability_7.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_7.state|round(0)}}%
       entity_picture_template: >-
         {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_7.state ~ '.png'}}
+#- platform: dir_files
+#  dir_paths:
+#    - /backup

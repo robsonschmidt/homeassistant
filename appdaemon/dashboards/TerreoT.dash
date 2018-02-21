@@ -29,14 +29,14 @@ weather:
     units: "&deg;F"
     
 power_net_sala:
-    title: NET
+    title: Power NET
     widget_type: switch
     entity: switch.power_net_sala
     icon_on: mdi-boombox
     icon_off: mdi-boombox
 
 power_tv_sala:
-    title: TV
+    title: Power TV
     widget_type: switch
     entity: switch.power_tv_sala
     icon_on: mdi-television-classic
@@ -205,5 +205,4 @@ layout:
     - power_dvd_sala        , source_dvd_sala           , 7_net_sala            , 8_net_sala                , 9_net_sala
     - vol_cima_tv_sala      , vol_baixo_tv_sala         , mute_tv_sala          , 0_net_sala
     - canal_cima_net_sala   , canal_baixo_net_sala
-    - cima_tv_sala          , baixo_tv_sala
-    - ok_tv_sala            , source_tv_sala
+    - cima_tv_sala          , baixo_tv_sala             , ok_tv_sala            , source_tv_sala

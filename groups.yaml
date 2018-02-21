@@ -2,21 +2,18 @@ default_view:
   view: yes
   icon: mdi:home
   entities:
-  - group.tempo
-  - group.churrasqueira
-  - group.quarto
-  - group.sala
-  - group.camera
-  - group.configuracao
-  - group.fundos_tiles
-  - group.quartos_tiles
+  - device_tracker.iphonederobsonlan
+  - device_tracker.iphonedeflavialan
+  - group.weather_card_forecast
+  - camera.frente
+  - camera.interna
+  - camera.fundos
   name: 'Tela Inicial'
-tempo:
-  name: Temperatura
-  view: yes
-  icon: mdi:weather-sunny
-  entities:
-   - group.weather_card_forecast
+#tempo:
+#  name: Temperatura
+#  view: yes
+#  icon: mdi:weather-sunny
+#  entities:
 #   - sensor.pws_relative_humidity
 #   - sensor.pws_feelslike_c
 #   - sensor.pws_temp_c
@@ -58,8 +55,8 @@ quarto:
   icon: mdi:hotel
   entities:
   - media_player.quarto
-  - group.quartos_tiles
   - group.tv_quarto_tiles
+  - group.quartos_tiles
   - group.quarto_spotify
 quarto_spotify:
   name: Spotify

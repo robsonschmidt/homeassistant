@@ -510,3 +510,65 @@ sensor.google_wifi_status:
   friendly_name: Status 
 sensor.google_wifi_uptime:
   friendly_name: Tempo Ativo
+device_tracker.iphonedeflavialan:
+  friendly_name: Flavia
+device_tracker.iphonederobsonlan:
+  friendly_name: Robson
+
+# Controle Quarto
+script.source_chromecast_quarto:
+  homebridge_visible: true
+  homebridge_name: Source Chromecast Quarto
+script.source_net_quarto:
+  homebridge_visible: true
+  homebridge_name: Source Net Quarto
+script._tv_quarto_globo:
+  homebridge_visible: true
+  homebridge_name: TV Quarto Globo
+script._tv_quarto_discovery:
+  homebridge_visible: true
+  homebridge_name: TV Quarto Discovery
+script.tv_quarto_sbt:
+  homebridge_visible: true
+  homebridge_name: TV Quarto SBT
+script.liga_tv_quarto_globo:
+  homebridge_visible: true
+  homebridge_name: Liga TV Quarto Globo
+script.liga_tv_quarto_discovery:
+  homebridge_visible: true
+  homebridge_name: Liga TV Quarto Discovery
+script.liga_tv_quarto_sbt:
+  homebridge_visible: true
+  homebridge_name: Liga TV Quarto SBT
+
+# Controle Sala
+script.tv_net_sala:
+  homebridge_visible: true
+  homebridge_name: TV Net Sala
+script.tv_sala_discovery:
+  homebridge_visible: true
+  homebridge_name: TV Sala Discovery
+script.tv_sala_globo:
+  homebridge_visible: true
+  homebridge_name: TV Sala Globo
+script.tv_sala_sbt:
+  homebridge_visible: true
+  homebridge_name: TV Sala SBT
+script.liga_tv_sala_discovery:
+  homebridge_visible: true
+  homebridge_name: Liga TV Sala Discovery
+script.liga_tv_sala_globo:
+  homebridge_visible: true
+  homebridge_name: Liga TV Sala Globo
+script.liga_tv_sala_sbt:
+  homebridge_visible: true
+  homebridge_name: Liga TV Sala SBT
+switch.source_chromecast_sala:
+  homebridge_visible: true
+  homebridge_name: Source Chromecast Sala
+script.liga_chromecast_sala:
+  homebridge_visible: true
+  homebridge_name: Liga Chromecast Sala
+switch.source_net_sala:
+  homebridge_visible: true
+  homebridge_name: Source Net Sala

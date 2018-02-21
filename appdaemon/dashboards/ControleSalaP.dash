@@ -193,7 +193,7 @@ power_dvd_sala:
     icon_off: mdi-arrow-up-drop-circle
 
 layout:
-    - phone, terreo
+    - phone                 , terreo
     - power_net_sala        , power_tv_sala             , power_dvd_sala
     - source_net_sala       , source_chromecast_sala    , source_dvd_sala
     - mute_tv_sala          , vol_baixo_tv_sala         , vol_cima_tv_sala

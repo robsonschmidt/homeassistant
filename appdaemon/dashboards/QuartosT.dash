@@ -18,14 +18,14 @@ tablet:
     dashboard: Tablet
 
 power_net_quarto:
-    title: NET
+    title: Power NET
     widget_type: switch
     entity: switch.power_net_quarto
     icon_on: mdi-boombox
     icon_off: mdi-boombox
 
 power_tv_quarto:
-    title: TV
+    title: Power TV
     widget_type: switch
     entity: switch.power_tv_quarto
     icon_on: mdi-television-classic
@@ -152,14 +152,14 @@ source_tv_quarto:
     icon_off: mdi-source-branch
     
 source_chromecast_quarto:
-    title: Chromecast
+    title: Source Chromecast
     widget_type: script
     entity: script.source_chromecast_quarto
     icon_on: mdi-google-chrome
     icon_off: mdi-google-chrome
 
 source_net_quarto:
-    title: Net
+    title: Source NET
     widget_type: script
     entity: script.source_net_quarto
     icon_on: mdi-boombox
@@ -172,5 +172,4 @@ layout:
     - power_tv_quarto           , source_chromecast_quarto      , 4_net_quarto              , 5_net_quarto                , 6_net_quarto
     - canal_cima_net_quarto     , canal_baixo_net_quarto        , 7_net_quarto              , 8_net_quarto                , 9_net_quarto
     - vol_cima_tv_quarto        , vol_baixo_tv_quarto           , mute_tv_quarto            , 0_net_quarto
-    - cima_tv_quarto            , baixo_tv_quarto
-    - ok_tv_quarto              , source_tv_quarto
+    - cima_tv_quarto            , baixo_tv_quarto               , ok_tv_quarto              , source_tv_quarto

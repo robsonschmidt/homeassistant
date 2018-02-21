@@ -52,8 +52,9 @@
     to: 'off'
 - action:
   - data:
-      message: 'Hassio FRIS: Temp. CPU Alta - {{ states(''sensor.cpu_temperature'')
-        }} ºC'
+      message: 'Temp. CPU Alta - {{ states(''sensor.cpu_temperature'') }} ºC
+
+        '
     service: notify.telegram_bot
   alias: CPU Alta
   condition: []
@@ -65,8 +66,9 @@
     platform: numeric_state
 - action:
   - data:
-      message: 'Hassio FRIS: Temp. CPU Multo Alta - {{ states(''sensor.cpu_temperature'')
-        }} ºC'
+      message: 'Temp. CPU Multo Alta - {{ states(''sensor.cpu_temperature) }} ºC
+
+        '
     service: notify.telegram_bot
   alias: CPU Muito Alta
   condition: []
@@ -77,7 +79,9 @@
 - action:
   - alias: ''
     data_template:
-      entity: '{{ trigger.entity_id }}'
+      entity: '{{ trigger.entity_id }}
+
+        '
     service: python_script.set_state
   alias: Broadlink Always OFF
   condition: []
@@ -297,8 +301,9 @@
     to: 'on'
 - action:
   - data_template:
-      message: 'Hassio FRIS: {{ trigger.event }}'
-    service: telegram_bot.send_message
+      message: '{{ trigger.entity_id 
+         }}'
+    service: notify.telegram_bot
   alias: FRIS Start/Stop
   condition: []
   id: '1517794305968'
@@ -310,7 +315,7 @@
 - action:
   - data:
       message: Portão acionado.
-    service: telegram_bot.send_message
+    service: notify.telegram_bot
   alias: Portão ON/OFF
   condition: []
   id: '1517794695771'
@@ -321,7 +326,7 @@
     to: 'on'
 - action:
   - data:
-      message: 'Hassio FRIS: Placa encontrada.'
+      message: Placa encontrada.
     service: notify.telegram_bot
   alias: Placa carro
   condition: []
@@ -340,22 +345,12 @@
   - event_data: {}
     event_type: image_processing.found_plate
     platform: event
-- alias: Backup diário as 3:00
-  trigger:
-    platform: time
-    at: '3:00:00'
-  action:
-  - service: hassio.snapshot_full
-    data_template:
-      name: Backup Automático {{ now().strftime('%Y-%m-%d') }}
-  - service: notify.telegram_bot
-    data_template:
-      message: Creating backup named "Automated Backup {{ now().strftime('%Y-%m-%d')
-        }}"
 - id: update_friendly_names
   alias: 'Atualiza Nomes Previsão '
   initial_state: 'on'
   trigger:
+  - at: 0:05:00
+    platform: time
   - entity_id: sensor.forecast_1
     platform: state
   - entity_id: sensor.forecast_2
@@ -374,3 +369,32 @@
   - data_template:
       entityid: '{{trigger.entity_id}}'
     service: python_script.dark_sky_friendly_names
+- alias: Backup diário as 3:00
+  trigger:
+    platform: time
+    at: '3:00:00'
+  action:
+  - service: hassio.snapshot_full
+    data_template:
+      name: FRIS {{ now().strftime('%Y-%m-%d') }}
+  - service: notify.telegram_bot
+    data_template:
+      message: Criando Snapshot "FRIS {{ now().strftime('%Y-%m-%d')
+        }}"
+  - delay: 02:00:00
+  - data:
+      entity_id: switch.del_snap_files
+    service: switch.toggle
+  - delay: 00:02:00
+  - data:
+      addon: 7be23ff5_dropbox_sync
+    service: hassio.addon_restart
+- alias: Novo arquivo backup
+  trigger:
+    platform: state
+    entity_id: sensor.count_snap_files
+  action:
+  - service: notify.telegram_bot
+    data_template:
+      message: Número de arquivos de backups {{ states.sensor.count_snap_files.state 
+        }}
