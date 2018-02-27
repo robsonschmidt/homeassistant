@@ -1,0 +1,6 @@
+sensor.iphone_de_robson_battery_state:
+  platform: ios
+  unique_id: state_iphone_de_robson
+sensor.iphone_de_robson_battery_level:
+  platform: ios
+  unique_id: level_iphone_de_robson

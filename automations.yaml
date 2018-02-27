@@ -77,7 +77,7 @@
     entity_id: sensor.cpu_temperature
     platform: numeric_state
 - action:
-  - alias: ''
+  - alias: 'Broadlink Always OFF'
     data_template:
       entity: '{{ trigger.entity_id }}
 

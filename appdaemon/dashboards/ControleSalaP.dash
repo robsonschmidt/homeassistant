@@ -31,14 +31,16 @@ terreo:
     dashboard: TerreoP
 
 power_net_sala:
-    title: Power NET
+    title: Liga  
+    title2: NET
     widget_type: switch
     entity: switch.power_net_sala
-    icon_on: mdi-boombox
-    icon_off: mdi-boombox
+    icon_on: mdi-router-wireless
+    icon_off: mdi-router-wireless
 
 power_tv_sala:
-    title: Power TV
+    title: Liga  
+    title2: TV
     widget_type: switch
     entity: switch.power_tv_sala
     icon_on: mdi-television-classic
@@ -165,35 +167,46 @@ source_tv_sala:
     icon_off: mdi-source-branch
     
 source_net_sala:
-    title: Source NET
+    title: Source 
+    title2: NET
     widget_type: switch
     entity: switch.source_net_sala
-    icon_on: mdi-boombox
-    icon_off: mdi-boombox
+    icon_on: mdi-router-wireless
+    icon_off: mdi-router-wireless
 
 source_chromecast_sala:
-    title: Source Chromecast
+    title: Source 
+    title2: Chromecast
     widget_type: switch
     entity: switch.source_chromecast_sala
     icon_on: mdi-google-chrome
     icon_off: mdi-google-chrome
 
 source_dvd_sala:
-    title: Source DVD
+    title: Source 
+    title2: DVD
     widget_type: switch
     entity: switch.source_dvd_sala
-    icon_on: mdi-arrow-up-drop-circle
-    icon_off: mdi-arrow-up-drop-circle
+    icon_on: mdi-disk
+    icon_off: mdi-disk
 
 power_dvd_sala:
-    title: Power DVD
+    title: Liga 
+    title2: DVD
     widget_type: switch
     entity: switch.power_dvd_sala
-    icon_on: mdi-arrow-up-drop-circle
-    icon_off: mdi-arrow-up-drop-circle
+    icon_on: mdi-disk
+    icon_off: mdi-disk
 
+controle_sala_atalho:
+    title: Atalhos
+    icon_inactive: mdi-arrange-send-to-back
+    widget_type: navigate
+    widget_style: "background: #006437"
+    dashboard: ControleSalaAtalhosP
+    
 layout:
-    - phone                 , terreo
+    - phone                 , terreo                    , controle_sala_atalho
     - power_net_sala        , power_tv_sala             , power_dvd_sala
     - source_net_sala       , source_chromecast_sala    , source_dvd_sala
     - mute_tv_sala          , vol_baixo_tv_sala         , vol_cima_tv_sala

@@ -18,14 +18,16 @@ tablet:
     dashboard: Tablet
 
 power_net_quarto:
-    title: Power NET
+    title: Liga  
+    title2: NET
     widget_type: switch
     entity: switch.power_net_quarto
-    icon_on: mdi-boombox
-    icon_off: mdi-boombox
+    icon_on: mdi-router-wireless
+    icon_off: mdi-router-wireless
 
 power_tv_quarto:
-    title: Power TV
+    title: Liga  
+    title2: TV
     widget_type: switch
     entity: switch.power_tv_quarto
     icon_on: mdi-television-classic
@@ -152,18 +154,20 @@ source_tv_quarto:
     icon_off: mdi-source-branch
     
 source_chromecast_quarto:
-    title: Source Chromecast
+    title: Source  
+    title2: Chromecast
     widget_type: script
     entity: script.source_chromecast_quarto
     icon_on: mdi-google-chrome
     icon_off: mdi-google-chrome
 
 source_net_quarto:
-    title: Source NET
+    title: Source  
+    title2: NET
     widget_type: script
     entity: script.source_net_quarto
-    icon_on: mdi-boombox
-    icon_off: mdi-boombox
+    icon_on: mdi-router-wireless
+    icon_off: mdi-router-wireless
 
 layout:
     - include: TitleT

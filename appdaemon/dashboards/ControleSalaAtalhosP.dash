@@ -1,0 +1,110 @@
+#
+# Main arguments, all optional
+#
+title: FRIS - Controle Sala
+widget_dimensions: [120, 110]
+widget_margins: [3, 3]
+columns: 3
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+phone:
+    title: FRIS
+    icon_inactive: mdi-home-assistant
+    widget_type: navigate
+    widget_style: "background: #006437"
+    dashboard: Phone
+
+terreo:
+    title: Térreo
+    icon_inactive: mdi-home
+    widget_type: navigate
+    widget_style: "background: #006437"
+    dashboard: TerreoP
+
+controle:
+    title: Controle
+    icon_inactive: mdi-remote
+    widget_style: "background: #006437"
+    widget_type: navigate
+    dashboard: ControleSalaP
+    
+power_globo:
+    title: Liga 
+    title2: Globo
+    widget_type: script
+    entity: script.liga_tv_sala_globo
+    icon_on: mdi-power
+    icon_off: mdi-power
+    
+power_discovery:
+    title: Liga 
+    title2: Discovery
+    widget_type: script
+    entity: script.liga_tv_sala_discovery
+    icon_on: mdi-power
+    icon_off: mdi-power
+
+power_sbt:
+    title: Liga 
+    title2: SBT
+    widget_type: script
+    entity: script.liga_tv_sala_sbt
+    icon_on: mdi-power
+    icon_off: mdi-power
+
+channel_globo:
+    title: Canal 
+    title2: Globo
+    widget_type: script
+    entity: script.tv_sala_globo
+    icon_on: mdi-cursor-pointer
+    icon_off: mdi-cursor-pointer
+    
+channel_discovery:
+    title: Canal 
+    title2: Discovery
+    widget_type: script
+    entity: script.tv_sala_discovery
+    icon_on: mdi-cursor-pointer
+    icon_off: mdi-cursor-pointer
+
+channel_sbt:
+    title: Canal 
+    title2: SBT
+    widget_type: script
+    entity: script.tv_sala_sbt
+    icon_on: mdi-cursor-pointer
+    icon_off: mdi-cursor-pointer
+
+liga_tv_net:
+    title: Liga 
+    title2: TV e NET
+    widget_type: script
+    entity: script.liga_tv_net_sala
+    icon_on: mdi-power
+    icon_off: mdi-power
+
+source_net:
+    title: Source
+    title2: NET
+    widget_type: switch
+    entity: switch.source_net_sala
+    icon_on: mdi-router-wireless
+    icon_off: mdi-router-wireless
+
+source_chromecast:
+    title: Source 
+    title2: Chromecast
+    widget_type: switch
+    entity: switch.source_chromecast_sala
+    icon_on: mdi-google-chrome
+    icon_off: mdi-google-chrome
+    
+layout:
+    - phone             , terreo        , controle
+    - liga_tv_net       , source_net    , source_chromecast
+    - power_discovery   , power_globo   , power_sbt
+    - channel_discovery , channel_globo , channel_sbt

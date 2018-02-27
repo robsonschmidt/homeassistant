@@ -25,7 +25,7 @@ phone:
 
 controle:
     title: Controle
-    icon_inactive: mdi-television-classic
+    icon_inactive: mdi-remote
     widget_type: navigate
     widget_style: "background: #006437"
     dashboard: ControleQuartoP

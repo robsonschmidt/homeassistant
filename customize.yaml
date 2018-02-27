@@ -1,3 +1,4 @@
+# Fundos
 input_boolean.beer_fridge:
   icon: mdi:glass-mug
   show_last_changed: true
@@ -78,82 +79,15 @@ light.luz_direita:
     blacklist_states: 0
   homebridge_visible: true
   homebridge_name: Luz Direita
+
+# Quartos
 input_boolean.hall_light:
   icon: mdi:lightbulb-outline
   show_last_changed: true
   homebridge_visible: true
   homebridge_name: Luz Corredor
-sensor.pws_feelslike_c:
-  friendly_name: Sensação Térmica
-  state_card_mode: badges
-  ha-label-badge-color: green
-  label-badge-background-color: black
-  ha-label-badge-size: 1
-  label-badge-text-color: blue
-sensor.pws_temp_high_1d_c:
-  friendly_name: Máxima
-  state_card_mode: badges
-  theme: theme.green
-sensor.pws_temp_high_2d_c:
-  friendly_name: Máxima
-  state_card_mode: badges
-sensor.pws_temp_high_3d_c:
-  friendly_name: Máxima
-  state_card_mode: badges
-sensor.pws_temp_high_4d_c:
-  friendly_name: Máxima
-  state_card_mode: badges
-sensor.pws_location:
-  friendly_name: Localização
-  state_card_mode: badges
-sensor.pws_temp_low_1d_c:
-  friendly_name: Mínima
-  state_card_mode: badges
-sensor.pws_temp_low_2d_c:
-  friendly_name: Mínima
-  state_card_mode: badges
-sensor.pws_temp_low_3d_c:
-  friendly_name: Mínima
-  state_card_mode: badges
-sensor.pws_temp_low_4d_c:
-  friendly_name: Mínima
-  state_card_mode: badges
-sensor.pws_precip_1d:
-  friendly_name: Prob. de Chuva
-  state_card_mode: badges
-sensor.pws_precip_4d:
-  friendly_name: Prob. de Chuva
-  state_card_mode: badges
-sensor.pws_precip_3d:
-  friendly_name: Prob. de Chuva
-  state_card_mode: badges
-sensor.pws_precip_2d:
-  friendly_name: Prob. de Chuva
-  state_card_mode: badges
-sensor.pws_precip_2d_mm:
-  friendly_name: Int. de Chuva
-  state_card_mode: badges
-sensor.pws_precip_3d_mm:
-  friendly_name: Int. de Chuva
-  state_card_mode: badges
-sensor.pws_precip_4d_mm:
-  friendly_name: Int. de Chuva
-  state_card_mode: badges
-sensor.pws_precip_today_metric:
-  friendly_name: Int. de Chuva
-  state_card_mode: badges
-  homebridge_visible: true
-  homebridge_name: Precipitção de Chuva
-sensor.pws_relative_humidity:
-  friendly_name: Humidade Relativa
-  state_card_mode: badges
-  homebridge_visible: true
-  homebridge_name: Humidade Relativa
-sensor.pws_temp_c:
-  friendly_name: Temp.
-  state_card_mode: badges
-  homebridge_visible: true
-  homebridge_name: Temperatura
+
+# State Cards Fundos
 input_text.fundos_tiles:
   custom_ui_state_card: state-card-tiles
   config:
@@ -192,6 +126,7 @@ input_text.fundos_tiles:
         image: /local/beer.png
         column: 3
         row: 2
+# State Cards Quartos
 input_text.quartos_tiles:
   custom_ui_state_card: state-card-tiles
   config:
@@ -206,6 +141,8 @@ input_text.quartos_tiles:
         image: /local/hall.png
         column: 1
         row: 1
+
+# State Cards TV Sala
 input_text.tv_sala_tiles:
   custom_ui_state_card: state-card-tiles
   config:
@@ -316,6 +253,8 @@ input_text.tv_sala_tiles:
         image: /local/0.png
         column: 4
         row: 4    
+        
+# State Cards TV Quarto
 input_text.tv_quarto_tiles:
   custom_ui_state_card: state-card-tiles
   config:
@@ -418,6 +357,8 @@ input_text.tv_quarto_tiles:
         image: /local/0.png
         column: 4
         row: 4    
+
+# State Cards Spotify
 input_text.churrasqueira_spotify_player:
   icon: mdi:cast
   custom_ui_state_card: state-card-mini-media-player
@@ -466,22 +407,34 @@ input_text.quarto_spotify_player:
       - name: Isabelle
         icon: mdi:music-note
         script: script.play_spotify_isabelle
+        
+# Portão
 switch.portao:
   friendly_name: Portão
   homebridge_visible: true
   homebridge_name: Portão
-switch.power_net_sala:
-  friendly_name: NET
-  homebridge_visible: true
-  homebridge_name: Net Sala
-switch.power_tv_sala:
-  friendly_name: TV
-  homebridge_visible: true
-  homebridge_name: TV Sala
-switch.mute_tv_sala:
-  friendly_name: Mute
-  homebridge_visible: true
-  homebridge_name: Mute TV Sala
+
+# Google Wifi
+sensor.google_wifi_current_version:
+  friendly_name: Versão Atual 
+sensor.google_wifi_last_restart:
+  friendly_name: Ultimo Reinício 
+sensor.google_wifi_local_ip:
+  friendly_name: IP Local 
+sensor.google_wifi_new_version:
+  friendly_name: Nova Versão 
+sensor.google_wifi_status:
+  friendly_name: Status 
+sensor.google_wifi_uptime:
+  friendly_name: Tempo Ativo
+  
+# Device Tracker
+device_tracker.iphonedeflavialan:
+  friendly_name: Flavia
+device_tracker.iphonederobsonlan:
+  friendly_name: Robson
+
+# Controle Quarto
 switch.power_net_quarto:
   friendly_name: NET
   homebridge_visible: true
@@ -496,26 +449,6 @@ switch.mute_tv_quarto:
   homebridge_name: Mute TV Quarto
 switch.ok_tv_quarto:
   friendly_name: OK
-switch.ok_tv_sala:
-  friendly_name: OK
-sensor.google_wifi_current_version:
-  friendly_name: Versão Atual 
-sensor.google_wifi_last_restart:
-  friendly_name: Ultimo Reinício 
-sensor.google_wifi_local_ip:
-  friendly_name: IP Local 
-sensor.google_wifi_new_version:
-  friendly_name: Nova Versão 
-sensor.google_wifi_status:
-  friendly_name: Status 
-sensor.google_wifi_uptime:
-  friendly_name: Tempo Ativo
-device_tracker.iphonedeflavialan:
-  friendly_name: Flavia
-device_tracker.iphonederobsonlan:
-  friendly_name: Robson
-
-# Controle Quarto
 script.source_chromecast_quarto:
   homebridge_visible: true
   homebridge_name: Source Chromecast Quarto
@@ -542,6 +475,20 @@ script.liga_tv_quarto_sbt:
   homebridge_name: Liga TV Quarto SBT
 
 # Controle Sala
+switch.power_net_sala:
+  friendly_name: NET
+  homebridge_visible: true
+  homebridge_name: Net Sala
+switch.power_tv_sala:
+  friendly_name: TV
+  homebridge_visible: true
+  homebridge_name: TV Sala
+switch.mute_tv_sala:
+  friendly_name: Mute
+  homebridge_visible: true
+  homebridge_name: Mute TV Sala
+switch.ok_tv_sala:
+  friendly_name: OK
 script.tv_net_sala:
   homebridge_visible: true
   homebridge_name: TV Net Sala
@@ -560,6 +507,7 @@ script.liga_tv_sala_discovery:
 script.liga_tv_sala_globo:
   homebridge_visible: true
   homebridge_name: Liga TV Sala Globo
+  entity_picture: /local/power_globo.png
 script.liga_tv_sala_sbt:
   homebridge_visible: true
   homebridge_name: Liga TV Sala SBT

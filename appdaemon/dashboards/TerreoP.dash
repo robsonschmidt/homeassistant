@@ -19,7 +19,7 @@ phone:
 
 controle:
     title: Controle
-    icon_inactive: mdi-television-classic
+    icon_inactive: mdi-remote
     widget_style: "background: #006437"
     widget_type: navigate
     dashboard: ControleSalaP

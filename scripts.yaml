@@ -82,12 +82,12 @@ tv_quarto_globo:
       entity_id: switch.5_net_quarto
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      seconds: 1
   - data:
       entity_id: switch.1_net_quarto
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      seconds: 1
   - data:
       entity_id: switch.2_net_quarto
     service: switch.turn_on
@@ -98,12 +98,12 @@ tv_quarto_discovery:
       entity_id: switch.6_net_quarto
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      seconds: 1
   - data:
       entity_id: switch.0_net_quarto
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      seconds: 1
   - data:
       entity_id: switch.0_net_quarto
     service: switch.turn_on
@@ -114,12 +114,12 @@ tv_quarto_sbt:
       entity_id: switch.5_net_quarto
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      seconds: 1
   - data:
       entity_id: switch.0_net_quarto
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      seconds: 1
   - data:
       entity_id: switch.4_net_quarto
     service: switch.turn_on
@@ -130,7 +130,7 @@ liga_tv_quarto_globo:
       entity_id: script.liga_tv_net_quarto
     service: script.turn_on
   - delay:
-      seconds: 60
+      seconds: 80
   - data:
       entity_id: script.tv_quarto_globo
     service: script.turn_on
@@ -141,7 +141,7 @@ liga_tv_quarto_discovery:
       entity_id: script.liga_tv_net_quarto
     service: script.turn_on
   - delay:
-      seconds: 60
+      seconds: 80
   - data:
       entity_id: script.tv_quarto_discovery
     service: script.turn_on
@@ -152,7 +152,7 @@ liga_tv_quarto_sbt:
       entity_id: script.liga_tv_net_quarto
     service: script.turn_on
   - delay:
-      seconds: 60
+      seconds: 80
   - data:
       entity_id: script.tv_quarto_sbt
     service: script.turn_on
@@ -173,16 +173,23 @@ tv_sala_discovery:
   - data:
       entity_id: switch.source_net_sala
     service: switch.turn_on
+  - delay:
+      seconds: 1
+  - data:
+      entity_id: switch.sair_net_sala
+    service: switch.turn_on
+  - delay:
+      seconds: 1
   - data:
       entity_id: switch.6_net_sala
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      seconds: 1
   - data:
       entity_id: switch.0_net_sala
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      seconds: 1
   - data:
       entity_id: switch.0_net_sala
     service: switch.turn_on
@@ -192,16 +199,23 @@ tv_sala_globo:
   - data:
       entity_id: switch.source_net_sala
     service: switch.turn_on
+  - delay:
+      seconds: 1
+  - data:
+      entity_id: switch.sair_net_sala
+    service: switch.turn_on
+  - delay:
+      seconds: 1
   - data:
       entity_id: switch.5_net_sala
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      seconds: 1
   - data:
       entity_id: switch.1_net_sala
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      seconds: 1
   - data:
       entity_id: switch.2_net_sala
     service: switch.turn_on
@@ -211,16 +225,23 @@ tv_sala_sbt:
   - data:
       entity_id: switch.source_net_sala
     service: switch.turn_on
+  - delay:
+      seconds: 1
+  - data:
+      entity_id: switch.sair_net_sala
+    service: switch.turn_on
+  - delay:
+      seconds: 1
   - data:
       entity_id: switch.5_net_sala
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      seconds: 1
   - data:
       entity_id: switch.0_net_sala
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      seconds: 1
   - data:
       entity_id: switch.4_net_sala
     service: switch.turn_on
@@ -231,7 +252,7 @@ liga_tv_sala_discovery:
       entity_id: script.liga_tv_net_sala
     service: script.turn_on
   - delay:
-      seconds: 40
+      seconds: 80
   - data:
       entity_id: script.tv_sala_discovery
     service: script.turn_on
@@ -242,7 +263,7 @@ liga_tv_sala_globo:
       entity_id: script.liga_tv_net_sala
     service: script.turn_on
   - delay:
-      seconds: 60
+      seconds: 80
   - data:
       entity_id: script.tv_sala_globo
     service: script.turn_on
@@ -253,7 +274,7 @@ liga_tv_sala_sbt:
       entity_id: script.liga_tv_net_sala
     service: script.turn_on
   - delay:
-      seconds: 60
+      seconds: 80
   - data:
       entity_id: script.tv_sala_sbt
     service: script.turn_on

@@ -55,10 +55,18 @@ controle_sala:
     widget_type: navigate
     widget_style: "background: #006437"
     dashboard: ControleSalaP
+    
+escola_isabelle:
+    title: Escola Isabelle
+    widget_type: javascript
+    widget_style: "background: #006437"
+    icon_active: mdi-gate
+    icon_inactive: mdi-gate
+    command: "window.open();"
 
 layout:
     - include: TitleP
     -
     - terreo,                       controle_sala,                  cameras
     - quartos,                      controle_quarto
-    - portao
+    - portao,                       escola_isabelle

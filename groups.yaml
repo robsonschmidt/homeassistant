@@ -58,6 +58,7 @@ quarto:
   - group.tv_quarto_tiles
   - group.quartos_tiles
   - group.quarto_spotify
+  - script.liga_tv_sala_globo
 quarto_spotify:
   name: Spotify
   entities:
