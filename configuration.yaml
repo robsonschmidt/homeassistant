@@ -86,6 +86,7 @@ logger:
   logs:
     homeassistant.components.camera: debug
     homeassistant.components.image_processing: debug
+    homeassistant.components.sensor: debug
 
 # Weather prediction
 #sensor:
@@ -94,6 +95,10 @@ logger:
 # Text to speech
 tts:
   - platform: google
+    cache: true
+    cache_dir: /config/tts
+    time_memory: 600
+#    language: 'pt-BR'
 
 group: !include groups.yaml
 automation: !include automations.yaml
@@ -149,6 +154,11 @@ zone:
     icon: mdi:briefcase
     
 mqtt:
+
+alexa:
+
+shell_command:
+  renomear_flashbriefing: for FILENAME in \config\tts\*; do mv $FILENAME FlashBriefing.mp3; done
 
 #image_processing:
 #  - platform: openalpr_local

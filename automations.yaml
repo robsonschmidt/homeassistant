@@ -300,26 +300,6 @@
     platform: state
     to: 'on'
 - action:
-  - data_template:
-      message: 'FRIS iniciando.'
-    service: telegram_bot.send_message
-  alias: FRIS Start
-  condition: []
-  id: '1517794305968'
-  trigger:
-  - event: start
-    platform: homeassistant
-- action:
-  - data_template:
-      message: 'FRIS desligando.'
-    service: telegram_bot.send_message
-  alias: FRIS Stop
-  condition: []
-  id: '1517794305969'
-  trigger:
-  - event: shutdown
-    platform: homeassistant
-- action:
   - data:
       message: Portão acionado.
     service: notify.telegram_bot
@@ -352,6 +332,29 @@
   - event_data: {}
     event_type: image_processing.found_plate
     platform: event
+
+# Inicio e Parada do FRIS
+- alias: 'FRIS Start'
+  action:
+  - data_template:
+      message: '*FRIS Automação* iniciado.'
+    service: telegram_bot.send_message
+  condition: []
+  id: '1517794305968'
+  trigger:
+  - event: start
+    platform: homeassistant
+- alias: 'FRIS Stop'
+  action:
+  - data_template:
+      message: '*FRIS Automação* desligado.'
+    service: telegram_bot.send_message
+
+  condition: []
+  id: '1517794305969'
+  trigger:
+  - event: shutdown
+    platform: homeassistant
 
 # Previsão de tempo 7 dias
 - alias: 'Atualiza Nomes Previsão'
@@ -508,7 +511,7 @@
   - platform: event
     event_type: telegram_command
     event_data:
-      command: '/fris'
+      command: '/inicio'
   - platform: event
     event_type: telegram_callback
     event_data:
@@ -516,7 +519,7 @@
   action:
     - service: notify.telegram_bot
       data:
-        message: 'Bem vindo automação residencial *FRIS*. Selecione um dos menus abaixo:'
+        message: 'Bem vindo automação residencial *FRIS Automação*. Selecione um dos menus abaixo:'
         data:
           inline_keyboard:
             - 'Térreo:/terreo, Controle Sala:/controlesala'
@@ -715,20 +718,21 @@
   - platform: event
     event_type: telegram_command
     event_data:
-      command: '/saindo'
+      command: '/sair_casa'
   - platform: event
     event_type: telegram_callback
     event_data:
-      data: '/saindo'
+      data: '/sair_casa'
   action:
     - service: notify.telegram_bot
-      data:
-        message: 'Olá *Robson*, você está saindo de casa, seguem seus atalhos:'
+      data_template:
+        message: 'Olá *Robson*, você está saindo de casa, seguem seus atalhos :'
         data:
           inline_keyboard:
             - 'Portão:/portao'
-            - 'Waze BRF:/wazebrf, Waze Sogro:/wazesogro, Waze Pai:/wazepai'
-            - 'Waze Escola Isabelle:/wazeescola'
+            - 'Waze BRF ({{ states.sensor.para_brf.attributes.duration }}):/wazebrf, Waze Sogro ({{ states.sensor.para_sogro.attributes.duration }}):/wazesogro'
+            - 'Waze Pai ({{ states.sensor.para_pai.attributes.duration }}):/wazepai, Waze Escola ({{ states.sensor.para_escola_isabelle.attributes.duration }}):/wazeescola'
+            - 'Waze Comprimisso ({{ states.sensor.para_compromisso.attributes.duration }}):/wazecompromisso'
             - 'Musica Rock:/musicarock, Musica Familia:/musicafamilia'
 
 # Comando Waze
@@ -752,7 +756,7 @@
     - service: notify.telegram_bot
       data:
         message: 'waze://?favorite=Sogro&navigate=yes'
-- alias: 'Comando Waze Sogro'
+- alias: 'Comando Waze Pai'
   trigger:
     platform: event
     event_type: telegram_callback
@@ -771,4 +775,46 @@
   action:
     - service: notify.telegram_bot
       data:
-        message: 'waze://?favorite=EscolaIsabellem&navigate=yes'
+        message: 'waze://?favorite=EscolaIsabelle&navigate=yes'
+- alias: 'Comando Waze Próximo Compromisso'
+  trigger:
+    platform: event
+    event_type: telegram_callback
+    event_data:
+      data: '/wazecompromisso'
+  action:
+    - service: notify.telegram_bot
+      data_template:
+        message: 'waze://?q={{ states.calendar.robson.attributes["location"]|replace(" ", "+") }}&navigate=yes'
+
+# Camando Start
+- alias: 'Start'
+  trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/start'
+  action:
+    - service: notify.telegram_bot
+      data:
+        message: 'Atualizando comandos para *FRIS Automação*'
+        data:
+          keyboard:
+            - '/inicio'
+            - '/sair_casa'
+            
+# Flash Briefing
+- alias: 'Flashbriefing'
+  trigger:
+    platform: time
+    at: '6:00:00'
+  action:
+    - service: tts.clear_cache
+    - delay: 00:01:00
+    - service: tts.google_say
+      entity_id: media_player.quarto_isabelle
+      data:
+        message: 'Bem vindo ao seu flash briefing diário.'
+        language: 'pt'
+    - delay: 00:05:00
+    - service: shell_command.renomear_flashbriefing
