@@ -24,3 +24,11 @@ homeassistant_robson:
   picture: /local/Robson.jpg
   track: true
   vendor:
+52008849ec808451:
+  hide_if_away: false
+  icon:
+  mac:
+  name: 52008849ec808451
+  picture: /local/Robson.jpg
+  track: true
+  vendor:

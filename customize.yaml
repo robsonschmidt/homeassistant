@@ -445,9 +445,8 @@ device_tracker.iphonedeflavialan:
   friendly_name: Flavia
 device_tracker.iphonederobsonlan:
   friendly_name: Robson
-device_tracker.homeassistant_robson:
+device_tracker.52008849ec808451:
   friendly_name: Robson
-
 
 # Controle Quarto
 switch.power_net_quarto:

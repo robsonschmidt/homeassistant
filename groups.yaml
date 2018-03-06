@@ -2,7 +2,7 @@ default_view:
   view: yes
   icon: mdi:home
   entities:
-  - device_tracker.homeassistant_robson
+  - device_tracker.52008849ec808451
 #  - device_tracker.iphonederobsonlan
   - device_tracker.iphonedeflavialan
   - group.weather_card_forecast

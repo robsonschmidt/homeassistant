@@ -1,7 +1,7 @@
 #
 # Main arguments, all optional
 #
-title: FRIS - Controle Quarto
+title: FRIS - Quarto
 widget_dimensions: [120, 110]
 widget_margins: [3, 3]
 columns: 3

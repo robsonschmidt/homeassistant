@@ -1,45 +1,14 @@
-2018-03-06 12:03:03 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.command_line
-2018-03-06 12:03:03 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.template
-2018-03-06 12:03:03 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.template
-2018-03-06 12:03:03 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.template
-2018-03-06 12:03:03 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.google_wifi
-2018-03-06 12:03:03 INFO (SyncWorker_9) [homeassistant.components.sensor.command_line] Running command: cat /sys/class/thermal/thermal_zone0/temp
-2018-03-06 12:03:06 INFO (MainThread) [homeassistant.components.camera] Setting up camera.ffmpeg
-2018-03-06 12:03:06 INFO (MainThread) [homeassistant.components.camera] Setting up camera.ffmpeg
-2018-03-06 12:03:06 INFO (MainThread) [homeassistant.components.camera] Setting up camera.ffmpeg
-2018-03-06 12:03:16 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/lib/python3.6/asyncio/tasks.py", line 180, in _step
-    result = coro.send(None)
-  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
-    msg)
-homeassistant.exceptions.HomeAssistantError: Entity id already exists: calendar.palmeiras
-2018-03-06 12:03:16 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/lib/python3.6/asyncio/tasks.py", line 180, in _step
-    result = coro.send(None)
-  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
-    msg)
-homeassistant.exceptions.HomeAssistantError: Entity id already exists: calendar.palmeiras
-2018-03-06 12:03:17 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/lib/python3.6/asyncio/tasks.py", line 180, in _step
-    result = coro.send(None)
-  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
-    msg)
-homeassistant.exceptions.HomeAssistantError: Entity id already exists: calendar.palmeiras
-2018-03-06 12:03:21 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.google_travel_time
-2018-03-06 12:03:23 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.google_travel_time
-2018-03-06 12:03:25 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.speedtest
-2018-03-06 12:03:26 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.google_travel_time
-2018-03-06 12:03:28 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.darksky
-2018-03-06 12:03:30 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.google_travel_time
-2018-03-06 12:03:32 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.google_travel_time
-2018-03-06 12:03:34 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.google_travel_time
-2018-03-06 12:03:36 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.systemmonitor
-2018-03-06 12:03:38 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.season
-2018-03-06 12:03:38 DEBUG (SyncWorker_8) [homeassistant.components.sensor.season] astronomical
-2018-03-06 12:04:05 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.ios
-2018-03-06 12:04:11 INFO (SyncWorker_14) [homeassistant.components.sensor.command_line] Running command: cat /sys/class/thermal/thermal_zone0/temp
-2018-03-06 12:05:11 INFO (SyncWorker_8) [homeassistant.components.sensor.command_line] Running command: cat /sys/class/thermal/thermal_zone0/temp
-2018-03-06 12:06:13 INFO (SyncWorker_13) [homeassistant.components.sensor.command_line] Running command: cat /sys/class/thermal/thermal_zone0/temp
+2018-03-06 16:52:42 WARNING (Recorder) [homeassistant.components.recorder] Ended unfinished session (id=13 from 2018-03-06 19:49:15.972616)
+2018-03-06 16:52:48 WARNING (MainThread) [homeassistant.setup] Setup of mqtt is taking over 10 seconds.
+2018-03-06 16:52:55 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.template
+2018-03-06 16:52:55 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.google_wifi
+2018-03-06 16:52:55 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.template
+2018-03-06 16:52:55 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.template
+2018-03-06 16:52:55 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.command_line
+2018-03-06 16:52:55 INFO (SyncWorker_8) [homeassistant.components.sensor.command_line] Running command: cat /sys/class/thermal/thermal_zone0/temp
+2018-03-06 16:53:01 INFO (MainThread) [homeassistant.components.camera] Setting up camera.ffmpeg
+2018-03-06 16:53:01 INFO (MainThread) [homeassistant.components.camera] Setting up camera.ffmpeg
+2018-03-06 16:53:01 INFO (MainThread) [homeassistant.components.camera] Setting up camera.ffmpeg
+2018-03-06 16:53:13 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.darksky
+2018-03-06 16:53:15 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.season
+2018-03-06 16:53:15 DEBUG (SyncWorker_11) [homeassistant.components.sensor.season] astronomical

@@ -137,34 +137,33 @@
 - platform: google_travel_time
   name: 'Para pai'
   api_key: !secret google_travel_api
-  origin: device_tracker.homeassistant_robson
+  origin: device_tracker.52008849ec808451
   destination: 'Alameda Júlia da Costa, 2350 - Bigorrilho, Curitiba - PR, 80730-070, Brasil'
 - platform: google_travel_time
   name: 'Para escola Isabelle'
   api_key: !secret google_travel_api
-  origin: device_tracker.homeassistant_robson
+  origin: device_tracker.52008849ec808451
   destination: 'R. Prof. Ulisses Vieira, 2809 - Santa Quiteria, Curitiba - PR, 80310-120'
 - platform: google_travel_time
   name: 'Para Casa'
   api_key: !secret google_travel_api
-  origin: device_tracker.homeassistant_robson
+  origin: device_tracker.52008849ec808451
   destination: 'R. Pedro Carlesso, 63 - Cidade Industrial, Curitiba - PR'
 - platform: google_travel_time
   name: 'Para Sogro'
   api_key: !secret google_travel_api
-  origin: device_tracker.homeassistant_robson
+  origin: device_tracker.52008849ec808451
   destination: 'BR-116, 103 - Xaxim, Curitiba - PR, 81690-200'
 - platform: google_travel_time
   name: 'Para BRF'
   api_key: !secret google_travel_api
-  origin: device_tracker.homeassistant_robson
+  origin: device_tracker.52008849ec808451
   destination: 'Rodovia Curitiba - Ponta Grossa Br-277 km 97, 3001 - Orleans, Curitiba - PR, 81020-430'
 - platform: google_travel_time
   name: 'Para Compromisso'
   api_key: !secret google_travel_api
-  origin: device_tracker.homeassistant_robson
+  origin: device_tracker.52008849ec808451
   destination: sensor.end_compromisso
-  
   
 # Template com endereço do próximo compromisso
 - platform: template
@@ -173,3 +172,8 @@
         friendly_name: "Endereço Compromisso"
         unit_of_measurement: 'degrees'
         value_template: "{{ states.calendar.robson.attributes.location }}"
+        
+# Bitcoin
+- platform: bitcoin
+  display_options:
+    - exchangerate
