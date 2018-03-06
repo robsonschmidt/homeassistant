@@ -4,8 +4,8 @@
    host: 192.168.86.86
  - platform: cast
    host: 192.168.86.91
- - platform: cast
-   host: 192.168.86.31
+# - platform: cast
+#   host: 192.168.86.31
  - platform: spotify
    client_id: !secret spotify_client_id
    client_secret: !secret spotify_client_secret
