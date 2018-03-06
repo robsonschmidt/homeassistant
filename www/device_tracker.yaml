@@ -1,0 +1,19 @@
+- platform: nmap_tracker
+  hosts:
+    - 192.168.86.102
+    - 192.168.86.144
+  consider_home: 300
+- platform: owntracks
+#  max_gps_accuracy: 200
+#  waypoints: True
+#  mqtt_topic: "owntracks/#"
+#  events_only: True
+#  waypoint_whitelist:
+#    - robson
+#  region_mapping:
+#    home: casa
+#    office: BRF
+#  - platform: icloud
+#    username: robsonschmidt@gmail.com
+#    password: 
+#    account_name: iPhoneRobson

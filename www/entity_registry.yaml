@@ -1,0 +1,15 @@
+sensor.iphone_de_robson_battery_state:
+  platform: ios
+  unique_id: state_iphone_de_robson
+sensor.iphone_de_robson_battery_level:
+  platform: ios
+  unique_id: level_iphone_de_robson
+media_player.churrasqueira:
+  platform: cast
+  unique_id: d8853bda-b407-8fbd-52b1-22fbd80c83e1
+media_player.sala:
+  platform: cast
+  unique_id: 7f53f138-d327-2039-6167-f6e706667479
+media_player.quarto:
+  platform: cast
+  unique_id: 0568d8d6-a4f0-6465-d3f1-cc0921ce5f0f

@@ -1,0 +1,48 @@
+2018-03-05 22:56:07 WARNING (Recorder) [homeassistant.components.recorder] Ended unfinished session (id=50 from 2018-03-05 01:31:15.426366)
+2018-03-05 22:56:13 WARNING (MainThread) [homeassistant.setup] Setup of mqtt is taking over 10 seconds.
+2018-03-05 22:56:22 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 180, in _step
+    result = coro.send(None)
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
+    msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: automation.comando_waze_sogro
+2018-03-05 22:56:32 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 180, in _step
+    result = coro.send(None)
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
+    msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: calendar.palmeiras
+2018-03-05 22:56:32 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 180, in _step
+    result = coro.send(None)
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
+    msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: calendar.palmeiras
+2018-03-05 22:56:32 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 180, in _step
+    result = coro.send(None)
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity_platform.py", line 260, in _async_add_entity
+    msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: calendar.palmeiras
+2018-03-05 22:56:38 INFO (MainThread) [homeassistant.components.camera] Setting up camera.ffmpeg
+2018-03-05 22:56:38 INFO (MainThread) [homeassistant.components.camera] Setting up camera.ffmpeg
+2018-03-05 22:56:38 INFO (MainThread) [homeassistant.components.camera] Setting up camera.ffmpeg
+2018-03-05 22:57:00 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-05 22:57:00 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 30 seconds.
+2018-03-05 22:57:28 ERROR (Thread-5) [pychromecast.socket_client] Error reading from socket.
+2018-03-05 22:57:28 WARNING (Thread-5) [pychromecast.socket_client] Error communicating with socket, resetting connection
+2018-03-05 22:57:33 ERROR (Recorder) [homeassistant.components.recorder.util] Error executing query: (sqlite3.DatabaseError) database disk image is malformed [SQL: 'INSERT INTO events (event_type, event_data, origin, time_fired, created) VALUES (?, ?, ?, ?, ?)'] [parameters: ('service_registered', '{"domain": "recorder", "service": "purge"}', 'LOCAL', '2018-03-06 01:56:05.164332', '2018-03-06 01:57:33.580228')] (Background on this error at: http://sqlalche.me/e/4xp6)
+2018-03-05 22:57:35 WARNING (SyncWorker_6) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
+2018-03-05 22:57:36 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-05 22:57:36 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 60 seconds.
+2018-03-05 22:58:40 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-05 22:58:40 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 90 seconds.
+2018-03-05 22:58:53 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-05 23:00:14 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-05 23:00:14 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 120 seconds.
+2018-03-05 23:02:18 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-05 23:02:18 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 150 seconds.

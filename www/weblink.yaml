@@ -1,0 +1,13 @@
+  entities:
+    - name: Terminal
+      url: http://fris.duckdns.org:7681/
+    - name: File Editor
+      url: http://hassio.local:3218/
+    - name: Waze Casa
+      url: https://waze.com/ul?favorite=Casa
+    - name: Waze Sogro
+      url: https://waze.com/ul?favorite=Sogro
+    - name: Waze BRF
+      url: https://waze.com/ul?favorite=BRF
+    - name: Waze Escola Isabelle
+      url: https://waze.com/ul?favorite=Escola Isabelle

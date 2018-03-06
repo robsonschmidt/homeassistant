@@ -1,0 +1,48 @@
+
+- cal_id: robsonschmidt@gmail.com
+  entities:
+  - device_id: robson
+    name: Robson
+    track: true
+
+- cal_id: '#contacts@group.v.calendar.google.com'
+  entities:
+  - device_id: contacts
+    name: Contacts
+    track: false
+
+- cal_id: pt_br.brazilian#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: feriados_no_brasil
+    name: Feriados no Brasil
+    track: true
+
+- cal_id: p#weather@group.v.calendar.google.com
+  entities:
+  - device_id: weather_mende
+    name: 'Weather: Mende'
+    track: false
+
+- cal_id: braz_7276_%50almeiras#sports@group.v.calendar.google.com
+  entities:
+  - device_id: palmeiras
+    name: Palmeiras
+    track: true
+
+- cal_id: brazcp_7276_%50almeiras#sports@group.v.calendar.google.com
+  entities:
+  - device_id: palmeiras
+    name: Palmeiras
+    track: true
+
+- cal_id: brazcup_7276_%50almeiras#sports@group.v.calendar.google.com
+  entities:
+  - device_id: palmeiras
+    name: Palmeiras
+    track: true
+
+- cal_id: lib_7276_%50almeiras#sports@group.v.calendar.google.com
+  entities:
+  - device_id: palmeiras
+    name: Palmeiras
+    track: true

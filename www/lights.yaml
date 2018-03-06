@@ -1,0 +1,9 @@
+- platform: tplink
+  host: 192.168.86.48
+  name: luz_central
+- platform: tplink
+  host: 192.168.86.29
+  name: luz_direita
+- platform: tplink
+  host: 192.168.86.28
+  name: luz_esquerda
