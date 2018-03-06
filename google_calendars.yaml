@@ -32,17 +32,17 @@
 - cal_id: brazcp_7276_%50almeiras#sports@group.v.calendar.google.com
   entities:
   - device_id: palmeiras
-    name: Palmeiras
+    name: Palmeiras 2
     track: true
 
 - cal_id: brazcup_7276_%50almeiras#sports@group.v.calendar.google.com
   entities:
   - device_id: palmeiras
-    name: Palmeiras
+    name: Palmeiras 3
     track: true
 
 - cal_id: lib_7276_%50almeiras#sports@group.v.calendar.google.com
   entities:
   - device_id: palmeiras
-    name: Palmeiras
+    name: Palmeiras 4
     track: true

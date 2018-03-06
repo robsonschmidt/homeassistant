@@ -9,7 +9,7 @@ default_view:
   - camera.frente
   - camera.interna
   - camera.fundos
-  - group.waze
+#  - group.waze
   name: 'Tela Inicial'
 waze:
   name: Waze
