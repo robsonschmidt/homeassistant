@@ -135,6 +135,39 @@
 
 # Google Travel Time
 - platform: google_travel_time
-  api_key: AIzaSyDqHMdgfqGyEvYvke640j5BF2ejRrLOMCM
-  origin: zone.home
+  name: 'Para pai'
+  api_key: !secret google_travel_api
+  origin: device_tracker.homeassistant_robson
   destination: 'Alameda Julia da Costa, 2350, Curitiba - PR, Brasil'
+- platform: google_travel_time
+  name: 'Para escola Isabelle'
+  api_key: !secret google_travel_api
+  origin: device_tracker.homeassistant_robson
+  destination: 'R. Prof. Ulisses Vieira, 2809 - Santa Quiteria, Curitiba - PR, 80310-120'
+- platform: google_travel_time
+  name: 'Para Casa'
+  api_key: !secret google_travel_api
+  origin: device_tracker.homeassistant_robson
+  destination: 'R. Pedro Carlesso, 63 - Cidade Industrial, Curitiba - PR'
+- platform: google_travel_time
+  name: 'Para Sogro'
+  api_key: !secret google_travel_api
+  origin: device_tracker.homeassistant_robson
+  destination: 'BR-116, 103 - Xaxim, Curitiba - PR, 81690-200'
+- platform: google_travel_time
+  name: 'Para BRF'
+  api_key: !secret google_travel_api
+  origin: device_tracker.homeassistant_robson
+  destination: 'Rodovia Curitiba - Ponta Grossa Br-277 km 97, 3001 - Orleans, Curitiba - PR, 81020-430'
+- platform: google_travel_time
+  name: 'Para Compromisso'
+  api_key: !secret google_travel_api
+  origin: device_tracker.homeassistant_robson
+  destination: sensor.end_compromisso
+  
+- platform: template
+  sensors:
+    end_compromisso:
+        friendly_name: "Endereço Compromisso"
+        unit_of_measurement: 'degrees'
+        value_template: "{{ states.calendar.robson.attributes.localtion }}"
