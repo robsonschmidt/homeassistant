@@ -55,6 +55,14 @@ power_sbt:
     icon_on: mdi-power
     icon_off: mdi-power
 
+power_record:
+    title: Liga 
+    title2: Record
+    widget_type: script
+    entity: script.liga_tv_sala_record
+    icon_on: mdi-power
+    icon_off: mdi-power
+    
 channel_globo:
     title: Canal 
     title2: Globo
@@ -76,6 +84,14 @@ channel_sbt:
     title2: SBT
     widget_type: script
     entity: script.tv_sala_sbt
+    icon_on: mdi-cursor-pointer
+    icon_off: mdi-cursor-pointer
+
+channel_record:
+    title: Canal 
+    title2: Record
+    widget_type: script
+    entity: script.tv_sala_record
     icon_on: mdi-cursor-pointer
     icon_off: mdi-cursor-pointer
 
@@ -102,9 +118,18 @@ source_chromecast:
     entity: switch.source_chromecast_sala
     icon_on: mdi-google-chrome
     icon_off: mdi-google-chrome
-    
+
+source_dvd:
+    title: Source 
+    title2: DVD
+    widget_type: switch
+    entity: switch.source_dvd_sala
+    icon_on: mdi-disk
+    icon_off: mdi-disk
+
 layout:
-    - phone             , terreo        , controle
-    - liga_tv_net       , source_net    , source_chromecast
-    - power_discovery   , power_globo   , power_sbt
-    - channel_discovery , channel_globo , channel_sbt
+    - phone             , terreo            , controle
+    - liga_tv_net       , power_sbt         , channel_sbt
+    - source_net        , power_record      , channel_record
+    - source_chromecast , power_globo       , channel_globo
+    - source_dvd        , power_discovery   , channel_discovery

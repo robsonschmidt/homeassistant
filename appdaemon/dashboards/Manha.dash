@@ -10,20 +10,6 @@ global_parameters:
     precision: 1
     use_hass_icon: 1
 
-terreo:
-    title: Térreo
-    icon_inactive: mdi-home
-    widget_type: navigate
-    widget_style: "background: #006437"
-    dashboard: TerreoP
-
-quartos:
-    title: Quartos
-    icon_inactive: mdi-hotel
-    widget_style: "background: #006437"
-    widget_type: navigate
-    dashboard: QuartosP
-
 cameras:
     title: Cameras
     icon_inactive: mdi-cctv
@@ -42,31 +28,15 @@ portao:
   icon_on: mdi-gate
   icon_off: mdi-gate
 
-controle_quarto:
-    title: TV Quarto
-    icon_inactive: mdi-remote
-    widget_type: navigate
-    widget_style: "background: #006437"
-    dashboard: ControleQuartoP
-    
-controle_sala:
-    title: TV Sala
-    icon_inactive: mdi-remote
-    widget_type: navigate
-    widget_style: "background: #006437"
-    dashboard: ControleSalaP
-    
 escola_isabelle:
     title: Escola Isabelle
-    widget_type: javascript
-    widget_style: "background: #006437"
-    icon_active: mdi-gate
-    icon_inactive: mdi-gate
-    command: "window.open();"
-
+    widget_type: navigate
+    url: https://waze.com/ul
+    args:
+      favorite: casa
+      
 layout:
     - include: TitleP
     -
-    - terreo,                       controle_sala,                  cameras
-    - quartos,                      controle_quarto
+    - cameras
     - portao,                       escola_isabelle

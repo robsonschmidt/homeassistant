@@ -55,6 +55,14 @@ power_sbt:
     icon_on: mdi-power
     icon_off: mdi-power
 
+power_record:
+    title: Liga  
+    title2: SBT
+    widget_type: script
+    entity: script.liga_tv_quarto_record
+    icon_on: mdi-power
+    icon_off: mdi-power
+
 channel_globo:
     title: Canal  
     title2: Globo
@@ -76,6 +84,14 @@ channel_sbt:
     title2: SBT
     widget_type: script
     entity: script.tv_quarto_sbt
+    icon_on: mdi-cursor-pointer
+    icon_off: mdi-cursor-pointer
+
+channel_record:
+    title: Canal  
+    title2: Record
+    widget_type: script
+    entity: script.tv_quarto_record
     icon_on: mdi-cursor-pointer
     icon_off: mdi-cursor-pointer
 
@@ -104,7 +120,8 @@ source_chromecast:
     icon_off: mdi-google-chrome
     
 layout:
-    - phone             , quartos       , controle
-    - liga_tv_net       , source_net    , source_chromecast
-    - power_discovery   , power_globo   , power_sbt
-    - channel_discovery , channel_globo , channel_sbt
+    - phone             , quartos           , controle
+    - liga_tv_net       , power_sbt         , channel_sbt
+    - source_net        , power_record      , channel_record
+    - source_chromecast , power_globo       , channel_globo
+    - spacer            , power_discovery   , channel_discovery

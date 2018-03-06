@@ -2,7 +2,7 @@
 # Main arguments, all optional
 #
 title: FRIS
-widget_dimensions: [110, 110]
+widget_dimensions: [110, 106]
 widget_margins: [3, 3]
 columns: 9
 global_parameters:

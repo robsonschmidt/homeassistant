@@ -123,6 +123,22 @@ tv_quarto_sbt:
   - data:
       entity_id: switch.4_net_quarto
     service: switch.turn_on
+tv_quarto_record:
+  alias: TV Quarto Record
+  sequence:
+  - data:
+      entity_id: switch.5_net_quarto
+    service: switch.turn_on
+  - delay:
+      seconds: 1
+  - data:
+      entity_id: switch.0_net_quarto
+    service: switch.turn_on
+  - delay:
+      seconds: 1
+  - data:
+      entity_id: switch.7_net_quarto
+    service: switch.turn_on
 liga_tv_quarto_globo:
   alias: Liga TV Quarto Globo
   sequence:
@@ -155,6 +171,17 @@ liga_tv_quarto_sbt:
       seconds: 80
   - data:
       entity_id: script.tv_quarto_sbt
+    service: script.turn_on
+liga_tv_quarto_record:
+  alias: Liga TV Quarto Record
+  sequence:
+  - data:
+      entity_id: script.liga_tv_net_quarto
+    service: script.turn_on
+  - delay:
+      seconds: 80
+  - data:
+      entity_id: script.tv_quarto_record
     service: script.turn_on
 
 # Controle Sala
@@ -245,6 +272,32 @@ tv_sala_sbt:
   - data:
       entity_id: switch.4_net_sala
     service: switch.turn_on
+tv_sala_record:
+  alias: TV Sala Record
+  sequence:
+  - data:
+      entity_id: switch.source_net_sala
+    service: switch.turn_on
+  - delay:
+      seconds: 1
+  - data:
+      entity_id: switch.sair_net_sala
+    service: switch.turn_on
+  - delay:
+      seconds: 1
+  - data:
+      entity_id: switch.5_net_sala
+    service: switch.turn_on
+  - delay:
+      seconds: 1
+  - data:
+      entity_id: switch.0_net_sala
+    service: switch.turn_on
+  - delay:
+      seconds: 1
+  - data:
+      entity_id: switch.7_net_sala
+    service: switch.turn_on
 liga_tv_sala_discovery:
   alias: Liga TV Sala Discovery
   sequence:
@@ -277,6 +330,17 @@ liga_tv_sala_sbt:
       seconds: 80
   - data:
       entity_id: script.tv_sala_sbt
+    service: script.turn_on
+liga_tv_sala_record:
+  alias: Liga TV Sala Record
+  sequence:
+  - data:
+      entity_id: script.liga_tv_net_sala
+    service: script.turn_on
+  - delay:
+      seconds: 80
+  - data:
+      entity_id: script.tv_sala_record
     service: script.turn_on
 liga_chromecast_sala:
   alias: Liga Chromecast Sala

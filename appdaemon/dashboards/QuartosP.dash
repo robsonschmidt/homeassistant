@@ -30,8 +30,14 @@ controle:
     widget_style: "background: #006437"
     dashboard: ControleQuartoP
 
+luz_painel:
+    title: Painel
+    widget_type: switch
+    entity: script.luz_painel_quarto    
+
 layout:
-    - phone, controle, input_boolean.hall_light
+    - phone                     , controle                      , input_boolean.hall_light
+    - switch.luz_quarto         , switch.luz_painel_quarto      , switch.luz_sacada_frente
     - media_player.quarto(3x2)
     -
     - media_player.quarto_isabelle(3x2)

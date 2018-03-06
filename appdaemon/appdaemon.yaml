@@ -11,7 +11,8 @@ appdaemon:
   plugins:
     HASS:
       type: hass
-      ha_url: https://fris.duckdns.org:8123
+#      ha_url: http://192.168.86.139:8123
+      ha_url: https://192.168.86.139:8123
       ha_key: !secret http_password
       cert_verify: false
 hadashboard:

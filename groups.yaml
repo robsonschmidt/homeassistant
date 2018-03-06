@@ -2,32 +2,22 @@ default_view:
   view: yes
   icon: mdi:home
   entities:
-  - device_tracker.iphonederobsonlan
+  - device_tracker.homeassistant_robson
+#  - device_tracker.iphonederobsonlan
   - device_tracker.iphonedeflavialan
   - group.weather_card_forecast
   - camera.frente
   - camera.interna
   - camera.fundos
+  - group.waze
   name: 'Tela Inicial'
-#tempo:
-#  name: Temperatura
-#  view: yes
-#  icon: mdi:weather-sunny
-#  entities:
-#   - sensor.pws_relative_humidity
-#   - sensor.pws_feelslike_c
-#   - sensor.pws_temp_c
-#   - group.tempo_hoje
-#   - group.tempo_amanha
-#   - group.tempo_2dias
-#   - group.tempo_3dias
-#tempo_hoje:
-#  name: 'Previsão de Hoje'
-#  entities:
-#   - sensor.pws_temp_low_1d_c
-#   - sensor.pws_temp_high_1d_c
-#   - sensor.pws_precip_1d
-#   - sensor.pws_precip_today_metric
+waze:
+  name: Waze
+  entities:
+  - weblink.waze_casa
+  - weblink.waze_brf
+  - weblink.waze_sogro
+  - weblink.waze_escola_isabelle
 churrasqueira:
   name: Churrasqueira
   view: yes
@@ -84,27 +74,6 @@ camera:
   - camera.interna
   - camera.frente
   - camera.fundos
-#tempo_amanha:
-#  name: 'Previsão Amanhã'
-#  entities:
-#   - sensor.pws_temp_low_2d_c
-#   - sensor.pws_temp_high_2d_c
-#   - sensor.pws_precip_2d
-#   - sensor.pws_precip_2d_mm
-#tempo_2dias:
-#  name: 'Previsão 2 dias'
-#  entities:
-#   - sensor.pws_temp_low_3d_c
-#   - sensor.pws_temp_high_3d_c
-#   - sensor.pws_precip_3d
-#   - sensor.pws_precip_3d_mm
-#tempo_3dias:
-#  name: 'Previsão 3 dias'
-#  entities:
-#   - sensor.pws_temp_low_4d_c
-#   - sensor.pws_temp_high_4d_c
-#   - sensor.pws_precip_4d
-#   - sensor.pws_precip_4d_mm
 configuracao:
   name: 'Configuração'
   view: yes
@@ -113,7 +82,6 @@ configuracao:
   - group.servidor
   - group.teste_velocidade
   - group.google_wifi
-#  - group.conf_weblinks
 servidor:
   name: Servidor
   entities:

@@ -2,7 +2,7 @@
 # Main arguments, all optional
 #
 title: FRIS - Terreo
-widget_dimensions: [110, 110]
+widget_dimensions: [110, 106]
 widget_margins: [3, 3]
 columns: 9
 global_parameters:
@@ -210,5 +210,4 @@ layout:
     - power_tv_sala         , source_chromecast_sala    , 4_net_sala            , 5_net_sala                , 6_net_sala
     - power_dvd_sala        , source_dvd_sala           , 7_net_sala            , 8_net_sala                , 9_net_sala
     - vol_cima_tv_sala      , vol_baixo_tv_sala         , mute_tv_sala          , 0_net_sala
-    - canal_cima_net_sala   , canal_baixo_net_sala
-    - cima_tv_sala          , baixo_tv_sala             , ok_tv_sala            , source_tv_sala
+    - canal_cima_net_sala   , canal_baixo_net_sala      , cima_tv_sala          , baixo_tv_sala             , ok_tv_sala            , source_tv_sala

@@ -15,16 +15,21 @@ homeassistant:
   customize_glob: !include customize_glob.yaml
   customize_domain: !include customize_domain.yaml
   
-#  whitelist_external_dirs:
-#    - '/backup'
+#  whitelist_external_dirs: /backup
 
 frontend: !include frontend.yaml
 
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
+  
 # Show links to resources in log and frontend
 # introduction:
 
 # Enables configuration UI
 config:
+
+ios:
 
 #cloud:
 #  alexa:
@@ -45,9 +50,9 @@ http:
    base_url: https://fris.duckdns.org:8123
    ssl_certificate: /ssl/fullchain.pem
    ssl_key: /ssl/privkey.pem   
-   trusted_networks:
-     - 127.0.0.1
-     - 192.168.86.0/24
+#   trusted_networks:
+#     - 127.0.0.1
+#     - 192.168.86.0/24
    
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -81,8 +86,6 @@ logger:
   logs:
     homeassistant.components.camera: debug
     homeassistant.components.image_processing: debug
-    homeassistant.components.media_player: debug
-    homeassistant.components.sensor: debug
 
 # Weather prediction
 #sensor:
@@ -132,6 +135,20 @@ python_script:
 
 recorder:
   purge_keep_days: 5
+  
+zone:
+  - name: home
+    latitude: -25.451756
+    longitude: -49.343350
+    radius: 10
+    icon: mdi:home-outline
+  - name: BRF
+    latitude: -25.430876
+    longitude: -49.343193
+    radius: 10
+    icon: mdi:briefcase
+    
+mqtt:
 
 #image_processing:
 #  - platform: openalpr_local

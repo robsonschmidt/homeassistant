@@ -7,3 +7,7 @@
   gate:
     name: Portão
     initial: off
+  robson:
+    name: Robson
+    initial: on
+    icon: mdi:cellphone-iphone

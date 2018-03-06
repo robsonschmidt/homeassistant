@@ -130,7 +130,7 @@ input_text.fundos_tiles:
 input_text.quartos_tiles:
   custom_ui_state_card: state-card-tiles
   config:
-    columns: 3
+    columns: 5
     color: blue
     color_on: "#006437"
     color_off: "#404040"
@@ -140,6 +140,18 @@ input_text.quartos_tiles:
       - entity: input_boolean.hall_light
         image: /local/hall.png
         column: 1
+        row: 1
+      - entity: switch.luz_quarto
+        image: /local/hall.png
+        column: 2
+        row: 1
+      - entity: switch.luz_painel_quarto
+        image: /local/hall.png
+        column: 3
+        row: 1
+      - entity: switch.luz_sacada_frente
+        image: /local/hall.png
+        column: 4
         row: 1
 
 # State Cards TV Sala
@@ -433,6 +445,9 @@ device_tracker.iphonedeflavialan:
   friendly_name: Flavia
 device_tracker.iphonederobsonlan:
   friendly_name: Robson
+device_tracker.homeassistant_robson:
+  friendly_name: Robson
+
 
 # Controle Quarto
 switch.power_net_quarto:
