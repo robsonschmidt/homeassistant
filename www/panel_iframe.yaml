@@ -1,8 +1,0 @@
-  configurator:
-    title: Configurator
-    icon: mdi:wrench
-    url: http://hassio.local:3218
-  terminal:
-    title: Terminal
-    icon: mdi:console
-    url: http://hassio.local:7682
