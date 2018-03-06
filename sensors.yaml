@@ -138,7 +138,7 @@
   name: 'Para pai'
   api_key: !secret google_travel_api
   origin: device_tracker.homeassistant_robson
-  destination: 'Alameda Julia da Costa, 2350, Curitiba - PR, Brasil'
+  destination: 'Alameda Júlia da Costa, 2350 - Bigorrilho, Curitiba - PR, 80730-070, Brasil'
 - platform: google_travel_time
   name: 'Para escola Isabelle'
   api_key: !secret google_travel_api
@@ -165,9 +165,11 @@
   origin: device_tracker.homeassistant_robson
   destination: sensor.end_compromisso
   
+  
+# Template com endereço do próximo compromisso
 - platform: template
   sensors:
     end_compromisso:
         friendly_name: "Endereço Compromisso"
         unit_of_measurement: 'degrees'
-        value_template: "{{ states.calendar.robson.attributes.localtion }}"
+        value_template: "{{ states.calendar.robson.attributes.location }}"

@@ -2,8 +2,9 @@
   hosts:
     - 192.168.86.102
     - 192.168.86.144
-  consider_home: 300
+  consider_home: 900
 - platform: owntracks
+
 #  max_gps_accuracy: 200
 #  waypoints: True
 #  mqtt_topic: "owntracks/#"
