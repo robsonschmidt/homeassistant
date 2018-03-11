@@ -4,3 +4,4 @@ secrets.yaml
 .spotify-token-cache
 camera/
 icloud/
+www/home-assistant_v2.db
