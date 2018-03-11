@@ -13,3 +13,6 @@ media_player.sala:
 media_player.quarto:
   platform: cast
   unique_id: 0568d8d6-a4f0-6465-d3f1-cc0921ce5f0f
+media_player.quarto_isabelle:
+  platform: cast
+  unique_id: 67f7d06f-bed1-63f6-e992-1664e19a6329

@@ -1,0 +1,8 @@
+  valor_bitcoin_meianoite:
+    name: Valor Bitcoin Meia Noite
+    initial: 0
+    min: 0
+    max: 999999
+    step: 1
+    mode: box
+    unit_of_measurement: USD

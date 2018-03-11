@@ -1,14 +1,2 @@
-2018-03-06 16:52:42 WARNING (Recorder) [homeassistant.components.recorder] Ended unfinished session (id=13 from 2018-03-06 19:49:15.972616)
-2018-03-06 16:52:48 WARNING (MainThread) [homeassistant.setup] Setup of mqtt is taking over 10 seconds.
-2018-03-06 16:52:55 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.template
-2018-03-06 16:52:55 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.google_wifi
-2018-03-06 16:52:55 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.template
-2018-03-06 16:52:55 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.template
-2018-03-06 16:52:55 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.command_line
-2018-03-06 16:52:55 INFO (SyncWorker_8) [homeassistant.components.sensor.command_line] Running command: cat /sys/class/thermal/thermal_zone0/temp
-2018-03-06 16:53:01 INFO (MainThread) [homeassistant.components.camera] Setting up camera.ffmpeg
-2018-03-06 16:53:01 INFO (MainThread) [homeassistant.components.camera] Setting up camera.ffmpeg
-2018-03-06 16:53:01 INFO (MainThread) [homeassistant.components.camera] Setting up camera.ffmpeg
-2018-03-06 16:53:13 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.darksky
-2018-03-06 16:53:15 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.season
-2018-03-06 16:53:15 DEBUG (SyncWorker_11) [homeassistant.components.sensor.season] astronomical
+2018-03-11 20:13:30 WARNING (SyncWorker_15) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
+2018-03-11 20:16:21 WARNING (SyncWorker_18) [homeassistant.components.python_script.set_state.py] switch.power_tv_quarto

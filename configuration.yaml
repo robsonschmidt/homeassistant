@@ -15,7 +15,9 @@ homeassistant:
   customize_glob: !include customize_glob.yaml
   customize_domain: !include customize_domain.yaml
   
-#  whitelist_external_dirs: /backup
+  whitelist_external_dirs:
+  - /config/tts
+#  - /backup
 
 frontend: !include frontend.yaml
 
@@ -84,9 +86,8 @@ sun:
 logger:
   default: warning
   logs:
-    homeassistant.components.camera: debug
     homeassistant.components.image_processing: debug
-    homeassistant.components.sensor: debug
+#    homeassistant.components.automation: debug
 
 # Weather prediction
 #sensor:
@@ -112,7 +113,7 @@ input_text: !include input_text.yaml
 device_tracker: !include device_tracker.yaml
 input_boolean: !include input_boolean.yaml
 camera: !include camera.yaml
-#input_number: !include input_number.yaml
+input_number: !include input_number.yaml
 #input_select: !include input_select.yaml
 weblink: !include weblink.yaml
 
@@ -125,7 +126,7 @@ telegram_bot:
     allowed_chat_ids:
       - 328083280
       - -301349283
-      
+
 notify:
   - name: telegram_bot
     platform: telegram
@@ -153,12 +154,23 @@ zone:
     radius: 10
     icon: mdi:briefcase
     
-mqtt:
-
-alexa:
+#alexa:
 
 shell_command:
-  renomear_flashbriefing: for FILENAME in \config\tts\*; do mv $FILENAME FlashBriefing.mp3; done
+  renomear_flashbriefing: for FILENAME in /config/tts/*; do mv $FILENAME /config/tts/FlashBriefing.mp3; done;
+  excluir_ultimo_flashbriefing: rm /config/tts/FlashBriefing.mp3;
+  excluir_snapshot_antigos: find /backup/* -mtime +5 -exec rm {} \;
+
+google_assistant:
+  project_id: !secret google_assistant_project_id
+  client_id: !secret google_assistant_client_id
+  access_token: !secret google_assistant_access_token
+#  agent_user_id: FRIS GA
+#  api_key: !secret google_assistant_api_key
+  exposed_domains:
+    - switch
+    - light
+    - group
 
 #image_processing:
 #  - platform: openalpr_local

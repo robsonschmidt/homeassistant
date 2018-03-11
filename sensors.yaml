@@ -60,26 +60,6 @@
   # If errors occur, remove degree symbol below
   unit_of_measurement: "°C"
   value_template: '{{ value | multiply(0.001) | round(1) }}'  
-- platform: darksky
-  api_key: c96f80d478f6e3c254f3d7d1863f7241
-  forecast:
-   - 1
-   - 2
-   - 3
-   - 4
-   - 5
-   - 6
-   - 7
-  monitored_conditions:
-   - summary
-   - precip_probability
-   - wind_speed
-   - cloud_cover
-   - icon
-   - temperature_min
-   - temperature_max
-   - daily_summary
-   - humidity
 - platform: season
 - platform: template
   sensors:
@@ -133,6 +113,32 @@
       entity_picture_template: >-
         {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_7.state ~ '.png'}}
 
+# Previsão de tempo 
+- platform: darksky
+  api_key: c96f80d478f6e3c254f3d7d1863f7241
+  units: si
+  lang: pt
+  forecast:
+   - 1
+   - 2
+   - 3
+   - 4
+   - 5
+   - 6
+   - 7
+  monitored_conditions:
+   - summary
+   - precip_probability
+   - wind_speed
+   - cloud_cover
+   - icon
+   - temperature_min
+   - temperature_max
+   - daily_summary
+   - humidity
+   - temperature
+
+
 # Google Travel Time
 - platform: google_travel_time
   name: 'Para pai'
@@ -177,3 +183,8 @@
 - platform: bitcoin
   display_options:
     - exchangerate
+    
+# Cotação de moedas
+- platform: openexchangerates
+  api_key: !secret exchange_api_key
+  quote: BRL
