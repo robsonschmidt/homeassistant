@@ -170,7 +170,6 @@ google_assistant:
   exposed_domains:
     - switch
     - light
-    - group
 
 #image_processing:
 #  - platform: openalpr_local
