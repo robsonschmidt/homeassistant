@@ -1,3 +1,6 @@
 2018-03-11 20:13:30 WARNING (SyncWorker_15) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
 2018-03-11 20:16:21 WARNING (SyncWorker_18) [homeassistant.components.python_script.set_state.py] switch.power_tv_quarto
 2018-03-11 20:21:18 ERROR (SyncWorker_0) [homeassistant.components.sensor.darksky] Unable to connect to Dark Sky. HTTPSConnectionPool(host='api.darksky.net', port=443): Max retries exceeded with url: /forecast/c96f80d478f6e3c254f3d7d1863f7241/-25.451756,-49.34335?units=si (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x73063690>: Failed to establish a new connection: [Errno -3] Try again',))
+2018-03-11 21:07:24 WARNING (SyncWorker_4) [homeassistant.components.python_script.set_state.py] switch.vol_cima_tv_quarto
+2018-03-11 21:07:25 WARNING (SyncWorker_3) [homeassistant.components.python_script.set_state.py] switch.vol_cima_tv_quarto
+2018-03-11 21:07:26 WARNING (SyncWorker_0) [homeassistant.components.python_script.set_state.py] switch.vol_cima_tv_quarto

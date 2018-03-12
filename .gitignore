@@ -5,3 +5,4 @@ secrets.yaml
 camera/
 icloud/
 www/home-assistant_v2.db
+deps/
