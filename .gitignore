@@ -6,3 +6,6 @@ camera/
 icloud/
 www/home-assistant_v2.db
 deps/
+home-assistant_v2.db-wal
+.google.token
+.gitignore
