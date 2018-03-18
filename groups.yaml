@@ -3,21 +3,26 @@ default_view:
   icon: mdi:home
   entities:
   - device_tracker.52008849ec808451
-#  - device_tracker.iphonederobsonlan
   - device_tracker.iphonedeflavialan
-  - group.weather_card_forecast
-  - camera.frente
-  - camera.interna
-  - camera.fundos
-#  - group.waze
+  - group.previsao_tempo
   name: 'Tela Inicial'
-waze:
-  name: Waze
+
+# Card Previsão de Tempo
+previsao_tempo:
+  name: Previsão de Tempo
+  view: no
+  icon: mdi:sun
   entities:
-  - weblink.waze_casa
-  - weblink.waze_brf
-  - weblink.waze_sogro
-  - weblink.waze_escola_isabelle
+   - sensor.forecast_0
+   - sensor.forecast_1
+   - sensor.forecast_2
+   - sensor.forecast_3
+   - sensor.forecast_4
+   - sensor.forecast_5
+   - sensor.forecast_6
+   - sensor.forecast_7
+
+# Menu Churrasqueira
 churrasqueira:
   name: Churrasqueira
   view: yes
@@ -49,6 +54,9 @@ quarto:
   - group.quartos_tiles
   - group.quarto_spotify
   - script.liga_tv_sala_globo
+  - switch.luz_sacada_frente
+  - switch.luz_painel_quarto
+  - switch.luz_quarto
 quarto_spotify:
   name: Spotify
   entities:
@@ -74,6 +82,7 @@ camera:
   - camera.interna
   - camera.frente
   - camera.fundos
+  - camera.teste_carro
 configuracao:
   name: 'Configuração'
   view: yes
@@ -134,16 +143,34 @@ conf_weblinks:
     entities:
       - weblink.terminal
       - weblink.file_editor
-weather_card_forecast:
-  name: Previsão de Tempo
-  view: no
-  icon: mdi:sun
+
+# Menu Parametros
+parametro:
+  name: Parametros
+  view: yes
+  icon: mdi:format-list-numbers
   entities:
-   - sensor.forecast_0
-   - sensor.forecast_1
-   - sensor.forecast_2
-   - sensor.forecast_3
-   - sensor.forecast_4
-   - sensor.forecast_5
-   - sensor.forecast_6
-   - sensor.forecast_7
+    - group.boletim
+    - group.timers
+    - group.backup
+# Card Boletim
+boletim:
+  name: Boletim
+  entities:
+    - input_datetime.boletim_1
+    - input_datetime.boletim_2
+    - input_datetime.boletim_3
+# Card Timers
+timers:
+  name: Timers
+  entities:
+    - input_number.tempo_timer
+    - input_boolean.ativa_timer_tv_isabelle
+    - input_datetime.timer_tv_isabelle
+    
+# Card Backup
+backup:
+  name: Backup
+  entities:
+    - input_boolean.fazer_backup
+    - input_datetime.hora_backup

@@ -49,7 +49,7 @@ panel_iframe: !include panel_iframe.yaml
 http:
   # Secrets are defined in the file secrets.yaml
    api_password: !secret http_password
-   base_url: https://fris.duckdns.org:8123
+   base_url: !secret base_url
    ssl_certificate: /ssl/fullchain.pem
    ssl_key: /ssl/privkey.pem   
 #   trusted_networks:
@@ -114,8 +114,10 @@ device_tracker: !include device_tracker.yaml
 input_boolean: !include input_boolean.yaml
 camera: !include camera.yaml
 input_number: !include input_number.yaml
+input_datetime: !include input_datetime.yaml
 #input_select: !include input_select.yaml
 weblink: !include weblink.yaml
+shell_command: !include shell_command.yaml
 
 ifttt:
   key: !secret ifttt
@@ -144,22 +146,34 @@ recorder:
   
 zone:
   - name: home
-    latitude: -25.451756
-    longitude: -49.343350
-    radius: 10
+    latitude: !secret home_latitude
+    longitude: !secret home_longitude
+    radius: 20
     icon: mdi:home-outline
   - name: BRF
-    latitude: -25.430876
-    longitude: -49.343193
-    radius: 10
+    latitude: !secret brf_latitude
+    longitude: !secret brf_longitude
+    radius: 100
     icon: mdi:briefcase
+  - name: home_arriving
+    latitude: !secret home_arriving_latitude
+    longitude: !secret home_arriving_longitude
+    radius: 100
+    icon: mdi:home-outline
+  - name: sogro
+    latitude: !secret sogro_latitude
+    longitude: !secret sogro_longitude
+    radius: 100
+  - name: escola
+    latitude: !secret escola_latitude
+    longitude: !secret escola_longitude
+    radius: 100
+  - name: pai
+    latitude: !secret pai_latitude
+    longitude: !secret pai_longitude
+    radius: 100
     
 #alexa:
-
-shell_command:
-  renomear_flashbriefing: for FILENAME in /config/tts/*; do mv $FILENAME /config/tts/FlashBriefing.mp3; done;
-  excluir_ultimo_flashbriefing: rm /config/tts/FlashBriefing.mp3;
-  excluir_snapshot_antigos: find /backup/* -mtime +5 -exec rm {} \;
 
 google_assistant:
   project_id: !secret google_assistant_project_id
@@ -171,11 +185,18 @@ google_assistant:
     - switch
     - light
 
-#image_processing:
-#  - platform: openalpr_local
-#    region: br
-#    source:
-#    - entity_id: camera.frente
+#rest_command:
+#  dark_sky_summary_pt:
+#    url: 'https://translate.yandex.net/api/v1.5/tr.json/translate'
+#    method: post
+#    payload: >
+#      key=trnsl.1.1.20180312T184049Z.25ec68dcb8cdd93c.e8313f4eb494259e59ca6a6efd1c03e42e81d8a6&lang=en-pt&text={{states.sensor.dark_sky_summary.state}}
+
+image_processing:
+  - platform: openalpr_local
+    region: eu
+    source:
+    - entity_id: camera.teste_carro
 #  - platform: dlib_face_detect
 #    source:
 #      - entity_id: camera.frente

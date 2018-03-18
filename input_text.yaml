@@ -1,5 +1,3 @@
-  command:
-    name: Button
   fundos_tiles:
     name: fundos
   quartos_tiles:
@@ -17,3 +15,27 @@
   churrasqueira_spotify_player:
     name: Churrasqueira Spotify Player
     initial: Spotify Churrasqueira
+  saudacao_texto:
+    name: Texto da saudacao
+    max: 300
+  saudacao_voz:
+    name: Texto da saudacao para voz
+    max: 300
+  clima_texto:
+    name: Texto do clima
+    max: 300
+  clima_voz:
+    name: Texto do clima para voz
+    max: 300
+  mercado_financeiro_texto:
+    name: Texto do mercado financeiro
+    max: 500
+  mercado_financeiro_voz:
+    name: Texto do mercado financeiro para voz
+    max: 300
+  proximo_compromisso_texto:
+    name: Texto do próximo compromisso
+    max: 500
+  proximo_compromisso_voz:
+    name: Texto do próximo compromisso para voz
+    max: 300

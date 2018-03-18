@@ -137,8 +137,34 @@
    - daily_summary
    - humidity
    - temperature
+   - hourly_summary
+   - precip_intensity_max
+   - precip_type
 
-
+# Tradução Previsão de tempo
+#- platform: rest
+#  method: POST
+#  name: dark_sky_summary_pt
+#  resource: https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20180312T184049Z.25ec68dcb8cdd93c.e8313f4eb494259e59ca6a6efd1c03e42e81d8a6&lang=en-pt
+#  payload: >
+#    text={{ states.sensor.dark_sky_summary.state }}
+#  value_template: '{{ value_json.text }}'
+#  headers:
+#    User-Agent: Home Assistant
+#    Content-Type: application/x-www-form-urlencoded
+- platform: command_line
+  name: dark_sky_summary_pt
+  command: curl --data \"key=trnsl.1.1.20180312T184049Z.25ec68dcb8cdd93c.e8313f4eb494259e59ca6a6efd1c03e42e81d8a6&lang=en-pt&text={{ states.sensor.dark_sky_summary.state }}\" https://translate.yandex.net/api/v1.5/tr.json/translate
+  value_template: '{{ value_json.text[0] }}'
+- platform: command_line
+  name: dark_sky_daily_summary_pt
+  command: curl --data \"key=trnsl.1.1.20180312T184049Z.25ec68dcb8cdd93c.e8313f4eb494259e59ca6a6efd1c03e42e81d8a6&lang=en-pt&text={{ states.sensor.dark_sky_daily_summary.state }}\" https://translate.yandex.net/api/v1.5/tr.json/translate
+  value_template: '{{ value_json.text[0] }}'
+- platform: command_line
+  name: dark_sky_hourly_summary_pt
+  command: curl --data \"key=trnsl.1.1.20180312T184049Z.25ec68dcb8cdd93c.e8313f4eb494259e59ca6a6efd1c03e42e81d8a6&lang=en-pt&text={{ states.sensor.dark_sky_hourly_summary.state }}\" https://translate.yandex.net/api/v1.5/tr.json/translate
+  value_template: '{{ value_json.text[0] }}'
+  
 # Google Travel Time
 - platform: google_travel_time
   name: 'Para pai'
@@ -159,7 +185,7 @@
   name: 'Para Sogro'
   api_key: !secret google_travel_api
   origin: device_tracker.52008849ec808451
-  destination: 'BR-116, 103 - Xaxim, Curitiba - PR, 81690-200'
+  destination: 'BR-116, 15575 - Xaxim, Curitiba - PR'
 - platform: google_travel_time
   name: 'Para BRF'
   api_key: !secret google_travel_api
@@ -188,3 +214,14 @@
 - platform: openexchangerates
   api_key: !secret exchange_api_key
   quote: BRL
+  
+# Horário
+- platform: time_date
+  display_options:
+    - 'time'
+    - 'date'
+    - 'date_time'
+    
+# Arquivos de backup
+- platform: backup
+  folder: /backup

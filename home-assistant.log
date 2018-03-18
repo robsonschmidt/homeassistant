@@ -1,6 +1,417 @@
-2018-03-11 20:13:30 WARNING (SyncWorker_15) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
-2018-03-11 20:16:21 WARNING (SyncWorker_18) [homeassistant.components.python_script.set_state.py] switch.power_tv_quarto
-2018-03-11 20:21:18 ERROR (SyncWorker_0) [homeassistant.components.sensor.darksky] Unable to connect to Dark Sky. HTTPSConnectionPool(host='api.darksky.net', port=443): Max retries exceeded with url: /forecast/c96f80d478f6e3c254f3d7d1863f7241/-25.451756,-49.34335?units=si (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x73063690>: Failed to establish a new connection: [Errno -3] Try again',))
-2018-03-11 21:07:24 WARNING (SyncWorker_4) [homeassistant.components.python_script.set_state.py] switch.vol_cima_tv_quarto
-2018-03-11 21:07:25 WARNING (SyncWorker_3) [homeassistant.components.python_script.set_state.py] switch.vol_cima_tv_quarto
-2018-03-11 21:07:26 WARNING (SyncWorker_0) [homeassistant.components.python_script.set_state.py] switch.vol_cima_tv_quarto
+2018-03-17 21:58:19 ERROR (MainThread) [homeassistant.loader] Unable to find component sensor.backup
+2018-03-17 21:58:20 ERROR (MainThread) [homeassistant.config] Invalid config for [automation]: [state] is an invalid option for [automation]. Check: automation->condition->0->state. (See /config/configuration.yaml, line 104). Please check the docs at https://home-assistant.io/components/automation/
+2018-03-17 21:58:24 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'dict object' has no attribute 'text' (value: {"code":502,"message":"Invalid parameter: text"}, template: {{ value_json.text[0] }})
+2018-03-17 21:58:26 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'dict object' has no attribute 'text' (value: {"code":502,"message":"Invalid parameter: text"}, template: {{ value_json.text[0] }})
+2018-03-17 21:58:27 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'dict object' has no attribute 'text' (value: {"code":502,"message":"Invalid parameter: text"}, template: {{ value_json.text[0] }})
+2018-03-17 21:58:33 INFO (MainThread) [homeassistant.components.image_processing] Setting up image_processing.openalpr_local
+2018-03-17 21:59:30 WARNING (SyncWorker_10) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
+2018-03-17 22:03:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-17 22:04:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-17 22:04:46 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:46 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:46 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:46 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:46 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:46 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:46 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:46 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:46 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:46 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:46 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:46 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:46 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:46 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:04:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:55 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:56 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:56 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:56 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:56 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:56 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:56 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:56 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:56 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:56 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:56 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:56 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:56 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:57 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:57 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:57 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:57 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:57 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:05:57 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:06:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-17 22:06:04 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:06:04 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:33 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:33 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:33 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:33 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:33 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:33 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:33 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:33 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:33 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:33 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:07:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:08:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-17 22:08:21 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/frontend-622a02e67c4395ecfd7ccaeb704f00ad.html:144:7062 Uncaught TypeError: Cannot read property 'value' of null
+2018-03-17 22:08:21 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/frontend-622a02e67c4395ecfd7ccaeb704f00ad.html:144:7062 Uncaught TypeError: Cannot read property 'value' of null
+2018-03-17 22:09:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-17 22:09:12 ERROR (MainThread) [frontend.js.latest.201803100] :0:0 Script error.
+2018-03-17 22:10:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-17 22:11:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-17 22:12:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-17 22:13:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-17 22:14:00 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:12 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:12 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:12 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:12 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:12 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:12 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:12 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:12 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:12 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:12 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:12 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:12 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:12 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:12 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:12 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:13 ERROR (MainThread) [homeassistant.core] Invalid service data for input_datetime.set_datetime: Invalid time specified: 3:undefined for dictionary value @ data['time']. Got '3:undefined'
+2018-03-17 22:14:14 ERROR (MainThread) [homeassistant.core] Invalid service data for input_datetime.set_datetime: Invalid time specified: 03:undefined for dictionary value @ data['time']. Got '03:undefined'
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:14:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/core-79cea8ece91ee5a5dc48f1a8b89b5d1e.js:1:6978 Uncaught TypeError: Cannot read property 'attributes' of undefined
+2018-03-17 22:18:31 WARNING (SyncWorker_4) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:18:36 WARNING (SyncWorker_17) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:18:42 WARNING (SyncWorker_16) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:19:00 WARNING (SyncWorker_14) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:19:05 WARNING (SyncWorker_1) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:19:08 WARNING (SyncWorker_17) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:19:31 WARNING (SyncWorker_6) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:19:34 WARNING (SyncWorker_16) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:19:37 WARNING (SyncWorker_0) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:20:02 WARNING (SyncWorker_1) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:20:05 WARNING (SyncWorker_2) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:20:09 WARNING (SyncWorker_6) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:20:33 WARNING (SyncWorker_2) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:20:36 WARNING (SyncWorker_12) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:20:40 WARNING (SyncWorker_2) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:21:04 WARNING (SyncWorker_12) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:21:07 WARNING (SyncWorker_4) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:21:11 WARNING (SyncWorker_14) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:21:35 WARNING (SyncWorker_5) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:21:38 WARNING (SyncWorker_6) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:21:42 WARNING (SyncWorker_3) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:22:06 WARNING (SyncWorker_2) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:22:09 WARNING (SyncWorker_18) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:22:12 WARNING (SyncWorker_16) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:22:37 WARNING (SyncWorker_6) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:22:40 WARNING (SyncWorker_11) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:22:44 WARNING (SyncWorker_0) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:23:08 WARNING (SyncWorker_2) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:23:11 WARNING (SyncWorker_11) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:23:14 WARNING (SyncWorker_14) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:23:39 WARNING (SyncWorker_6) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:23:42 WARNING (SyncWorker_1) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:23:46 WARNING (SyncWorker_17) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:24:10 WARNING (SyncWorker_1) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:24:13 WARNING (SyncWorker_13) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:24:16 WARNING (SyncWorker_14) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:24:41 WARNING (SyncWorker_4) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:24:44 WARNING (SyncWorker_8) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:24:47 WARNING (SyncWorker_13) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:25:12 WARNING (SyncWorker_9) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:25:15 WARNING (SyncWorker_7) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:25:19 WARNING (SyncWorker_19) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:25:43 WARNING (SyncWorker_4) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:25:46 WARNING (SyncWorker_1) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:25:49 WARNING (SyncWorker_15) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:26:14 WARNING (SyncWorker_17) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:26:17 WARNING (SyncWorker_14) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:26:20 WARNING (SyncWorker_5) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:26:45 WARNING (SyncWorker_16) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:26:48 WARNING (SyncWorker_10) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:26:51 WARNING (SyncWorker_9) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:27:16 WARNING (SyncWorker_17) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:27:19 WARNING (SyncWorker_6) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:27:23 WARNING (SyncWorker_8) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-03-17 22:27:47 WARNING (SyncWorker_13) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-03-17 22:27:47 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall light.turn_off: entity_id=['light.luz_esquerda']>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/pyHS100/smartdevice.py", line 77, in _query_helper
+    request={target: {cmd: arg}}
+  File "/usr/lib/python3.6/site-packages/pyHS100/protocol.py", line 47, in query
+    sock.connect((host, port))
+OSError: [Errno 113] Host is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/homeassistant/core.py", line 1006, in _event_to_service_call
+    await service_handler.func(service_call)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/light/__init__.py", line 346, in async_handle_light_service
+    await light.async_turn_off(**params)
+  File "/usr/lib/python3.6/asyncio/futures.py", line 332, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 250, in _wakeup
+    future.result()
+  File "/usr/lib/python3.6/asyncio/futures.py", line 245, in result
+    raise self._exception
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/light/tplink.py", line 123, in turn_off
+    self.smartbulb.state = self.smartbulb.BULB_STATE_OFF
+  File "/usr/lib/python3.6/site-packages/pyHS100/smartbulb.py", line 230, in state
+    self.set_light_state(light_state)
+  File "/usr/lib/python3.6/site-packages/pyHS100/smartbulb.py", line 88, in set_light_state
+    "transition_light_state", state)
+  File "/usr/lib/python3.6/site-packages/pyHS100/smartdevice.py", line 80, in _query_helper
+    raise SmartDeviceException('Communication error') from ex
+pyHS100.smartdevice.SmartDeviceException: Communication error
+2018-03-17 22:27:50 WARNING (SyncWorker_1) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-03-17 22:27:50 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall light.turn_on: entity_id=['light.luz_central']>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/pyHS100/smartdevice.py", line 77, in _query_helper
+    request={target: {cmd: arg}}
+  File "/usr/lib/python3.6/site-packages/pyHS100/protocol.py", line 47, in query
+    sock.connect((host, port))
+OSError: [Errno 113] Host is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/homeassistant/core.py", line 1006, in _event_to_service_call
+    await service_handler.func(service_call)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/light/__init__.py", line 344, in async_handle_light_service
+    await light.async_turn_on(**params)
+  File "/usr/lib/python3.6/asyncio/futures.py", line 332, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.6/asyncio/tasks.py", line 250, in _wakeup
+    future.result()
+  File "/usr/lib/python3.6/asyncio/futures.py", line 245, in result
+    raise self._exception
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/light/tplink.py", line 107, in turn_on
+    self.smartbulb.state = self.smartbulb.BULB_STATE_ON
+  File "/usr/lib/python3.6/site-packages/pyHS100/smartbulb.py", line 230, in state
+    self.set_light_state(light_state)
+  File "/usr/lib/python3.6/site-packages/pyHS100/smartbulb.py", line 88, in set_light_state
+    "transition_light_state", state)
+  File "/usr/lib/python3.6/site-packages/pyHS100/smartdevice.py", line 80, in _query_helper
+    raise SmartDeviceException('Communication error') from ex
+pyHS100.smartdevice.SmartDeviceException: Communication error
+2018-03-17 22:27:53 WARNING (SyncWorker_14) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error

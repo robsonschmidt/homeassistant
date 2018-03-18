@@ -1,6 +1,3 @@
-beer_fridge:
-  sequence:
-    service: input_boolean.beer_fridge
 play_spotify_rock:
   sequence:
   - service: media_player.play_media
@@ -353,3 +350,150 @@ liga_chromecast_sala:
   - data:
       entity_id: switch.source_chromecast_sala
     service: switch.turn_on
+    
+# Briefing
+ # Saudacao
+saudacao_texto:
+  alias: Saudacao Texto
+  sequence:
+  - service: input_text.set_value
+    data_template:
+      entity_id: input_text.saudacao_texto
+      value: >
+         {% if now().hour > 18 %}
+         Boa noite Robson,
+         {% elif now().hour > 12 %}
+         Boa tarde Robson,
+         {% else %}
+         Bom dia Robson,
+         {% endif %}
+         {{{"Sunday": "domingo","Monday": "segunda-feira", "Tuesday": "terça-feira", "Wednesday": "quarta-feira", "Thursday": "quinta-feira", "Friday": "sexta-feira", "Saturday": "sábado"}[now().strftime('%A')] | default(now().strftime('%A')) }},
+         {{ now().strftime('%d/%m') }}
+saudacao_voz:
+  alias: Saudacao Voz
+  sequence:
+  - service: input_text.set_value
+    data_template:
+      entity_id: input_text.saudacao_voz
+      value: >
+         {% if now().hour > 18 %}
+         Boa noite Robson,
+         {% elif now().hour > 12 %}
+         Boa tarde Robson,
+         {% else %}
+         Bom dia Robson,
+         {% endif %}
+         {{ {"Sunday": "domingo","Monday": "segunda-feira", "Tuesday": "terça-feira", "Wednesday": "quarta-feira", "Thursday": "quinta-feira", "Friday": "sexta-feira", "Saturday": "sábado"}[now().strftime('%A')] | default(now().strftime('%A')) }}
+          {{ now().strftime('%d/%m') }}
+         as {{ (now().strftime('%H')) | int }} horas
+         {% if (now().strftime('%M')) | int != 0 %}
+         e {{ (now().strftime('%M')) | int }} minutos
+         {% endif %}.
+
+ # Clima
+clima_texto:
+  alias: Clima Texto
+  sequence:
+  - service: input_text.set_value
+    data_template:
+      entity_id: input_text.clima_texto
+      value: >
+       *Temperatura Atual:*{{- '\n' -}}
+       *- *{{ states.sensor.dark_sky_temperature.state|replace('.', ',') }} {{ states.sensor.dark_sky_temperature.attributes.unit_of_measurement }} {{ states.sensor.dark_sky_summary_pt.state }}{{- '\n' -}}
+       *Previsão de tempo de hoje:*{{- '\n' -}}
+       *- *{{ states.sensor.forecast_0.state }}{{- '\n' -}}
+       *Previsão de tempo amanhã:*{{- '\n' -}}
+       *- *{{ states.sensor.forecast_1.state }}
+clima_voz:
+  alias: Clima Voz
+  sequence:
+  - service: input_text.set_value
+    data_template:
+      entity_id: input_text.clima_voz
+      value: >
+         Temperatura atual de {{ (states.sensor.dark_sky_temperature.state|round(0))}}°,
+         {{ states.sensor.dark_sky_summary_pt.state }},
+         {% if now().hour > 18 %}
+         amanhã máxima de {{ (states.sensor.dark_sky_daily_high_temperature_1.state|round(0))}}°,
+         mínima de {{ (states.sensor.dark_sky_daily_low_temperature_1.state|round(0))}}°,
+         humidade de {{ (states.sensor.dark_sky_humidity_1.state|round(0)) }}{{ states.sensor.dark_sky_humidity_1.attributes.unit_of_measurement }},
+         e probabilidade de chuva de {{ (states.sensor.dark_sky_precip_probability_1.state|round(0)) }}{{ states.sensor.dark_sky_precip_probability_1.attributes.unit_of_measurement }},
+         {% else %}
+         máxima de {{ (states.sensor.dark_sky_daily_high_temperature.state|round(0))}}°,
+         mínima de {{ (states.sensor.dark_sky_daily_low_temperature.state|round(0))}}°,
+         humidade de {{ (states.sensor.dark_sky_humidity.state|round(0)) }}{{ states.sensor.dark_sky_humidity.attributes.unit_of_measurement }},
+         e probabilidade de chuva de {{ (states.sensor.dark_sky_precip_probability.state|round(0)) }}{{ states.sensor.dark_sky_precip_probability.attributes.unit_of_measurement }},
+         {% endif %}
+         para os próximos dias {{ states.sensor.dark_sky_daily_summary_pt.state }}
+mercado_financeiro_texto:
+  alias: Mercado Financeiro Texto
+  sequence:
+  - service: input_text.set_value
+    data_template:
+      entity_id: input_text.mercado_financeiro_texto
+      value: >
+       *Dolar:*{{- '\n' -}}
+       *- Atual:* {{ (states.sensor.exchange_rate_sensor.state|round(2))|replace('.', ',') }}{{- '\n' -}}
+       *Bitcoin:*{{- '\n' -}}
+       *- Abertura:* {{ ((states.input_number.valor_bitcoin_meianoite.state) | round(2))|replace('.', ',') }}{{- '\n' -}}
+       *- Atual:* {{((states.sensor.exchange_rate_1_btc.state | float) | round(2))|replace('.', ',') }}({{ (((((states.sensor.exchange_rate_1_btc.state | float) / (states.input_number.valor_bitcoin_meianoite.state | float)) -1) * 100) | round(2))|replace('.', ',') }}%){{- '\n' -}}
+       *- Abertura D-1:* {{ ((states.input_number.valor_bitcoin_meianoite_ontem.state) | round(2))|replace('.', ',') }}({{ (((((states.input_number.valor_bitcoin_meianoite.state | float) / (states.input_number.valor_bitcoin_meianoite_ontem.state | float)) -1) * 100) | round(2))|replace('.', ',') }}%){{- '\n' -}}
+       *- Valor Carteira:* USD {{ (((states.sensor.exchange_rate_1_btc.state | float) * 0.028924) | round(2))|replace('.', ',') }} | BRL {{ (((states.sensor.exchange_rate_1_btc.state | float) * 0.028924 * (states.sensor.exchange_rate_sensor.state | float)) | round(2))|replace('.', ',') }}
+mercado_financeiro_voz:
+  alias: Mercado Financeiro Voz
+  sequence:
+  - service: input_text.set_value
+    data_template:
+      entity_id: input_text.mercado_financeiro_voz
+      value: >
+       A cotação do dolar está em {{ (states.sensor.exchange_rate_sensor.state|round(2))|replace('.', ' e ') }}
+       , e o bitcoin em {{ (states.sensor.exchange_rate_1_btc.state|round(0)) }}
+       , com uma variação de {{ (((((states.sensor.exchange_rate_1_btc.state | float) / (states.input_number.valor_bitcoin_meianoite.state | float)) -1) * 100) | round(2))|replace('.', ' virgula ') }} %.
+proximo_compromisso_texto:
+  alias: Proximo Compromisso Texto
+  sequence:
+  - service: input_text.set_value
+    data_template:
+      entity_id: input_text.proximo_compromisso_texto
+      value: >
+       *Próximo compromisso:*{{- '\n' -}}
+       *- Título:* {{ states.calendar.robson.attributes.message }} {{- '\n' -}}
+       *- Horário:* {{ as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%d-%m-%Y %H:%M') }}
+       até{% if as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%d') == as_timestamp(states.calendar.robson.attributes.end_time) | timestamp_custom('%d') %}
+       {{ as_timestamp(states.calendar.robson.attributes.end_time) | timestamp_custom('%H:%M') }}
+       {% else %}
+       {{ as_timestamp(states.calendar.robson.attributes.end_time) | timestamp_custom('%d-%m-%Y %H:%M') }}
+       {% endif %}{{- '\n' -}}
+       *- Local:*
+       {% if states.calendar.robson.attributes.location %}
+       {{ states.calendar.robson.attributes.location.split(',')[0] }}
+       {% else %}
+       Sem Endereço
+       {% endif %}
+       {{- '\n' -}}
+       *- Tempo até destino:* {{ states.sensor.para_compromisso.attributes.duration }}
+proximo_compromisso_voz:
+  alias: Proximo Compromisso Voz
+  sequence:
+  - service: input_text.set_value
+    data_template:
+      entity_id: input_text.proximo_compromisso_voz
+      value: >
+       Seu próximo compromisso é {{ states.calendar.robson.attributes.message }}
+       {% if ((as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%d')) | int == now().day) and
+       ((as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%m')) | int == now().month) %}
+       Hoje
+       {% elif ((as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%d')) | int == (now().day + 1)) and
+       ((as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%m')) | int == (now().month)) %}
+       Amanhã
+       {% else %}
+       {{ as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%d-%m-%Y') }}
+       {% endif %}
+       as {{ (as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%H')) | int }} horas
+       {% if (as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%M')) | int != 0 %}
+       e {{ (as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%M')) | int }} minutos
+       {% endif %}
+       {% if states.calendar.robson.attributes.location %}
+       no {{ states.calendar.robson.attributes.location.split(',')[0] }} 
+       {% endif %} 
+       com tempo previsto de chegada de {{ states.sensor.para_compromisso.attributes.duration |replace('mins', 'minutos') }}.

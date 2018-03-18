@@ -7,7 +7,17 @@
   gate:
     name: Portão
     initial: off
-  robson:
-    name: Robson
-    initial: on
-    icon: mdi:cellphone-iphone
+  sacada_frente:
+    name: Sacada Frente
+    initial: off
+  painel_quarto:
+    name: Painel Quarto
+    initial: off
+  quarto:
+    name: Quarto
+    initial: off
+  ativa_timer_tv_isabelle:
+    name: TV Isabelle
+    initial: off
+  fazer_backup:
+    name: Fazer Backup

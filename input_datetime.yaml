@@ -1,0 +1,16 @@
+boletim_1:
+  name: Hora do boletim 1
+  has_time: true
+boletim_2:
+  name: Hora do boletim 2
+  has_time: true
+boletim_3:
+  name: Hora do boletim 3
+  has_time: true
+timer_tv_isabelle:
+  name: Ativa timer TV Isabelle
+  has_time: true
+  has_date: true
+hora_backup:
+  name: Hora Backup
+  has_time: true

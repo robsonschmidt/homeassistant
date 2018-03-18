@@ -46,3 +46,9 @@
   - device_id: palmeiras
     name: Palmeiras 4
     track: false
+
+- cal_id: en.brazilian#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: holidays_in_brazil
+    name: Holidays in Brazil
+    track: true

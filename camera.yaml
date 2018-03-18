@@ -1,18 +1,15 @@
   - platform: ffmpeg
     name: fundos
     input: !secret camera_fundos
-#    extra_arguments: -r 0.5 -ignore_unknown /config/camera/fundos%d.jpg   
   - platform: ffmpeg
     name: frente
     input: !secret camera_frente
-#    extra_arguments: -r 0.5 -ignore_unknown /config/camera/frente%d.jpg
   - platform: ffmpeg
     name: interna
     input: !secret camera_interna
-#    extra_arguments: -r 0.5 -ignore_unknown /config/camera/interna%d.jpg
-#  - platform: local_file
-#    name: interna_local
-#    file_path: /config/camera/interna1.jpg
+  - platform: local_file
+    name: teste_carro
+    file_path: /config/teste.png
 #  - platform: local_file
 #    name: frente_local
 #    file_path: /config/camera/frente1.jpg

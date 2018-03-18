@@ -1,91 +1,28 @@
-- alias: Luz Corredor On
-  action:
-  - data:
-      event: hall_light_on
-      value1: 'on'
-    service: ifttt.trigger
-  condition: []
-  id: '1513562930930'
+# Temperatura CPU
+- alias: CPU Alta
   trigger:
-  - entity_id: input_boolean.hall_light
-    from: 'off'
-    platform: state
-    to: 'on'
-- action:
-  - data:
-      event: hall_light_off
-      value1: 'off'
-    service: ifttt.trigger
-  alias: Luz Corredor Off
-  condition: []
-  id: '1513562995349'
-  trigger:
-  - entity_id: input_boolean.hall_light
-    from: 'on'
-    platform: state
-    to: 'off'
-- action:
-  - data:
-      event: beer_fridge_on
-      value1: 'on'
-    service: ifttt.trigger
-  alias: Cervejeira On
-  condition: []
-  id: '1513563051024'
-  trigger:
-  - entity_id: input_boolean.beer_fridge
-    from: 'off'
-    platform: state
-    to: 'on'
-- action:
-  - data:
-      event: beer_fridge_off
-      value1: 'off'
-    service: ifttt.trigger
-  alias: Cervejeira Off
-  condition: []
-  id: '1513563084506'
-  trigger:
-  - entity_id: input_boolean.beer_fridge
-    from: 'on'
-    platform: state
-    to: 'off'
-- action:
-  - data:
-      message: 'Temp. CPU Alta - {{ states(''sensor.cpu_temperature'') }} ºC
-
-        '
-    service: notify.telegram_group
-  alias: CPU Alta
-  condition: []
-  id: '1517266230635'
-  trigger:
-  - above: '60'
+  - platform: numeric_state
+    entity_id: sensor.cpu_temperature
+    above: '60'
     below: '70'
-    entity_id: sensor.cpu_temperature
-    platform: numeric_state
-- action:
-  - data:
-      message: 'Temp. CPU Multo Alta - {{ states(''sensor.cpu_temperature'') }} ºC
-
-        '
-    service: notify.telegram_group
-  alias: CPU Muito Alta
-  condition: []
+  action:
+  - service: notify.telegram_group
+    data:
+      message: >
+       *Temp. CPU Alta* - {{ states.sensor.cpu_temperature.state }} ºC
+- alias: CPU Muito Alta
   trigger:
-  - above: '70'
+  - platform: numeric_state
     entity_id: sensor.cpu_temperature
-    platform: numeric_state
-- action:
-  - alias: Broadlink Always OFF
-    data_template:
-      entity: '{{ trigger.entity_id }}
+    above: '70'
+  action:
+  - service: notify.telegram_group
+    data:
+      message: > 
+       *Temp. CPU Multo Alta* - {{ states.sensor.cpu_temperature.state }} ºC
 
-        '
-    service: python_script.set_state
-  alias: Broadlink Always OFF
-  condition: []
-  id: '1517777081947'
+# Manter sensor broadlink OFF
+- alias: Broadlink Always OFF
   trigger:
   - entity_id: switch.0_net_quarto
     from: 'off'
@@ -299,13 +236,16 @@
     from: 'off'
     platform: state
     to: 'on'
-- action:
-  - data:
-      message: Placa encontrada.
-    service: notify.telegram_bot
-  alias: Placa carro
-  condition: []
-  id: '1518651715891'
+  action:
+  - alias: Broadlink Always OFF
+    data_template:
+      entity: '{{ trigger.entity_id }}
+
+        '
+    service: python_script.set_state
+
+# Placa do carro
+- alias: Placa carro
   trigger:
   - event_data:
       entity_id: image_processing.openalpr_frente
@@ -320,7 +260,11 @@
   - event_data: {}
     event_type: image_processing.found_plate
     platform: event
-
+  action:
+  - service: notify.telegram_bot
+    data:
+      message: Placa encontrada.
+    
 # Telegram Portão
 - alias: 'Portão ON/OFF'
   action:
@@ -378,10 +322,14 @@
     service: python_script.dark_sky_friendly_names
 
 # Backup
-- alias: 'Backup diário as 3:00'
+- alias: 'Backup diário'
   trigger:
-    platform: time
-    at: '3:00:00'
+  - platform: template
+    value_template: "{{ states.sensor.time.state == (states.input_datetime.hora_backup.attributes.timestamp | int | timestamp_custom('%H:%M', false)) }}"
+  condition:
+    condition: state
+    entity_id: input_boolean.fazer_backup
+    state: 'on'
   action:
   - service: hassio.snapshot_full
     data_template:
@@ -404,8 +352,8 @@
   action:
   - service: notify.telegram_group
     data_template:
-      message: Número de arquivos de backups {{ states.sensor.count_snap_files.state
-        }}
+      message: >
+        Número de arquivos de backups {{ states.sensor.count_snap_files.state }}
 
 # Velocidade Internet
 - alias: 'Velocidade Internet Baixa'
@@ -421,34 +369,13 @@
         '
 
 # Device Tracker
-- alias: 'Flavia chegou em casa'
-  trigger:
-  - platform: state
-    entity_id: device_tracker.iphonedeflavialan
-    from: 'not_home'
-    to: 'home'
-  action:
-  - service: notify.telegram_group
-    data:
-      message: 'Flavia chegou em casa'
-- alias: 'Flavia saiu de casa'
-  trigger:
-  - platform: state
-    entity_id: device_tracker.iphonedeflavialan
-    from: 'home'
-    to: 'not_home'
-  action:
-  - service: notify.telegram_group
-    data:
-      message: 'Flavia saiu de casa'
 - alias: 'Robson chegou em casa'
   trigger:
   - platform: state
     entity_id: device_tracker.52008849ec808451
-    from: 'not_home'
     to: 'home'
   action:
-    - service: notify.telegram_bot
+    - service: notify.telegram_group
       data:
         message: 'Olá *Robson*, bem vindo a sua casa. Deseja executar uma das ações favoritas:'
         data:
@@ -458,6 +385,51 @@
             - 'Liga TV Record:/ligarecordsala, Canal Record:/canalrecordsala'
             - 'Liga TV Globo:/ligaglobosala, Canal Globo:/canalglobosala'
             - 'Liga TV Discovery:/ligadiscoverysala, Canal Discovery:/canaldiscoverysala'
+- alias: 'Robson chegou na BRF'
+  trigger:
+  - platform: state
+    entity_id: device_tracker.52008849ec808451
+    to: 'BRF'
+  action:
+    - service: notify.telegram_group
+      data:
+        message: 'Robson chegou na BRF.'
+- alias: 'Robson chegou no Sogro'
+  trigger:
+  - platform: state
+    entity_id: device_tracker.52008849ec808451
+    to: 'sogro'
+  action:
+    - service: notify.telegram_group
+      data:
+        message: 'Robson chegou no sogro.'
+- alias: 'Robson chegou na Escola'
+  trigger:
+  - platform: state
+    entity_id: device_tracker.52008849ec808451
+    to: 'escola'
+  action:
+    - service: notify.telegram_group
+      data:
+        message: 'Robson chegou no escola.'
+- alias: 'Robson chegou na casa dos pais'
+  trigger:
+  - platform: state
+    entity_id: device_tracker.52008849ec808451
+    to: 'pais'
+  action:
+    - service: notify.telegram_group
+      data:
+        message: 'Robson chegou na casa dos pais.'
+- alias: 'Robson saiu de casa'
+  trigger:
+  - platform: state
+    entity_id: device_tracker.52008849ec808451
+    to: 'not_home'
+  action:
+    - service: notify.telegram_group
+      data:
+        message: 'Robson não está em um local mapeado.'
 - alias: 'Liga Globo Flavia Chegou'
   trigger:
   - platform: state
@@ -477,38 +449,6 @@
       - fri
   action:
   - service: script.liga_tv_sala_globo
-- alias: 'Robson Fora de Casa'
-  condition:
-    condition: state
-    entity_id: input_boolean.robson
-    state: 'on'
-  trigger:
-    - platform: state
-      entity_id: device_tracker.iphonederobsonlan
-      to: 'not_home' 
-      for:
-        minutes: 10
-    - platform: state
-      entity_id: device_tracker.52008849ec808451
-      to: 'not_home' 
-  action:
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.robson
-- alias: 'Robson Casa'
-  condition:
-    condition: state
-    entity_id: input_boolean.robson
-    state: 'off'
-  trigger:
-    - platform: state
-      entity_id: device_tracker.iphonederobsonlan
-      to: 'home' 
-    - platform: state
-      entity_id: device_tracker.52008849ec808451
-      to: 'home' 
-  action:
-     service: input_boolean.turn_
-     entity_id: input_boolean.robson
 
 # Comandos Telegram
 - alias: 'Lista de Comandos Telegram'
@@ -750,7 +690,7 @@
   action:
     - service: notify.telegram_bot
       data:
-        message: 'waze://?favorite=BRF&navigate=yes'
+        message: 'https://waze.com/ul?favorite=BRF&navigate=yes'
 - alias: 'Comando Waze Sogro'
   trigger:
     platform: event
@@ -760,7 +700,7 @@
   action:
     - service: notify.telegram_bot
       data:
-        message: 'waze://?favorite=Sogro&navigate=yes'
+        message: 'https://waze.com/ul?favorite=Sogro&navigate=yes'
 - alias: 'Comando Waze Pai'
   trigger:
     platform: event
@@ -770,7 +710,7 @@
   action:
     - service: notify.telegram_bot
       data:
-        message: 'waze://?favorite=CostaGaragem&navigate=yes'
+        message: 'https://waze.com/ul?favorite=CostaGaragem&navigate=yes'
 - alias: 'Comando Waze Escola Isabelle'
   trigger:
     platform: event
@@ -780,7 +720,7 @@
   action:
     - service: notify.telegram_bot
       data:
-        message: 'waze://?favorite=EscolaIsabelle&navigate=yes'
+        message: 'https://waze.com/ul?favorite=EscolaIsabelle&navigate=yes'
 - alias: 'Comando Waze Próximo Compromisso'
   trigger:
     platform: event
@@ -790,7 +730,7 @@
   action:
     - service: notify.telegram_bot
       data_template:
-        message: 'waze://?q={{ states.calendar.robson.attributes["location"]|replace(" ", "+") }}&navigate=yes'
+        message: 'https://waze.com/ul?q={{ states.sensor.para_compromisso.attributes["destination_addresses"]|replace(" ", "+") }}'
 
 # Camando Start
 - alias: 'Start'
@@ -806,149 +746,76 @@
         data:
           keyboard:
             - '/inicio'
+            - '/boletim'
             - '/sair_casa'
             
 # Flash Briefing
 - alias: 'Flashbriefing'
   trigger:
-  - platform: time
-    at: '6:30:00'
   - platform: event
     event_type: telegram_command
     event_data:
       command: '/boletim'
+  - platform: template
+    value_template: "{{ states.sensor.time.state == (states.input_datetime.boletim_1.attributes.timestamp | int | timestamp_custom('%H:%M', false)) }}"
+  - platform: template
+    value_template: "{{ states.sensor.time.state == (states.input_datetime.boletim_2.attributes.timestamp | int | timestamp_custom('%H:%M', false)) }}"
+  - platform: template
+    value_template: "{{ states.sensor.time.state == (states.input_datetime.boletim_3.attributes.timestamp | int | timestamp_custom('%H:%M', false)) }}"
   action:
     - service: shell_command.excluir_ultimo_flashbriefing
-    - service: notify.telegram_bot
-      data_template:
-        message: >
-          *Temperatura Atual:* {{- '\n' -}}
-          *- *{{ states.sensor.dark_sky_temperature.state|replace('.', ',') }} {{ states.sensor.dark_sky_temperature.attributes.unit_of_measurement }}  {{ states.sensor.dark_sky_summary.state }} {{- '\n' -}}
-          *Previsão de tempo de hoje:* {{- '\n' -}}
-          *- *{{ states.sensor.forecast_0.state }}
-    - service: notify.telegram_bot
-      data_template:
-        message: >
-          *Variação do Bitcoin:* {{- '\n' -}}
-          *- Valor Compra:* USD 11.500,00 | BRL {{ ((states.sensor.exchange_rate_sensor.state|float) * 11500)|replace('.', ',') }} {{- '\n' -}}
-          ( {{ (((((states.sensor.exchange_rate_1_btc.state | float) / 11500.00) -1) * 100) | round(2))|replace('.', ',') }} %) 
-          {{- '\n' -}}
-          *- Valor Carteira: * USD {{ (((states.sensor.exchange_rate_1_btc.state | float) * 0.028924) | round(2))|replace('.', ',') }} | BRL {{ (((states.sensor.exchange_rate_1_btc.state | float) * 0.028924 * (states.sensor.exchange_rate_sensor.state | float)) | round(2))|replace('.', ',') }}
-          {{- '\n' -}}
-          *- Ini:* {{ states.input_number.valor_bitcoin_meianoite.attributes.unit_of_measurement }} {{ ((states.input_number.valor_bitcoin_meianoite.state) | round(2))|replace('.', ',') }} 
-          *| Atual:* {{states.sensor.exchange_rate_1_btc.attributes.unit_of_measurement }} {{((states.sensor.exchange_rate_1_btc.state | float) | round(2))|replace('.', ',') }} 
-          ( {{ (((((states.sensor.exchange_rate_1_btc.state | float) / (states.input_number.valor_bitcoin_meianoite.state | float)) -1) * 100) | round(2))|replace('.', ',') }} %)
-    - service: notify.telegram_bot
-      data_template:
-        message: >
-           *Próximo compromisso:*  {{- '\n' -}}
-           *- Título:* {{ states.calendar.robson.attributes.message }} {{- '\n' -}}
-           *- Horário:* {{ as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%d-%m-%Y %H:%M') }}
-           até{% if as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%d') == as_timestamp(states.calendar.robson.attributes.end_time) | timestamp_custom('%d') %}
-           {{ as_timestamp(states.calendar.robson.attributes.end_time) | timestamp_custom('%H:%M') }}
-           {% else %}
-           {{ as_timestamp(states.calendar.robson.attributes.end_time) | timestamp_custom('%d-%m-%Y %H:%M') }}
-           {% endif %}
-           {{- '\n' -}}
-           *- Local:* 
-           {% if states.calendar.robson.attributes.location %}
-           {{ states.calendar.robson.attributes.location }} 
-           {% else %}
-           Sem Endereço
-           {% endif %}
-           {{- '\n' -}}
-           *- Tempo até destino:* {{ states.sensor.para_compromisso.attributes.duration }}
+    - service: script.saudacao_texto
+    - service: script.saudacao_voz
+    - service: script.clima_texto
+    - service: script.clima_voz
+    - service: script.mercado_financeiro_texto
+    - service: script.mercado_financeiro_voz
+    - service: script.proximo_compromisso_texto
+    - service: script.proximo_compromisso_voz
     - delay: 00:00:03
     - service: tts.google_say
-      entity_id: media_player.quarto_isa
+      entity_id: media_player.quarto_fake
       data_template:
         language: 'pt'
         message: >
-         {% if now().hour > 18 %}
-         Boa noite Robson,
-         {% elif now().hour > 12 %}
-         Boa tarde Robson,
-         {% else %}
-         Bom dia Robson,
-         {% endif %}
-         {{ {"Sunday": "domingo","Monday": "segunda-feira", "Thusday": "terça-feira", "Wednesday": "quarta-feira", "Thursday": "quinta-feira", "Friday": "sexta-feira", "Saturday": "sábado"}[now().strftime('%A')] | default(now().strftime('%A')) }}
-         , {{ now().strftime('%d/%m/%Y') }},
-         as {{ (now().strftime('%H')) | int }} horas
-         {% if (now().strftime('%M')) | int != 0 %}
-         e {{ (now().strftime('%M')) | int }} minutos
-         {% endif %}
-         A temperatura atual é de {{ (states.sensor.dark_sky_temperature.state|round(0))}}°
-         , {{ {"Partly Cloudy": "parcialmente nublado", "Mostly Cloudy": "totalmente nublado"}[states.sensor.dark_sky_summary.state] | default(states.sensor.dark_sky_summary.state) }}
-         , com máxima de {{ (states.sensor.dark_sky_daily_high_temperature.state|round(0))}}°
-         , mínima de {{ (states.sensor.dark_sky_daily_low_temperature.state|round(0))}}°
-         , humidade de {{ (states.sensor.dark_sky_humidity.state|round(0)) }}{{ states.sensor.dark_sky_humidity.attributes.unit_of_measurement }}
-         , e probabilidade de chuva de {{ (states.sensor.dark_sky_precip_probability.state|round(0)) }}{{ states.sensor.dark_sky_precip_probability.attributes.unit_of_measurement }}.
-         A cotação do dolar está em {{ (states.sensor.exchange_rate_sensor.state|round(2))|replace('.', ' e ') }}
-         , e o bitcoin em {{ (states.sensor.exchange_rate_1_btc.state|round(0)) }}
-         , com uma variação de {{ (((((states.sensor.exchange_rate_1_btc.state | float) / (states.input_number.valor_bitcoin_meianoite.state | float)) -1) * 100) | round(2))|replace('.', ' virgula ') }} %.
-         Seu próximo compromisso é {{ states.calendar.robson.attributes.message }}
-         {% if ((as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%d')) | int == now().day) and
-         ((as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%m')) | int == now().month) %}
-         Hoje
-         {% elif ((as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%d')) | int == (now().day + 1)) and
-         ((as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%m')) | int == (now().month)) %}
-         Amanhã
-         {% else %}
-         {{ as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%d-%m-%Y') }}
-         {% endif %}
-         as {{ (as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%H')) | int }} horas
-         {% if (as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%M')) | int != 0 %}
-         e {{ (as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%M')) | int }} minutos
-         {% endif %}
-         {% if states.calendar.robson.attributes.location %}
-         no {{ states.calendar.robson.attributes.location.split(',')[0] }} 
-         {% endif %} 
-         com tempo previsto de chegada de {{ states.sensor.para_compromisso.attributes.duration |replace('mins', 'minutos') }}.
-    - delay: 00:00:45
+         {{ states.input_text.saudacao_voz.state }}
+         {{ states.input_text.clima_voz.state }}
+         {{ states.input_text.mercado_financeiro_voz.state }}
+         {{ states.input_text.proximo_compromisso_voz.state }}
+    - delay: 00:00:30
     - service: shell_command.renomear_flashbriefing
     - delay: 00:00:03
+    - service: notify.telegram_bot
+      data_template:
+        message: >
+          {{ states.input_text.saudacao_texto.state }}
+    - service: notify.telegram_bot
+      data_template:
+        message: >
+          {{ states.input_text.clima_texto.state }}
+    - service: notify.telegram_bot
+      data_template:
+        message: >
+         {{ states.input_text.mercado_financeiro_texto.state }}
+    - service: notify.telegram_bot
+      data_template:
+        message: >
+         {{ states.input_text.proximo_compromisso_texto.state }}
     - service: telegram_bot.send_video
       data:
         file: /config/tts/FlashBriefing.mp3
-
-# Flash Briefing Noite
-- alias: 'FlashbriefingNoite'
-  trigger:
-  - platform: time
-    at: '19:00:00'
-  - platform: event
-    event_type: telegram_command
-    event_data:
-      command: '/boletim_noite'  
-  action:
-    - service: notify.telegram_bot
-      data_template:
-        message: >
-          *Temperatura Atual:* {{- '\n' -}}
-          {{ states.sensor.dark_sky_temperature.state }} {{ states.sensor.dark_sky_summary.state }} {{- '\n' -}}
-          *Previsão de tempo de amanhã:* {{- '\n' -}}
-          {{ states.sensor.forecast_1.state }}
-    - service: notify.telegram_bot
-      data_template:
-        message: >
-          *Variação do Bitcoin:* {{- '\n' -}}
-          *- Valor Compra:* USD 11.500,00 | BRL {{ (states.sensor.exchange_rate_sensor.state | float) * 11500 }} {{- '\n' -}}
-          ( {{ ((((states.sensor.exchange_rate_1_btc.state | float) / 11500.00) -1) * 100) | round(2) }} %) 
-          {{- '\n' -}}
-          *- Valor Carteira: * USD {{ ((states.sensor.exchange_rate_1_btc.state | float) * 0.028924) | round(2) }} | BRL {{ ((states.sensor.exchange_rate_1_btc.state | float) * 0.028924 * (states.sensor.exchange_rate_sensor.state | float)) | round(2) }}
-          {{- '\n' -}}
-          *- Ini:* {{ states.input_number.valor_bitcoin_meianoite.attributes.unit_of_measurement }} {{ (states.input_number.valor_bitcoin_meianoite.state) | round(2) }} 
-          *| Atual:* {{states.sensor.exchange_rate_1_btc.attributes.unit_of_measurement }} {{(states.sensor.exchange_rate_1_btc.state | float) | round(2) }} 
-          ( {{ ((((states.sensor.exchange_rate_1_btc.state | float) / (states.input_number.valor_bitcoin_meianoite.state | float)) -1) * 100) | round(2) }} %)
 
 # Guardar valor do bitcoin
 - alias: 'Guardar Valor do Bitcoin'
   trigger:
   - platform: time
     at: '00:00:00'
-  - event: start
-    platform: homeassistant
   action:
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.valor_bitcoin_meianoite_ontem
+        value: >
+          {{ states.input_number.valor_bitcoin_meianoite.state }}
     - service: input_number.set_value
       data_template:
         entity_id: input_number.valor_bitcoin_meianoite
@@ -967,3 +834,152 @@
           {{ states.persistent_notification.invalid_config.attributes.title }}
         message: >
           {{ states.persistent_notification.invalid_config.attributes.message }}
+    
+# Liga / Desliga Cervejeira
+- alias: Cervejeira On
+  trigger:
+  - entity_id: input_boolean.beer_fridge
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - service: ifttt.trigger
+    data:
+      event: beer_fridge_on
+- alias: Cervejeira Off
+  trigger:
+  - entity_id: input_boolean.beer_fridge
+    from: 'on'
+    platform: state
+    to: 'off'
+  action:
+  - service: ifttt.trigger
+    data:
+      event: beer_fridge_off
+
+# Liga / Desliga Luz Corredor
+- alias: Luz Corredor On
+  trigger:
+  - entity_id: input_boolean.hall_light
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - service: ifttt.trigger
+    data:
+      event: hall_light_on
+- alias: Luz Corredor Off
+  trigger:
+  - entity_id: input_boolean.hall_light
+    from: 'on'
+    platform: state
+    to: 'off'
+  action:
+  - service: ifttt.trigger
+    data:
+      event: hall_light_off
+
+# Liga / Desliga Luz Quarto
+- alias: Luz Quarto On
+  trigger:
+  - entity_id: input_boolean.quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - service: ifttt.trigger
+    data:
+      event: quarto_on
+- alias: Luz Quarto Off
+  trigger:
+  - entity_id: input_boolean.quarto
+    from: 'on'
+    platform: state
+    to: 'off'
+  action:
+  - service: ifttt.trigger
+    data:
+      event: quarto_off
+    
+# Liga / Desliga Luz Sacada Frente
+- alias: Luz Sacada Frente On
+  trigger:
+  - entity_id: input_boolean.sacada_frente
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - service: ifttt.trigger
+    data:
+      event: sacada_frente_on
+- alias: Luz Sacada Frente Off
+  trigger:
+  - entity_id: input_boolean.sacada_frente
+    from: 'on'
+    platform: state
+    to: 'off'
+  action:
+  - service: ifttt.trigger
+    data:
+      event: sacada_frente_off
+
+# Liga / Desliga Luz Painel Quarto
+- alias: Luz Painel Quarto On
+  trigger:
+  - entity_id: input_boolean.painel_quarto
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - service: ifttt.trigger
+    data:
+      event: painel_quarto_on
+- alias: Luz Painel Quarto Off
+  trigger:
+  - entity_id: input_boolean.painel_quarto
+    from: 'on'
+    platform: state
+    to: 'off'
+  action:
+  - service: ifttt.trigger
+    data:
+      event: painel_quarto_off
+      
+# Ativa timer TV Isabelle
+- alias: Ativa Timer TV Isabelle
+  trigger:
+  - entity_id: input_boolean.ativa_timer_tv_isabelle
+    platform: state
+    to: 'on'
+  action:
+  - service: input_datetime.set_datetime
+    entity_id: input_datetime.timer_tv_isabelle
+    data_template:
+      time: "{{ (as_timestamp(now()) + (states.input_number.tempo_timer.state | int * 60)) | timestamp_custom('%H:%M:00', true) }}"
+      date: "{{ (as_timestamp(now()) + (states.input_number.tempo_timer.state | int * 60))  | timestamp_custom('%Y-%m-%d', true) }}"
+  - service: notify.telegram_bot
+    data_template:
+      message: "*Timer* iniciado para *TV Isabelle*, fim as {{ (as_timestamp(now()) + (states.input_number.tempo_timer.state | int * 60)) | timestamp_custom('%H:%M:00', true) }}"
+# Fim timer TV Isabelle
+- alias: Fim timer TV Isabelle
+  trigger:
+  - platform: template
+    value_template: "{{ states.sensor.date__time.state == (states.input_datetime.timer_tv_isabelle.attributes.timestamp | int | timestamp_custom('%Y-%m-%d, %H:%M', true)) }}"
+  action:
+    - service: media_player.turn_off
+      entity_id: media_player.quarto_isabelle
+    - service: notify.telegram_bot
+      data_template:
+        message: '*TV da Isabelle desligada.*'
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.ativa_timer_tv_isabelle
+    - service: tts.google_say
+      entity_id: media_player.quarto_isabelle
+      data: 
+       message: 'Timer finalizado, hora de dormir. Boa noite.'
+       language: pt
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.quarto_isabelle
+        media_content_id: 'https://fris.duckdns.org:8123/local/Ninar.mp4'
+        media_content_type: 'VIDEO'

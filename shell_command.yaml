@@ -1,0 +1,3 @@
+  renomear_flashbriefing: for FILENAME in /config/tts/*; do mv $FILENAME /config/tts/FlashBriefing.mp3; done;
+  excluir_ultimo_flashbriefing: rm /config/tts/FlashBriefing.mp3;
+  excluir_snapshot_antigos: find /backup/* -mtime +5 -exec rm {} \;
