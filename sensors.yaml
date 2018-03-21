@@ -66,50 +66,50 @@
     forecast_0:
       friendly_name: "Hoje"
       value_template: >
-       Max: {{states.sensor.dark_sky_daily_high_temperature.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity.state|round(0)}}%
+       ⇧ {{states.sensor.dark_sky_daily_high_temperature.state|round(0)}}°C | ⇩ {{states.sensor.dark_sky_daily_low_temperature.state|round(0)}}°C | ☂ {{states.sensor.dark_sky_precip_probability.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity.state|round(0)}}%
       entity_picture_template: >-
         {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon.state ~ '.png'}}
 
     forecast_1:
       friendly_name: "Amanhã"
       value_template: >
-       Max: {{states.sensor.dark_sky_daily_high_temperature_1.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature_1.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability_1.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_1.state|round(0)}}%
+       ⇧ {{states.sensor.dark_sky_daily_high_temperature_1.state|round(0)}}°C | ⇩ {{states.sensor.dark_sky_daily_low_temperature_1.state|round(0)}}°C | ☂ {{states.sensor.dark_sky_precip_probability_1.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_1.state|round(0)}}%
       entity_picture_template: >-
         {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_1.state ~ '.png'}}
 
     forecast_2:
       value_template: >
-       Max: {{states.sensor.dark_sky_daily_high_temperature_2.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature_2.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability_2.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_2.state|round(0)}}%
+       ⇧ {{states.sensor.dark_sky_daily_high_temperature_2.state|round(0)}}°C | ⇩ {{states.sensor.dark_sky_daily_low_temperature_2.state|round(0)}}°C | ☂ {{states.sensor.dark_sky_precip_probability_2.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_2.state|round(0)}}%
       entity_picture_template: >-
         {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_2.state ~ '.png'}}
 
     forecast_3:
       value_template: >
-       Max: {{states.sensor.dark_sky_daily_high_temperature_3.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature_3.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability_3.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_3.state|round(0)}}%
+       ⇧ {{states.sensor.dark_sky_daily_high_temperature_3.state|round(0)}}°C | ⇩ {{states.sensor.dark_sky_daily_low_temperature_3.state|round(0)}}°C | ☂ {{states.sensor.dark_sky_precip_probability_3.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_3.state|round(0)}}%
       entity_picture_template: >-
         {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_3.state ~ '.png'}}
 
     forecast_4:
       value_template: >
-       Max: {{states.sensor.dark_sky_daily_high_temperature_4.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature_4.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability_4.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_4.state|round(0)}}%
+       ⇧ {{states.sensor.dark_sky_daily_high_temperature_4.state|round(0)}}°C | ⇩ {{states.sensor.dark_sky_daily_low_temperature_4.state|round(0)}}°C | ☂ {{states.sensor.dark_sky_precip_probability_4.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_4.state|round(0)}}%
       entity_picture_template: >-
         {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_4.state ~ '.png'}}
 
     forecast_5:
       value_template: >
-       Max: {{states.sensor.dark_sky_daily_high_temperature_5.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature_5.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability_5.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_5.state|round(0)}}%
+       ⇧ {{states.sensor.dark_sky_daily_high_temperature_5.state|round(0)}}°C | ⇩ {{states.sensor.dark_sky_daily_low_temperature_5.state|round(0)}}°C | ☂ {{states.sensor.dark_sky_precip_probability_5.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_5.state|round(0)}}%
       entity_picture_template: >-
         {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_5.state ~ '.png'}}
 
     forecast_6:
       value_template: >
-       Max: {{states.sensor.dark_sky_daily_high_temperature_6.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature_6.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability_6.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_6.state|round(0)}}%
+       ⇧ {{states.sensor.dark_sky_daily_high_temperature_6.state|round(0)}}°C | ⇩ {{states.sensor.dark_sky_daily_low_temperature_6.state|round(0)}}°C | ☂ {{states.sensor.dark_sky_precip_probability_6.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_6.state|round(0)}}%
       entity_picture_template: >-
         {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_6.state ~ '.png'}}
 
     forecast_7:
       value_template: >
-       Max: {{states.sensor.dark_sky_daily_high_temperature_7.state|round(0)}}°C | Min: {{states.sensor.dark_sky_daily_low_temperature_7.state|round(0)}}°C | Prob. {{states.sensor.dark_sky_precip_probability_7.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_7.state|round(0)}}%
+       ⇧ {{states.sensor.dark_sky_daily_high_temperature_7.state|round(0)}}°C | ⇩ {{states.sensor.dark_sky_daily_low_temperature_7.state|round(0)}}°C | ☂ {{states.sensor.dark_sky_precip_probability_7.state|round(0)}}% | Hum. {{states.sensor.dark_sky_humidity_7.state|round(0)}}%
       entity_picture_template: >-
         {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon_7.state ~ '.png'}}
 
@@ -225,3 +225,54 @@
 # Arquivos de backup
 - platform: backup
   folder: /backup
+  
+# Pi-hole - DNS & Ad Blocker
+- platform: pi_hole
+
+# Armario Robson
+- platform: mqtt
+  name: "Armario Robson Temperatura"
+  state_topic: "tele/sonoff2731/SENSOR"
+  value_template: "{{ value_json.AM2301.Temperature }}"
+  unit_of_measurement: "°C"
+  scan_interval: 20
+  force_update: true
+- platform: mqtt
+  name: "Armario Robson Humidade"
+  state_topic: "tele/sonoff2731/SENSOR"
+  value_template: "{{ value_json.AM2301.Humidity }}"
+  unit_of_measurement: "%"
+  scan_interval: 20
+  force_update: true
+  
+# Armario Flavia
+- platform: mqtt
+  name: "Armario Flavia Temperatura"
+  state_topic: "tele/sonoff1549/SENSOR"
+  value_template: "{{ value_json.AM2301.Temperature }}"
+  unit_of_measurement: "°C"
+  scan_interval: 20
+  force_update: true
+- platform: mqtt
+  name: "Armario Flavia Humidade"
+  state_topic: "tele/sonoff1549/SENSOR"
+  value_template: "{{ value_json.AM2301.Humidity }}"
+  unit_of_measurement: "%"
+  scan_interval: 20
+  force_update: true
+
+# Aquecedor Isabelle
+- platform: mqtt
+  name: "Temperatura Quarto Isabelle"
+  state_topic: "tele/sonoff3944/SENSOR"
+  value_template: "{{ value_json.AM2301.Temperature }}"
+  unit_of_measurement: "°C"
+  scan_interval: 20
+  force_update: true
+- platform: mqtt
+  name: "Humidade Quarto Isabelle"
+  state_topic: "tele/sonoff3944/SENSOR"
+  value_template: "{{ value_json.AM2301.Humidity }}"
+  unit_of_measurement: "%"
+  scan_interval: 20
+  force_update: true

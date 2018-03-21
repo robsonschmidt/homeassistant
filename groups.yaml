@@ -22,45 +22,21 @@ previsao_tempo:
    - sensor.forecast_6
    - sensor.forecast_7
 
-# Menu Churrasqueira
-churrasqueira:
-  name: Churrasqueira
+# Menu Garagem
+garagem:
+  name: Garagem
   view: yes
-  icon: mdi:radiator
+  icon: mdi:garage
   entities:
-  - group.churrasqueira_luz
-  - camera.fundos
-  - group.churrasqueira_spotify
-churrasqueira_luz:
-  name: 'Iluminação'
+    - camera.frente
+    - group.portao
+# Card portão
+portao:
+  name: Portão
   entities:
-  - switch.display
-  - switch.garden_light
-  - light.luz_esquerda
-  - light.luz_central
-  - light.luz_direita
-  - input_boolean.beer_fridge
-churrasqueira_spotify:
-  name: 'Spotify'
-  entities:
-  - input_text.churrasqueira_spotify_player
-quarto:
-  name: Quarto
-  view: yes
-  icon: mdi:hotel
-  entities:
-  - media_player.quarto
-  - group.tv_quarto_tiles
-  - group.quartos_tiles
-  - group.quarto_spotify
-  - script.liga_tv_sala_globo
-  - switch.luz_sacada_frente
-  - switch.luz_painel_quarto
-  - switch.luz_quarto
-quarto_spotify:
-  name: Spotify
-  entities:
-  - input_text.quarto_spotify_player
+    - switch.portao
+
+# Menu Sala
 sala:
   name: Sala
   view: yes
@@ -70,54 +46,116 @@ sala:
   - camera.interna
   - group.tv_sala_tiles
   - group.sala_spotify
+# Card Spotify
 sala_spotify:
   name: Spotify
   entities:
   - input_text.sala_spotify_player
-camera:
-  name: Cameras
+# Card Controle TV Sala
+tv_sala_tiles:
+    name: 'TV Sala'
+    entities:
+      - input_text.tv_sala_tiles
+
+# Menu Churrasqueira
+churrasqueira:
+  name: Churrasqueira
   view: yes
-  icon: mdi:cctv
+  icon: mdi:radiator
   entities:
-  - camera.interna
-  - camera.frente
+  - group.churrasqueira_luz
   - camera.fundos
-  - camera.teste_carro
-configuracao:
-  name: 'Configuração'
+  - group.churrasqueira_spotify
+# Card Luz Churrasqueira
+churrasqueira_luz:
+  name: 'Iluminação'
+  entities:
+  - switch.display
+  - switch.garden_light
+  - light.luz_esquerda
+  - light.luz_central
+  - light.luz_direita
+  - switch.cervejeira
+# Card Churrasqueira Spotify
+churrasqueira_spotify:
+  name: 'Spotify'
+  entities:
+  - input_text.churrasqueira_spotify_player
+
+# Menu Quarto
+quarto:
+  name: Quarto
   view: yes
-  icon: mdi:switch
+  icon: mdi:hotel
   entities:
-  - group.servidor
-  - group.teste_velocidade
-  - group.google_wifi
-servidor:
-  name: Servidor
+  - media_player.quarto
+  - group.tv_quarto_tiles
+  - group.quarto_spotify
+  - group.luz_quarto
+  - group.humidade_robson_quarto
+  - group.humidade_flavia_quarto
+  - group.agenda_humidade_quarto
+# Card Humidade Quarto Robson
+humidade_robson_quarto:
+  name: Humidade Robson
   entities:
-  - sensor.memory_use_percent
-  - sensor.disk_use_percent
-  - sensor.process
-  - sensor.swap_use_percent
-  - sensor.load_1m
-  - sensor.load_15m
-  - sensor.processor_use
-  - sensor.last_boot
-  - sensor.cpu_temperature
-teste_velocidade:
-  name: 'Teste de Velocidade'
+  - switch.onoff_desumidificador_robson
+  - sensor.armario_robson_humidade
+  - sensor.armario_robson_temperatura
+# Card Humidade Quarto Flavia
+humidade_flavia_quarto:
+  name: Humidade Flavia
   entities:
-  - sensor.speedtest_download
-  - sensor.speedtest_upload
-  - sensor.speedtest_ping
-google_wifi:
-  name: 'Google Wifi'
+  - switch.onoff_desumidificador_flavia
+  - sensor.armario_flavia_humidade
+  - sensor.armario_flavia_temperatura
+# Card Humidade Quarto Robson
+agenda_humidade_quarto:
+  name: Desumidificação
   entities:
-  - sensor.google_wifi_current_version
-  - sensor.google_wifi_last_restart
-  - sensor.google_wifi_local_ip
-  - sensor.google_wifi_new_version
-  - sensor.google_wifi_status
-  - sensor.google_wifi_uptime
+  - input_boolean.ligar_desumidificador
+  - input_number.min_humidade_quarto
+  - input_number.max_humidade_quarto
+  - input_datetime.ligar_desumidificador_inicio
+  - input_datetime.ligar_desumidificador_fim
+# Card Spotify Quarto
+quarto_spotify:
+  name: Spotify
+  entities:
+  - input_text.quarto_spotify_player
+luz_quarto:
+  name: Iluminação
+  entities:
+  - switch.luz_corredor
+  - switch.luz_quarto
+  - switch.luz_painel_quarto
+  - switch.luz_sacada_frente
+
+# Menu Quarto Isabelle
+quarto_isabelle:
+  name: Quarto Isabelle
+  view: yes
+  icon: mdi:human-child
+  entities:
+    - media_player.quarto_isabelle
+    - group.timer_tv_dormir
+    - group.aquecedor_isabelle
+    - sensor.humidade_quarto_isabelle
+    - sensor.temperatura_quarto_isabelle
+# Card Timer TV Dormir
+timer_tv_dormir:
+  name: Timer TV Dormir
+  entities:
+    - input_number.tempo_timer
+    - input_boolean.ativa_timer_tv_dormir
+    - input_datetime.timer_tv_dormir
+    - input_select.media_player
+# Card Aquecedor Isabelle
+aquecedor_isabelle:
+  name: Aquecedor
+  entities:
+  - switch.onoff_aquecedor_isabelle
+
 fundos_tiles:
     name: Térreo
     entities:
@@ -130,10 +168,6 @@ quartos_tiles:
     name: Quarto
     entities:
       - input_text.quartos_tiles
-tv_sala_tiles:
-    name: 'TV Sala'
-    entities:
-      - input_text.tv_sala_tiles
 tv_quarto_tiles:
     name: 'TV Quarto'
     entities:
@@ -144,6 +178,17 @@ conf_weblinks:
       - weblink.terminal
       - weblink.file_editor
 
+# Menu Camera
+camera:
+  name: Cameras
+  view: yes
+  icon: mdi:cctv
+  entities:
+  - camera.interna
+  - camera.frente
+  - camera.fundos
+  - camera.teste_carro
+
 # Menu Parametros
 parametro:
   name: Parametros
@@ -151,8 +196,9 @@ parametro:
   icon: mdi:format-list-numbers
   entities:
     - group.boletim
-    - group.timers
     - group.backup
+    - group.alertas_admin_telegram
+    - group.automacao_flavia
 # Card Boletim
 boletim:
   name: Boletim
@@ -160,17 +206,74 @@ boletim:
     - input_datetime.boletim_1
     - input_datetime.boletim_2
     - input_datetime.boletim_3
-# Card Timers
-timers:
-  name: Timers
-  entities:
-    - input_number.tempo_timer
-    - input_boolean.ativa_timer_tv_isabelle
-    - input_datetime.timer_tv_isabelle
-    
+    - input_boolean.enviar_texto
+    - input_boolean.enviar_voz
+    - input_boolean.enviar_saudacao
+    - input_boolean.enviar_clima
+    - input_boolean.enviar_mercado_financeiro
+    - input_boolean.enviar_proximo_compromisso
 # Card Backup
 backup:
   name: Backup
   entities:
     - input_boolean.fazer_backup
     - input_datetime.hora_backup
+# Card Alertas Admin
+alertas_admin_telegram:
+  name: Alertas Admin
+  entities:
+    - input_boolean.enviar_on_hassio
+    - input_boolean.enviar_off_hassio
+    - input_boolean.enviar_velocidade_internet_baixa
+    - input_boolean.enviar_cpu_temp_alta
+    - input_boolean.enviar_localizacao_flavia
+    - input_boolean.enviar_localizacao_robson
+    - input_boolean.enviar_acionamento_portao
+# Card Automacao Flavia
+automacao_flavia:
+  name: Automação Flavia
+  entities:
+    - input_boolean.automacao_flavia_ativada
+    - input_select.canal
+    - input_datetime.ligar_flavia_inicio
+    - input_datetime.ligar_flavia_fim
+    
+# Menu Configuração
+configuracao:
+  name: 'Configuração'
+  view: yes
+  icon: mdi:switch
+  entities:
+  - group.servidor
+  - group.teste_velocidade
+  - group.google_wifi
+# Card Servidor
+servidor:
+  name: Servidor
+  entities:
+  - sensor.memory_use_percent
+  - sensor.disk_use_percent
+  - sensor.process
+  - sensor.swap_use_percent
+  - sensor.load_1m
+  - sensor.load_15m
+  - sensor.processor_use
+  - sensor.last_boot
+  - sensor.cpu_temperature
+# Card Teste de Velocidade
+teste_velocidade:
+  name: 'Teste de Velocidade'
+  entities:
+  - sensor.speedtest_download
+  - sensor.speedtest_upload
+  - sensor.speedtest_ping
+# Card Google Wifi
+google_wifi:
+  name: 'Google Wifi'
+  entities:
+  - sensor.google_wifi_current_version
+  - sensor.google_wifi_last_restart
+  - sensor.google_wifi_local_ip
+  - sensor.google_wifi_new_version
+  - sensor.google_wifi_status
+  - sensor.google_wifi_uptime

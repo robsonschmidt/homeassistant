@@ -1,5 +1,5 @@
 # Fundos
-input_boolean.beer_fridge:
+switch.cervejeira:
   icon: mdi:glass-mug
   show_last_changed: true
   homebridge_visible: true
@@ -81,11 +81,26 @@ light.luz_direita:
   homebridge_name: Luz Direita
 
 # Quartos
-input_boolean.hall_light:
+switch.luz_corredor:
   icon: mdi:lightbulb-outline
   show_last_changed: true
   homebridge_visible: true
   homebridge_name: Luz Corredor
+switch.luz_quarto:
+  icon: mdi:lightbulb-outline
+  show_last_changed: true
+  homebridge_visible: true
+  homebridge_name: Luz Quarto
+switch.luz_painel_quarto:
+  icon: mdi:window-maximize
+  show_last_changed: true
+  homebridge_visible: true
+  homebridge_name: Luz Painel Quarto
+switch.luz_sacada_quarto:
+  icon: mdi:lightbulb-outline
+  show_last_changed: true
+  homebridge_visible: true
+  homebridge_name: Luz sacada Quarto
 
 # State Cards Fundos
 input_text.fundos_tiles:

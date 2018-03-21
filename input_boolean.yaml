@@ -1,23 +1,34 @@
-  hall_light:
-    name: Luz Hall
-    initial: off
-  beer_fridge:
-    name: Cervejeira
-    initial: off
-  gate:
-    name: Portão
-    initial: off
-  sacada_frente:
-    name: Sacada Frente
-    initial: off
-  painel_quarto:
-    name: Painel Quarto
-    initial: off
-  quarto:
-    name: Quarto
-    initial: off
-  ativa_timer_tv_isabelle:
-    name: TV Isabelle
-    initial: off
+  ativa_timer_tv_dormir:
+    name: TV Dormir
   fazer_backup:
     name: Fazer Backup
+  enviar_saudacao:
+    name: Enviar Saudação
+  enviar_clima:
+    name: Enviar Clima
+  enviar_mercado_financeiro:
+    name: Enviar Mercado Financeiro
+  enviar_proximo_compromisso:
+    name: Enviar Próximo Compromisso
+  enviar_voz:
+    name: Enviar Voz
+  enviar_texto:
+    name: Enviar Texto
+  enviar_on_hassio:
+    name: Enviar On Hassio
+  enviar_off_hassio:
+    name: Enviar Off Hassio
+  enviar_velocidade_internet_baixa:
+    name: Enviar Velocidade Internet Baixa
+  enviar_cpu_temp_alta:
+    name: Enviar Temperatura do CPU Alta
+  enviar_localizacao_flavia:
+    name: Enviar Localização Flavia
+  enviar_localizacao_robson:
+    name: Enviar Localização Robson
+  enviar_acionamento_portao:
+    name: Enviar Acionamento Portão
+  automacao_flavia_ativada:
+    name: Automação Ativada
+  ligar_desumidificador:
+    name: Ligar Desumidificador Diário

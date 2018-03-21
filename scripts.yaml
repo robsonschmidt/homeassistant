@@ -351,8 +351,21 @@ liga_chromecast_sala:
       entity_id: switch.source_chromecast_sala
     service: switch.turn_on
     
-# Briefing
- # Saudacao
+## Atualização Texto e Voz Briefing
+
+# Atualizar todos textos e voz
+atualiza_texto_voz:
+  alias: Atualiza Texto e Voz
+  sequence:
+  - service: script.saudacao_texto
+  - service: script.saudacao_voz
+  - service: script.clima_texto
+  - service: script.clima_voz
+  - service: script.mercado_financeiro_texto
+  - service: script.mercado_financeiro_voz
+  - service: script.proximo_compromisso_texto
+  - service: script.proximo_compromisso_voz
+# Saudacao
 saudacao_texto:
   alias: Saudacao Texto
   sequence:
@@ -360,15 +373,15 @@ saudacao_texto:
     data_template:
       entity_id: input_text.saudacao_texto
       value: >
-         {% if now().hour > 18 %}
-         Boa noite Robson,
-         {% elif now().hour > 12 %}
-         Boa tarde Robson,
-         {% else %}
-         Bom dia Robson,
-         {% endif %}
-         {{{"Sunday": "domingo","Monday": "segunda-feira", "Tuesday": "terça-feira", "Wednesday": "quarta-feira", "Thursday": "quinta-feira", "Friday": "sexta-feira", "Saturday": "sábado"}[now().strftime('%A')] | default(now().strftime('%A')) }},
-         {{ now().strftime('%d/%m') }}
+       {% if now().hour > 18 %}
+       Boa noite Robson,
+       {% elif now().hour > 12 %}
+       Boa tarde Robson,
+       {% else %}
+       Bom dia Robson,
+       {% endif %}
+       {{{"Sunday": "domingo","Monday": "segunda-feira", "Tuesday": "terça-feira", "Wednesday": "quarta-feira", "Thursday": "quinta-feira", "Friday": "sexta-feira", "Saturday": "sábado"}[now().strftime('%A')] | default(now().strftime('%A')) }},
+       {{ now().strftime('%d/%m') }}
 saudacao_voz:
   alias: Saudacao Voz
   sequence:
@@ -391,6 +404,7 @@ saudacao_voz:
          {% endif %}.
 
  # Clima
+# Clima
 clima_texto:
   alias: Clima Texto
   sequence:
@@ -411,20 +425,21 @@ clima_voz:
     data_template:
       entity_id: input_text.clima_voz
       value: >
-         Temperatura atual de {{ (states.sensor.dark_sky_temperature.state|round(0))}}°,
-         {{ states.sensor.dark_sky_summary_pt.state }},
-         {% if now().hour > 18 %}
-         amanhã máxima de {{ (states.sensor.dark_sky_daily_high_temperature_1.state|round(0))}}°,
-         mínima de {{ (states.sensor.dark_sky_daily_low_temperature_1.state|round(0))}}°,
-         humidade de {{ (states.sensor.dark_sky_humidity_1.state|round(0)) }}{{ states.sensor.dark_sky_humidity_1.attributes.unit_of_measurement }},
-         e probabilidade de chuva de {{ (states.sensor.dark_sky_precip_probability_1.state|round(0)) }}{{ states.sensor.dark_sky_precip_probability_1.attributes.unit_of_measurement }},
-         {% else %}
-         máxima de {{ (states.sensor.dark_sky_daily_high_temperature.state|round(0))}}°,
-         mínima de {{ (states.sensor.dark_sky_daily_low_temperature.state|round(0))}}°,
-         humidade de {{ (states.sensor.dark_sky_humidity.state|round(0)) }}{{ states.sensor.dark_sky_humidity.attributes.unit_of_measurement }},
-         e probabilidade de chuva de {{ (states.sensor.dark_sky_precip_probability.state|round(0)) }}{{ states.sensor.dark_sky_precip_probability.attributes.unit_of_measurement }},
-         {% endif %}
-         para os próximos dias {{ states.sensor.dark_sky_daily_summary_pt.state }}
+       Temperatura atual de {{ (states.sensor.dark_sky_temperature.state|round(0))}}°,
+       {{ states.sensor.dark_sky_summary_pt.state }},
+       {% if now().hour > 18 %}
+       amanhã máxima de {{ (states.sensor.dark_sky_daily_high_temperature_1.state|round(0))}}°,
+       mínima de {{ (states.sensor.dark_sky_daily_low_temperature_1.state|round(0))}}°,
+       humidade de {{ (states.sensor.dark_sky_humidity_1.state|round(0)) }}{{ states.sensor.dark_sky_humidity_1.attributes.unit_of_measurement }},
+       e probabilidade de chuva de {{ (states.sensor.dark_sky_precip_probability_1.state|round(0)) }}{{ states.sensor.dark_sky_precip_probability_1.attributes.unit_of_measurement }},
+       {% else %}
+       máxima de {{ (states.sensor.dark_sky_daily_high_temperature.state|round(0))}}°,
+       mínima de {{ (states.sensor.dark_sky_daily_low_temperature.state|round(0))}}°,
+       humidade de {{ (states.sensor.dark_sky_humidity.state|round(0)) }}{{ states.sensor.dark_sky_humidity.attributes.unit_of_measurement }},
+       e probabilidade de chuva de {{ (states.sensor.dark_sky_precip_probability.state|round(0)) }}{{ states.sensor.dark_sky_precip_probability.attributes.unit_of_measurement }},
+       {% endif %}
+       para os próximos dias {{ states.sensor.dark_sky_daily_summary_pt.state }}
+# Mercado Financeiro    
 mercado_financeiro_texto:
   alias: Mercado Financeiro Texto
   sequence:
@@ -449,6 +464,7 @@ mercado_financeiro_voz:
        A cotação do dolar está em {{ (states.sensor.exchange_rate_sensor.state|round(2))|replace('.', ' e ') }}
        , e o bitcoin em {{ (states.sensor.exchange_rate_1_btc.state|round(0)) }}
        , com uma variação de {{ (((((states.sensor.exchange_rate_1_btc.state | float) / (states.input_number.valor_bitcoin_meianoite.state | float)) -1) * 100) | round(2))|replace('.', ' virgula ') }} %.
+# Proximo Compromisso
 proximo_compromisso_texto:
   alias: Proximo Compromisso Texto
   sequence:
@@ -497,3 +513,74 @@ proximo_compromisso_voz:
        no {{ states.calendar.robson.attributes.location.split(',')[0] }} 
        {% endif %} 
        com tempo previsto de chegada de {{ states.sensor.para_compromisso.attributes.duration |replace('mins', 'minutos') }}.
+
+## Envio de Briefing Texto Telegram
+
+# Envia Telegram Texto Briefing
+envia_texto:
+  alias: Envia Texto
+  sequence:
+  - condition: state
+    entity_id: input_boolean.enviar_texto
+    state: 'on'
+  - service: script.envia_saudacao_texto
+  - service: script.envia_clima_texto
+  - service: script.envia_financeiro_texto
+  - service: script.envia_compromisso_texto
+# Envia Telegram Texto Saudacao
+envia_saudacao_texto:
+  alias: Envia Saudacao Texto
+  sequence:
+  - condition: state
+    entity_id: input_boolean.enviar_saudacao
+    state: 'on'
+  - service: notify.telegram_bot
+    data_template:
+      message: >
+       {{ states.input_text.saudacao_texto.state }}
+# Envia Telegram Texto Clima
+envia_clima_texto:
+  alias: Envia Clima Texto
+  sequence:
+  - condition: state
+    entity_id: input_boolean.enviar_clima
+    state: 'on'
+  - service: notify.telegram_bot
+    data_template:
+      message: >
+       {{ states.input_text.clima_texto.state }}
+# Envia Telegram Texto Financeiro
+envia_financeiro_texto:
+  alias: Envia Financeiro Texto
+  sequence:
+  - condition: state
+    entity_id: input_boolean.enviar_mercado_financeiro
+    state: 'on'
+  - service: notify.telegram_bot
+    data_template:
+      message: >
+       {{ states.input_text.mercado_financeiro_texto.state }}
+# Envia Telegram Texto Compromisso
+envia_compromisso_texto:
+  alias: Envia Compromisso Texto
+  sequence:
+  - condition: state
+    entity_id: input_boolean.enviar_proximo_compromisso
+    state: 'on'
+  - service: notify.telegram_bot
+    data_template:
+      message: >
+       {{ states.input_text.proximo_compromisso_texto.state }}
+       
+## Envio de Briefing Voz Telegram
+
+# Envia Telegram Voz Briefing
+envia_voz:
+  alias: Envia voz
+  sequence:
+  - condition: state
+    entity_id: input_boolean.enviar_voz
+    state: 'on'
+  - service: telegram_bot.send_video
+    data:
+      file: /config/tts/FlashBriefing.mp3

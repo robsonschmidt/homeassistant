@@ -85,8 +85,8 @@ sun:
 
 logger:
   default: warning
-  logs:
-    homeassistant.components.image_processing: debug
+#  logs:
+#    homeassistant.components.mqtt: debug
 #    homeassistant.components.automation: debug
 
 # Weather prediction
@@ -115,7 +115,7 @@ input_boolean: !include input_boolean.yaml
 camera: !include camera.yaml
 input_number: !include input_number.yaml
 input_datetime: !include input_datetime.yaml
-#input_select: !include input_select.yaml
+input_select: !include input_select.yaml
 weblink: !include weblink.yaml
 shell_command: !include shell_command.yaml
 
@@ -185,18 +185,13 @@ google_assistant:
     - switch
     - light
 
-#rest_command:
-#  dark_sky_summary_pt:
-#    url: 'https://translate.yandex.net/api/v1.5/tr.json/translate'
-#    method: post
-#    payload: >
-#      key=trnsl.1.1.20180312T184049Z.25ec68dcb8cdd93c.e8313f4eb494259e59ca6a6efd1c03e42e81d8a6&lang=en-pt&text={{states.sensor.dark_sky_summary.state}}
+mqtt:
 
-image_processing:
-  - platform: openalpr_local
-    region: eu
-    source:
-    - entity_id: camera.teste_carro
+#image_processing:
+#  - platform: openalpr_local
+#    region: eu
+#    source:
+#    - entity_id: camera.teste_carro
 #  - platform: dlib_face_detect
 #    source:
 #      - entity_id: camera.frente

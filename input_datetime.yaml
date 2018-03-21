@@ -7,10 +7,22 @@ boletim_2:
 boletim_3:
   name: Hora do boletim 3
   has_time: true
-timer_tv_isabelle:
-  name: Ativa timer TV Isabelle
+timer_tv_dormir:
+  name: Fim timer
   has_time: true
   has_date: true
 hora_backup:
   name: Hora Backup
+  has_time: true
+ligar_flavia_inicio:
+  name: Inicio ativação automação
+  has_time: true
+ligar_flavia_fim:
+  name: Termino ativação automação
+  has_time: true
+ligar_desumidificador_inicio:
+  name: Inicio
+  has_time: true
+ligar_desumidificador_fim:
+  name: Termino
   has_time: true

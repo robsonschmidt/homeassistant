@@ -1,5 +1,9 @@
 # Temperatura CPU
 - alias: CPU Alta
+  condition:
+    condition: state
+    entity_id: input_boolean.enviar_cpu_temp_alta
+    state: 'on'  
   trigger:
   - platform: numeric_state
     entity_id: sensor.cpu_temperature
@@ -11,6 +15,10 @@
       message: >
        *Temp. CPU Alta* - {{ states.sensor.cpu_temperature.state }} ºC
 - alias: CPU Muito Alta
+  condition:
+    condition: state
+    entity_id: input_boolean.enviar_cpu_temp_alta
+    state: 'on'  
   trigger:
   - platform: numeric_state
     entity_id: sensor.cpu_temperature
@@ -267,6 +275,10 @@
     
 # Telegram Portão
 - alias: 'Portão ON/OFF'
+  condition:
+    condition: state
+    entity_id: input_boolean.enviar_acionamento_portao
+    state: 'on'  
   action:
   - data:
       message: '*Portão* acionado.'
@@ -279,6 +291,10 @@
 
 # Inicio e Parada do FRIS
 - alias: 'FRIS Start'
+  condition:
+    condition: state
+    entity_id: input_boolean.enviar_on_hassio
+    state: 'on'  
   action:
   - data_template:
       message: '*FRIS Automação* iniciado.'
@@ -287,6 +303,10 @@
   - event: start
     platform: homeassistant
 - alias: 'FRIS Stop'
+  condition:
+    condition: state
+    entity_id: input_boolean.enviar_off_hassio
+    state: 'on'  
   action:
   - service: notify.telegram_group
     data_template:
@@ -298,7 +318,6 @@
 # Previsão de tempo 7 dias
 - alias: 'Atualiza Nomes Previsão'
   id: update_friendly_names
-  initial_state: 'on'
   trigger:
   - at: 0:05:00
     platform: time
@@ -323,13 +342,13 @@
 
 # Backup
 - alias: 'Backup diário'
-  trigger:
-  - platform: template
-    value_template: "{{ states.sensor.time.state == (states.input_datetime.hora_backup.attributes.timestamp | int | timestamp_custom('%H:%M', false)) }}"
   condition:
     condition: state
     entity_id: input_boolean.fazer_backup
     state: 'on'
+  trigger:
+  - platform: template
+    value_template: "{{ states.sensor.time.state == (states.input_datetime.hora_backup.attributes.timestamp | int | timestamp_custom('%H:%M', false)) }}"
   action:
   - service: hassio.snapshot_full
     data_template:
@@ -346,6 +365,10 @@
       addon: 7be23ff5_dropbox_sync
     service: hassio.addon_restart
 - alias: 'Novo arquivo backup'
+  condition:
+    condition: state
+    entity_id: input_boolean.fazer_backup
+    state: 'on'
   trigger:
     platform: state
     entity_id: sensor.count_snap_files
@@ -357,6 +380,10 @@
 
 # Velocidade Internet
 - alias: 'Velocidade Internet Baixa'
+  condition:
+    condition: state
+    entity_id: input_boolean.enviar_velocidade_internet_baixa
+    state: 'on'
   trigger:
   - below: '30'
     entity_id: sensor.speedtest_download
@@ -370,12 +397,16 @@
 
 # Device Tracker
 - alias: 'Robson chegou em casa'
+  condition:
+    condition: state
+    entity_id: input_boolean.enviar_localizacao_robson
+    state: 'on'
   trigger:
   - platform: state
     entity_id: device_tracker.52008849ec808451
     to: 'home'
   action:
-    - service: notify.telegram_group
+    - service: notify.telegram_bot
       data:
         message: 'Olá *Robson*, bem vindo a sua casa. Deseja executar uma das ações favoritas:'
         data:
@@ -386,6 +417,10 @@
             - 'Liga TV Globo:/ligaglobosala, Canal Globo:/canalglobosala'
             - 'Liga TV Discovery:/ligadiscoverysala, Canal Discovery:/canaldiscoverysala'
 - alias: 'Robson chegou na BRF'
+  condition:
+    condition: state
+    entity_id: input_boolean.enviar_localizacao_robson
+    state: 'on'
   trigger:
   - platform: state
     entity_id: device_tracker.52008849ec808451
@@ -395,6 +430,10 @@
       data:
         message: 'Robson chegou na BRF.'
 - alias: 'Robson chegou no Sogro'
+  condition:
+    condition: state
+    entity_id: input_boolean.enviar_localizacao_robson
+    state: 'on'
   trigger:
   - platform: state
     entity_id: device_tracker.52008849ec808451
@@ -404,6 +443,10 @@
       data:
         message: 'Robson chegou no sogro.'
 - alias: 'Robson chegou na Escola'
+  condition:
+    condition: state
+    entity_id: input_boolean.enviar_localizacao_robson
+    state: 'on'
   trigger:
   - platform: state
     entity_id: device_tracker.52008849ec808451
@@ -413,6 +456,10 @@
       data:
         message: 'Robson chegou no escola.'
 - alias: 'Robson chegou na casa dos pais'
+  condition:
+    condition: state
+    entity_id: input_boolean.enviar_localizacao_robson
+    state: 'on'
   trigger:
   - platform: state
     entity_id: device_tracker.52008849ec808451
@@ -422,6 +469,10 @@
       data:
         message: 'Robson chegou na casa dos pais.'
 - alias: 'Robson saiu de casa'
+  condition:
+    condition: state
+    entity_id: input_boolean.enviar_localizacao_robson
+    state: 'on'
   trigger:
   - platform: state
     entity_id: device_tracker.52008849ec808451
@@ -431,24 +482,86 @@
       data:
         message: 'Robson não está em um local mapeado.'
 - alias: 'Liga Globo Flavia Chegou'
+  condition:
+    condition: and
+    conditions: 
+      - condition: time
+        # At least one of the following is required.
+        after: '18:00:00' 
+        before: '19:00:00'
+        weekday:
+        - mon 
+        - tue
+        - wed
+        - thu
+        - fri
+      - condition: state
+        entity_id: input_select.canal
+        state: 'Globo'
+      - condition: state
+        entity_id: input_boolean.automacao_flavia_ativada
+        state: 'on'
   trigger:
   - platform: state
     entity_id: device_tracker.iphonedeflavialan
     from: 'not_home'
     to: 'home'
-  condition:
-  - condition: time
-    # At least one of the following is required.
-    after: '18:00:00'
-    before: '19:00:00'
-    weekday:
-      - mon 
-      - tue
-      - wed
-      - thu
-      - fri
   action:
   - service: script.liga_tv_sala_globo
+- alias: 'Liga SBT Flavia Chegou'
+  condition:
+    condition: and
+    conditions: 
+      - condition: time
+        # At least one of the following is required.
+        after: '18:00:00' 
+        before: '19:00:00'
+        weekday:
+        - mon 
+        - tue
+        - wed
+        - thu
+        - fri
+      - condition: state
+        entity_id: input_select.canal
+        state: 'SBT'
+      - condition: state
+        entity_id: input_boolean.automacao_flavia_ativada
+        state: 'on'
+  trigger:
+  - platform: state
+    entity_id: device_tracker.iphonedeflavialan
+    from: 'not_home'
+    to: 'home'
+  action:
+  - service: script.liga_tv_sala_sbt
+- alias: 'Liga Record Flavia Chegou'
+  condition:
+    condition: and
+    conditions: 
+      - condition: time
+        # At least one of the following is required.
+        after: '18:00:00' 
+        before: '19:00:00'
+        weekday:
+        - mon 
+        - tue
+        - wed
+        - thu
+        - fri
+      - condition: state
+        entity_id: input_select.canal
+        state: 'Record'
+      - condition: state
+        entity_id: input_boolean.automacao_flavia_ativada
+        state: 'on'
+  trigger:
+  - platform: state
+    entity_id: device_tracker.iphonedeflavialan
+    from: 'not_home'
+    to: 'home'
+  action:
+  - service: script.liga_tv_sala_record
 
 # Comandos Telegram
 - alias: 'Lista de Comandos Telegram'
@@ -611,16 +724,15 @@
         
 # Comando Portão
 - alias: 'Comando Telegram portão'
-  hide_entity: true
   trigger:
     platform: event
     event_type: telegram_callback
     event_data:
       data: '/portao'
   action:
-    - service: switch.toggle
-      data:
-        entity_id: switch.portao
+  - service: switch.toggle
+    data:
+      entity_id: switch.portao
 
 # Comandos da Lista de Comandos da Sala
 - alias: 'Comando Telegram TV Sala'
@@ -764,46 +876,31 @@
     value_template: "{{ states.sensor.time.state == (states.input_datetime.boletim_3.attributes.timestamp | int | timestamp_custom('%H:%M', false)) }}"
   action:
     - service: shell_command.excluir_ultimo_flashbriefing
-    - service: script.saudacao_texto
-    - service: script.saudacao_voz
-    - service: script.clima_texto
-    - service: script.clima_voz
-    - service: script.mercado_financeiro_texto
-    - service: script.mercado_financeiro_voz
-    - service: script.proximo_compromisso_texto
-    - service: script.proximo_compromisso_voz
+    - service: tts.clear_cache
+    - service: script.atualiza_texto_voz
     - delay: 00:00:03
     - service: tts.google_say
       entity_id: media_player.quarto_fake
       data_template:
         language: 'pt'
         message: >
+         {% if is_state("input_boolean.enviar_saudacao", "on") %}
          {{ states.input_text.saudacao_voz.state }}
+         {% endif %}
+         {% if is_state("input_boolean.enviar_clima", "on") %}
          {{ states.input_text.clima_voz.state }}
+         {% endif %}
+         {% if is_state("input_boolean.enviar_mercado_financeiro", "on") %}
          {{ states.input_text.mercado_financeiro_voz.state }}
+         {% endif %}
+         {% if is_state("input_boolean.enviar_proximo_compromisso", "on") %}
          {{ states.input_text.proximo_compromisso_voz.state }}
+         {% endif %}
     - delay: 00:00:30
     - service: shell_command.renomear_flashbriefing
     - delay: 00:00:03
-    - service: notify.telegram_bot
-      data_template:
-        message: >
-          {{ states.input_text.saudacao_texto.state }}
-    - service: notify.telegram_bot
-      data_template:
-        message: >
-          {{ states.input_text.clima_texto.state }}
-    - service: notify.telegram_bot
-      data_template:
-        message: >
-         {{ states.input_text.mercado_financeiro_texto.state }}
-    - service: notify.telegram_bot
-      data_template:
-        message: >
-         {{ states.input_text.proximo_compromisso_texto.state }}
-    - service: telegram_bot.send_video
-      data:
-        file: /config/tts/FlashBriefing.mp3
+    - service: script.envia_texto
+    - service: script.envia_voz
 
 # Guardar valor do bitcoin
 - alias: 'Guardar Valor do Bitcoin'
@@ -834,126 +931,16 @@
           {{ states.persistent_notification.invalid_config.attributes.title }}
         message: >
           {{ states.persistent_notification.invalid_config.attributes.message }}
-    
-# Liga / Desliga Cervejeira
-- alias: Cervejeira On
-  trigger:
-  - entity_id: input_boolean.beer_fridge
-    from: 'off'
-    platform: state
-    to: 'on'
-  action:
-  - service: ifttt.trigger
-    data:
-      event: beer_fridge_on
-- alias: Cervejeira Off
-  trigger:
-  - entity_id: input_boolean.beer_fridge
-    from: 'on'
-    platform: state
-    to: 'off'
-  action:
-  - service: ifttt.trigger
-    data:
-      event: beer_fridge_off
-
-# Liga / Desliga Luz Corredor
-- alias: Luz Corredor On
-  trigger:
-  - entity_id: input_boolean.hall_light
-    from: 'off'
-    platform: state
-    to: 'on'
-  action:
-  - service: ifttt.trigger
-    data:
-      event: hall_light_on
-- alias: Luz Corredor Off
-  trigger:
-  - entity_id: input_boolean.hall_light
-    from: 'on'
-    platform: state
-    to: 'off'
-  action:
-  - service: ifttt.trigger
-    data:
-      event: hall_light_off
-
-# Liga / Desliga Luz Quarto
-- alias: Luz Quarto On
-  trigger:
-  - entity_id: input_boolean.quarto
-    from: 'off'
-    platform: state
-    to: 'on'
-  action:
-  - service: ifttt.trigger
-    data:
-      event: quarto_on
-- alias: Luz Quarto Off
-  trigger:
-  - entity_id: input_boolean.quarto
-    from: 'on'
-    platform: state
-    to: 'off'
-  action:
-  - service: ifttt.trigger
-    data:
-      event: quarto_off
-    
-# Liga / Desliga Luz Sacada Frente
-- alias: Luz Sacada Frente On
-  trigger:
-  - entity_id: input_boolean.sacada_frente
-    from: 'off'
-    platform: state
-    to: 'on'
-  action:
-  - service: ifttt.trigger
-    data:
-      event: sacada_frente_on
-- alias: Luz Sacada Frente Off
-  trigger:
-  - entity_id: input_boolean.sacada_frente
-    from: 'on'
-    platform: state
-    to: 'off'
-  action:
-  - service: ifttt.trigger
-    data:
-      event: sacada_frente_off
-
-# Liga / Desliga Luz Painel Quarto
-- alias: Luz Painel Quarto On
-  trigger:
-  - entity_id: input_boolean.painel_quarto
-    from: 'off'
-    platform: state
-    to: 'on'
-  action:
-  - service: ifttt.trigger
-    data:
-      event: painel_quarto_on
-- alias: Luz Painel Quarto Off
-  trigger:
-  - entity_id: input_boolean.painel_quarto
-    from: 'on'
-    platform: state
-    to: 'off'
-  action:
-  - service: ifttt.trigger
-    data:
-      event: painel_quarto_off
       
 # Ativa timer TV Isabelle
 - alias: Ativa Timer TV Isabelle
   trigger:
-  - entity_id: input_boolean.ativa_timer_tv_isabelle
+  - entity_id: input_boolean.ativa_timer_tv_dormir
     platform: state
     to: 'on'
   action:
   - service: input_datetime.set_datetime
-    entity_id: input_datetime.timer_tv_isabelle
+    entity_id: input_datetime.timer_tv_dormir
     data_template:
       time: "{{ (as_timestamp(now()) + (states.input_number.tempo_timer.state | int * 60)) | timestamp_custom('%H:%M:00', true) }}"
       date: "{{ (as_timestamp(now()) + (states.input_number.tempo_timer.state | int * 60))  | timestamp_custom('%Y-%m-%d', true) }}"
@@ -964,22 +951,105 @@
 - alias: Fim timer TV Isabelle
   trigger:
   - platform: template
-    value_template: "{{ states.sensor.date__time.state == (states.input_datetime.timer_tv_isabelle.attributes.timestamp | int | timestamp_custom('%Y-%m-%d, %H:%M', true)) }}"
+    value_template: "{{ states.sensor.date__time.state == (states.input_datetime.timer_tv_dormir.state | int | timestamp_custom('%Y-%m-%d, %H:%M', true)) }}"
   action:
-    - service: media_player.turn_off
-      entity_id: media_player.quarto_isabelle
     - service: notify.telegram_bot
       data_template:
         message: '*TV da Isabelle desligada.*'
     - service: input_boolean.turn_off
-      entity_id: input_boolean.ativa_timer_tv_isabelle
+      entity_id: input_boolean.ativa_timer_tv_dormir
     - service: tts.google_say
-      entity_id: media_player.quarto_isabelle
-      data: 
-       message: 'Timer finalizado, hora de dormir. Boa noite.'
-       language: pt
+      data_template: 
+        entity_id: >
+         {% if is_state("input_select.media_player", "Quarto Isabelle") %}
+           media_player.quarto_isabelle
+         {% elif is_state("input_select.media_player", "Quarto") %}
+           media_player.quarto
+         {% elif is_state("input_select.media_player", "Sala") %}
+           media_player.sala
+         {% elif is_state("input_select.media_player", "Churrasqueira") %}
+           media_player.churrasqueira
+         {% else %}
+           none
+         {% endif %}
+        message: 'Timer finalizado, hora de dormir. Boa noite.'
+        language: pt
     - service: media_player.play_media
-      data:
-        entity_id: media_player.quarto_isabelle
+      data_template: 
+        entity_id: >
+         {% if is_state("input_select.media_player", "Quarto Isabelle") %}
+           media_player.quarto_isabelle
+         {% elif is_state("input_select.media_player", "Quarto") %}
+           media_player.quarto
+         {% elif is_state("input_select.media_player", "Sala") %}
+           media_player.sala
+         {% elif is_state("input_select.media_player", "Churrasqueira") %}
+           media_player.churrasqueira
+         {% else %}
+           none
+         {% endif %}
         media_content_id: 'https://fris.duckdns.org:8123/local/Ninar.mp4'
         media_content_type: 'VIDEO'
+        
+# Sem energia
+- alias: Sem energia
+  trigger:
+  - entity_id: light.luz_esquerda
+    platform: state
+    to: 'unavailable'
+  action:
+  - service: notify.telegram_group
+    data:
+      message: Sem energia na casa
+      
+## Desumidificador
+
+# Liga Desumidificador Horario
+- alias: Liga Desumidificador Horario
+  condition:
+    condition: state
+    entity_id: input_boolean.ligar_desumidificador
+    state: 'on'
+  trigger:
+  - platform: template
+    value_template: "{{ states.sensor.time.state == (states.input_datetime.ligar_desumidificador_inicio.attributes.timestamp | int | timestamp_custom('%H:%M', false)) }}"
+  action:
+  - service: switch.turn_on
+    entity_id: switch.onoff_desumidificador_robson
+# Liga Desumidificador devido a excesso de humidade
+- alias: Liga Desumidificador Humidade
+  condition:
+    condition: state
+    entity_id: input_boolean.ligar_desumidificador
+    state: 'on'
+  trigger:
+  - platform: template
+    value_template: '{{ states.sensor.armario_robson_humidade.state > states.input_number.max_humidade_quarto.state }}'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.onoff_desumidificador_robson
+
+# Desliga Desumidificador pelo horário
+- alias: Desliga Desumidificador Horario
+  condition:
+    condition: state
+    entity_id: input_boolean.ligar_desumidificador
+    state: 'on'  
+  trigger:
+  - platform: template
+    value_template: "{{ states.sensor.time.state == (states.input_datetime.ligar_desumidificador_fim.attributes.timestamp | int | timestamp_custom('%H:%M', false)) }}"
+  action:
+  - service: switch.turn_on
+    entity_id: switch.onoff_desumidificador
+# Desliga Desumidificador devido a baixa humidade
+- alias: Desliga Desumidificador Humidade
+  condition:
+    condition: state
+    entity_id: input_boolean.ligar_desumidificador
+    state: 'on'
+  trigger:
+  - platform: template
+    value_template: '{{ states.sensor.armario_robson_humidade.state < states.input_number.min_humidade_quarto.state }}'
+  action:
+  - service: switch.turn_off
+    entity_id: switch.onoff_desumidificador_robson

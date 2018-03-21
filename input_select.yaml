@@ -1,0 +1,15 @@
+media_player:
+  name: Player
+  options:
+    - Quarto Isabelle
+    - Quarto
+    - Sala
+    - Churrasqueira
+  icon: mdi:google-chrome
+canal:
+  name: Canal
+  options:
+    - Globo
+    - Record
+    - SBT
+  icon: mdi:remote

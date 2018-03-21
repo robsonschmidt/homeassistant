@@ -226,15 +226,120 @@
       friendly_name: 'Sair Net Sala'
       command_on: 'JgBgAAABJZQSOBE4EjgRFBETERQRFBE4ERQROBE5ETgSOBEUETgRFBETEjgRFBE4ERQRExITERQROBEUETgSExE5ETgRORE4EQAFCwABJUoSAAxdAAElSxEADF0AASVLEQANBQAAAAAAAAAA'
       command_off: 'JgBgAAABJZQSOBE4EjgRFBETERQRFBE4ERQROBE5ETgSOBEUETgRFBETEjgRFBE4ERQRExITERQROBEUETgSExE5ETgRORE4EQAFCwABJUoSAAxdAAElSxEADF0AASVLEQANBQAAAAAAAAAA'
-    luz_sacada_frente:
-      friendly_name: 'Luz Sacada Frente'
-      command_on: 'qhQ0AAocChsKGwobChsKGxsLGgsKGwobChwKGxoMGgsLGxoLCxsLGxoLGgsKGwobGgsKGwoAAQEAAAAA'
-      command_off: 'qhQ0AAocChsKGwobChsKGxsLGgsKGwobChwKGxoMGgsLGxoLCxsLGxoLGgsKGwobGgsKGwoAAQEAAAAA'
-    luz_quarto:
-      friendly_name: 'Luz Quarto'
-      command_on: 'sgw0AA0kDSQNJCQNDSQNJA0kDSQNJA0kDSQNJCQNDSQkDQ0kDSQkDSQNDSQNJA0kDSQNJAwAAW8AAAAA'
-      command_off: 'sgw0AA0kDSQNJCQNDSQNJA0kDSQNJA0kDSQNJCQNDSQkDQ0kDSQkDSQNDSQNJA0kDSQNJAwAAW8AAAAA'
-    luz_painel_quarto:
-      friendly_name: 'Luz Painel Quarto'
-      command_on: 'sgw0AA0kJA0kDQ0kDSQkDQ0kJA0kDSQNJA0NJA0kDSQNJCQNJA0NJCQNJA0NJCQNJA0NJAwAAW8AAAAA'
-      command_off: 'sgw0AA0kJA0kDQ0kDSQkDQ0kJA0kDSQNJA0NJA0kDSQNJCQNJA0NJCQNJA0NJCQNJA0NJAwAAW8AAAAA'
+
+# Armario Robson
+- platform: mqtt
+  name: "On/Off Desumidificador Robson"
+  state_topic: "tele/sonoff2731/STATE"
+  value_template: '{{ value_json["POWER"] }}'
+  command_topic: "cmnd/sonoff2731/POWER"
+  availability_topic: "tele/sonoff2731/LWT"
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true
+  
+# Armario Flavia
+- platform: mqtt
+  name: "On/Off Desumidificador Flavia"
+  state_topic: "tele/sonoff1549/STATE"
+  value_template: '{{ value_json["POWER"] }}'
+  command_topic: "cmnd/sonoff1549/POWER"
+  availability_topic: "tele/sonoff1549/LWT"
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true
+  
+# Aquecedor Isabelle
+- platform: mqtt
+  name: "On/Off Aquecedor Isabelle"
+  state_topic: "tele/sonoff3944/STATE"
+  value_template: '{{ value_json["POWER"] }}'
+  command_topic: "cmnd/sonoff3944/POWER"
+  availability_topic: "tele/sonoff3944/LWT"
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true
+  
+# Luz corredor
+- platform: mqtt
+  name: "Luz Corredor"
+  state_topic: "tele/sonoff6590/STATE"
+  value_template: '{{ value_json["POWER"] }}'
+  command_topic: "cmnd/sonoff6590/POWER"
+  availability_topic: "tele/sonoff6590/LWT"
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true  
+
+# Luz quarto
+- platform: mqtt
+  name: "Luz Quarto"
+  state_topic: "tele/sonoff6075/STATE"
+  value_template: '{{ value_json["POWER"] }}'
+  command_topic: "cmnd/sonoff6075/POWER"
+  availability_topic: "tele/sonoff6075/LWT"
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true
+
+# Luz painel quarto
+- platform: mqtt
+  name: "Luz Painel Quarto"
+  state_topic: "tele/sonoff4777/STATE"
+  value_template: '{{ value_json["POWER"] }}'
+  command_topic: "cmnd/sonoff4777/POWER"
+  availability_topic: "tele/sonoff4777/LWT"
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true
+
+# Luz sacada frente
+- platform: mqtt
+  name: "Luz Sacada Frente"
+  state_topic: "tele/sonoff2343/STATE"
+  value_template: '{{ value_json["POWER"] }}'
+  command_topic: "cmnd/sonoff2343/POWER"
+  availability_topic: "tele/sonoff2343/LWT"
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true
+
+# Cervejeira
+- platform: mqtt
+  name: "Cervejeira"
+  state_topic: "tele/sonoff7880/STATE"
+  value_template: '{{ value_json["POWER"] }}'
+  command_topic: "cmnd/sonoff7880/POWER"
+  availability_topic: "tele/sonoff7880/LWT"
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true
+
+# RF
+- platform: mqtt
+  name: "On/Off RF"
+  state_topic: "tele/sonoff4569/STATE"
+  value_template: '{{ value_json["POWER"] }}'
+  command_topic: "cmnd/sonoff4569/POWER"
+  availability_topic: "tele/sonoff4569/LWT"
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: true
