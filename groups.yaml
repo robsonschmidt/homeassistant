@@ -10,18 +10,9 @@ default_view:
 # Card Previsão de Tempo
 previsao_tempo:
   name: Previsão de Tempo
-  view: no
-  icon: mdi:sun
   entities:
-   - sensor.forecast_0
-   - sensor.forecast_1
-   - sensor.forecast_2
-   - sensor.forecast_3
-   - sensor.forecast_4
-   - sensor.forecast_5
-   - sensor.forecast_6
-   - sensor.forecast_7
-
+    - input_boolean.weather
+    
 # Menu Garagem
 garagem:
   name: Garagem
@@ -64,6 +55,7 @@ churrasqueira:
   icon: mdi:radiator
   entities:
   - group.churrasqueira_luz
+  - group.churrasqueira_cervejeira
   - camera.fundos
   - group.churrasqueira_spotify
 # Card Luz Churrasqueira
@@ -75,7 +67,11 @@ churrasqueira_luz:
   - light.luz_esquerda
   - light.luz_central
   - light.luz_direita
+churrasqueira_cervejeira:
+  name: 'Cervejeira'
+  entities:
   - switch.cervejeira
+  - sensor.temperatura_cervejeira
 # Card Churrasqueira Spotify
 churrasqueira_spotify:
   name: 'Spotify'
@@ -88,13 +84,13 @@ quarto:
   view: yes
   icon: mdi:hotel
   entities:
-  - media_player.quarto
   - group.tv_quarto_tiles
-  - group.quarto_spotify
   - group.luz_quarto
   - group.humidade_robson_quarto
   - group.humidade_flavia_quarto
   - group.agenda_humidade_quarto
+  - media_player.quarto
+  - group.quarto_spotify
 # Card Humidade Quarto Robson
 humidade_robson_quarto:
   name: Humidade Robson
@@ -140,8 +136,6 @@ quarto_isabelle:
     - media_player.quarto_isabelle
     - group.timer_tv_dormir
     - group.aquecedor_isabelle
-    - sensor.humidade_quarto_isabelle
-    - sensor.temperatura_quarto_isabelle
 # Card Timer TV Dormir
 timer_tv_dormir:
   name: Timer TV Dormir
@@ -155,6 +149,8 @@ aquecedor_isabelle:
   name: Aquecedor
   entities:
   - switch.onoff_aquecedor_isabelle
+  - sensor.humidade_quarto_isabelle
+  - sensor.temperatura_quarto_isabelle
 
 fundos_tiles:
     name: Térreo

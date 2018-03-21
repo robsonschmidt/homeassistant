@@ -428,7 +428,7 @@
   action:
     - service: notify.telegram_group
       data:
-        message: 'Robson chegou na BRF.'
+        message: '*Robson* chegou na *BRF*.'
 - alias: 'Robson chegou no Sogro'
   condition:
     condition: state
@@ -441,7 +441,7 @@
   action:
     - service: notify.telegram_group
       data:
-        message: 'Robson chegou no sogro.'
+        message: '*Robson* chegou no *sogro*.'
 - alias: 'Robson chegou na Escola'
   condition:
     condition: state
@@ -454,7 +454,7 @@
   action:
     - service: notify.telegram_group
       data:
-        message: 'Robson chegou no escola.'
+        message: '*Robson* chegou no *escola*.'
 - alias: 'Robson chegou na casa dos pais'
   condition:
     condition: state
@@ -467,7 +467,7 @@
   action:
     - service: notify.telegram_group
       data:
-        message: 'Robson chegou na casa dos pais.'
+        message: '*Robson* chegou na casa dos *pais*.'
 - alias: 'Robson saiu de casa'
   condition:
     condition: state
@@ -1016,8 +1016,10 @@
   action:
   - service: switch.turn_on
     entity_id: switch.onoff_desumidificador_robson
+  - service: switch.turn_on
+    entity_id: switch.onoff_desumidificador_flavia
 # Liga Desumidificador devido a excesso de humidade
-- alias: Liga Desumidificador Humidade
+- alias: Liga Desumidificador Humidade Robson
   condition:
     condition: state
     entity_id: input_boolean.ligar_desumidificador
@@ -1028,6 +1030,17 @@
   action:
   - service: switch.turn_on
     entity_id: switch.onoff_desumidificador_robson
+- alias: Liga Desumidificador Humidade Flavia
+  condition:
+    condition: state
+    entity_id: input_boolean.ligar_desumidificador
+    state: 'on'
+  trigger:
+  - platform: template
+    value_template: '{{ states.sensor.armario_robson_humidade.state > states.input_number.max_humidade_quarto.state }}'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.onoff_desumidificador_flavia
 
 # Desliga Desumidificador pelo horário
 - alias: Desliga Desumidificador Horario
@@ -1039,10 +1052,12 @@
   - platform: template
     value_template: "{{ states.sensor.time.state == (states.input_datetime.ligar_desumidificador_fim.attributes.timestamp | int | timestamp_custom('%H:%M', false)) }}"
   action:
-  - service: switch.turn_on
-    entity_id: switch.onoff_desumidificador
+  - service: switch.turn_off
+    entity_id: switch.onoff_desumidificador_robson
+  - service: switch.turn_off
+    entity_id: switch.onoff_desumidificador_flavia
 # Desliga Desumidificador devido a baixa humidade
-- alias: Desliga Desumidificador Humidade
+- alias: Desliga Desumidificador Humidade Robson
   condition:
     condition: state
     entity_id: input_boolean.ligar_desumidificador
@@ -1053,3 +1068,14 @@
   action:
   - service: switch.turn_off
     entity_id: switch.onoff_desumidificador_robson
+- alias: Desliga Desumidificador Humidade Flavia
+  condition:
+    condition: state
+    entity_id: input_boolean.ligar_desumidificador
+    state: 'on'
+  trigger:
+  - platform: template
+    value_template: '{{ states.sensor.armario_robson_humidade.state < states.input_number.min_humidade_quarto.state }}'
+  action:
+  - service: switch.turn_off
+    entity_id: switch.onoff_desumidificador_flavia

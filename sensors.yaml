@@ -63,6 +63,13 @@
 - platform: season
 - platform: template
   sensors:
+    now:
+      friendly_name: "Agora"
+      value_template: >
+       ● {{ states.sensor.dark_sky_temperature.state|round(0)}}°C
+      entity_picture_template: >-
+        {{ '/local/icons/dark_sky/' ~ states.sensor.dark_sky_icon.state ~ '.png'}}
+
     forecast_0:
       friendly_name: "Hoje"
       value_template: >
@@ -222,10 +229,6 @@
     - 'date'
     - 'date_time'
     
-# Arquivos de backup
-- platform: backup
-  folder: /backup
-  
 # Pi-hole - DNS & Ad Blocker
 - platform: pi_hole
 
@@ -274,5 +277,14 @@
   state_topic: "tele/sonoff3944/SENSOR"
   value_template: "{{ value_json.AM2301.Humidity }}"
   unit_of_measurement: "%"
+  scan_interval: 20
+  force_update: true
+  
+# Cervejeira
+- platform: mqtt
+  name: "Temperatura Cervejeira"
+  state_topic: "tele/sonoff7880/SENSOR"
+  value_template: "{{ value_json.DS18B20.Temperature }}"
+  unit_of_measurement: "°C"
   scan_interval: 20
   force_update: true

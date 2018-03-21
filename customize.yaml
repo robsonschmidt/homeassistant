@@ -549,3 +549,8 @@ script.liga_chromecast_sala:
 switch.source_net_sala:
   homebridge_visible: true
   homebridge_name: Source Net Sala
+
+input_boolean.weather:
+  custom_ui_state_card: custom-weather-card
+  config:
+    weather: weather.yweather

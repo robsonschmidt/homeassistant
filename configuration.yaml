@@ -93,6 +93,8 @@ logger:
 #sensor:
 #  - platform: yr
 
+weather: !include weather.yaml
+
 # Text to speech
 tts:
   - platform: google
