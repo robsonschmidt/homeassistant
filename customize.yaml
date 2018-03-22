@@ -4,6 +4,9 @@ switch.cervejeira:
   show_last_changed: true
   homebridge_visible: true
   homebridge_name: Cervejeira
+  extra_badge:
+    entity_id: sensor.temperatura_cervejeira
+    unit: °C
 switch.display:
   friendly_name: Schmidt's Bar & Grill
   icon: mdi:flag-variant
@@ -96,11 +99,42 @@ switch.luz_painel_quarto:
   show_last_changed: true
   homebridge_visible: true
   homebridge_name: Luz Painel Quarto
-switch.luz_sacada_quarto:
+switch.luz_sacada_frente:
   icon: mdi:lightbulb-outline
   show_last_changed: true
   homebridge_visible: true
-  homebridge_name: Luz sacada Quarto
+  homebridge_name: Luz sacada Frente
+sensor.armario_robson_humidade:
+  friendly_name: Humidade
+sensor.armario_robson_temperatura:
+  friendly_name: Temperatura
+sensor.armario_flavia_humidade:
+  friendly_name: Humidade
+sensor.armario_flavia_temperatura:
+  friendly_name: Temperatura
+sensor.humidade_quarto_isabelle:
+  friendly_name: Humidade
+sensor.temperatura_quarto_isabelle:
+  friendly_name: Temperatura
+switch.onoff_desumidificador_robson:
+  friendly_name: Desumidificador
+  icon: mdi:water-off
+  extra_badge:
+  - entity_id: sensor.armario_robson_humidade
+    unit: '%'
+  - entity_id: sensor.armario_robson_temperatura
+    unit: °C
+switch.onoff_desumidificador_flavia:
+  friendly_name: Desumidificador
+  icon: mdi:water-off
+  extra_badge:
+  - entity_id: sensor.armario_flavia_humidade
+    unit: '%'
+  - entity_id: sensor.armario_flavia_temperatura
+    unit: °C
+switch.onoff_aquecedor_isabelle:
+  friendly_name: Aquecedor
+  icon: mdi:hot-tub
 
 # State Cards Fundos
 input_text.fundos_tiles:
@@ -440,7 +474,9 @@ switch.portao:
   friendly_name: Portão
   homebridge_visible: true
   homebridge_name: Portão
-
+  confirm_controls_show_lock: true
+  icon: mdi:garage-open
+  
 # Google Wifi
 sensor.google_wifi_current_version:
   friendly_name: Versão Atual 
@@ -554,3 +590,6 @@ input_boolean.weather:
   custom_ui_state_card: custom-weather-card
   config:
     weather: weather.yweather
+    
+zone.home:
+  friendly_name: Casa

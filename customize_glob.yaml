@@ -14,5 +14,17 @@ sensor.pws_precip_1d:
   state_card_mode: badges
 sensor.pws_precip_today_metric:
   state_card_mode: badges
-group.tempo_amanha:
+sensor.temperatura_cervejeira:
+  state_card_mode: badges
+sensor.armario_humidade_robson:
+  state_card_mode: badges
+sensor.armario_temperatura_robson:
+  state_card_mode: badges
+sensor.armario_humidade_flavia:
+  state_card_mode: badges
+sensor.armario_temperatura_flavia:
+  state_card_mode: badges
+sensor.humidade_quarto_isabelle:
+  state_card_mode: badges
+sensor.temperatura_quarto_isabelle:
   state_card_mode: badges

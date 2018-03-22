@@ -232,7 +232,9 @@
 # Pi-hole - DNS & Ad Blocker
 - platform: pi_hole
 
-# Armario Robson
+## Armario Robson
+
+# Temperatura
 - platform: mqtt
   name: "Armario Robson Temperatura"
   state_topic: "tele/sonoff2731/SENSOR"
@@ -240,6 +242,7 @@
   unit_of_measurement: "°C"
   scan_interval: 20
   force_update: true
+# Humidade
 - platform: mqtt
   name: "Armario Robson Humidade"
   state_topic: "tele/sonoff2731/SENSOR"
@@ -247,8 +250,15 @@
   unit_of_measurement: "%"
   scan_interval: 20
   force_update: true
-  
-# Armario Flavia
+# Versão
+- platform: mqtt
+  name: Versão Armario Robson
+  state_topic: "stat/sonoff2731/STATUS2"
+  value_template: "{{ value_json['StatusFWR'].Version }}"
+
+## Armario Flavia
+
+# Temperatura
 - platform: mqtt
   name: "Armario Flavia Temperatura"
   state_topic: "tele/sonoff1549/SENSOR"
@@ -256,6 +266,7 @@
   unit_of_measurement: "°C"
   scan_interval: 20
   force_update: true
+# Humidade
 - platform: mqtt
   name: "Armario Flavia Humidade"
   state_topic: "tele/sonoff1549/SENSOR"
@@ -263,8 +274,15 @@
   unit_of_measurement: "%"
   scan_interval: 20
   force_update: true
+# Versão
+- platform: mqtt
+  name: Versão Armario Flavua
+  state_topic: "stat/sonoff1549/STATUS2"
+  value_template: "{{ value_json['StatusFWR'].Version }}"
 
-# Aquecedor Isabelle
+## Aquecedor Isabelle
+
+# Temperatura
 - platform: mqtt
   name: "Temperatura Quarto Isabelle"
   state_topic: "tele/sonoff3944/SENSOR"
@@ -272,6 +290,7 @@
   unit_of_measurement: "°C"
   scan_interval: 20
   force_update: true
+# Humidade
 - platform: mqtt
   name: "Humidade Quarto Isabelle"
   state_topic: "tele/sonoff3944/SENSOR"
@@ -279,8 +298,15 @@
   unit_of_measurement: "%"
   scan_interval: 20
   force_update: true
+# Versão
+- platform: mqtt
+  name: Versão Aquecedor Isabelle
+  state_topic: "stat/sonoff3944/STATUS2"
+  value_template: "{{ value_json['StatusFWR'].Version }}"
   
-# Cervejeira
+## Cervejeira
+
+# Temperatura
 - platform: mqtt
   name: "Temperatura Cervejeira"
   state_topic: "tele/sonoff7880/SENSOR"
@@ -288,3 +314,53 @@
   unit_of_measurement: "°C"
   scan_interval: 20
   force_update: true
+# Versão
+- platform: mqtt
+  name: Versão Cervejeira
+  state_topic: "stat/sonoff7880/STATUS2"
+  value_template: "{{ value_json['StatusFWR'].Version }}"
+
+# Versão Luz Quarto
+- platform: mqtt
+  name: Versão Luz Quarto
+  state_topic: "stat/sonoff4569/STATUS2"
+  value_template: "{{ value_json['StatusFWR'].Version }}"
+
+# Versão Luz Painel Quarto
+- platform: mqtt
+  name: Versão Luz Painel Quarto
+  state_topic: "stat/sonoff4777/STATUS2"
+  value_template: "{{ value_json['StatusFWR'].Version }}"
+
+# Versão Luz Sacada Frente
+- platform: mqtt
+  name: Versão Sonoff Luz Sacada Frente
+  state_topic: "stat/sonoff2343/STATUS2"
+  value_template: "{{ value_json['StatusFWR'].Version }}"
+  
+# Versão Luz Corredor
+- platform: mqtt
+  name: Versão Luz Corredor
+  state_topic: "stat/sonoff6590/STATUS2"
+  value_template: "{{ value_json['StatusFWR'].Version }}"
+
+# IP Luz Corredor
+- platform: mqtt
+  name: IP Luz Corredor
+  state_topic: "tele/sonoff4569/INFO2"
+  value_template: "{{ value_json['IPAddress'] }}"
+
+# Ultima versão Sonoff Tasmota
+- platform: rest
+  name: Ultima Versão Sonoff
+  resource: https://api.github.com/repos/arendst/Sonoff-Tasmota/releases/latest
+  value_template: '{{ value_json.tag_name }}'
+  headers:
+    Accept: application/vnd.github.v3+json
+    Content-Type: application/json
+    User-Agent: Home Assistant REST sensor 
+  
+# RF Reciever  
+- platform: mqtt
+  state_topic: "sensors/rf/receiver"
+  name: "RF Receiver"

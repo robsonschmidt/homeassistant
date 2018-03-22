@@ -162,6 +162,11 @@ zone:
     longitude: !secret home_arriving_longitude
     radius: 100
     icon: mdi:home-outline
+  - name: home_arriving2
+    latitude: !secret home_arriving2_latitude
+    longitude: !secret home_arriving2_longitude
+    radius: 100
+    icon: mdi:home-outline
   - name: sogro
     latitude: !secret sogro_latitude
     longitude: !secret sogro_longitude
@@ -170,6 +175,7 @@ zone:
     latitude: !secret escola_latitude
     longitude: !secret escola_longitude
     radius: 100
+    icon: mdi:school
   - name: pai
     latitude: !secret pai_latitude
     longitude: !secret pai_longitude
@@ -217,8 +223,9 @@ mqtt:
 #       - entity_id: camera.frente_local
 #    classifier:
 #      mom: /config/haarcascade_licence_plate_rus_16stages.xml
-#vacuum:
-#  - platform: roomba
-#    host: 192.168.86.38
-#    username: robsonschmidt@gmail.com
-#    password: 123456@a
+vacuum:
+  - platform: roomba
+    name: FRITZ
+    host: 192.168.86.38
+    username: 3143C90C02131830
+    password: :1:1507417757:sY0dqzT8bxdvS5SQ

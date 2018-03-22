@@ -584,3 +584,21 @@ envia_voz:
   - service: telegram_bot.send_video
     data:
       file: /config/tts/FlashBriefing.mp3
+
+# Verificar versão do sonoff
+check_sonoffs_version:
+  alias: Verifica versão do Sonoff
+  sequence:
+  - service: mqtt.publish
+    data_template:
+      topic: "cmnd/sonoffs/status"
+      payload: 2
+
+# Atualiza versão do sonoff
+update_sonoffs:
+  alias: Atualiza versão Sonoff
+  sequence:
+  - service: mqtt.publish
+    data_template:
+       topic: "cmnd/sonoffs/upgrade"
+       payload: 1

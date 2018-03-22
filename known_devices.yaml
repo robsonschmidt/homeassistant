@@ -1,12 +1,3 @@
-iphonederobsonlan:
-  hide_if_away: false
-  icon:
-  mac: D0:33:11:5F:63:74
-  name: iphonederobson
-  picture: /local/Robson.jpg
-  track: true
-  vendor: unknown
-
 iphonedeflavialan:
   hide_if_away: false
   icon:
@@ -16,14 +7,6 @@ iphonedeflavialan:
   track: true
   vendor: Apple, Inc.
 
-homeassistant_robson:
-  hide_if_away: false
-  icon:
-  mac:
-  name: homeassistant
-  picture: /local/Robson.jpg
-  track: true
-  vendor:
 52008849ec808451:
   hide_if_away: false
   icon:

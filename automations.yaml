@@ -391,7 +391,7 @@
   action:
   - service: notify.telegram_group
     data_template:
-      message: 'Velocidade Internet Baixa - Download {{ states(''sensor.speedtest_download'') }} Mbit/s
+      message: '*Velocidade Internet Baixa* - Download {{ states(''sensor.speedtest_download'') }} Mbit/s
 
         '
 
@@ -404,7 +404,10 @@
   trigger:
   - platform: state
     entity_id: device_tracker.52008849ec808451
-    to: 'home'
+    to: 'home_arriving'
+  - platform: state
+    entity_id: device_tracker.52008849ec808451
+    to: 'home_arriving2'
   action:
     - service: notify.telegram_bot
       data:
@@ -479,8 +482,8 @@
     to: 'not_home'
   action:
     - service: notify.telegram_group
-      data:
-        message: 'Robson não está em um local mapeado.'
+      data_template:
+        message: '*Robson* saiu *{{ trigger.from_state.state }}*.'
 - alias: 'Liga Globo Flavia Chegou'
   condition:
     condition: and
@@ -990,17 +993,31 @@
          {% endif %}
         media_content_id: 'https://fris.duckdns.org:8123/local/Ninar.mp4'
         media_content_type: 'VIDEO'
-        
+
 # Sem energia
 - alias: Sem energia
   trigger:
-  - entity_id: light.luz_esquerda
+  - entity_id: switch.onoff_desumidificador_robson
     platform: state
     to: 'unavailable'
   action:
   - service: notify.telegram_group
     data:
-      message: Sem energia na casa
+      message: 'Sem *energia* em *casa*.'
+- alias: Voltou energia
+  trigger:
+  - entity_id: switch.onoff_desumidificador_robson
+    platform: state
+    from: 'unavailable'
+    to: 'on' 
+  - entity_id: switch.onoff_desumidificador_robson
+    platform: state
+    from: 'unavailable'
+    to: 'off'
+  action:
+  - service: notify.telegram_group
+    data:
+      message: '*Energia* voltou em *casa*.'
       
 ## Desumidificador
 

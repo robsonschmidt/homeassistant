@@ -5,7 +5,14 @@ default_view:
   - device_tracker.52008849ec808451
   - device_tracker.iphonedeflavialan
   - group.previsao_tempo
+  - group.aspirador
   name: 'Tela Inicial'
+
+# Card Aspirador
+aspirador:
+  name: Aspirador
+  entities:
+  - vacuum.fritz
 
 # Card Previsão de Tempo
 previsao_tempo:
@@ -33,13 +40,12 @@ sala:
   view: yes
   icon: mdi:sofa
   entities:
-  - media_player.sala
   - camera.interna
   - group.tv_sala_tiles
   - group.sala_spotify
 # Card Spotify
 sala_spotify:
-  name: Spotify
+  name: Chromecast
   entities:
   - input_text.sala_spotify_player
 # Card Controle TV Sala
@@ -71,10 +77,9 @@ churrasqueira_cervejeira:
   name: 'Cervejeira'
   entities:
   - switch.cervejeira
-  - sensor.temperatura_cervejeira
 # Card Churrasqueira Spotify
 churrasqueira_spotify:
-  name: 'Spotify'
+  name: Chromecast
   entities:
   - input_text.churrasqueira_spotify_player
 
@@ -89,22 +94,16 @@ quarto:
   - group.humidade_robson_quarto
   - group.humidade_flavia_quarto
   - group.agenda_humidade_quarto
-  - media_player.quarto
-  - group.quarto_spotify
 # Card Humidade Quarto Robson
 humidade_robson_quarto:
   name: Humidade Robson
   entities:
   - switch.onoff_desumidificador_robson
-  - sensor.armario_robson_humidade
-  - sensor.armario_robson_temperatura
 # Card Humidade Quarto Flavia
 humidade_flavia_quarto:
   name: Humidade Flavia
   entities:
   - switch.onoff_desumidificador_flavia
-  - sensor.armario_flavia_humidade
-  - sensor.armario_flavia_temperatura
 # Card Humidade Quarto Robson
 agenda_humidade_quarto:
   name: Desumidificação
@@ -114,11 +113,6 @@ agenda_humidade_quarto:
   - input_number.max_humidade_quarto
   - input_datetime.ligar_desumidificador_inicio
   - input_datetime.ligar_desumidificador_fim
-# Card Spotify Quarto
-quarto_spotify:
-  name: Spotify
-  entities:
-  - input_text.quarto_spotify_player
 luz_quarto:
   name: Iluminação
   entities:
@@ -126,6 +120,12 @@ luz_quarto:
   - switch.luz_quarto
   - switch.luz_painel_quarto
   - switch.luz_sacada_frente
+# Card Controle  
+tv_quarto_tiles:
+  name: 'TV Quarto'
+  entities:
+  - input_text.quarto_spotify_player
+  - input_text.tv_quarto_tiles
 
 # Menu Quarto Isabelle
 quarto_isabelle:
@@ -133,9 +133,11 @@ quarto_isabelle:
   view: yes
   icon: mdi:human-child
   entities:
-    - media_player.quarto_isabelle
-    - group.timer_tv_dormir
-    - group.aquecedor_isabelle
+  - sensor.humidade_quarto_isabelle
+  - sensor.temperatura_quarto_isabelle
+  - media_player.quarto_isabelle
+  - group.timer_tv_dormir
+  - group.aquecedor_isabelle
 # Card Timer TV Dormir
 timer_tv_dormir:
   name: Timer TV Dormir
@@ -149,8 +151,6 @@ aquecedor_isabelle:
   name: Aquecedor
   entities:
   - switch.onoff_aquecedor_isabelle
-  - sensor.humidade_quarto_isabelle
-  - sensor.temperatura_quarto_isabelle
 
 fundos_tiles:
     name: Térreo
@@ -164,10 +164,6 @@ quartos_tiles:
     name: Quarto
     entities:
       - input_text.quartos_tiles
-tv_quarto_tiles:
-    name: 'TV Quarto'
-    entities:
-      - input_text.tv_quarto_tiles
 conf_weblinks:
     name: 'Links'
     entities:
@@ -243,6 +239,7 @@ configuracao:
   - group.servidor
   - group.teste_velocidade
   - group.google_wifi
+  - group.sonoff
 # Card Servidor
 servidor:
   name: Servidor
@@ -273,3 +270,19 @@ google_wifi:
   - sensor.google_wifi_new_version
   - sensor.google_wifi_status
   - sensor.google_wifi_uptime
+# Card Sonoff
+sonoff:
+  name: 'Sonoff'
+  entities:
+  - script.check_sonoffs_version
+  - script.update_sonoffs
+  - sensor.ultima_versao_sonoff
+  - sensor.versao_aquecedor_isabelle
+  - sensor.versao_armario_flavua
+  - sensor.versao_armario_robson
+  - sensor.versao_cervejeira
+  - sensor.versao_luz_corredor
+  - sensor.versao_luz_painel_quarto
+  - sensor.versao_luz_quarto
+  - sensor.versao_luz_sacada_frente
+  

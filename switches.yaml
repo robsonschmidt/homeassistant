@@ -282,10 +282,10 @@
 # Luz quarto
 - platform: mqtt
   name: "Luz Quarto"
-  state_topic: "tele/sonoff6075/STATE"
+  state_topic: "tele/sonoff4569/STATE"
   value_template: '{{ value_json["POWER"] }}'
-  command_topic: "cmnd/sonoff6075/POWER"
-  availability_topic: "tele/sonoff6075/LWT"
+  command_topic: "cmnd/sonoff4569/POWER"
+  availability_topic: "tele/sonoff4569/LWT"
   payload_on: "ON"
   payload_off: "OFF"
   payload_available: "Online"
@@ -334,12 +334,20 @@
 # RF
 - platform: mqtt
   name: "On/Off RF"
-  state_topic: "tele/sonoff4569/STATE"
+  state_topic: "tele/sonoff6075/STATE"
   value_template: '{{ value_json["POWER"] }}'
-  command_topic: "cmnd/sonoff4569/POWER"
-  availability_topic: "tele/sonoff4569/LWT"
+  command_topic: "cmnd/sonoff6075/POWER"
+  availability_topic: "tele/sonoff6075/LWT"
   payload_on: "ON"
   payload_off: "OFF"
   payload_available: "Online"
   payload_not_available: "Offline"
   retain: true
+  
+# Transmissor RF
+- platform: rpi_rf
+  gpio: 17
+  switches:
+    bedroom_light:
+      code_on: 1234567
+      code_off: 1234568
