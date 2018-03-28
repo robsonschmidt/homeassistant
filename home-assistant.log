@@ -1,434 +1,164 @@
-2018-03-22 16:38:02 WARNING (MainThread) [homeassistant.setup] Setup of mqtt is taking over 10 seconds.
-2018-03-22 16:38:31 WARNING (MainThread) [homeassistant.setup] Setup of frontend is taking over 10 seconds.
-2018-03-22 16:38:37 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:38:37 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:38:37 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:38:37 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:38:37 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:38:37 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:38:37 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:38:37 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.setup] Setup of input_text is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.setup] Setup of input_select is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.setup] Setup of input_boolean is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.setup] Setup of group is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.setup] Setup of input_number is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.setup] Setup of input_datetime is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform rest is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform google_wifi is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform pi_hole is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform command_line is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform template is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform template is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform template is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform openexchangerates is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform time_date is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform command_line is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform command_line is taking over 10 seconds.
-2018-03-22 16:38:48 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform command_line is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.setup] Setup of config is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.camera] Setup of platform local_file is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-22 16:38:57 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'dict object' has no attribute 'text' (value: {"code":502,"message":"Invalid parameter: text"}, template: {{ value_json.text[0] }})
-2018-03-22 16:39:00 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:39:00 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:39:00 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:39:00 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:39:00 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:39:00 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:39:00 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:39:00 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:39:03 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'dict object' has no attribute 'text' (value: {"code":502,"message":"Invalid parameter: text"}, template: {{ value_json.text[0] }})
-2018-03-22 16:39:11 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'dict object' has no attribute 'text' (value: {"code":502,"message":"Invalid parameter: text"}, template: {{ value_json.text[0] }})
-2018-03-22 16:39:25 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:39:25 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:39:25 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:39:25 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:39:25 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:39:25 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:42:05 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/lib/python3.6/asyncio/tasks.py", line 180, in _step
-    result = coro.send(None)
-  File "/usr/lib/python3.6/site-packages/hbmqtt/broker.py", line 342, in stream_connected
-    yield from self.client_connected(listener_name, StreamReaderAdapter(reader), StreamWriterAdapter(writer))
-  File "/usr/lib/python3.6/site-packages/hbmqtt/broker.py", line 357, in client_connected
-    handler, client_session = yield from BrokerProtocolHandler.init_from_connect(reader, writer, self.plugins_manager, loop=self._loop)
-  File "/usr/lib/python3.6/site-packages/hbmqtt/mqtt/protocol/broker_handler.py", line 129, in init_from_connect
-    connect = yield from ConnectPacket.from_stream(reader)
-  File "/usr/lib/python3.6/site-packages/hbmqtt/mqtt/packet.py", line 228, in from_stream
-    variable_header = yield from cls.VARIABLE_HEADER.from_stream(reader, fixed_header)
-  File "/usr/lib/python3.6/site-packages/hbmqtt/mqtt/connect.py", line 104, in from_stream
-    protocol_name = yield from decode_string(reader)
-  File "/usr/lib/python3.6/site-packages/hbmqtt/codecs.py", line 65, in decode_string
-    length_bytes = yield from read_or_raise(reader, 2)
-  File "/usr/lib/python3.6/site-packages/hbmqtt/codecs.py", line 54, in read_or_raise
-    raise NoDataException("No more data")
-hbmqtt.errors.NoDataException: No more data
-2018-03-22 16:44:21 WARNING (MainThread) [homeassistant.components.media_player] Setup of platform spotify is taking over 10 seconds.
-2018-03-22 16:44:38 WARNING (MainThread) [homeassistant.components.vacuum] Setup of platform roomba is taking over 10 seconds.
-2018-03-22 16:46:01 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:46:13 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:46:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.dark_sky_summary_pt is taking over 10 seconds
-2018-03-22 16:46:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.ultima_versao_sonoff is taking over 10 seconds
-2018-03-22 16:46:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.dark_sky_daily_max_precip_intensity_5 is taking over 10 seconds
-2018-03-22 16:46:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify is taking over 10 seconds
-2018-03-22 16:46:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.luz_direita is taking over 10 seconds
-2018-03-22 16:46:13 WARNING (MainThread) [homeassistant.setup] Setup of hassio is taking over 10 seconds.
-2018-03-22 16:46:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of calendar.holidays_in_brazil is taking over 10 seconds
-2018-03-22 16:46:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.last_boot is taking over 10 seconds
-2018-03-22 16:46:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_upload is taking over 10 seconds
-2018-03-22 16:46:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.pihole_dns_unique_domains is taking over 10 seconds
-2018-03-22 16:46:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.display is taking over 10 seconds
-2018-03-22 16:46:13 ERROR (MainThread) [homeassistant.components.hassio.handler] Timeout on /homeassistant/options request
-2018-03-22 16:46:16 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:46:20 ERROR (MainThread) [aiohttp.server] Error handling request
-Traceback (most recent call last):
-  File "/usr/lib/python3.6/site-packages/aiohttp/web_protocol.py", line 381, in start
-    resp = await self._request_handler(request)
-  File "/usr/lib/python3.6/site-packages/aiohttp/web_app.py", line 310, in _handle
-    resp = await handler(request)
-  File "/usr/lib/python3.6/site-packages/aiohttp/web_middlewares.py", line 88, in impl
-    return await handler(request)
-  File "/usr/lib/python3.6/site-packages/homeassistant/components/http/static.py", line 68, in staticresource_middleware
-    return await handler(request)
-  File "/usr/lib/python3.6/site-packages/homeassistant/components/http/real_ip.py", line 27, in real_ip_middleware
-    return await handler(request)
-  File "/usr/lib/python3.6/site-packages/homeassistant/components/http/ban.py", line 68, in ban_middleware
-    return await handler(request)
-  File "/usr/lib/python3.6/site-packages/homeassistant/components/http/auth.py", line 52, in auth_middleware
-    return await handler(request)
-  File "/usr/lib/python3.6/site-packages/homeassistant/components/http/view.py", line 100, in handle
-    result = await result
-  File "/usr/lib/python3.6/site-packages/homeassistant/components/frontend/__init__.py", line 558, in get
-    resources = yield from async_get_translations(hass, language)
-  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/translation.py", line 120, in async_get_translations
-    resources = await async_get_component_resources(hass, language)
-  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/translation.py", line 110, in async_get_component_resources
-    resources = build_resources(translation_cache, components)
-  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/translation.py", line 77, in build_resources
-    resources[domain].update(translation_cache[component])
-KeyError: 'hassio'
-2018-03-22 16:46:24 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:46:30 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:46:30 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.swap_use_percent is taking over 10 seconds
-2018-03-22 16:46:30 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.dark_sky_precip is taking over 10 seconds
-2018-03-22 16:46:35 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:46:35 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.google_wifi_current_version is taking over 10 seconds
-2018-03-22 16:46:38 WARNING (MainThread) [homeassistant.components.sensor] Updating google_wifi sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:46:39 WARNING (MainThread) [homeassistant.components.sensor] Updating systemmonitor sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:46:39 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:46:39 WARNING (MainThread) [homeassistant.components.media_player] Setup of platform cast is taking over 10 seconds.
-2018-03-22 16:46:39 WARNING (MainThread) [homeassistant.components.media_player] Setup of platform cast is taking over 10 seconds.
-2018-03-22 16:46:39 WARNING (MainThread) [homeassistant.components.media_player] Setup of platform cast is taking over 10 seconds.
-2018-03-22 16:46:39 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:46:45 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.dark_sky_hourly_summary_pt is taking over 10 seconds
-2018-03-22 16:46:45 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:46:47 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:46:53 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:46:53 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.ultima_versao_sonoff is taking over 10 seconds
-2018-03-22 16:47:03 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:47:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.iphone_de_robson_battery_state is taking over 10 seconds
-2018-03-22 16:47:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_upload is taking over 10 seconds
-2018-03-22 16:47:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.google_wifi_local_ip is taking over 10 seconds
-2018-03-22 16:47:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.garden_light is taking over 10 seconds
-2018-03-22 16:47:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.para_compromisso is taking over 10 seconds
-2018-03-22 16:47:04 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.luz_direita is taking over 10 seconds
-2018-03-22 16:47:11 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:11 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:11 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:47:16 WARNING (MainThread) [homeassistant.components.sensor] Updating speedtest sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:47:16 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:47:16 WARNING (MainThread) [homeassistant.components.light] Updating tplink light took longer than the scheduled update interval 0:00:30
-2018-03-22 16:47:16 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:16 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:16 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:47:19 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:47:28 WARNING (MainThread) [homeassistant.components.sensor] Updating google_travel_time sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:47:28 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:47:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.cpu_temperature is taking over 10 seconds
-2018-03-22 16:47:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.para_sogro is taking over 10 seconds
-2018-03-22 16:47:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.iphone_de_robson_battery_state is taking over 10 seconds
-2018-03-22 16:47:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.date is taking over 10 seconds
-2018-03-22 16:47:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.date__time is taking over 10 seconds
-2018-03-22 16:47:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.time is taking over 10 seconds
-2018-03-22 16:47:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.exchange_rate_sensor is taking over 10 seconds
-2018-03-22 16:47:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.ultima_versao_sonoff is taking over 10 seconds
-2018-03-22 16:47:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.google_wifi_status is taking over 10 seconds
-2018-03-22 16:47:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.last_boot is taking over 10 seconds
-2018-03-22 16:47:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.season is taking over 10 seconds
-2018-03-22 16:47:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify is taking over 10 seconds
-2018-03-22 16:47:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.garden_light is taking over 10 seconds
-2018-03-22 16:47:29 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:29 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:29 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:29 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:29 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:34 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:34 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:34 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:34 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:34 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:47:38 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:47:42 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:42 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:42 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:47:42 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.dark_sky_daily_summary_pt is taking over 10 seconds
-2018-03-22 16:47:48 WARNING (MainThread) [homeassistant.components.sensor] Updating google_wifi sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:47:48 WARNING (MainThread) [homeassistant.components.sensor] Updating systemmonitor sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:47:48 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:47:48 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:48 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:47:55 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:47:55 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:47:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.google_wifi_uptime is taking over 10 seconds
-2018-03-22 16:47:56 ERROR (MainThread) [homeassistant.core] Error doing job: Future exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/lib/python3.6/asyncio/sslproto.py", line 583, in _on_handshake_complete
-    raise handshake_exc
-  File "/usr/lib/python3.6/asyncio/sslproto.py", line 648, in _process_write_backlog
-    self._transport.write(chunk)
-  File "uvloop/handles/stream.pyx", line 636, in uvloop.loop.UVStream.write
-  File "uvloop/handles/handle.pyx", line 165, in uvloop.loop.UVHandle._ensure_alive
-RuntimeError: unable to perform operation on <TCPTransport closed=True reading=False 0x6ad57030>; the handler is closed
-2018-03-22 16:47:56 ERROR (MainThread) [homeassistant.core] Error doing job: Exception in callback UVTransport._start_reading
-Traceback (most recent call last):
-  File "uvloop/cbhandles.pyx", line 52, in uvloop.loop.Handle._run
-  File "uvloop/handles/stream.pyx", line 261, in uvloop.loop.UVStream._start_reading
-  File "uvloop/handles/handle.pyx", line 165, in uvloop.loop.UVHandle._ensure_alive
-RuntimeError: unable to perform operation on <TCPTransport closed=True reading=False 0x6ad57030>; the handler is closed
-2018-03-22 16:48:00 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:00 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:00 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:00 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:00 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:48:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.dark_sky_daily_low_temperature_2 is taking over 10 seconds
-2018-03-22 16:48:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.dark_sky_hourly_summary_pt is taking over 10 seconds
-2018-03-22 16:48:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.iphone_de_robson_battery_state is taking over 10 seconds
-2018-03-22 16:48:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.time is taking over 10 seconds
-2018-03-22 16:48:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.date__time is taking over 10 seconds
-2018-03-22 16:48:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.date is taking over 10 seconds
-2018-03-22 16:48:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.exchange_rate_sensor is taking over 10 seconds
-2018-03-22 16:48:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.ultima_versao_sonoff is taking over 10 seconds
-2018-03-22 16:48:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_upload is taking over 10 seconds
-2018-03-22 16:48:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.season is taking over 10 seconds
-2018-03-22 16:48:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify is taking over 10 seconds
-2018-03-22 16:48:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.luz_direita is taking over 10 seconds
-2018-03-22 16:48:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.garden_light is taking over 10 seconds
-2018-03-22 16:48:01 WARNING (MainThread) [homeassistant.components.sensor] Updating google_travel_time sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:48:05 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:05 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:05 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:48:11 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:48:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.google_wifi_new_version is taking over 10 seconds
-2018-03-22 16:48:13 WARNING (MainThread) [homeassistant.components.sensor] Updating command_line sensor took longer than the scheduled update interval 0:01:00
-2018-03-22 16:48:14 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:14 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:48:14 ERROR (MainThread) [homeassistant.core] Error doing job: Future exception was never retrieved
-Traceback (most recent call last):
-  File "/usr/lib/python3.6/asyncio/sslproto.py", line 583, in _on_handshake_complete
-    raise handshake_exc
-  File "/usr/lib/python3.6/asyncio/sslproto.py", line 648, in _process_write_backlog
-    self._transport.write(chunk)
-  File "uvloop/handles/stream.pyx", line 636, in uvloop.loop.UVStream.write
-  File "uvloop/handles/handle.pyx", line 165, in uvloop.loop.UVHandle._ensure_alive
-RuntimeError: unable to perform operation on <TCPTransport closed=True reading=False 0x6aa0ca80>; the handler is closed
-2018-03-22 16:48:14 ERROR (MainThread) [homeassistant.core] Error doing job: Exception in callback UVTransport._start_reading
-Traceback (most recent call last):
-  File "uvloop/cbhandles.pyx", line 52, in uvloop.loop.Handle._run
-  File "uvloop/handles/stream.pyx", line 261, in uvloop.loop.UVStream._start_reading
-  File "uvloop/handles/handle.pyx", line 165, in uvloop.loop.UVHandle._ensure_alive
-RuntimeError: unable to perform operation on <TCPTransport closed=True reading=False 0x6aa0ca80>; the handler is closed
-2018-03-22 16:48:16 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:48:25 WARNING (MainThread) [homeassistant.components.sensor] Updating google_wifi sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:48:25 WARNING (MainThread) [homeassistant.components.sensor] Updating systemmonitor sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:48:25 WARNING (MainThread) [homeassistant.components.sensor] Updating speedtest sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:48:25 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:48:25 WARNING (MainThread) [homeassistant.components.light] Updating tplink light took longer than the scheduled update interval 0:00:30
-2018-03-22 16:48:25 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:25 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:25 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:48:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.dark_sky_summary_pt is taking over 10 seconds
-2018-03-22 16:48:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.dark_sky_icon_6 is taking over 10 seconds
-2018-03-22 16:48:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_ping is taking over 10 seconds
-2018-03-22 16:48:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.google_wifi_last_restart is taking over 10 seconds
-2018-03-22 16:48:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of calendar.robson is taking over 10 seconds
-2018-03-22 16:48:26 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:26 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:26 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:27 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:27 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:27 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.luz_esquerda is taking over 10 seconds
-2018-03-22 16:48:30 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:48:35 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:48:37 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:37 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:37 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:48:40 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:40 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:48:44 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:44 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:48:49 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:49 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:49 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:49 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:49 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:48:49 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:48:52 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:48:56 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:56 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:56 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:48:57 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:48:57 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:49:00 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:49:00 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:49:00 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:49:09 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:49:09 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:49:09 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.ultima_versao_sonoff is taking over 10 seconds
-2018-03-22 16:49:09 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify is taking over 10 seconds
-2018-03-22 16:49:09 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:49:09 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.dark_sky_humidity_1 is taking over 10 seconds
-2018-03-22 16:49:09 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.google_wifi_new_version is taking over 10 seconds
-2018-03-22 16:49:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.para_brf is taking over 10 seconds
-2018-03-22 16:49:11 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:49:12 WARNING (MainThread) [homeassistant.components.sensor] Updating google_travel_time sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:49:15 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:49:16 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:49:16 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:49:16 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:49:17 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:49:17 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:49:17 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on SSL transport
-Traceback (most recent call last):
-  File "/usr/lib/python3.6/asyncio/sslproto.py", line 641, in _process_write_backlog
-    self._on_handshake_complete)
-  File "/usr/lib/python3.6/asyncio/sslproto.py", line 128, in do_handshake
-    raise RuntimeError('handshake in progress or completed')
-RuntimeError: handshake in progress or completed
-2018-03-22 16:49:17 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on SSL transport
-Traceback (most recent call last):
-  File "/usr/lib/python3.6/asyncio/sslproto.py", line 641, in _process_write_backlog
-    self._on_handshake_complete)
-  File "/usr/lib/python3.6/asyncio/sslproto.py", line 128, in do_handshake
-    raise RuntimeError('handshake in progress or completed')
-RuntimeError: handshake in progress or completed
-2018-03-22 16:49:17 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:49:20 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:49:21 WARNING (MainThread) [homeassistant.components.sensor] Updating google_wifi sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:49:21 WARNING (MainThread) [homeassistant.components.sensor] Updating systemmonitor sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:49:21 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:49:21 WARNING (MainThread) [homeassistant.components.light] Updating tplink light took longer than the scheduled update interval 0:00:30
-2018-03-22 16:49:30 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:49:31 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.ultima_versao_sonoff is taking over 10 seconds
-2018-03-22 16:49:31 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify is taking over 10 seconds
-2018-03-22 16:49:34 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.cpu_temperature is taking over 10 seconds
-2018-03-22 16:49:34 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:49:41 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:49:42 WARNING (MainThread) [hbmqtt.mqtt.protocol.handler] Unhandled exception: unable to perform operation on <TCPTransport closed=True reading=False 0x6a698558>; the handler is closed
-2018-03-22 16:49:44 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:49:44 WARNING (MainThread) [hbmqtt.mqtt.protocol.handler] BrokerProtocolHandler Unhandled exception in reader coro: BrokenPipeError(32, 'Broken pipe')
-2018-03-22 16:49:45 WARNING (MainThread) [hbmqtt.mqtt.protocol.handler] Unhandled exception: unable to perform operation on <TCPTransport closed=True reading=False 0x6a698710>; the handler is closed
-2018-03-22 16:49:47 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:49:47 WARNING (MainThread) [hbmqtt.mqtt.protocol.handler] BrokerProtocolHandler Unhandled exception in reader coro: BrokenPipeError(32, 'Broken pipe')
-2018-03-22 16:49:48 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:49:48 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-22 16:49:51 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-03-22 16:49:56 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
-2018-03-22 16:49:56 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-27 22:08:16 ERROR (SyncWorker_16) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.setup] Setup of input_number is taking over 10 seconds.
+2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.setup] Setup of input_select is taking over 10 seconds.
+2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.setup] Setup of input_boolean is taking over 10 seconds.
+2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.setup] Setup of group is taking over 10 seconds.
+2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.setup] Setup of input_datetime is taking over 10 seconds.
+2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.setup] Setup of input_text is taking over 10 seconds.
+2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.alarm_control_panel] Setup of platform manual is taking over 10 seconds.
+2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of platform template is taking over 10 seconds.
+2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform google_wifi is taking over 10 seconds.
+2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform template is taking over 10 seconds.
+2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform rest is taking over 10 seconds.
+2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform rest is taking over 10 seconds.
+2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform template is taking over 10 seconds.
+2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform command_line is taking over 10 seconds.
+2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform template is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform command_line is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform command_line is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform command_line is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform template is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform openexchangerates is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform time_date is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform pi_hole is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.setup] Setup of panel_iframe is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.setup] Setup of config is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.setup] Setup of logbook is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.camera] Setup of platform local_file is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
+2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:24 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'value_json' is undefined (value: Error in call to API function "users/get_space_usage": Your request's HTTP request method is "GET".  This function only accepts the HTTP request method "POST"., template: {{ value_json.used }})
+2018-03-27 22:08:24 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'dict object' has no attribute 'text' (value: {"code":502,"message":"Invalid parameter: text"}, template: {{ value_json.text[0] }})
+2018-03-27 22:08:26 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'dict object' has no attribute 'text' (value: {"code":502,"message":"Invalid parameter: text"}, template: {{ value_json.text[0] }})
+2018-03-27 22:08:29 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'dict object' has no attribute 'text' (value: {"code":502,"message":"Invalid parameter: text"}, template: {{ value_json.text[0] }})
+2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:09:10 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:09:10 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:09:10 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:09:10 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:09:10 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:09:10 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:09:10 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:09:30 WARNING (MainThread) [homeassistant.components.calendar] Setup of platform google is taking over 10 seconds.
+2018-03-27 22:09:30 WARNING (MainThread) [homeassistant.components.calendar] Setup of platform google is taking over 10 seconds.
+2018-03-27 22:09:30 WARNING (MainThread) [homeassistant.components.calendar] Setup of platform google is taking over 10 seconds.
+2018-03-27 22:09:35 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:09:35 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:09:35 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:09:35 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
+OSError: [Errno 107] Socket not connected
+2018-03-27 22:09:54 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform darksky is taking over 10 seconds.
+2018-03-27 22:10:16 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-27 22:10:16 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 30 seconds.
+2018-03-27 22:10:47 ERROR (MainThread) [homeassistant.components.cover.template] could not convert string to float: 'False'
+2018-03-27 22:10:47 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:10:50 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-27 22:10:51 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 60 seconds.
+2018-03-27 22:11:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:11:54 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-27 22:11:54 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 90 seconds.
+2018-03-27 22:12:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:13:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:13:28 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-27 22:13:28 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 120 seconds.
+2018-03-27 22:14:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:15:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:15:32 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-27 22:15:32 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 150 seconds.
+2018-03-27 22:16:01 ERROR (MainThread) [homeassistant.components.cover.template] could not convert string to float: 'True'
+2018-03-27 22:16:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:16:05 ERROR (MainThread) [homeassistant.components.cover.template] could not convert string to float: 'False'
+2018-03-27 22:17:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:18:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:18:06 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-27 22:18:06 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 180 seconds.
+2018-03-27 22:18:26 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'value_json' is undefined (value: Error in call to API function "users/get_space_usage": Your request's HTTP request method is "GET".  This function only accepts the HTTP request method "POST"., template: {{ value_json.used }})
+2018-03-27 22:19:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:20:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:21:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:21:10 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-27 22:21:10 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 180 seconds.
+2018-03-27 22:22:00 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:23:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:24:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:24:14 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-27 22:24:14 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 180 seconds.
+2018-03-27 22:25:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:26:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:27:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:27:18 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-27 22:27:18 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 180 seconds.
+2018-03-27 22:28:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:28:27 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'value_json' is undefined (value: Error in call to API function "users/get_space_usage": Your request's HTTP request method is "GET".  This function only accepts the HTTP request method "POST"., template: {{ value_json.used }})
+2018-03-27 22:29:00 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:30:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:30:22 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-27 22:30:22 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 180 seconds.
+2018-03-27 22:31:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:31:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-03-27 22:32:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:32:07 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-03-27 22:33:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-27 22:33:26 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
+2018-03-27 22:33:26 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 180 seconds.
+2018-03-27 22:34:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'

@@ -1,0 +1,18 @@
+- platform: rpi_gpio
+  ports:
+    23: Ativado
+    22: Acionado
+  invert_logic: true
+- platform: template
+  sensors:
+    people_home:
+      value_template: >-
+        {{ is_state('device_tracker.52008849ec808451', 'home')
+           or is_state('device_tracker.iphonedeflavialan', 'home') }}
+- platform: mqtt
+  name: Portão
+  state_topic: "tele/sonoff6075/SENSOR"
+  device_class: opening
+  payload_on: "ON"
+  payload_off: "OFF"  
+  value_template: '{{ value_json["Switch2"] }}'

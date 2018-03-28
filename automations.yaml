@@ -5,10 +5,10 @@
     entity_id: input_boolean.enviar_cpu_temp_alta
     state: 'on'  
   trigger:
-  - platform: numeric_state
-    entity_id: sensor.cpu_temperature
-    above: '60'
-    below: '70'
+  - platform: template
+    value_template: >
+      {{ states.sensor.cpu_temperature.state >= states.input_number.temp_cpu_alta.state and 
+      states.sensor.cpu_temperature.state < states.input_number.temp_cpu_muito_alta.state }}
   action:
   - service: notify.telegram_group
     data:
@@ -20,15 +20,57 @@
     entity_id: input_boolean.enviar_cpu_temp_alta
     state: 'on'  
   trigger:
-  - platform: numeric_state
-    entity_id: sensor.cpu_temperature
-    above: '70'
+  - platform: template
+    value_template: >
+      {{ states.sensor.cpu_temperature.state >= states.input_number.temp_cpu_muito_alta.state }}
   action:
   - service: notify.telegram_group
     data:
       message: > 
        *Temp. CPU Multo Alta* - {{ states.sensor.cpu_temperature.state }} ºC
 
+# Portao
+
+# Muda status do switch do portao
+- alias: Portao aberto/fechado
+  trigger:
+  - entity_id: sensor.portao
+    platform: state
+  action:
+  - service: python_script.set_state
+    data_template:
+      entity: 'switch.portao'
+      state: '{{ trigger.to_state.state }}'
+    
+# Telegram Portão
+- alias: 'Portão ON/OFF'
+  condition:
+    condition: state
+    entity_id: input_boolean.enviar_acionamento_portao
+    state: 'on'  
+  action:
+  - data:
+      message: '*Portão* acionado.'
+    service: notify.telegram_group
+  trigger:
+  - entity_id: switch.portao
+    from: 'off'
+    platform: state
+    to: 'on'
+
+# Avisa portão aberto
+- alias: Portao aberto muito tempo
+  trigger:
+  - entity_id: sensor.portao
+    platform: state
+    to: 'ON'
+    for:
+      minutes: 10
+  action:
+  - service: notify.telegram_group
+    data:
+      message: '*Portão* aberto por muito tempo.'
+    
 # Manter sensor broadlink OFF
 - alias: Broadlink Always OFF
   trigger:
@@ -176,10 +218,6 @@
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.portao
-    from: 'off'
-    platform: state
-    to: 'on'
   - entity_id: switch.power_net_quarto
     from: 'off'
     platform: state
@@ -247,9 +285,8 @@
   action:
   - alias: Broadlink Always OFF
     data_template:
-      entity: '{{ trigger.entity_id }}
-
-        '
+      entity: '{{ trigger.entity_id }}'
+      state: 'off'
     service: python_script.set_state
 
 # Placa do carro
@@ -273,22 +310,6 @@
     data:
       message: Placa encontrada.
     
-# Telegram Portão
-- alias: 'Portão ON/OFF'
-  condition:
-    condition: state
-    entity_id: input_boolean.enviar_acionamento_portao
-    state: 'on'  
-  action:
-  - data:
-      message: '*Portão* acionado.'
-    service: notify.telegram_group
-  trigger:
-  - entity_id: switch.portao
-    from: 'off'
-    platform: state
-    to: 'on'
-
 # Inicio e Parada do FRIS
 - alias: 'FRIS Start'
   condition:
@@ -296,9 +317,10 @@
     entity_id: input_boolean.enviar_on_hassio
     state: 'on'  
   action:
-  - data_template:
+  - service: notify.telegram_group
+    data_template:
       message: '*FRIS Automação* iniciado.'
-    service: notify.telegram_group
+  - service: script.check_sonoffs_version
   trigger:
   - event: start
     platform: homeassistant
@@ -350,6 +372,11 @@
   - platform: template
     value_template: "{{ states.sensor.time.state == (states.input_datetime.hora_backup.attributes.timestamp | int | timestamp_custom('%H:%M', false)) }}"
   action:
+  - service: rest_command.delete_backup_old
+  - delay: 00:00:10
+  - service: rest_command.move_backup_old
+  - delay: 00:00:10
+  - service: rest_command.cria_pasta_backup
   - service: hassio.snapshot_full
     data_template:
       name: FRIS {{ now().strftime('%Y-%m-%d') }}
@@ -357,13 +384,12 @@
     data_template:
       message: Criando Snapshot "FRIS {{ now().strftime('%Y-%m-%d') }}"
   - delay: 03:00:00
-  - data:
-      entity_id: switch.del_snap_files
-    service: switch.toggle
-  - delay: 00:10:00
-  - data:
+  - service: hassio.addon_stdin
+    data:
       addon: 7be23ff5_dropbox_sync
-    service: hassio.addon_restart
+      input:
+        command: "upload"
+    
 - alias: 'Novo arquivo backup'
   condition:
     condition: state
@@ -483,7 +509,8 @@
   action:
     - service: notify.telegram_group
       data_template:
-        message: '*Robson* saiu *{{ trigger.from_state.state }}*.'
+        message: >
+         *Robson* saiu *{{ trigger.from_state.state | replace("home_arriving", "proximidade de casa") | replace("home","casa") }}*.
 - alias: 'Liga Globo Flavia Chegou'
   condition:
     condition: and
@@ -919,8 +946,8 @@
     - service: input_number.set_value
       data_template:
         entity_id: input_number.valor_bitcoin_meianoite
-        value: '{{ states.sensor.exchange_rate_1_btc.state | float}}'
-        
+        value: '{{ 1 / (states.sensor.exchange_rate_sensor.attributes.BTC | float)}}'
+
 # Envia invalid configuration
 - alias: 'Envio invalid configuration'
   trigger:
@@ -934,9 +961,9 @@
           {{ states.persistent_notification.invalid_config.attributes.title }}
         message: >
           {{ states.persistent_notification.invalid_config.attributes.message }}
-      
-# Ativa timer TV Isabelle
-- alias: Ativa Timer TV Isabelle
+
+# Ativa timer TV
+- alias: Ativa Timer TV
   trigger:
   - entity_id: input_boolean.ativa_timer_tv_dormir
     platform: state
@@ -945,20 +972,17 @@
   - service: input_datetime.set_datetime
     entity_id: input_datetime.timer_tv_dormir
     data_template:
-      time: "{{ (as_timestamp(now()) + (states.input_number.tempo_timer.state | int * 60)) | timestamp_custom('%H:%M:00', true) }}"
+      time: "{{ (as_timestamp(now()) + (states.input_number.tempo_timer.state | int * 60)) | timestamp_custom('%H:%M', true) }}"
       date: "{{ (as_timestamp(now()) + (states.input_number.tempo_timer.state | int * 60))  | timestamp_custom('%Y-%m-%d', true) }}"
   - service: notify.telegram_bot
     data_template:
-      message: "*Timer* iniciado para *TV Isabelle*, fim as {{ (as_timestamp(now()) + (states.input_number.tempo_timer.state | int * 60)) | timestamp_custom('%H:%M:00', true) }}"
-# Fim timer TV Isabelle
-- alias: Fim timer TV Isabelle
+      message: "*Timer* iniciado para *TV Isabelle*, fim as {{ (as_timestamp(now()) + (states.input_number.tempo_timer.state | int * 60)) | timestamp_custom('%H:%M', true) }}"
+# Fim timer TV
+- alias: Fim timer TV
   trigger:
   - platform: template
-    value_template: "{{ states.sensor.date__time.state == (states.input_datetime.timer_tv_dormir.state | int | timestamp_custom('%Y-%m-%d, %H:%M', true)) }}"
+    value_template: "{{ states.sensor.date__time.state == (states.input_datetime.timer_tv_dormir.attributes.timestamp | int | timestamp_custom('%Y-%m-%d, %H:%M', true)) }}"
   action:
-    - service: notify.telegram_bot
-      data_template:
-        message: '*TV da Isabelle desligada.*'
     - service: input_boolean.turn_off
       entity_id: input_boolean.ativa_timer_tv_dormir
     - service: tts.google_say
@@ -975,8 +999,17 @@
          {% else %}
            none
          {% endif %}
-        message: 'Timer finalizado, hora de dormir. Boa noite.'
+        message: >
+         Timer finalizado,
+         {% if now().hour > 18 %}
+         hora de dormir. Boa noite.
+         {% elif now().hour > 12 %}
+         hora de ir na escola. Tenha um ótimo dia.
+         {% else %}
+         hora de se arrumar, escovar os dentes, trocar de roupa e pentear o cabelo. Tenha um ótimo dia.
+         {% endif %}
         language: pt
+    - delay: '00:00:30'
     - service: media_player.play_media
       data_template: 
         entity_id: >
@@ -993,6 +1026,9 @@
          {% endif %}
         media_content_id: 'https://fris.duckdns.org:8123/local/Ninar.mp4'
         media_content_type: 'VIDEO'
+    - service: notify.telegram_bot
+      data_template:
+        message: '*TV da Isabelle desligada.*'
 
 # Sem energia
 - alias: Sem energia
@@ -1054,7 +1090,7 @@
     state: 'on'
   trigger:
   - platform: template
-    value_template: '{{ states.sensor.armario_robson_humidade.state > states.input_number.max_humidade_quarto.state }}'
+    value_template: '{{ states.sensor.armario_flavia_humidade.state > states.input_number.max_humidade_quarto.state }}'
   action:
   - service: switch.turn_on
     entity_id: switch.onoff_desumidificador_flavia
@@ -1092,7 +1128,91 @@
     state: 'on'
   trigger:
   - platform: template
-    value_template: '{{ states.sensor.armario_robson_humidade.state < states.input_number.min_humidade_quarto.state }}'
+    value_template: '{{ states.sensor.armario_flavia_humidade.state < states.input_number.min_humidade_quarto.state }}'
   action:
   - service: switch.turn_off
     entity_id: switch.onoff_desumidificador_flavia
+    
+## Alarmes
+
+# Avisa esquecimento de acionamento
+- alias: Esqueceu de ligar alarme
+  condition:
+    condition: state
+    entity_id: binary_sensor.ativado
+    state: 'off'  
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.people_home
+    to: 'off'
+  action:
+  - service: notify.telegram_bot
+    data:
+      message: '*Atenção!* Não encontrei ninguém em casa e o alarme está desligado.'
+# Avisa alarme tocando
+- alias: Alarme acionado
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.acionado
+    to: 'on'
+  action:
+  - service: notify.telegram_bot
+    data:
+      message: '*Atenção! Atenção! Alarme tocando.'
+  - service: alarm_control_panel.alarm_trigger
+    entity_id: alarm_control_panel.ha_alarm      
+# Alarme ligado
+- alias: Alarme ligado
+  condition:
+    condition: state
+    entity_id: binary_sensor.acionado
+    state: 'off'  
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.ativado
+    to: 'on'
+  action: 
+  - service: alarm_control_panel.alarm_arm_away
+    entity_id: alarm_control_panel.ha_alarm
+# Alarme ligado
+- alias: Alarme desligado
+  condition:
+    condition: state
+    entity_id: binary_sensor.acionado
+    state: 'off'  
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.ativado
+    to: 'off'
+  action: 
+  - service: alarm_control_panel.alarm_disarm
+    entity_id: alarm_control_panel.ha_alarm    
+# Ativa alarme HA
+- alias: Ativa alarme
+  condition:
+    condition: state
+    entity_id: binary_sensor.ativado
+    state: 'off'
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.ha_alarm
+    to: 'armed_away'
+  - platform: state
+    entity_id: alarm_control_panel.ha_alarm
+    to: 'armed_home'
+  action:
+  - service: switch.toggle
+    entity_id: switch.alarme
+# Desativa alarme HA
+- alias: Desativa alarme
+  condition:
+    condition: state
+    entity_id: binary_sensor.ativado
+    state: 'on'
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.ha_alarm
+    to: 'disarmed'
+  action:
+  - service: switch.toggle
+    entity_id: switch.alarme

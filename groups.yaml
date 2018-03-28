@@ -6,6 +6,8 @@ default_view:
   - device_tracker.iphonedeflavialan
   - group.previsao_tempo
   - group.aspirador
+  - alarm_control_panel.ha_alarm
+  - binary_sensor.portao
   name: 'Tela Inicial'
 
 # Card Aspirador
@@ -13,6 +15,13 @@ aspirador:
   name: Aspirador
   entities:
   - vacuum.fritz
+
+# Card Alarme  
+alarme:
+  name: Alarme
+  entities:
+  - binary_sensor.acionado
+  - binary_sensor.ativado
 
 # Card Previsão de Tempo
 previsao_tempo:
@@ -32,7 +41,8 @@ garagem:
 portao:
   name: Portão
   entities:
-    - switch.portao
+  - switch.portao
+  - cover.portao
 
 # Menu Sala
 sala:
@@ -42,12 +52,12 @@ sala:
   entities:
   - camera.interna
   - group.tv_sala_tiles
-  - group.sala_spotify
-# Card Spotify
-sala_spotify:
+  - group.chromecast_sala
+# Card Chromecast Sala
+chromecast_sala:
   name: Chromecast
   entities:
-  - input_text.sala_spotify_player
+  - input_text.sala_player
 # Card Controle TV Sala
 tv_sala_tiles:
     name: 'TV Sala'
@@ -63,7 +73,7 @@ churrasqueira:
   - group.churrasqueira_luz
   - group.churrasqueira_cervejeira
   - camera.fundos
-  - group.churrasqueira_spotify
+  - group.chromecast_churrasqueira
 # Card Luz Churrasqueira
 churrasqueira_luz:
   name: 'Iluminação'
@@ -77,11 +87,11 @@ churrasqueira_cervejeira:
   name: 'Cervejeira'
   entities:
   - switch.cervejeira
-# Card Churrasqueira Spotify
-churrasqueira_spotify:
+# Card Chromecast Churrasqueira
+chromecast_churrasqueira:
   name: Chromecast
   entities:
-  - input_text.churrasqueira_spotify_player
+  - input_text.churrasqueira_player
 
 # Menu Quarto
 quarto:
@@ -89,11 +99,11 @@ quarto:
   view: yes
   icon: mdi:hotel
   entities:
+  - group.chromecast_quarto
   - group.tv_quarto_tiles
   - group.luz_quarto
   - group.humidade_robson_quarto
   - group.humidade_flavia_quarto
-  - group.agenda_humidade_quarto
 # Card Humidade Quarto Robson
 humidade_robson_quarto:
   name: Humidade Robson
@@ -104,15 +114,7 @@ humidade_flavia_quarto:
   name: Humidade Flavia
   entities:
   - switch.onoff_desumidificador_flavia
-# Card Humidade Quarto Robson
-agenda_humidade_quarto:
-  name: Desumidificação
-  entities:
-  - input_boolean.ligar_desumidificador
-  - input_number.min_humidade_quarto
-  - input_number.max_humidade_quarto
-  - input_datetime.ligar_desumidificador_inicio
-  - input_datetime.ligar_desumidificador_fim
+# Card Iluminação Quarto
 luz_quarto:
   name: Iluminação
   entities:
@@ -124,8 +126,12 @@ luz_quarto:
 tv_quarto_tiles:
   name: 'TV Quarto'
   entities:
-  - input_text.quarto_spotify_player
   - input_text.tv_quarto_tiles
+# Card Chromecast Quarto Isabelle 
+chromecast_quarto:
+  name: Chromecast
+  entities:
+  - input_text.quarto_player
 
 # Menu Quarto Isabelle
 quarto_isabelle:
@@ -135,7 +141,7 @@ quarto_isabelle:
   entities:
   - sensor.humidade_quarto_isabelle
   - sensor.temperatura_quarto_isabelle
-  - media_player.quarto_isabelle
+  - group.chromecast_quarto_isabelle
   - group.timer_tv_dormir
   - group.aquecedor_isabelle
 # Card Timer TV Dormir
@@ -151,6 +157,11 @@ aquecedor_isabelle:
   name: Aquecedor
   entities:
   - switch.onoff_aquecedor_isabelle
+# Card Chromecast Quarto Isabelle 
+chromecast_quarto_isabelle:
+  name: Chromecast
+  entities:
+  - input_text.quarto_isabelle_player
 
 fundos_tiles:
     name: Térreo
@@ -191,6 +202,7 @@ parametro:
     - group.backup
     - group.alertas_admin_telegram
     - group.automacao_flavia
+    - group.agenda_humidade_quarto
 # Card Boletim
 boletim:
   name: Boletim
@@ -218,6 +230,8 @@ alertas_admin_telegram:
     - input_boolean.enviar_off_hassio
     - input_boolean.enviar_velocidade_internet_baixa
     - input_boolean.enviar_cpu_temp_alta
+    - input_number.temp_cpu_alta
+    - input_number.temp_cpu_muito_alta
     - input_boolean.enviar_localizacao_flavia
     - input_boolean.enviar_localizacao_robson
     - input_boolean.enviar_acionamento_portao
@@ -229,6 +243,16 @@ automacao_flavia:
     - input_select.canal
     - input_datetime.ligar_flavia_inicio
     - input_datetime.ligar_flavia_fim
+# Card Humidade Quarto Robson
+agenda_humidade_quarto:
+  name: Desumidificação
+  entities:
+  - input_boolean.ligar_desumidificador
+  - input_number.min_humidade_quarto
+  - input_number.max_humidade_quarto
+  - input_datetime.ligar_desumidificador_inicio
+  - input_datetime.ligar_desumidificador_fim
+
     
 # Menu Configuração
 configuracao:

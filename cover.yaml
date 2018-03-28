@@ -1,0 +1,23 @@
+- platform: template
+  covers:
+    portao:
+      friendly_name: "Portão"
+      position_template: "{{ is_state('binary_sensor.portao', 'on') }}"
+      open_cover:
+        service: switch.turn_on
+        data:
+          entity_id: switch.portao
+      close_cover:
+        service: switch.turn_off
+        data:
+          entity_id: switch.portao
+      stop_cover:
+        service: switch.turn_on
+        data:
+          entity_id: switch.portao
+      icon_template: >-
+        {% if is_state('binary_sensor.portao','on') %}
+          mdi:garage-open
+        {% else %}
+          mdi:garage
+        {% endif %}

@@ -213,9 +213,9 @@
         value_template: "{{ states.calendar.robson.attributes.location }}"
         
 # Bitcoin
-- platform: bitcoin
-  display_options:
-    - exchangerate
+#- platform: bitcoin
+#  display_options:
+#    - exchangerate
     
 # Cotação de moedas
 - platform: openexchangerates
@@ -359,8 +359,36 @@
     Accept: application/vnd.github.v3+json
     Content-Type: application/json
     User-Agent: Home Assistant REST sensor 
-  
+  scan_interval: 60
+
+# Uso espaço no dropbox
+- platform: rest
+  name: Dropbox espaço usado
+  method: GET
+  resource: https://api.dropboxapi.com/2/users/get_space_usage
+  value_template: '{{ value_json.used }}'
+  headers:
+    Authorization: !secret dropbox_auth
+  scan_interval: 600
+
+
 # RF Reciever  
 - platform: mqtt
   state_topic: "sensors/rf/receiver"
   name: "RF Receiver"
+  
+# Cotação Bitcoin
+- platform: template
+  sensors:
+    btc:
+      friendly_name: "Cotação Bitcoin"
+      unit_of_measurement: USD
+      icon_template: mdi:currency-btc
+      value_template: >
+       {{ (1 / states.sensor.exchange_rate_sensor.attributes.BTC | float) | round(2) }}
+       
+# Versão
+- platform: mqtt
+  name: Versão Portao
+  state_topic: "stat/sonoff6075/STATUS2"
+  value_template: "{{ value_json['StatusFWR'].Version }}"

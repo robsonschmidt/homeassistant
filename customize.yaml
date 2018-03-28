@@ -218,7 +218,7 @@ input_text.tv_sala_tiles:
         image: /local/net.png
         column: 1
         row: 1
-      - entity: script.source_net_sala
+      - entity: switch.source_net_sala
         image: /local/net_source.png
         column: 2
         row: 1
@@ -226,7 +226,7 @@ input_text.tv_sala_tiles:
         image: /local/tv.png
         column: 1
         row: 2
-      - entity: script.source_chromecast_sala
+      - entity: switch.source_chromecast_sala
         image: /local/chromecast.png
         column: 2
         row: 2
@@ -420,62 +420,114 @@ input_text.tv_quarto_tiles:
         row: 4    
 
 # State Cards Spotify
-input_text.churrasqueira_spotify_player:
+input_text.churrasqueira_player:
   icon: mdi:cast
   custom_ui_state_card: state-card-mini-media-player
-  friendly_name: Spotify Churrasqueira
+  friendly_name: Chromecast Churrasqueira
   config:
     player: media_player.churrasqueira
     buttons:
       - name: Rock
         icon: mdi:music-note
         script: script.play_spotify_rock
+        variables:
+          data:
+            media_player: Churrasqueira
       - name: Susse
         icon: mdi:music-note
         script: script.play_spotify_susse
+        variables:
+          data:
+            media_player: Churrasqueira
       - name: Isabelle
         icon: mdi:music-note
         script: script.play_spotify_isabelle
-input_text.sala_spotify_player:
+        variables:
+          data:
+            media_player: Churrasqueira
+input_text.sala_player:
   icon: mdi:cast
   custom_ui_state_card: state-card-mini-media-player
-  friendly_name: Spotify Sala
+  friendly_name: Chromecast Sala
   config:
     player: media_player.sala
     buttons:
       - name: Rock
         icon: mdi:music-note
         script: script.play_spotify_rock
+        variables:
+          data:
+            media_player: Sala
       - name: Susse
         icon: mdi:music-note
         script: script.play_spotify_susse
+        variables:
+          data:
+            media_player: media_player.sala
       - name: Isabelle
         icon: mdi:music-note
         script: script.play_spotify_isabelle
-input_text.quarto_spotify_player:
+        variables:
+          data:
+            media_player: Sala
+input_text.quarto_player:
   icon: mdi:cast
   custom_ui_state_card: state-card-mini-media-player
-  friendly_name: Spotify Quarto
+  friendly_name: Chromecast Quarto
   config:
     player: media_player.quarto
     buttons:
       - name: Rock
         icon: mdi:music-note
         script: script.play_spotify_rock
+        variables:
+          data:
+            media_player: Quarto
       - name: Susse
         icon: mdi:music-note
         script: script.play_spotify_susse
+        variables:
+          data:
+            media_player: Quarto
       - name: Isabelle
         icon: mdi:music-note
         script: script.play_spotify_isabelle
-        
+        variables:
+          data:
+            media_player: Quarto
+input_text.quarto_isabelle_player:
+  icon: mdi:cast
+  custom_ui_state_card: state-card-mini-media-player
+  friendly_name: Chromecast Quarto Isabelle
+  config:
+    player: media_player.quarto_isabelle
+    buttons:
+      - name: Rock
+        icon: mdi:music-note
+        script: script.play_spotify_rock
+        variables:
+          data:
+            media_player: Quarto Isabelle
+      - name: Susse
+        icon: mdi:music-note
+        script: script.play_spotify_susse
+        variables:
+          data:
+            media_player: Quarto Isabelle
+      - name: Isabelle
+        icon: mdi:music-note
+        script: script.play_spotify_isabelle
+        variables:
+          data:
+            media_player: Quarto Isabelle
+
 # Portão
 switch.portao:
-  friendly_name: Portão
   homebridge_visible: true
   homebridge_name: Portão
   confirm_controls_show_lock: true
   icon: mdi:garage-open
+  assumed_state: false
   
 # Google Wifi
 sensor.google_wifi_current_version:
@@ -593,3 +645,17 @@ input_boolean.weather:
     
 zone.home:
   friendly_name: Casa
+  
+sensor.exchange_rate_sensor:
+  friendly_name: Cotação Dolar
+  icon: mdi:currency-usd
+  
+binary_sensor.acionado:
+  icon: mdi:home-alert
+binary_sensor.ativado:
+  icon: mdi:lock
+binary_sensor.portao:
+  icon: mdi:garage
+
+alarm_control_panel.ha_alarm:
+  friendly_name: Alarme

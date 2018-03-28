@@ -1,35 +1,51 @@
-  valor_bitcoin_meianoite:
-    name: Valor Bitcoin Meia Noite
-    min: 0
-    max: 999999
-    step: 1
-    mode: box
-    unit_of_measurement: USD
-  valor_bitcoin_meianoite_ontem:
-    name: Valor Bitcoin Meia Noite Ontem
-    min: 0
-    max: 999999
-    step: 1
-    mode: box
-    unit_of_measurement: USD
-  tempo_timer:
-    name: Tempo
-    min: 0
-    max: 120
-    step: 1
-    unit_of_measurement: min
-    mode: box
-  min_humidade_quarto:
-    name: Hum. Mínima
-    min: 0
-    max: 100
-    step: 1
-    unit_of_measurement: '%'
-    mode: box
-  max_humidade_quarto:
-    name: Hum. Máxima
-    min: 0
-    max: 100
-    step: 1
-    unit_of_measurement: '%'
-    mode: box
+valor_bitcoin_meianoite:
+  name: Valor Bitcoin Meia Noite
+  min: 0
+  max: 999999
+  step: 1
+  mode: box
+  unit_of_measurement: USD
+  icon: mdi:currency-btc
+valor_bitcoin_meianoite_ontem:
+  name: Valor Bitcoin Meia Noite Ontem
+  min: 0
+  max: 999999
+  step: 1
+  mode: box
+  unit_of_measurement: USD
+  icon: mdi:currency-btc
+tempo_timer:
+  name: Tempo
+  min: 0
+  max: 120
+  step: 1
+  unit_of_measurement: min
+  mode: box
+min_humidade_quarto:
+  name: Hum. Mínima
+  min: 0
+  max: 100
+  step: 1
+  unit_of_measurement: '%'
+  mode: box
+max_humidade_quarto:
+  name: Hum. Máxima
+  min: 0
+  max: 100
+  step: 1
+  unit_of_measurement: '%'
+  mode: box
+temp_cpu_alta:
+  name: Temp. CPU Alta
+  min: 0
+  max: 100
+  step: 1
+  unit_of_measurement: '°C'
+  mode: box
+temp_cpu_muito_alta:
+  name: Temp. CPU Muito Alta
+  min: 0
+  max: 100
+  step: 1
+  unit_of_measurement: '°C'
+  mode: box

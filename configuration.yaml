@@ -41,8 +41,6 @@ ios:
 #        - light
 #        - switch
 
-panel_iframe: !include panel_iframe.yaml
-
 #customizer:
 #  custom_ui: local
 
@@ -101,7 +99,7 @@ tts:
     cache: true
     cache_dir: /config/tts
     time_memory: 600
-#    language: 'pt-BR'
+    language: 'pt'
 
 group: !include groups.yaml
 automation: !include automations.yaml
@@ -120,6 +118,7 @@ input_datetime: !include input_datetime.yaml
 input_select: !include input_select.yaml
 weblink: !include weblink.yaml
 shell_command: !include shell_command.yaml
+cover: !include cover.yaml
 
 ifttt:
   key: !secret ifttt
@@ -195,7 +194,56 @@ google_assistant:
 
 mqtt:
 
-#image_processing:
+rest_command:
+  move_backup_old:
+    url: 'https://api.dropboxapi.com/2/files/move_v2'
+    method: post
+    headers:
+      Authorization: !secret dropbox_auth
+      Content-Type: application/json
+    payload: '{ "from_path": "/backup", "to_path": "/backup-old"}'
+  delete_backup_old:
+    url: 'https://api.dropboxapi.com/2/files/delete_v2'
+    method: post
+    headers:
+      Authorization: !secret dropbox_auth
+      Content-Type: application/json
+    payload: '{ "path": "/backup-old" }'
+  cria_pasta_backup:
+    url: 'https://api.dropboxapi.com/2/files/create_folder_v2'
+    method: post
+    headers:
+      Authorization: !secret dropbox_auth
+      Content-Type: application/json
+    payload: '{ "path": "/backup" }'
+
+binary_sensor:
+  - platform: rpi_gpio
+    ports:
+      23: Ativado
+      22: Acionado
+    invert_logic: true
+  - platform: template
+    sensors:
+      people_home:
+        value_template: >-
+          {{ is_state('device_tracker.52008849ec808451', 'home')
+             or is_state('device_tracker.iphonedeflavialan', 'home') }}
+  - platform: mqtt
+    name: Portão
+    state_topic: "tele/sonoff6075/SENSOR"
+    device_class: opening
+    payload_on: "ON"
+    payload_off: "OFF"  
+    value_template: '{{ value_json["Switch2"] }}'
+#    value_template: '{{{"ON": "Aberto","OFF": "Fechado"}[value_json["Switch2"]] }}'
+  
+alarm_control_panel:
+  - platform: manual
+    pending_time: 0
+    delay_time: 0
+    trigger_time: 0
+    
 #  - platform: openalpr_local
 #    region: eu
 #    source:
@@ -223,6 +271,7 @@ mqtt:
 #       - entity_id: camera.frente_local
 #    classifier:
 #      mom: /config/haarcascade_licence_plate_rus_16stages.xml
+
 vacuum:
   - platform: roomba
     name: FRITZ

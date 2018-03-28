@@ -1,36 +1,46 @@
 play_spotify_rock:
   sequence:
-  - service: media_player.play_media
+  - service: media_player.select_source
+    data_template:
+      entity_id: media_player.spotify
+      source: "{{ variables.media_player }}"
+  - service: media_player.shuffle_set
     data:
-      entity_id: media_player.churrasqueira
+      entity_id: media_player.spotify
+      shuffle: 'true'
+  - service: media_player.play_media
+    data_template:
+      entity_id: media_player.spotify
       media_content_id: spotify:user:spotify:playlist:6T2oElw93xmSRRpyBx1EcA
-      media_content_type: playlist
-play_spotify_rock_quarto:
-  sequence:
-  - service: media_player.play_media
-    data:
-      entity_id: media_player.quarto
-      media_content_id: spotify:user:12175389811:playlist:6T2oElw93xmSRRpyBx1EcA
-      media_content_type: playlist
-play_spotify_rock_churrasqueira:
-  sequence:
-  - service: media_player.play_media
-    data:
-      entity_id: media_player.churrasqueira
-      media_content_id: spotify:user:12175389811:playlist:6T2oElw93xmSRRpyBx1EcA
       media_content_type: playlist
 play_spotify_susse:
   sequence:
+  - service: media_player.select_source
+    data_template:
+      entity_id: media_player.spotify
+      source: "{{ variables.media_player }}"
+  - service: media_player.shuffle_set
+    data:
+      entity_id: media_player.spotify
+      shuffle: 'true'
   - service: media_player.play_media
     data_template:
-      entity_id: media_player.sala
+      entity_id: media_player.spotify
       media_content_id: spotify:user:12175389811:playlist:7tZCnbcEtYn6Mp17EBAKzP
       media_content_type: playlist
 play_spotify_isabelle:
   sequence:
+  - service: media_player.select_source
+    data_template:
+      entity_id: media_player.spotify
+      source: "{{ variables.media_player }}"
+  - service: media_player.shuffle_set
+    data:
+      entity_id: media_player.spotify
+      shuffle: 'true'
   - service: media_player.play_media
     data_template:
-      entity_id: media_player.sala
+      entity_id: media_player.spotify
       media_content_id: spotify:user:12175389811:playlist:5AY8U80s1JcmuCTk16LbCe
       media_content_type: playlist
       
@@ -450,10 +460,9 @@ mercado_financeiro_texto:
        *Dolar:*{{- '\n' -}}
        *- Atual:* {{ (states.sensor.exchange_rate_sensor.state|round(2))|replace('.', ',') }}{{- '\n' -}}
        *Bitcoin:*{{- '\n' -}}
-       *- Abertura:* {{ ((states.input_number.valor_bitcoin_meianoite.state) | round(2))|replace('.', ',') }}{{- '\n' -}}
-       *- Atual:* {{((states.sensor.exchange_rate_1_btc.state | float) | round(2))|replace('.', ',') }}({{ (((((states.sensor.exchange_rate_1_btc.state | float) / (states.input_number.valor_bitcoin_meianoite.state | float)) -1) * 100) | round(2))|replace('.', ',') }}%){{- '\n' -}}
-       *- Abertura D-1:* {{ ((states.input_number.valor_bitcoin_meianoite_ontem.state) | round(2))|replace('.', ',') }}({{ (((((states.input_number.valor_bitcoin_meianoite.state | float) / (states.input_number.valor_bitcoin_meianoite_ontem.state | float)) -1) * 100) | round(2))|replace('.', ',') }}%){{- '\n' -}}
-       *- Valor Carteira:* USD {{ (((states.sensor.exchange_rate_1_btc.state | float) * 0.028924) | round(2))|replace('.', ',') }} | BRL {{ (((states.sensor.exchange_rate_1_btc.state | float) * 0.028924 * (states.sensor.exchange_rate_sensor.state | float)) | round(2))|replace('.', ',') }}
+       *- D-1:* {{ ((states.input_number.valor_bitcoin_meianoite.state) | round(2))|replace('.', ',') }}({{ (((((states.input_number.valor_bitcoin_meianoite.state | float) / (states.input_number.valor_bitcoin_meianoite_ontem.state | float)) -1) * 100) | round(2))|replace('.', ',') }}%){{- '\n' -}}
+       *- Atual:* {{((states.sensor.btc.state | float) | round(2))|replace('.', ',') }}({{ (((((states.sensor.btc.state | float) / (states.input_number.valor_bitcoin_meianoite.state | float)) -1) * 100) | round(2))|replace('.', ',') }}%){{- '\n' -}}
+       *- Valor Carteira:* USD {{ (((states.sensor.btc.state | float) * 0.028924) | round(2))|replace('.', ',') }} | BRL {{ (((states.sensor.btc.state | float) * 0.028924 * (states.sensor.exchange_rate_sensor.state | float)) | round(2))|replace('.', ',') }}
 mercado_financeiro_voz:
   alias: Mercado Financeiro Voz
   sequence:
@@ -462,8 +471,8 @@ mercado_financeiro_voz:
       entity_id: input_text.mercado_financeiro_voz
       value: >
        A cotação do dolar está em {{ (states.sensor.exchange_rate_sensor.state|round(2))|replace('.', ' e ') }}
-       , e o bitcoin em {{ (states.sensor.exchange_rate_1_btc.state|round(0)) }}
-       , com uma variação de {{ (((((states.sensor.exchange_rate_1_btc.state | float) / (states.input_number.valor_bitcoin_meianoite.state | float)) -1) * 100) | round(2))|replace('.', ' virgula ') }} %.
+       , e o bitcoin em {{ (states.sensor.btc.state|round(0)) }}
+       , com uma variação de {{ (((((states.sensor.btc.state | float) / (states.input_number.valor_bitcoin_meianoite.state | float)) -1) * 100) | round(2))|replace('.', ' virgula ') }} %.
 # Proximo Compromisso
 proximo_compromisso_texto:
   alias: Proximo Compromisso Texto
