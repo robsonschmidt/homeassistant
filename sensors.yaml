@@ -162,15 +162,24 @@
 - platform: command_line
   name: dark_sky_summary_pt
   command: curl --data \"key=trnsl.1.1.20180312T184049Z.25ec68dcb8cdd93c.e8313f4eb494259e59ca6a6efd1c03e42e81d8a6&lang=en-pt&text={{ states.sensor.dark_sky_summary.state }}\" https://translate.yandex.net/api/v1.5/tr.json/translate
-  value_template: '{{ value_json.text[0] }}'
+  value_template: >
+   {% for text in value_json.text %}
+   {{text}}
+   {% endfor %}
 - platform: command_line
   name: dark_sky_daily_summary_pt
   command: curl --data \"key=trnsl.1.1.20180312T184049Z.25ec68dcb8cdd93c.e8313f4eb494259e59ca6a6efd1c03e42e81d8a6&lang=en-pt&text={{ states.sensor.dark_sky_daily_summary.state }}\" https://translate.yandex.net/api/v1.5/tr.json/translate
-  value_template: '{{ value_json.text[0] }}'
+  value_template: >
+   {% for text in value_json.text %}
+   {{text}}
+   {% endfor %}
 - platform: command_line
   name: dark_sky_hourly_summary_pt
   command: curl --data \"key=trnsl.1.1.20180312T184049Z.25ec68dcb8cdd93c.e8313f4eb494259e59ca6a6efd1c03e42e81d8a6&lang=en-pt&text={{ states.sensor.dark_sky_hourly_summary.state }}\" https://translate.yandex.net/api/v1.5/tr.json/translate
-  value_template: '{{ value_json.text[0] }}'
+  value_template: >
+   {% for text in value_json.text %}
+   {{text}}
+   {% endfor %}
   
 # Google Travel Time
 - platform: google_travel_time
@@ -364,13 +373,12 @@
 # Uso espaço no dropbox
 - platform: rest
   name: Dropbox espaço usado
-  method: GET
+  method: POST
   resource: https://api.dropboxapi.com/2/users/get_space_usage
   value_template: '{{ value_json.used }}'
   headers:
     Authorization: !secret dropbox_auth
   scan_interval: 600
-
 
 # RF Reciever  
 - platform: mqtt
@@ -386,6 +394,8 @@
       icon_template: mdi:currency-btc
       value_template: >
        {{ (1 / states.sensor.exchange_rate_sensor.attributes.BTC | float) | round(2) }}
+
+## Portao       
        
 # Versão
 - platform: mqtt

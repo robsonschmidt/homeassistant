@@ -26,6 +26,8 @@
       label-badge-background-color: white
       label-badge-text-color: black
       label-badge-red: "#006437"
+      label-badge-green: "#006437"
+      label-badge-blue: "#006437"
       label-badge-border-color: "#006437"
       #label-badge-font-size: 0.5
       #ha-label-badge-title-font-size: 1

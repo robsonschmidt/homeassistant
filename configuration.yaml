@@ -84,7 +84,7 @@ sun:
 logger:
   default: warning
 #  logs:
-#    homeassistant.components.mqtt: debug
+#    homeassistant.core: debug
 #    homeassistant.components.automation: debug
 
 # Weather prediction
@@ -193,6 +193,7 @@ google_assistant:
     - light
 
 mqtt:
+  broker: 192.168.86.139
 
 rest_command:
   move_backup_old:
@@ -243,9 +244,10 @@ alarm_control_panel:
     pending_time: 0
     delay_time: 0
     trigger_time: 0
-    
+
+image_processing:
 #  - platform: openalpr_local
-#    region: eu
+#    region: br
 #    source:
 #    - entity_id: camera.teste_carro
 #  - platform: dlib_face_detect
@@ -265,12 +267,12 @@ alarm_control_panel:
 #      - entity_id: camera.frente_local
 #    classifier:
 #      mom: /config/haarcascade_fullbody.xml
-#  - platform: opencv
-#    name: Garage Plate
-#    source:
-#       - entity_id: camera.frente_local
-#    classifier:
-#      mom: /config/haarcascade_licence_plate_rus_16stages.xml
+  - platform: opencv 
+    name: Garage Plate
+    source:
+       - entity_id: camera.frente
+    classifier:
+      mom: /config/haarcascade_licence_plate_rus_16stages.xml
 
 vacuum:
   - platform: roomba

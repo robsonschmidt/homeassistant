@@ -656,6 +656,10 @@ binary_sensor.ativado:
   icon: mdi:lock
 binary_sensor.portao:
   icon: mdi:garage
+  
+sensor.portao:
+  friendly_name_template: >
+   Portão {{ {"ON": "Aberto", "OFF", "Fechado"}[states.sensor.portao.state] }}
 
 alarm_control_panel.ha_alarm:
   friendly_name: Alarme

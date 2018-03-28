@@ -8,6 +8,7 @@ default_view:
   - group.aspirador
   - alarm_control_panel.ha_alarm
   - binary_sensor.portao
+  - sensor.portao
   name: 'Tela Inicial'
 
 # Card Aspirador

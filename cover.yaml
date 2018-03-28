@@ -2,7 +2,7 @@
   covers:
     portao:
       friendly_name: "Portão"
-      position_template: "{{ is_state('binary_sensor.portao', 'on') }}"
+      value_template: "{{ is_state('binary_sensor.portao','ON') }}"
       open_cover:
         service: switch.turn_on
         data:
@@ -16,7 +16,7 @@
         data:
           entity_id: switch.portao
       icon_template: >-
-        {% if is_state('binary_sensor.portao','on') %}
+        {% if is_state('binary_sensor.portao','ON') %}
           mdi:garage-open
         {% else %}
           mdi:garage

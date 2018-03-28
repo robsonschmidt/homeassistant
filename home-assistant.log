@@ -1,164 +1,706 @@
-2018-03-27 22:08:16 ERROR (SyncWorker_16) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
-2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.setup] Setup of input_number is taking over 10 seconds.
-2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.setup] Setup of input_select is taking over 10 seconds.
-2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.setup] Setup of input_boolean is taking over 10 seconds.
-2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.setup] Setup of group is taking over 10 seconds.
-2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.setup] Setup of input_datetime is taking over 10 seconds.
-2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.setup] Setup of input_text is taking over 10 seconds.
-2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.alarm_control_panel] Setup of platform manual is taking over 10 seconds.
-2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of platform template is taking over 10 seconds.
-2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform google_wifi is taking over 10 seconds.
-2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform template is taking over 10 seconds.
-2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform rest is taking over 10 seconds.
-2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform rest is taking over 10 seconds.
-2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform template is taking over 10 seconds.
-2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform command_line is taking over 10 seconds.
-2018-03-27 22:08:22 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform template is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform command_line is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform command_line is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform command_line is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform template is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform openexchangerates is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform time_date is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform pi_hole is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.setup] Setup of panel_iframe is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.setup] Setup of config is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.setup] Setup of logbook is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.camera] Setup of platform local_file is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform mqtt is taking over 10 seconds.
-2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:23 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:24 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'value_json' is undefined (value: Error in call to API function "users/get_space_usage": Your request's HTTP request method is "GET".  This function only accepts the HTTP request method "POST"., template: {{ value_json.used }})
-2018-03-27 22:08:24 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'dict object' has no attribute 'text' (value: {"code":502,"message":"Invalid parameter: text"}, template: {{ value_json.text[0] }})
-2018-03-27 22:08:26 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'dict object' has no attribute 'text' (value: {"code":502,"message":"Invalid parameter: text"}, template: {{ value_json.text[0] }})
-2018-03-27 22:08:29 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'dict object' has no attribute 'text' (value: {"code":502,"message":"Invalid parameter: text"}, template: {{ value_json.text[0] }})
-2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:08:46 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:09:10 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:09:10 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:09:10 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:09:10 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:09:10 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:09:10 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:09:10 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:09:30 WARNING (MainThread) [homeassistant.components.calendar] Setup of platform google is taking over 10 seconds.
-2018-03-27 22:09:30 WARNING (MainThread) [homeassistant.components.calendar] Setup of platform google is taking over 10 seconds.
-2018-03-27 22:09:30 WARNING (MainThread) [homeassistant.components.calendar] Setup of platform google is taking over 10 seconds.
-2018-03-27 22:09:35 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:09:35 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:09:35 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:09:35 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.shutdown callback)
-OSError: [Errno 107] Socket not connected
-2018-03-27 22:09:54 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform darksky is taking over 10 seconds.
-2018-03-27 22:10:16 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
-2018-03-27 22:10:16 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 30 seconds.
-2018-03-27 22:10:47 ERROR (MainThread) [homeassistant.components.cover.template] could not convert string to float: 'False'
-2018-03-27 22:10:47 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:10:50 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
-2018-03-27 22:10:51 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 60 seconds.
-2018-03-27 22:11:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:11:54 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
-2018-03-27 22:11:54 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 90 seconds.
-2018-03-27 22:12:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:13:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:13:28 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
-2018-03-27 22:13:28 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 120 seconds.
-2018-03-27 22:14:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:15:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:15:32 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
-2018-03-27 22:15:32 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 150 seconds.
-2018-03-27 22:16:01 ERROR (MainThread) [homeassistant.components.cover.template] could not convert string to float: 'True'
-2018-03-27 22:16:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:16:05 ERROR (MainThread) [homeassistant.components.cover.template] could not convert string to float: 'False'
-2018-03-27 22:17:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:18:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:18:06 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
-2018-03-27 22:18:06 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 180 seconds.
-2018-03-27 22:18:26 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'value_json' is undefined (value: Error in call to API function "users/get_space_usage": Your request's HTTP request method is "GET".  This function only accepts the HTTP request method "POST"., template: {{ value_json.used }})
-2018-03-27 22:19:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:20:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:21:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:21:10 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
-2018-03-27 22:21:10 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 180 seconds.
-2018-03-27 22:22:00 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:23:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:24:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:24:14 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
-2018-03-27 22:24:14 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 180 seconds.
-2018-03-27 22:25:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:26:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:27:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:27:18 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
-2018-03-27 22:27:18 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 180 seconds.
-2018-03-27 22:28:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:28:27 ERROR (MainThread) [homeassistant.helpers.template] Error parsing value: 'value_json' is undefined (value: Error in call to API function "users/get_space_usage": Your request's HTTP request method is "GET".  This function only accepts the HTTP request method "POST"., template: {{ value_json.used }})
-2018-03-27 22:29:00 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:30:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:30:22 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
-2018-03-27 22:30:22 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 180 seconds.
-2018-03-27 22:31:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:31:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-03-27 22:32:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:32:07 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-03-27 22:33:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
-2018-03-27 22:33:26 WARNING (MainThread) [homeassistant.components.media_player.cast] Can't set up chromecast on 192.168.86.31: Could not connect to 192.168.86.31:8009
-2018-03-27 22:33:26 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 180 seconds.
-2018-03-27 22:34:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'mappingproxy object' has no attribute 'timestamp'
+2018-03-28 12:18:14 WARNING (Recorder) [homeassistant.components.recorder] Ended unfinished session (id=184 from 2018-03-28 15:13:40.491165)
+2018-03-28 12:18:37 WARNING (MainThread) [homeassistant.setup] Setup of input_select is taking over 10 seconds.
+2018-03-28 12:18:37 WARNING (MainThread) [homeassistant.setup] Setup of weblink is taking over 10 seconds.
+2018-03-28 12:18:37 WARNING (MainThread) [homeassistant.setup] Setup of input_number is taking over 10 seconds.
+2018-03-28 12:18:38 WARNING (MainThread) [homeassistant.setup] Setup of input_text is taking over 10 seconds.
+2018-03-28 12:18:47 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform pi_hole is taking over 10 seconds.
+2018-03-28 12:18:47 ERROR (SyncWorker_7) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:18:47 ERROR (SyncWorker_7) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:18:57 ERROR (SyncWorker_11) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:18:58 ERROR (SyncWorker_11) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:19:08 ERROR (SyncWorker_14) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:19:08 ERROR (SyncWorker_14) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:19:18 ERROR (SyncWorker_4) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:19:18 ERROR (SyncWorker_4) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:19:28 ERROR (SyncWorker_15) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:19:28 ERROR (SyncWorker_15) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:19:38 ERROR (SyncWorker_14) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:19:38 ERROR (SyncWorker_14) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:19:48 ERROR (SyncWorker_10) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:19:48 ERROR (SyncWorker_10) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:19:58 ERROR (SyncWorker_9) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:19:58 ERROR (SyncWorker_9) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:20:08 ERROR (SyncWorker_2) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:20:08 ERROR (SyncWorker_2) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:24:01 ERROR (SyncWorker_4) [homeassistant.util.package] Unable to install package face_recognition==1.0.0: Command "/usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-z6kxrplv/dlib/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" install --record /tmp/pip-9clgy3m6-record/install-record.txt --single-version-externally-managed --prefix  --compile --user --prefix=" failed with error code 1 in /tmp/pip-build-z6kxrplv/dlib/
+2018-03-28 12:24:01 ERROR (MainThread) [homeassistant.requirements] Not initializing image_processing.dlib_face_detect because could not install requirement face_recognition==1.0.0
+2018-03-28 12:24:01 ERROR (MainThread) [homeassistant.setup] Unable to prepare setup for platform image_processing.dlib_face_detect: Could not install all requirements.
+2018-03-28 12:24:10 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:24:33 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:24:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.dark_sky_daily_summary_pt is taking over 10 seconds
+2018-03-28 12:24:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.ultima_versao_sonoff is taking over 10 seconds
+2018-03-28 12:24:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify is taking over 10 seconds
+2018-03-28 12:24:33 WARNING (MainThread) [homeassistant.setup] Setup of hassio is taking over 10 seconds.
+2018-03-28 12:24:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of calendar.feriados_no_brasil is taking over 10 seconds
+2018-03-28 12:24:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.speedtest_ping is taking over 10 seconds
+2018-03-28 12:24:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.memory_use_percent is taking over 10 seconds
+2018-03-28 12:24:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.iphone_de_robson_battery_state is taking over 10 seconds
+2018-03-28 12:24:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.garden_light is taking over 10 seconds
+2018-03-28 12:24:33 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:24:33 ERROR (MainThread) [homeassistant.components.hassio.handler] Timeout on /homeassistant/options request
+2018-03-28 12:24:35 WARNING (MainThread) [homeassistant.components.image_processing] Updating opencv image_processing took longer than the scheduled update interval 0:00:02
+2018-03-28 12:24:37 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:24:40 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:24:42 WARNING (MainThread) [homeassistant.components.sensor] Updating google_wifi sensor took longer than the scheduled update interval 0:00:30
+2018-03-28 12:24:42 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
+2018-03-28 12:24:42 WARNING (MainThread) [homeassistant.components.sensor] Updating systemmonitor sensor took longer than the scheduled update interval 0:00:30
+2018-03-28 12:24:42 WARNING (MainThread) [homeassistant.components.light] Updating tplink light took longer than the scheduled update interval 0:00:30
+2018-03-28 12:24:44 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:24:44 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:24:46 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:24:52 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:24:54 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:24:54 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:24:56 WARNING (MainThread) [homeassistant.components.image_processing] Updating opencv image_processing took longer than the scheduled update interval 0:00:02
+2018-03-28 12:24:56 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.cpu_temperature is taking over 10 seconds
+2018-03-28 12:25:00 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:25:00 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:25:01 WARNING (MainThread) [homeassistant.components.image_processing] Updating opencv image_processing took longer than the scheduled update interval 0:00:02
+2018-03-28 12:25:03 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:25:04 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:06 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:25:07 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:07 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:08 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:08 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:08 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:25:10 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:25:13 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:13 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:13 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:13 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:25:15 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:25:16 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
+2018-03-28 12:25:16 WARNING (MainThread) [homeassistant.components.image_processing] Updating opencv image_processing took longer than the scheduled update interval 0:00:02
+2018-03-28 12:25:16 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:25:18 WARNING (MainThread) [homeassistant.components.sensor] Updating google_travel_time sensor took longer than the scheduled update interval 0:00:30
+2018-03-28 12:25:18 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:25:19 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:19 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:22 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:25:24 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:25:25 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:25:25 WARNING (MainThread) [homeassistant.components.media_player] Setup of platform cast is taking over 10 seconds.
+2018-03-28 12:25:26 ERROR (SyncWorker_15) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:25:26 ERROR (SyncWorker_15) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:25:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.pihole_ads_blocked_today is taking over 10 seconds
+2018-03-28 12:25:26 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:27 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:27 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:27 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:28 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:31 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:25:31 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:25:33 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:33 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:34 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:25:36 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:36 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:36 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:37 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:25:40 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:40 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:25:41 ERROR (SyncWorker_8) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:25:41 ERROR (SyncWorker_8) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:25:41 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.pihole_dns_queries_cached is taking over 10 seconds
+2018-03-28 12:25:42 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:43 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:43 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:25:44 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:45 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:48 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:25:48 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
+2018-03-28 12:25:48 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:25:50 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:50 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:51 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:25:53 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:53 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:25:53 ERROR (SyncWorker_17) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:25:53 ERROR (SyncWorker_17) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:25:53 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:54 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:54 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:54 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:25:54 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.pihole_ads_percentage_blocked_today is taking over 10 seconds
+2018-03-28 12:25:55 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:25:57 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:25:59 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:26:00 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:00 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:02 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:03 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:04 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:04 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:05 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:06 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:07 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:07 ERROR (SyncWorker_3) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:26:07 ERROR (SyncWorker_3) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:26:08 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:08 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:08 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.pihole_dns_unique_domains is taking over 10 seconds
+2018-03-28 12:26:11 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:11 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:11 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:26:13 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:13 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:14 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:14 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:16 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:17 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:18 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:18 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
+2018-03-28 12:26:20 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:20 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:20 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:22 ERROR (SyncWorker_19) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:26:22 ERROR (SyncWorker_19) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:26:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.pihole_dns_queries_forwarded is taking over 10 seconds
+2018-03-28 12:26:23 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:23 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:24 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:26 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:26 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:27 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:27 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:27 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:30 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:26:30 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:31 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:32 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:34 ERROR (SyncWorker_2) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:26:34 ERROR (SyncWorker_2) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:26:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:34 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:34 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:34 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.pihole_dns_unique_clients is taking over 10 seconds
+2018-03-28 12:26:36 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:26:37 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:38 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:38 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:40 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:41 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:41 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:43 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:44 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:44 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:44 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:46 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.pihole_dns_queries_today is taking over 10 seconds
+2018-03-28 12:26:46 ERROR (SyncWorker_10) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:26:46 ERROR (SyncWorker_10) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:26:46 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:47 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:48 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:49 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:49 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
+2018-03-28 12:26:49 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:51 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:52 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:52 ERROR (MainThread) [frontend.js.latest.201803100] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-hassio-421266c5f02dbccd48443907251fa741.html:1:872 Uncaught SecurityError: Blocked a frame with origin "https://fris.duckdns.org:8123" from accessing a cross-origin frame.
+2018-03-28 12:26:54 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:57 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:26:57 ERROR (SyncWorker_0) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:26:57 ERROR (SyncWorker_0) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:26:57 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.pihole_domains_blocked is taking over 10 seconds
+2018-03-28 12:27:00 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:02 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:05 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:08 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:11 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:14 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:17 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:20 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:23 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:26 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:29 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:32 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:35 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:38 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:41 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:44 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:47 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:50 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:52 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:55 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:27:58 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:01 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:04 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:07 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:10 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:13 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:16 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:19 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:22 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:25 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:28 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:31 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:34 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:37 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:40 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:43 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:46 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:49 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:52 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:54 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:28:57 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:00 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:02 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:05 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:08 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:11 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:14 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:17 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:20 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:22 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:25 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:27 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:30 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:33 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:36 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:38 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:41 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:44 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:47 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:50 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:53 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:56 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:29:59 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:02 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:05 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:08 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:11 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:14 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:17 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:20 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:22 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:24 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.pihole_ads_percentage_blocked_today is taking over 10 seconds
+2018-03-28 12:30:24 ERROR (SyncWorker_9) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:30:24 ERROR (SyncWorker_9) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:30:26 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:28 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:31 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:34 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:35 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.pihole_dns_unique_clients is taking over 10 seconds
+2018-03-28 12:30:35 ERROR (SyncWorker_2) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:30:35 ERROR (SyncWorker_2) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:30:37 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:39 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:42 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:45 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:48 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:51 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:52 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.pihole_ads_blocked_today is taking over 10 seconds
+2018-03-28 12:30:52 ERROR (SyncWorker_15) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-03-28 12:30:52 ERROR (SyncWorker_15) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-Hole
+2018-03-28 12:30:53 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:56 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:30:58 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:01 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:04 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:07 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:10 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:13 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:16 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:18 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:21 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:24 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:26 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:29 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:32 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:35 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:38 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:41 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:44 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:47 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:50 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:53 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:56 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:31:58 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:01 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:04 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:07 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:10 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:13 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:16 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:18 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:21 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:24 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:27 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:29 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:32 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:35 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:38 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:41 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:44 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:47 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:50 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:53 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:56 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:32:59 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:02 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:05 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:08 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:11 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:14 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:17 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:20 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:23 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:25 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:28 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:31 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:34 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:37 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:40 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:43 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:46 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:49 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:52 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:55 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:33:58 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:00 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:03 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:06 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:09 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:12 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:15 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:18 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:21 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:24 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:26 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:29 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:31 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:34 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:37 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:40 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:43 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:46 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:49 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:52 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:55 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:34:58 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:01 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:03 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:06 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:09 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:12 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:15 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:17 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:20 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:22 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:25 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:27 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:30 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:33 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:36 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:38 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:41 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:44 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:46 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:49 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:52 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:55 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:35:58 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:01 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:03 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:06 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:09 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:12 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:15 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:18 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:21 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:24 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:26 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:29 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:32 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:34 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:37 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:39 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:42 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:45 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:48 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:51 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:54 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:36:57 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:00 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:02 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:05 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:08 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:11 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:14 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:17 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:19 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:22 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:25 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:28 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:31 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:34 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:36 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:39 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:42 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:45 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:48 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:51 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:54 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:57 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:37:59 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:02 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:05 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:07 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:10 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:13 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:16 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:19 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:22 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:25 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:28 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:31 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:34 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:37 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:39 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:42 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:45 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:48 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:51 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:54 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:57 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:38:59 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:02 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:05 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:08 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:11 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:14 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:17 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:20 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:22 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:25 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:28 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:31 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:34 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:37 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:39 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:41 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:44 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:47 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:50 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:53 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:56 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:39:59 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:01 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:04 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:07 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:10 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:13 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:16 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:19 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:22 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:25 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:28 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:31 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:34 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:37 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:39 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:42 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:45 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:48 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:51 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:54 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:57 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:40:59 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:02 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:05 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:08 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:11 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:14 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:17 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:19 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:22 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:25 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:28 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:31 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:34 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:37 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:39 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:42 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:44 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:47 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:50 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:53 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:56 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:41:59 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:02 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:05 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:08 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:11 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:14 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:17 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:19 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:22 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:25 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:27 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:30 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:33 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:35 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:38 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:40 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:43 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:45 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:48 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:51 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:54 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:57 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:42:59 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:02 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:05 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:08 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:11 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:14 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:16 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:19 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:22 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:25 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:28 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:31 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:34 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:37 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:40 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:43 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:46 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:49 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:52 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:55 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:43:58 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:00 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:03 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:06 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:09 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:12 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:15 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:18 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:20 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:23 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:26 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:29 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:32 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:35 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:38 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:40 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:43 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:46 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:49 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:52 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:55 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:44:58 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:01 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:04 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:07 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:10 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:13 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:16 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:18 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:21 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:24 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:27 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:30 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:33 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:36 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:39 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:42 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:45 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:48 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:50 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:53 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:56 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:45:59 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:02 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:05 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:07 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:10 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:13 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:16 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:19 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:22 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:25 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:27 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:30 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:33 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:36 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:39 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:42 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:45 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:47 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:50 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:53 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:56 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:46:59 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:02 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:05 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:07 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:10 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:13 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:16 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:19 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:22 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:25 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:27 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:30 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:33 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:36 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:39 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:42 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:45 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:47 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:50 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:53 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:56 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:47:59 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:02 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:05 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:07 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:10 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:13 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:16 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:19 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:22 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:24 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:27 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:30 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:33 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:36 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:39 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:41 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:44 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:47 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:50 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:53 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:55 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:48:58 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:01 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:04 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:07 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:10 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:13 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:16 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:19 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:21 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:24 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:26 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:29 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:32 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:35 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:38 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-03-28 12:49:38 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:40 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:43 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:46 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:49 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:52 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:55 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
+2018-03-28 12:49:58 ERROR (MainThread) [homeassistant.components.image_processing] Error on receive image from entity: No entity 'camera.frente_local' for grab an image
