@@ -1,0 +1,5 @@
+- platform: roomba
+  name: FRITZ
+  host: 192.168.86.38
+  username: 3143C90C02131830
+  password: !secret roomba_pwd

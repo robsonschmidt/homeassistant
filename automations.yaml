@@ -242,22 +242,6 @@
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.vol_baixo_tv_quarto
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: switch.vol_baixo_tv_sala
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: switch.vol_cima_tv_quarto
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: switch.vol_cima_tv_sala
-    from: 'off'
-    platform: state
-    to: 'on'
   - entity_id: switch.source_chromecast_sala
     from: 'off'
     platform: state
@@ -445,7 +429,7 @@
             - 'Liga TV Record:/ligarecordsala, Canal Record:/canalrecordsala'
             - 'Liga TV Globo:/ligaglobosala, Canal Globo:/canalglobosala'
             - 'Liga TV Discovery:/ligadiscoverysala, Canal Discovery:/canaldiscoverysala'
-- alias: 'Robson chegou na BRF'
+- alias: 'Robson chegou e saiu'
   condition:
     condition: state
     entity_id: input_boolean.enviar_localizacao_robson
@@ -453,64 +437,91 @@
   trigger:
   - platform: state
     entity_id: device_tracker.52008849ec808451
-    to: 'BRF'
-  action:
-    - service: notify.telegram_group
-      data:
-        message: '*Robson* chegou na *BRF*.'
-- alias: 'Robson chegou no Sogro'
-  condition:
-    condition: state
-    entity_id: input_boolean.enviar_localizacao_robson
-    state: 'on'
-  trigger:
-  - platform: state
-    entity_id: device_tracker.52008849ec808451
-    to: 'sogro'
-  action:
-    - service: notify.telegram_group
-      data:
-        message: '*Robson* chegou no *sogro*.'
-- alias: 'Robson chegou na Escola'
-  condition:
-    condition: state
-    entity_id: input_boolean.enviar_localizacao_robson
-    state: 'on'
-  trigger:
-  - platform: state
-    entity_id: device_tracker.52008849ec808451
-    to: 'escola'
-  action:
-    - service: notify.telegram_group
-      data:
-        message: '*Robson* chegou no *escola*.'
-- alias: 'Robson chegou na casa dos pais'
-  condition:
-    condition: state
-    entity_id: input_boolean.enviar_localizacao_robson
-    state: 'on'
-  trigger:
-  - platform: state
-    entity_id: device_tracker.52008849ec808451
-    to: 'pais'
-  action:
-    - service: notify.telegram_group
-      data:
-        message: '*Robson* chegou na casa dos *pais*.'
-- alias: 'Robson saiu de casa'
-  condition:
-    condition: state
-    entity_id: input_boolean.enviar_localizacao_robson
-    state: 'on'
-  trigger:
-  - platform: state
-    entity_id: device_tracker.52008849ec808451
-    to: 'not_home'
   action:
     - service: notify.telegram_group
       data_template:
         message: >
-         *Robson* saiu *{{ trigger.from_state.state | replace("home_arriving", "proximidade de casa") | replace("home","casa") }}*.
+         {% if trigger.from_state.state == 'not_home' and trigger.to_state.state == 'not_home' %}
+         *Robson*
+         {% endif %}
+         {% if trigger.from_state.state != 'not_home' %}
+         saiu de *{{trigger.from_state.state}}*
+         {% endif %}
+         {% if trigger.from_state.state != 'not_home' and trigger.to_state.state != 'not_home' %}
+         e
+         {% endif %}
+         {% if trigger.to_state.state != 'not_home' %}
+         chegou em *{{trigger.to_state.state}}*
+         {% endif %}
+         {% if trigger.from_state.state == 'not_home' and trigger.to_state.state == 'not_home' %}
+         .
+         {% endif %}
+#- alias: 'Robson chegou na BRF'
+#  condition:
+#    condition: state
+#    entity_id: input_boolean.enviar_localizacao_robson
+#    state: 'on'
+#  trigger:
+#  - platform: state
+#    entity_id: device_tracker.52008849ec808451
+#    to: 'BRF'
+#  action:
+#    - service: notify.telegram_group
+#      data:
+#        message: '*Robson* chegou na *BRF*.'
+#- alias: 'Robson chegou no Sogro'
+#  condition:
+#    condition: state
+#    entity_id: input_boolean.enviar_localizacao_robson
+#    state: 'on'
+#  trigger:
+#  - platform: state
+#    entity_id: device_tracker.52008849ec808451
+#    to: 'sogro'
+#  action:
+#    - service: notify.telegram_group
+#      data:
+#        message: '*Robson* chegou no *sogro*.'
+#- alias: 'Robson chegou na Escola'
+#  condition:
+#    condition: state
+#    entity_id: input_boolean.enviar_localizacao_robson
+#    state: 'on'
+#  trigger:
+#  - platform: state
+#    entity_id: device_tracker.52008849ec808451
+#    to: 'escola'
+#  action:
+#    - service: notify.telegram_group
+#      data:
+#        message: '*Robson* chegou no *escola*.'
+#- alias: 'Robson chegou na casa dos pais'
+#  condition:
+#    condition: state
+#    entity_id: input_boolean.enviar_localizacao_robson
+#    state: 'on'
+#  trigger:
+#  - platform: state
+#    entity_id: device_tracker.52008849ec808451
+#    to: 'pais'
+#  action:
+#    - service: notify.telegram_group
+#      data:
+#        message: '*Robson* chegou na casa dos *pais*.'
+#- alias: 'Robson saiu de casa'
+#  condition:
+#    condition: state
+#    entity_id: input_boolean.enviar_localizacao_robson
+#    state: 'on'
+#  trigger:
+#  - platform: state
+#    entity_id: device_tracker.52008849ec808451
+#    to: 'not_home'
+#  action:
+#    - service: notify.telegram_group
+#      data_template:
+#        message: >
+#         *Robson* saiu *{{ trigger.from_state.state | replace("home_arriving", "proximidade de casa") | replace("home","casa") }}*.
 - alias: 'Liga Globo Flavia Chegou'
   condition:
     condition: and
@@ -969,66 +980,19 @@
     platform: state
     to: 'on'
   action:
-  - service: input_datetime.set_datetime
-    entity_id: input_datetime.timer_tv_dormir
-    data_template:
-      time: "{{ (as_timestamp(now()) + (states.input_number.tempo_timer.state | int * 60)) | timestamp_custom('%H:%M', true) }}"
-      date: "{{ (as_timestamp(now()) + (states.input_number.tempo_timer.state | int * 60))  | timestamp_custom('%Y-%m-%d', true) }}"
   - service: notify.telegram_bot
     data_template:
-      message: "*Timer* iniciado para *TV Isabelle*, fim as {{ (as_timestamp(now()) + (states.input_number.tempo_timer.state | int * 60)) | timestamp_custom('%H:%M', true) }}"
-# Fim timer TV
-- alias: Fim timer TV
-  trigger:
-  - platform: template
-    value_template: "{{ states.sensor.date__time.state == (states.input_datetime.timer_tv_dormir.attributes.timestamp | int | timestamp_custom('%Y-%m-%d, %H:%M', true)) }}"
-  action:
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.ativa_timer_tv_dormir
-    - service: tts.google_say
-      data_template: 
-        entity_id: >
-         {% if is_state("input_select.media_player", "Quarto Isabelle") %}
-           media_player.quarto_isabelle
-         {% elif is_state("input_select.media_player", "Quarto") %}
-           media_player.quarto
-         {% elif is_state("input_select.media_player", "Sala") %}
-           media_player.sala
-         {% elif is_state("input_select.media_player", "Churrasqueira") %}
-           media_player.churrasqueira
-         {% else %}
-           none
-         {% endif %}
-        message: >
-         Timer finalizado,
-         {% if now().hour > 18 %}
-         hora de dormir. Boa noite.
-         {% elif now().hour > 12 %}
-         hora de ir na escola. Tenha um ótimo dia.
-         {% else %}
-         hora de se arrumar, escovar os dentes, trocar de roupa e pentear o cabelo. Tenha um ótimo dia.
-         {% endif %}
-        language: pt
-    - delay: '00:00:30'
-    - service: media_player.play_media
-      data_template: 
-        entity_id: >
-         {% if is_state("input_select.media_player", "Quarto Isabelle") %}
-           media_player.quarto_isabelle
-         {% elif is_state("input_select.media_player", "Quarto") %}
-           media_player.quarto
-         {% elif is_state("input_select.media_player", "Sala") %}
-           media_player.sala
-         {% elif is_state("input_select.media_player", "Churrasqueira") %}
-           media_player.churrasqueira
-         {% else %}
-           none
-         {% endif %}
-        media_content_id: 'https://fris.duckdns.org:8123/local/Ninar.mp4'
-        media_content_type: 'VIDEO'
-    - service: notify.telegram_bot
-      data_template:
-        message: '*TV da Isabelle desligada.*'
+      message: "*Timer* iniciado para *TV {{ states.input_select.media_player.state }}*, fim em {{ states('input_number.tempo_timer')|int }} minutos."
+  - delay: "00:{{ states('input_number.tempo_timer')|int }}:00"
+  - service: script.mensagem_tv
+#  - delay: "00:00:30"
+  - wait_template: "{{ is_state('sensor.state_media_player', 'idle') }}"
+  - service: notify.telegram_bot
+    data_template:
+        message: '*Timer* da *TV {{ states.input_select.media_player.state }}* foi *finalizado.*'
+  - service: script.video_ninar
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.ativa_timer_tv_dormir
 
 # Sem energia
 - alias: Sem energia
@@ -1074,9 +1038,15 @@
 # Liga Desumidificador devido a excesso de humidade
 - alias: Liga Desumidificador Humidade Robson
   condition:
-    condition: state
-    entity_id: input_boolean.ligar_desumidificador
-    state: 'on'
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: input_boolean.ligar_desumidificador
+      state: 'on'
+    - condition: template
+      value_template: "{{ states.sensor.time.state >= (states.input_datetime.horario_desumidificador_inicio.attributes.timestamp | int | timestamp_custom('%H:%M', false)) }}"
+    - condition: template
+      value_template: "{{ states.sensor.time.state <= (states.input_datetime.horario_desumidificador_fim.attributes.timestamp | int | timestamp_custom('%H:%M', false)) }}"
   trigger:
   - platform: template
     value_template: '{{ states.sensor.armario_robson_humidade.state > states.input_number.max_humidade_quarto.state }}'
@@ -1090,7 +1060,7 @@
     state: 'on'
   trigger:
   - platform: template
-    value_template: '{{ states.sensor.armario_flavia_humidade.state > states.input_number.max_humidade_quarto.state }}'
+    value_template: '{{ states.sensor.armario_robson_humidade.state > states.input_number.max_humidade_quarto.state }}'
   action:
   - service: switch.turn_on
     entity_id: switch.onoff_desumidificador_flavia
@@ -1128,11 +1098,11 @@
     state: 'on'
   trigger:
   - platform: template
-    value_template: '{{ states.sensor.armario_flavia_humidade.state < states.input_number.min_humidade_quarto.state }}'
+    value_template: '{{ states.sensor.armario_robson_humidade.state < states.input_number.min_humidade_quarto.state }}'
   action:
   - service: switch.turn_off
     entity_id: switch.onoff_desumidificador_flavia
-    
+
 ## Alarmes
 
 # Avisa esquecimento de acionamento
@@ -1216,3 +1186,33 @@
   action:
   - service: switch.toggle
     entity_id: switch.alarme
+
+- alias: Volume Sala Baixo
+  trigger:
+  - platform: state
+    entity_id: switch.vol_baixo_tv_sala
+  action:
+  - service: input_number.decrement
+    entity_id: input_number.vol_tv_sala
+- alias: Volume Sala Cima
+  trigger:
+  - platform: state
+    entity_id: switch.vol_cima_tv_sala
+  action:
+  - service: input_number.increment
+    entity_id: input_number.vol_tv_sala
+    
+- alias: Volume Quarto Baixo
+  trigger:
+  - platform: state
+    entity_id: switch.vol_baixo_tv_quarto
+  action:
+  - service: input_number.decrement
+    entity_id: input_number.vol_tv_quarto
+- alias: Volume Quarto Cima
+  trigger:
+  - platform: state
+    entity_id: switch.vol_cima_tv_quarto
+  action:
+  - service: input_number.increment
+    entity_id: input_number.vol_tv_quarto

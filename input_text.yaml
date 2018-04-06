@@ -1,44 +1,63 @@
-  fundos_tiles:
-    name: fundos
-  quartos_tiles:
-    name: quartos
-  tv_sala_tiles:
-    name: tv_sala
-  tv_quarto_tiles:
-    name: tv_quarto    
-  sala_player:
-    name: Sala Player
-    initial: TV Sala
-  quarto_player:
-    name: Quarto Player
-    initial: TV Quarto
-  quarto_isabelle_player:
-    name: Quarto Isabelle Player
-    initial: TV Quarto Isabelle
-  churrasqueira_player:
-    name: Churrasqueira Player
-    initial: Churrasqueira
-  saudacao_texto:
-    name: Texto da saudacao
-    max: 300
-  saudacao_voz:
-    name: Texto da saudacao para voz
-    max: 300
-  clima_texto:
-    name: Texto do clima
-    max: 300
-  clima_voz:
-    name: Texto do clima para voz
-    max: 300
-  mercado_financeiro_texto:
-    name: Texto do mercado financeiro
-    max: 500
-  mercado_financeiro_voz:
-    name: Texto do mercado financeiro para voz
-    max: 300
-  proximo_compromisso_texto:
-    name: Texto do próximo compromisso
-    max: 500
-  proximo_compromisso_voz:
-    name: Texto do próximo compromisso para voz
-    max: 300
+fundos_tiles:
+  name: fundos
+quartos_tiles:
+  name: quartos
+tv_sala_tiles:
+  name: tv_sala
+tv_quarto_tiles:
+  name: tv_quarto    
+sala_player:
+  name: Sala Player
+  initial: TV Sala
+quarto_player:
+  name: Quarto Player
+  initial: TV Quarto
+quarto_isabelle_player:
+  name: Quarto Isabelle Player
+  initial: TV Quarto Isabelle
+churrasqueira_player:
+  name: Churrasqueira Player
+  initial: Churrasqueira
+saudacao_texto:
+  name: Texto da saudacao
+  max: 300
+saudacao_voz:
+  name: Texto da saudacao para voz
+  max: 300
+clima_texto:
+  name: Texto do clima
+  max: 300
+clima_voz:
+  name: Texto do clima para voz
+  max: 300
+mercado_financeiro_texto:
+  name: Texto do mercado financeiro
+  max: 500
+mercado_financeiro_voz:
+  name: Texto do mercado financeiro para voz
+  max: 300
+proximo_compromisso_texto:
+  name: Texto do próximo compromisso
+  max: 500
+proximo_compromisso_voz:
+  name: Texto do próximo compromisso para voz
+  max: 300
+msg_voz_boa_noite_isabelle:
+  name: Boa noite Isabelle
+  max: 300
+#  initial: 'Boa noite Isabelle, está na hora de dormir. Já escovou os dentes, fez oração e leu o livro? Bom sono.'
+msg_voz_boa_dia_cleide:
+  name: Bom dia Vó Cleide
+  max: 300
+#  initial: 'Bom dia Isabelle, está na hora de acordar. Vamos escovar os dentes, lavar o rosto e trocar de roupa pois hoje é dia de ir na casa da vó Cleide.'
+msg_voz_boa_dia_tere:
+  name: Bom dia Vó Tere
+  max: 300
+#  initial: 'Bom dia Isabelle, está na hora de acordar. Vamos escovar os dentes, lavar o rosto e trocar de roupa pois hoje é dia de ir na casa da vó Tere.'
+msg_voz_boa_dia_maisa:
+  name: Bom dia Maísa
+  max: 300
+#  initial: 'Bom dia Isabelle, está na hora de acordar. Vamos escovar os dentes, lavar o rosto e trocar de roupa pois hoje é dia de ir na casa da Maísa.'
+msg_voz_customizada:
+  name: Customizada
+  max: 300

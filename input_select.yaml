@@ -1,15 +1,23 @@
 media_player:
   name: Player
   options:
-    - Quarto Isabelle
-    - Quarto
-    - Sala
-    - Churrasqueira
+  - Quarto Isabelle
+  - Quarto
+  - Sala
+  - Churrasqueira
   icon: mdi:google-chrome
 canal:
   name: Canal
   options:
-    - Globo
-    - Record
-    - SBT
+  - Globo
+  - Record
+  - SBT
   icon: mdi:remote
+mensagem_voz_tv:
+  name: Mensagem de Voz
+  options:
+  - Boa noite Isabelle
+  - Bom dia Vó Cleide
+  - Bom dia Vó Tere
+  - Bom dia Maísa
+  - Customizada

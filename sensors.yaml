@@ -239,7 +239,7 @@
     - 'date_time'
     
 # Pi-hole - DNS & Ad Blocker
-- platform: pi_hole
+#- platform: pi_hole
 
 ## Armario Robson
 
@@ -402,3 +402,14 @@
   name: Versão Portao
   state_topic: "stat/sonoff6075/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
+  
+# Estado do media player
+- platform: template
+  sensors:
+    state_media_player:
+      friendly_name: State Media Player
+      value_template: >
+       {% for device in states if (device.attributes.friendly_name == states.input_select.media_player.state and device.domain == 'media_player') -%}
+        {{ device.state }}
+       {%- endfor %}
+      entity_id: ['media_player.quarto','media_player.sala','media_player.quarto_isabelle','media_player.churrasqueira']

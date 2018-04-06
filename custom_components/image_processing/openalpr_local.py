@@ -194,6 +194,12 @@ class OpenAlprLocalEntity(ImageProcessingAlprEntity):
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.DEVNULL
         )
+        
+        _LOGGER.warning('Passou async_process_image - Aguardando criar processo')
+
+        proc = await alpr
+
+        _LOGGER.warning('Passou async_process_image - Processo criado')
 
         if alpr.returncode != 0:
             _LOGGER.warning('Passou async_process_image 2')

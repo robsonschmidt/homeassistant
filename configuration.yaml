@@ -31,7 +31,7 @@ google:
 # Enables configuration UI
 config:
 
-ios:
+#ios:
 
 #cloud:
 #  alexa:
@@ -53,7 +53,10 @@ http:
 #   trusted_networks:
 #     - 127.0.0.1
 #     - 192.168.86.0/24
-   
+   cors_allowed_origins:
+   - https://reformedreality.com
+   - http://reformedreality.com
+
 # Checks for available updates
 # Note: This component will send some information about your system to
 # the developers to assist with development of Home Assistant.
@@ -92,15 +95,7 @@ logger:
 #  - platform: yr
 
 weather: !include weather.yaml
-
-# Text to speech
-tts:
-  - platform: google
-    cache: true
-    cache_dir: /config/tts
-    time_memory: 600
-    language: 'pt'
-
+tts: !include tts.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
@@ -119,66 +114,23 @@ input_select: !include input_select.yaml
 weblink: !include weblink.yaml
 shell_command: !include shell_command.yaml
 cover: !include cover.yaml
+rest_command: !include rest_command.yaml
+alarm_control_panel: !include alarm_control_panel.yaml
+vacuum: !include vaccum.yaml
+binary_sensor: !include binary_sensor.yaml
+zone: !include zone.yaml
+telegram_bot: !include telegram_bot.yaml
+notify: !include notify.yaml
 
 ifttt:
   key: !secret ifttt
 
-telegram_bot:
-  - platform: polling
-    api_key: !secret api_key 
-    allowed_chat_ids:
-      - 328083280
-      - -301349283
-
-notify:
-  - name: telegram_bot
-    platform: telegram
-    chat_id: 328083280
-  - name: telegram_group
-    platform: telegram
-    chat_id: -301349283
-    
 ffmpeg:
 
 python_script:
 
 recorder:
   purge_keep_days: 5
-  
-zone:
-  - name: home
-    latitude: !secret home_latitude
-    longitude: !secret home_longitude
-    radius: 20
-    icon: mdi:home-outline
-  - name: BRF
-    latitude: !secret brf_latitude
-    longitude: !secret brf_longitude
-    radius: 100
-    icon: mdi:briefcase
-  - name: home_arriving
-    latitude: !secret home_arriving_latitude
-    longitude: !secret home_arriving_longitude
-    radius: 100
-    icon: mdi:home-outline
-  - name: home_arriving2
-    latitude: !secret home_arriving2_latitude
-    longitude: !secret home_arriving2_longitude
-    radius: 100
-    icon: mdi:home-outline
-  - name: sogro
-    latitude: !secret sogro_latitude
-    longitude: !secret sogro_longitude
-    radius: 100
-  - name: escola
-    latitude: !secret escola_latitude
-    longitude: !secret escola_longitude
-    radius: 100
-    icon: mdi:school
-  - name: pai
-    latitude: !secret pai_latitude
-    longitude: !secret pai_longitude
-    radius: 100
     
 #alexa:
 
@@ -186,8 +138,6 @@ google_assistant:
   project_id: !secret google_assistant_project_id
   client_id: !secret google_assistant_client_id
   access_token: !secret google_assistant_access_token
-#  agent_user_id: FRIS GA
-#  api_key: !secret google_assistant_api_key
   exposed_domains:
     - switch
     - light
@@ -195,57 +145,7 @@ google_assistant:
 mqtt:
   broker: 192.168.86.139
 
-rest_command:
-  move_backup_old:
-    url: 'https://api.dropboxapi.com/2/files/move_v2'
-    method: post
-    headers:
-      Authorization: !secret dropbox_auth
-      Content-Type: application/json
-    payload: '{ "from_path": "/backup", "to_path": "/backup-old"}'
-  delete_backup_old:
-    url: 'https://api.dropboxapi.com/2/files/delete_v2'
-    method: post
-    headers:
-      Authorization: !secret dropbox_auth
-      Content-Type: application/json
-    payload: '{ "path": "/backup-old" }'
-  cria_pasta_backup:
-    url: 'https://api.dropboxapi.com/2/files/create_folder_v2'
-    method: post
-    headers:
-      Authorization: !secret dropbox_auth
-      Content-Type: application/json
-    payload: '{ "path": "/backup" }'
-
-binary_sensor:
-  - platform: rpi_gpio
-    ports:
-      23: Ativado
-      22: Acionado
-    invert_logic: true
-  - platform: template
-    sensors:
-      people_home:
-        value_template: >-
-          {{ is_state('device_tracker.52008849ec808451', 'home')
-             or is_state('device_tracker.iphonedeflavialan', 'home') }}
-  - platform: mqtt
-    name: Portão
-    state_topic: "tele/sonoff6075/SENSOR"
-    device_class: opening
-    payload_on: "ON"
-    payload_off: "OFF"  
-    value_template: '{{ value_json["Switch2"] }}'
-#    value_template: '{{{"ON": "Aberto","OFF": "Fechado"}[value_json["Switch2"]] }}'
-  
-alarm_control_panel:
-  - platform: manual
-    pending_time: 0
-    delay_time: 0
-    trigger_time: 0
-
-image_processing:
+#image_processing:
 #  - platform: openalpr_local
 #    region: br
 #    source:
@@ -267,16 +167,9 @@ image_processing:
 #      - entity_id: camera.frente_local
 #    classifier:
 #      mom: /config/haarcascade_fullbody.xml
-  - platform: opencv 
-    name: Garage Plate
-    source:
-       - entity_id: camera.frente
-    classifier:
-      mom: /config/haarcascade_licence_plate_rus_16stages.xml
-
-vacuum:
-  - platform: roomba
-    name: FRITZ
-    host: 192.168.86.38
-    username: 3143C90C02131830
-    password: :1:1507417757:sY0dqzT8bxdvS5SQ
+#  - platform: opencv 
+#    name: Garage Plate
+#    source:
+#       - entity_id: camera.frente
+#    classifier:
+#      mom: /config/haarcascade_licence_plate_rus_16stages.xml

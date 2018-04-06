@@ -44,7 +44,8 @@ play_spotify_isabelle:
       media_content_id: spotify:user:12175389811:playlist:5AY8U80s1JcmuCTk16LbCe
       media_content_type: playlist
       
-# Controle Quarto
+## Controle Quarto
+
 liga_tv_net_quarto:
   alias: Liga TV Net Quarto
   sequence:
@@ -191,7 +192,84 @@ liga_tv_quarto_record:
       entity_id: script.tv_quarto_record
     service: script.turn_on
 
-# Controle Sala
+## Volume TV Quarto
+
+# Executa scripts para sincronizar volume para 10
+reset_vol_quarto:
+  alias: Reset Volume da Quarto
+  sequence:
+  - service: input_number.set_value
+    entity_id: input_number.vol_tv_quarto
+    data:
+      value: 50
+  - service: script.reduz_vol_quarto
+    data:
+      vol: 0
+  - delay: "00:00:20"
+  - service: script.aumenta_vol_quarto
+    data:
+      vol: 10
+
+# Reduz volume da TV da Quarto
+reduz_vol_quarto:
+  alias: Reduz Volume do Quarto
+  sequence:
+  - service: switch.toggle
+    entity_id: switch.vol_baixo_tv_quarto
+  - wait_template: "{{ is_state('script.reduz_vol_quarto_pause', 'off') }}"
+  - service_template: >
+       {% if states.input_number.vol_tv_quarto.state|int > vol|int %}
+         script.turn_on
+       {% endif %}
+    entity_id: script.reduz_vol_quarto_pause
+    data_template:
+      variables:
+        vol: "{{ vol }}"
+reduz_vol_quarto_pause:
+  alias: Reduz Volume do Quarto Pause
+  sequence:
+  - service: switch.toggle
+    entity_id: switch.vol_baixo_tv_quarto
+  - wait_template: "{{ is_state('script.reduz_vol_quarto', 'off') }}"
+  - service_template: >
+       {% if states.input_number.vol_tv_quarto.state|int > vol|int %}
+         script.turn_on
+       {% endif %}
+    entity_id: script.reduz_vol_quarto
+    data_template:
+      variables:
+        vol: "{{ vol }}"
+aumenta_vol_quarto:
+  alias: Aumenta Volume Quarto
+  sequence:
+  - service: switch.toggle
+    entity_id: switch.vol_cima_tv_quarto
+  - wait_template: "{{ is_state('script.aumenta_vol_quarto_pause', 'off') }}"
+  - service_template: >
+       {% if states.input_number.vol_tv_quarto.state|int < (vol | int) %}
+         script.turn_on
+       {% endif %}
+    entity_id: script.aumenta_vol_quarto_pause
+    data_template:
+      variables:
+        vol: "{{ vol }}"
+aumenta_vol_quarto_pause:
+  alias: Aumenta Volume Quarto Pause
+  sequence:
+  - service: switch.toggle
+    entity_id: switch.vol_cima_tv_quarto
+  - wait_template: "{{ is_state('script.aumenta_vol_quarto', 'off') }}"
+  - service_template: >
+       {% if states.input_number.vol_tv_quarto.state|int < vol|int %}
+         script.turn_on
+       {% endif %}
+    entity_id: script.aumenta_vol_quarto
+    data_template:
+      variables:
+        vol: "{{ vol }}"
+
+## Controle Sala
+
 liga_tv_net_sala:
   alias: Liga TV Net Sala
   sequence:
@@ -360,7 +438,83 @@ liga_chromecast_sala:
   - data:
       entity_id: switch.source_chromecast_sala
     service: switch.turn_on
-    
+
+## Volume TV Sala
+
+# Executa scripts para sincronizar volume para 10
+reset_vol_sala:
+  alias: Reset Volume da Sala
+  sequence:
+  - service: input_number.set_value
+    entity_id: input_number.vol_tv_sala
+    data:
+      value: 50
+  - service: script.reduz_vol_sala
+    data:
+      vol: 0
+  - delay: "00:00:20"
+  - service: script.aumenta_vol_sala
+    data:
+      vol: 10
+
+# Reduz volume da TV da Sala
+reduz_vol_sala:
+  alias: Reduz Volume do Sala
+  sequence:
+  - service: switch.toggle
+    entity_id: switch.vol_baixo_tv_sala
+  - wait_template: "{{ is_state('script.reduz_vol_sala_pause', 'off') }}"
+  - service_template: >
+       {% if states.input_number.vol_tv_sala.state|int > vol|int %}
+         script.turn_on
+       {% endif %}
+    entity_id: script.reduz_vol_sala_pause
+    data_template:
+      variables:
+        vol: "{{ vol }}"
+reduz_vol_sala_pause:
+  alias: Reduz Volume do Quarto Pause
+  sequence:
+  - service: switch.toggle
+    entity_id: switch.vol_baixo_tv_sala
+  - wait_template: "{{ is_state('script.reduz_vol_sala', 'off') }}"
+  - service_template: >
+       {% if states.input_number.vol_tv_sala.state|int > vol|int %}
+         script.turn_on
+       {% endif %}
+    entity_id: script.reduz_vol_sala
+    data_template:
+      variables:
+        vol: "{{ vol }}"
+aumenta_vol_sala:
+  alias: Aumenta Volume Sala
+  sequence:
+  - service: switch.toggle
+    entity_id: switch.vol_cima_tv_sala
+  - wait_template: "{{ is_state('script.aumenta_vol_sala_pause', 'off') }}"
+  - service_template: >
+       {% if states.input_number.vol_tv_sala.state|int < (vol | int) %}
+         script.turn_on
+       {% endif %}
+    entity_id: script.aumenta_vol_sala_pause
+    data_template:
+      variables:
+        vol: "{{ vol }}"
+aumenta_vol_sala_pause:
+  alias: Aumenta Volume do Quarto Pause
+  sequence:
+  - service: switch.toggle
+    entity_id: switch.vol_cima_tv_sala
+  - wait_template: "{{ is_state('script.aumenta_vol_sala', 'off') }}"
+  - service_template: >
+       {% if states.input_number.vol_tv_sala.state|int < vol|int %}
+         script.turn_on
+       {% endif %}
+    entity_id: script.aumenta_vol_sala
+    data_template:
+      variables:
+        vol: "{{ vol }}"
+
 ## Atualização Texto e Voz Briefing
 
 # Atualizar todos textos e voz
@@ -611,3 +765,64 @@ update_sonoffs:
     data_template:
        topic: "cmnd/sonoffs/upgrade"
        payload: 1
+
+# Mensagem na TV
+mensagem_tv:
+  alias: Mensagem na TV
+  sequence:
+  - service: tts.google_say
+    data_template: 
+      entity_id: >
+       {% for device in states if (device.attributes.friendly_name == states.input_select.media_player.state and device.domain == 'media_player') -%}
+         {{ device.entity_id }}
+       {%- endfor %}
+      message: >
+       {% for device in states if (device.attributes.friendly_name == states.input_select.mensagem_voz_tv.state and device.domain == 'input_text') -%}
+         {{ device.state }}
+       {%- endfor %}
+       .
+      language: pt
+      
+# Video de Ninar
+video_ninar:
+  alias: Video Ninar
+  sequence:
+  - condition: state
+    entity_id: input_select.mensagem_voz_tv
+    state: 'Boa noite Isabelle'
+  - service: media_player.play_media
+    data_template: 
+      entity_id:  >
+       {% for device in states if (device.attributes.friendly_name == states.input_select.media_player.state and device.domain == 'media_player') -%}
+         {{ device.entity_id }}
+       {%- endfor %}
+      media_content_id: 'https://fris.duckdns.org:8123/local/Ninar.mp4'
+      media_content_type: 'VIDEO'
+  - delay:
+      minutes: 1
+  - service: media_player.volume_down
+    data_template:
+      entity_id: >
+       {% for device in states if (device.attributes.friendly_name == states.input_select.media_player.state and device.domain == 'media_player') -%}
+         {{ device.entity_id }}
+       {%- endfor %}
+  - service: media_player.volume_down
+    data_template:
+      entity_id: >
+       {% for device in states if (device.attributes.friendly_name == states.input_select.media_player.state and device.domain == 'media_player') -%}
+         {{ device.entity_id }}
+       {%- endfor %}
+  - delay:
+      minutes: 1
+  - service: media_player.volume_down
+    data_template:
+      entity_id: >
+       {% for device in states if (device.attributes.friendly_name == states.input_select.media_player.state and device.domain == 'media_player') -%}
+         {{ device.entity_id }}
+       {%- endfor %}
+  - service: media_player.volume_down
+    data_template:
+      entity_id: >
+       {% for device in states if (device.attributes.friendly_name == states.input_select.media_player.state and device.domain == 'media_player') -%}
+         {{ device.entity_id }}
+       {%- endfor %}

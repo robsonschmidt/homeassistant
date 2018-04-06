@@ -7,10 +7,6 @@ boletim_2:
 boletim_3:
   name: Hora do boletim 3
   has_time: true
-timer_tv_dormir:
-  name: Fim timer
-  has_time: true
-  has_date: true
 hora_backup:
   name: Hora Backup
   has_time: true
@@ -25,4 +21,10 @@ ligar_desumidificador_inicio:
   has_time: true
 ligar_desumidificador_fim:
   name: Termino
+  has_time: true
+horario_desumidificador_inicio:
+  name: Horário Limite Inicio
+  has_time: true
+horario_desumidificador_fim:
+  name: Horário Limite Fim
   has_time: true

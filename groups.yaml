@@ -7,8 +7,8 @@ default_view:
   - group.previsao_tempo
   - group.aspirador
   - alarm_control_panel.ha_alarm
-  - binary_sensor.portao
-  - sensor.portao
+  - binary_sensor.portao_template
+  - switch.portao_template
   name: 'Tela Inicial'
 
 # Card Aspirador
@@ -28,7 +28,7 @@ alarme:
 previsao_tempo:
   name: Previsão de Tempo
   entities:
-    - input_boolean.weather
+  - input_boolean.weather
     
 # Menu Garagem
 garagem:
@@ -36,14 +36,13 @@ garagem:
   view: yes
   icon: mdi:garage
   entities:
-    - camera.frente
-    - group.portao
+  - camera.frente
+  - group.portao
 # Card portão
 portao:
   name: Portão
   entities:
   - switch.portao
-  - cover.portao
 
 # Menu Sala
 sala:
@@ -51,19 +50,14 @@ sala:
   view: yes
   icon: mdi:sofa
   entities:
-  - camera.interna
   - group.tv_sala_tiles
-  - group.chromecast_sala
-# Card Chromecast Sala
-chromecast_sala:
-  name: Chromecast
-  entities:
-  - input_text.sala_player
+  - media_player.tv_sala
+  - camera.interna
 # Card Controle TV Sala
 tv_sala_tiles:
-    name: 'TV Sala'
-    entities:
-      - input_text.tv_sala_tiles
+  name: 'TV Sala'
+  entities:
+  - input_text.tv_sala_tiles
 
 # Menu Churrasqueira
 churrasqueira:
@@ -100,7 +94,7 @@ quarto:
   view: yes
   icon: mdi:hotel
   entities:
-  - group.chromecast_quarto
+  - media_player.tv_quarto
   - group.tv_quarto_tiles
   - group.luz_quarto
   - group.humidade_robson_quarto
@@ -128,11 +122,6 @@ tv_quarto_tiles:
   name: 'TV Quarto'
   entities:
   - input_text.tv_quarto_tiles
-# Card Chromecast Quarto Isabelle 
-chromecast_quarto:
-  name: Chromecast
-  entities:
-  - input_text.quarto_player
 
 # Menu Quarto Isabelle
 quarto_isabelle:
@@ -149,10 +138,10 @@ quarto_isabelle:
 timer_tv_dormir:
   name: Timer TV Dormir
   entities:
-    - input_number.tempo_timer
-    - input_boolean.ativa_timer_tv_dormir
-    - input_datetime.timer_tv_dormir
-    - input_select.media_player
+  - input_number.tempo_timer
+  - input_boolean.ativa_timer_tv_dormir
+  - input_select.media_player
+  - input_select.mensagem_voz_tv
 # Card Aquecedor Isabelle
 aquecedor_isabelle:
   name: Aquecedor
@@ -165,22 +154,22 @@ chromecast_quarto_isabelle:
   - input_text.quarto_isabelle_player
 
 fundos_tiles:
-    name: Térreo
-    entities:
-      - input_text.fundos_tiles
-      - camera.frente
-      - camera.fundos
-      - camera.interna
-      - switch.rest_power_net_sala
+  name: Térreo
+  entities:
+  - input_text.fundos_tiles
+  - camera.frente
+  - camera.fundos
+  - camera.interna
+  - switch.rest_power_net_sala
 quartos_tiles:
-    name: Quarto
-    entities:
-      - input_text.quartos_tiles
+  name: Quarto
+  entities:
+  - input_text.quartos_tiles
 conf_weblinks:
-    name: 'Links'
-    entities:
-      - weblink.terminal
-      - weblink.file_editor
+  name: 'Links'
+  entities:
+  - weblink.terminal
+  - weblink.file_editor
 
 # Menu Camera
 camera:
@@ -191,7 +180,6 @@ camera:
   - camera.interna
   - camera.frente
   - camera.fundos
-  - camera.teste_carro
 
 # Menu Parametros
 parametro:
@@ -199,51 +187,52 @@ parametro:
   view: yes
   icon: mdi:format-list-numbers
   entities:
-    - group.boletim
-    - group.backup
-    - group.alertas_admin_telegram
-    - group.automacao_flavia
-    - group.agenda_humidade_quarto
+  - group.boletim
+  - group.backup
+  - group.alertas_admin_telegram
+  - group.automacao_flavia
+  - group.agenda_humidade_quarto
+  - group.mensagem_tv
 # Card Boletim
 boletim:
   name: Boletim
   entities:
-    - input_datetime.boletim_1
-    - input_datetime.boletim_2
-    - input_datetime.boletim_3
-    - input_boolean.enviar_texto
-    - input_boolean.enviar_voz
-    - input_boolean.enviar_saudacao
-    - input_boolean.enviar_clima
-    - input_boolean.enviar_mercado_financeiro
-    - input_boolean.enviar_proximo_compromisso
+  - input_datetime.boletim_1
+  - input_datetime.boletim_2
+  - input_datetime.boletim_3
+  - input_boolean.enviar_texto
+  - input_boolean.enviar_voz
+  - input_boolean.enviar_saudacao
+  - input_boolean.enviar_clima
+  - input_boolean.enviar_mercado_financeiro
+  - input_boolean.enviar_proximo_compromisso
 # Card Backup
 backup:
   name: Backup
   entities:
-    - input_boolean.fazer_backup
-    - input_datetime.hora_backup
+  - input_boolean.fazer_backup
+  - input_datetime.hora_backup
 # Card Alertas Admin
 alertas_admin_telegram:
   name: Alertas Admin
   entities:
-    - input_boolean.enviar_on_hassio
-    - input_boolean.enviar_off_hassio
-    - input_boolean.enviar_velocidade_internet_baixa
-    - input_boolean.enviar_cpu_temp_alta
-    - input_number.temp_cpu_alta
-    - input_number.temp_cpu_muito_alta
-    - input_boolean.enviar_localizacao_flavia
-    - input_boolean.enviar_localizacao_robson
-    - input_boolean.enviar_acionamento_portao
+  - input_boolean.enviar_on_hassio
+  - input_boolean.enviar_off_hassio
+  - input_boolean.enviar_velocidade_internet_baixa
+  - input_boolean.enviar_cpu_temp_alta
+  - input_number.temp_cpu_alta
+  - input_number.temp_cpu_muito_alta
+  - input_boolean.enviar_localizacao_flavia
+  - input_boolean.enviar_localizacao_robson
+  - input_boolean.enviar_acionamento_portao
 # Card Automacao Flavia
 automacao_flavia:
   name: Automação Flavia
   entities:
-    - input_boolean.automacao_flavia_ativada
-    - input_select.canal
-    - input_datetime.ligar_flavia_inicio
-    - input_datetime.ligar_flavia_fim
+  - input_boolean.automacao_flavia_ativada
+  - input_select.canal
+  - input_datetime.ligar_flavia_inicio
+  - input_datetime.ligar_flavia_fim
 # Card Humidade Quarto Robson
 agenda_humidade_quarto:
   name: Desumidificação
@@ -253,8 +242,18 @@ agenda_humidade_quarto:
   - input_number.max_humidade_quarto
   - input_datetime.ligar_desumidificador_inicio
   - input_datetime.ligar_desumidificador_fim
-
-    
+  - input_datetime.horario_desumidificador_inicio
+  - input_datetime.horario_desumidificador_fim
+# Card Mensagens na TV
+mensagem_tv:
+  name: Mensagem TV
+  entities:
+  - input_text.msg_voz_boa_noite_isabelle
+  - input_text.msg_voz_boa_dia_cleide
+  - input_text.msg_voz_boa_dia_tere
+  - input_text.msg_voz_boa_dia_maisa
+  - input_text.msg_voz_customizada
+  
 # Menu Configuração
 configuracao:
   name: 'Configuração'
@@ -310,4 +309,3 @@ sonoff:
   - sensor.versao_luz_painel_quarto
   - sensor.versao_luz_quarto
   - sensor.versao_luz_sacada_frente
-  

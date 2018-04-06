@@ -17,7 +17,7 @@ valor_bitcoin_meianoite_ontem:
 tempo_timer:
   name: Tempo
   min: 0
-  max: 120
+  max: 59
   step: 1
   unit_of_measurement: min
   mode: box
@@ -49,3 +49,13 @@ temp_cpu_muito_alta:
   step: 1
   unit_of_measurement: '°C'
   mode: box
+vol_tv_sala:
+  name: 'Vol TV Sala'
+  min: 0
+  max: 100
+  step: 1
+vol_tv_quarto:
+  name: 'Vol TV Quarto'
+  min: 0
+  max: 100
+  step: 1

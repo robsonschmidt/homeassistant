@@ -1,0 +1,5 @@
+- platform: google
+  cache: true
+  cache_dir: /config/tts
+  time_memory: 600
+  language: 'pt'

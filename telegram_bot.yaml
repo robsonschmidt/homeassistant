@@ -1,0 +1,5 @@
+- platform: polling
+  api_key: !secret api_key 
+  allowed_chat_ids:
+    - 328083280
+    - 231399891
