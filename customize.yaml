@@ -117,7 +117,7 @@ sensor.humidade_quarto_isabelle:
 sensor.temperatura_quarto_isabelle:
   friendly_name: Temperatura
 switch.onoff_desumidificador_robson:
-  friendly_name: Desumidificador
+  friendly_name: Desum. Robson
   icon: mdi:water-off
   extra_badge:
   - entity_id: sensor.armario_robson_humidade
@@ -125,7 +125,7 @@ switch.onoff_desumidificador_robson:
   - entity_id: sensor.armario_robson_temperatura
     unit: °C
 switch.onoff_desumidificador_flavia:
-  friendly_name: Desumidificador
+  friendly_name: Desum. Flavia
   icon: mdi:water-off
   extra_badge:
   - entity_id: sensor.armario_flavia_humidade
@@ -663,3 +663,26 @@ sensor.portao:
 
 alarm_control_panel.ha_alarm:
   friendly_name: Alarme
+  
+group.tv_sala: 
+  order: 1
+group.tv_sala_tiles:
+  order: 2
+camera.interna:
+  order: 3
+group.tv_quarto:
+  order: 4
+group.tv_quarto_tiles:
+  order: 5
+group.luz_quarto:
+  order: 6
+group.humidade_quarto:
+  order: 7
+
+sensor.hline_1:
+ custom_ui_state_card: state-card-hline
+ config:
+   width: 90 --> in percents
+   height: 0 --> in pixels, adds to bordertop
+   backgroundcolor: white
+   bordertop: '1px solid black'

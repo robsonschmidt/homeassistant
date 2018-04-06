@@ -10,7 +10,7 @@
       {{ states.sensor.cpu_temperature.state >= states.input_number.temp_cpu_alta.state and 
       states.sensor.cpu_temperature.state < states.input_number.temp_cpu_muito_alta.state }}
   action:
-  - service: notify.telegram_group
+  - service: notify.telegram_bot
     data:
       message: >
        *Temp. CPU Alta* - {{ states.sensor.cpu_temperature.state }} ºC
@@ -24,7 +24,7 @@
     value_template: >
       {{ states.sensor.cpu_temperature.state >= states.input_number.temp_cpu_muito_alta.state }}
   action:
-  - service: notify.telegram_group
+  - service: notify.telegram_bot
     data:
       message: > 
        *Temp. CPU Multo Alta* - {{ states.sensor.cpu_temperature.state }} ºC
@@ -51,7 +51,7 @@
   action:
   - data:
       message: '*Portão* acionado.'
-    service: notify.telegram_group
+    service: notify.telegram_bot
   trigger:
   - entity_id: switch.portao
     from: 'off'
@@ -67,7 +67,7 @@
     for:
       minutes: 10
   action:
-  - service: notify.telegram_group
+  - service: notify.telegram_bot
     data:
       message: '*Portão* aberto por muito tempo.'
     
@@ -301,7 +301,7 @@
     entity_id: input_boolean.enviar_on_hassio
     state: 'on'  
   action:
-  - service: notify.telegram_group
+  - service: notify.telegram_bot
     data_template:
       message: '*FRIS Automação* iniciado.'
   - service: script.check_sonoffs_version
@@ -314,7 +314,7 @@
     entity_id: input_boolean.enviar_off_hassio
     state: 'on'  
   action:
-  - service: notify.telegram_group
+  - service: notify.telegram_bot
     data_template:
       message: '*FRIS Automação* desligado.'
   trigger:
@@ -364,7 +364,7 @@
   - service: hassio.snapshot_full
     data_template:
       name: FRIS {{ now().strftime('%Y-%m-%d') }}
-  - service: notify.telegram_group
+  - service: notify.telegram_bot
     data_template:
       message: Criando Snapshot "FRIS {{ now().strftime('%Y-%m-%d') }}"
   - delay: 03:00:00
@@ -383,7 +383,7 @@
     platform: state
     entity_id: sensor.count_snap_files
   action:
-  - service: notify.telegram_group
+  - service: notify.telegram_bot
     data_template:
       message: >
         Número de arquivos de backups {{ states.sensor.count_snap_files.state }}
@@ -399,7 +399,7 @@
     entity_id: sensor.speedtest_download
     platform: numeric_state
   action:
-  - service: notify.telegram_group
+  - service: notify.telegram_bot
     data_template:
       message: '*Velocidade Internet Baixa* - Download {{ states(''sensor.speedtest_download'') }} Mbit/s
 
@@ -435,15 +435,15 @@
     entity_id: input_boolean.enviar_localizacao_robson
     state: 'on'
   trigger:
+  - platform: template
+    value_template: "{{ trigger.to_state.state != trigger.from_state.state }}"
   - platform: state
     entity_id: device_tracker.52008849ec808451
   action:
-    - service: notify.telegram_group
+    - service: notify.telegram_bot
       data_template:
         message: >
-         {% if trigger.from_state.state == 'not_home' and trigger.to_state.state == 'not_home' %}
          *Robson*
-         {% endif %}
          {% if trigger.from_state.state != 'not_home' %}
          saiu de *{{trigger.from_state.state}}*
          {% endif %}
@@ -453,7 +453,7 @@
          {% if trigger.to_state.state != 'not_home' %}
          chegou em *{{trigger.to_state.state}}*
          {% endif %}
-         {% if trigger.from_state.state == 'not_home' and trigger.to_state.state == 'not_home' %}
+         {% if trigger.from_state.state == 'not_home' or trigger.to_state.state == 'not_home' %}
          .
          {% endif %}
 #- alias: 'Robson chegou na BRF'
@@ -466,7 +466,7 @@
 #    entity_id: device_tracker.52008849ec808451
 #    to: 'BRF'
 #  action:
-#    - service: notify.telegram_group
+#    - service: notify.telegram_bot
 #      data:
 #        message: '*Robson* chegou na *BRF*.'
 #- alias: 'Robson chegou no Sogro'
@@ -479,7 +479,7 @@
 #    entity_id: device_tracker.52008849ec808451
 #    to: 'sogro'
 #  action:
-#    - service: notify.telegram_group
+#    - service: notify.telegram_bot
 #      data:
 #        message: '*Robson* chegou no *sogro*.'
 #- alias: 'Robson chegou na Escola'
@@ -492,7 +492,7 @@
 #    entity_id: device_tracker.52008849ec808451
 #    to: 'escola'
 #  action:
-#    - service: notify.telegram_group
+#    - service: notify.telegram_bot
 #      data:
 #        message: '*Robson* chegou no *escola*.'
 #- alias: 'Robson chegou na casa dos pais'
@@ -505,7 +505,7 @@
 #    entity_id: device_tracker.52008849ec808451
 #    to: 'pais'
 #  action:
-#    - service: notify.telegram_group
+#    - service: notify.telegram_bot
 #      data:
 #        message: '*Robson* chegou na casa dos *pais*.'
 #- alias: 'Robson saiu de casa'
@@ -518,7 +518,7 @@
 #    entity_id: device_tracker.52008849ec808451
 #    to: 'not_home'
 #  action:
-#    - service: notify.telegram_group
+#    - service: notify.telegram_bot
 #      data_template:
 #        message: >
 #         *Robson* saiu *{{ trigger.from_state.state | replace("home_arriving", "proximidade de casa") | replace("home","casa") }}*.
@@ -664,7 +664,7 @@
     platform: event
     event_type: telegram_callback
     event_data:
-      data: '/controlequarto'    
+      data: '/controlequarto'
   action:
     - service: notify.telegram_bot
       data:
@@ -966,7 +966,7 @@
     entity_id: persistent_notification.invalid_config
     to: 'notifying' 
   action:
-    - service: notify.telegram_group
+    - service: notify.telegram_bot
       data_template:
         title: >
           {{ states.persistent_notification.invalid_config.attributes.title }}
@@ -1001,7 +1001,7 @@
     platform: state
     to: 'unavailable'
   action:
-  - service: notify.telegram_group
+  - service: notify.telegram_bot
     data:
       message: 'Sem *energia* em *casa*.'
 - alias: Voltou energia
@@ -1015,7 +1015,7 @@
     from: 'unavailable'
     to: 'off'
   action:
-  - service: notify.telegram_group
+  - service: notify.telegram_bot
     data:
       message: '*Energia* voltou em *casa*.'
       

@@ -50,9 +50,14 @@ sala:
   view: yes
   icon: mdi:sofa
   entities:
+  - group.tv_sala
   - group.tv_sala_tiles
-  - media_player.tv_sala
   - camera.interna
+# Card Controle TV Sala
+tv_sala:
+  name: 'TV Sala'
+  entities:
+  - media_player.tv_sala
 # Card Controle TV Sala
 tv_sala_tiles:
   name: 'TV Sala'
@@ -94,20 +99,26 @@ quarto:
   view: yes
   icon: mdi:hotel
   entities:
-  - media_player.tv_quarto
+  - group.tv_quarto
   - group.tv_quarto_tiles
   - group.luz_quarto
-  - group.humidade_robson_quarto
-  - group.humidade_flavia_quarto
+  - group.humidade_quarto
+# Card Controle  
+tv_quarto:
+  name: 'TV Quarto'
+  entities:
+  - media_player.tv_quarto
+# Card Controle  
+tv_quarto_tiles:
+  name: 'TV Quarto'
+  entities:
+  - input_text.tv_quarto_tiles
 # Card Humidade Quarto Robson
-humidade_robson_quarto:
-  name: Humidade Robson
+humidade_quarto:
+  name: Humidade Quarto
   entities:
   - switch.onoff_desumidificador_robson
-# Card Humidade Quarto Flavia
-humidade_flavia_quarto:
-  name: Humidade Flavia
-  entities:
+  - sensor.hline_1
   - switch.onoff_desumidificador_flavia
 # Card Iluminação Quarto
 luz_quarto:
@@ -117,12 +128,6 @@ luz_quarto:
   - switch.luz_quarto
   - switch.luz_painel_quarto
   - switch.luz_sacada_frente
-# Card Controle  
-tv_quarto_tiles:
-  name: 'TV Quarto'
-  entities:
-  - input_text.tv_quarto_tiles
-
 # Menu Quarto Isabelle
 quarto_isabelle:
   name: Quarto Isabelle

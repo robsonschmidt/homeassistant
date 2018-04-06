@@ -413,3 +413,9 @@
         {{ device.state }}
        {%- endfor %}
       entity_id: ['media_player.quarto','media_player.sala','media_player.quarto_isabelle','media_player.churrasqueira']
+      
+# Linha horizontal
+- platform: template
+  sensors:
+    hline_1:
+      value_template: hline
