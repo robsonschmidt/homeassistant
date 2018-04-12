@@ -4,11 +4,12 @@ default_view:
   entities:
   - device_tracker.52008849ec808451
   - device_tracker.iphonedeflavialan
-  - group.previsao_tempo
-  - group.aspirador
+  - sun.sun
+  - sensor.fases_lua
   - alarm_control_panel.ha_alarm
   - binary_sensor.portao_template
-  - switch.portao_template
+  - group.previsao_tempo
+  - group.aspirador
   name: 'Tela Inicial'
 
 # Card Aspirador

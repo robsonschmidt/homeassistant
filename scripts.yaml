@@ -515,6 +515,23 @@ aumenta_vol_sala_pause:
       variables:
         vol: "{{ vol }}"
 
+set_vol_sala:
+  alias: Set Volume do Sala
+  sequence:
+  - service_template: >
+       {% if states.input_number.vol_tv_sala.state|int != vol|int %}
+         script.turn_on
+       {% endif %}
+    data_template: 
+      entity_id: >
+       {% if states.input_number.vol_tv_sala.state|int > vol|int %}
+         script.reduz_vol_sala
+       {% else %}
+         script.aumenta_vol_sala
+       {% endif%}
+      variables:
+        vol: "{{ vol }}"
+
 ## Atualização Texto e Voz Briefing
 
 # Atualizar todos textos e voz
@@ -826,3 +843,17 @@ video_ninar:
        {% for device in states if (device.attributes.friendly_name == states.input_select.media_player.state and device.domain == 'media_player') -%}
          {{ device.entity_id }}
        {%- endfor %}
+
+select_source_sala:
+  alias: Select Source Sala
+  sequence:
+  - service: switch.toggle
+    data_template:
+      entity_id: >
+        {% if source == 'Net'%}
+         switch.source_net_sala
+        {% elif source == 'Chromecast'%}
+         switch.source_chromecast_sala
+        {% elif source == 'Chromecast'%}
+         switch.source_dvd_sala
+        {% endif %}

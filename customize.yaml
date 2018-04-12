@@ -135,73 +135,11 @@ switch.onoff_desumidificador_flavia:
 switch.onoff_aquecedor_isabelle:
   friendly_name: Aquecedor
   icon: mdi:hot-tub
-
-# State Cards Fundos
-input_text.fundos_tiles:
-  custom_ui_state_card: state-card-tiles
-  config:
-    columns: 4
-    column_width: 75px  # optional
-    row_height: 75px    # optional
-    color: blue
-    color_on: "#006437"
-    color_off: "#404040"
-    entities:
-      - entity: light.luz_esquerda
-        image: /local/luz_esquerda.png
-        column: 1
-        row: 1
-      - entity: light.luz_central
-        image: /local/luz_central.png
-        column: 2
-        row: 1
-      - entity: light.luz_direita
-        image: /local/luz_direita.png
-        column: 3
-        row: 1
-      - entity: switch.portao
-        image: /local/gate.png
-        column: 4
-        row: 1
-      - entity: switch.display
-        image: /local/sign.png
-        column: 1
-        row: 2        
-      - entity: switch.garden_light
-        image: /local/spot.png
-        column: 2
-        row: 2
-      - entity: input_boolean.beer_fridge
-        image: /local/beer.png
-        column: 3
-        row: 2
-# State Cards Quartos
-input_text.quartos_tiles:
-  custom_ui_state_card: state-card-tiles
-  config:
-    columns: 5
-    color: blue
-    color_on: "#006437"
-    color_off: "#404040"
-    column_width: 75px  # optional
-    row_height: 75px    # optional
-    entities:
-      - entity: input_boolean.hall_light
-        image: /local/hall.png
-        column: 1
-        row: 1
-      - entity: switch.luz_quarto
-        image: /local/hall.png
-        column: 2
-        row: 1
-      - entity: switch.luz_painel_quarto
-        image: /local/hall.png
-        column: 3
-        row: 1
-      - entity: switch.luz_sacada_frente
-        image: /local/hall.png
-        column: 4
-        row: 1
+  extra_badge:
+  - entity_id: sensor.humidade_quarto_isabelle
+    unit: '%'
+  - entity_id: sensor.temperatura_quarto_isabelle
+    unit: °C
 
 # State Cards TV Sala
 input_text.tv_sala_tiles:
@@ -326,58 +264,38 @@ input_text.tv_quarto_tiles:
     column_width: 75px  # optional
     row_height: 75px    # optional
     entities:
-      - entity: switch.power_net_quarto
-        image: /local/net.png
-        column: 1
-        row: 1
       - entity: script.source_net_quarto
         image: /local/net_source.png
-        column: 2
-        row: 1
-      - entity: switch.power_tv_quarto
-        image: /local/tv.png
         column: 1
-        row: 2
+        row: 1
       - entity: script.source_chromecast_quarto
         image: /local/chromecast.png
         column: 2
-        row: 2
+        row: 1
       - entity: switch.canal_cima_net_quarto
         image: /local/CHMais.png
         column: 1
-        row: 3
+        row: 2
       - entity: switch.canal_baixo_net_quarto
         image: /local/CHMenos.png
         column: 2
-        row: 3
-      - entity: switch.vol_cima_tv_quarto
-        image: /local/VolMais.png
-        column: 1
-        row: 4
-      - entity: switch.vol_baixo_tv_quarto
-        image: /local/VolMenos.png
-        column: 2
-        row: 4
-      - entity: switch.mute_tv_quarto
-        image: /local/mute.png
-        column: 3
-        row: 4
+        row: 2
       - entity: switch.cima_tv_quarto
         image: /local/cima.png
         column: 1
-        row: 5
+        row: 3
       - entity: switch.baixo_tv_quarto
         image: /local/baixo.png
         column: 2
-        row: 5
+        row: 3
       - entity: switch.ok_tv_quarto
         image: /local/ok.png
         column: 1
-        row: 6
+        row: 4
       - entity: switch.source_tv_quarto
         image: /local/source.png
         column: 2
-        row: 6
+        row: 4
       - entity: switch.1_net_quarto
         image: /local/1.png
         column: 3
@@ -683,6 +601,6 @@ sensor.hline_1:
  custom_ui_state_card: state-card-hline
  config:
    width: 90 --> in percents
-   height: 0 --> in pixels, adds to bordertop
+   height: 1 --> in pixels, adds to bordertop
    backgroundcolor: white
    bordertop: '1px solid black'

@@ -419,3 +419,31 @@
   sensors:
     hline_1:
       value_template: hline
+      
+# Lua
+- platform: moon
+
+- platform: template
+  sensors:
+    fases_lua:
+      entity_id: sensor.moon
+      value_template: '{{{"New moon": "Lua Nova", "Waxing crescent": "Lua Crescente", "First quarter": "Minguante", "Waxing gibbous": "Minguante", "Full moon":"Lua Cheia", "Waning gibbous":"Lua Minguante", "Last quarter": "Lua Minguante", "Waning crescent": "Lua Crescente"} [states.sensor.moon.state] }}'
+      friendly_name_template: '{{{"New moon": "Lua Nova", "Waxing crescent": "Lua Crescente", "First quarter": "Minguante", "Waxing gibbous": "Minguante", "Full moon":"Lua Cheia", "Waning gibbous":"Lua Minguante", "Last quarter": "Lua Minguante", "Waning crescent": "Lua Crescente"} [states.sensor.moon.state] }}'
+      entity_picture_template: >
+       {% if is_state('sensor.moon', 'New moon') %}
+       /local/FasesLua/NNewMoon.jpg
+       {% elif is_state('sensor.moon', 'Waxing crescent') %}
+       /local/FasesLua/NWaxingCrescent.jpg
+       {% elif is_state('sensor.moon', 'First quarter') %}
+       /local/FasesLua/NFirstQuarter.jpg
+       {% elif is_state('sensor.moon', 'Waxing gibbous') %}
+       /local/FasesLua/NWaxingGibbous.jpg
+       {% elif is_state('sensor.moon', 'Full moon') %}
+       /local/FasesLua/NFullMoon.jpg
+       {% elif is_state('sensor.moon', 'Waning gibbous') %}
+       /local/FasesLua/NWaningGibbous.jpg
+       {% elif is_state('sensor.moon', 'Last quarter') %}
+       /local/FasesLua/NLastQuarter.jpg
+       {% elif is_state('sensor.moon', 'Waning crescent') %}
+       /local/FasesLua/NWaningCrescent.jpg
+       {% endif %}

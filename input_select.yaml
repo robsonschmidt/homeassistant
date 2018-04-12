@@ -21,3 +21,12 @@ mensagem_voz_tv:
   - Bom dia Vó Tere
   - Bom dia Maísa
   - Customizada
+source_tv_sala:
+  name: Source TV
+  options:
+  - Chromecast
+  - Net
+  - DVD
+  - Globo
+  - SBT
+  - Record

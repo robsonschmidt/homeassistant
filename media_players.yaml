@@ -13,20 +13,23 @@
   - media_player.quarto
   commands:
     turn_on:
-      service: switch.turn_on
+      service: switch.toggle
       entity_id: switch.power_tv_quarto
     turn_off:
-      service: switch.turn_on
+      service: switch.toggle
       entity_id: switch.power_tv_quarto
     volume_up:
-      service: switch.turn_on
+      service: switch.toggle
       entity_id: switch.vol_cima_tv_quarto
     volume_down:
-      service: switch.turn_on
+      service: switch.toggle
       entity_id: switch.vol_baixo_tv_quarto
     volume_mute:
-      service: switch.turn_on
+      service: switch.toggle
       entity_id: switch.mute_tv_quarto
+    select_source:
+      service: switch.toggle
+      entity_id: switch.source_tv_quarto
   attributes:
     volume_level: input_number.vol_tv_quarto
     state: binary_sensor.tv_quarto
@@ -36,20 +39,33 @@
   - media_player.Sala
   commands:
     turn_on:
-      service: switch.turn_on
+      service: switch.toggle
       entity_id: switch.power_tv_sala
     turn_off:
-      service: switch.turn_on
+      service: switch.toggle
       entity_id: switch.power_tv_sala
     volume_up:
-      service: switch.turn_on
+      service: switch.toggle
       entity_id: switch.vol_cima_tv_sala
     volume_down:
-      service: switch.turn_on
+      service: switch.toggle
       entity_id: switch.vol_baixo_tv_sala
     volume_mute:
-      service: switch.turn_on
+      service: switch.toggle
       entity_id: switch.mute_tv_sala
+    volume_set:
+      service: script.turn_on
+      data_template:
+        entity_id: script.set_vol_sala
+        variables:
+          vol: '{{ volume }}'
+    select_source:
+      service: script.turn_on
+      data_template:
+        entity_id: script.select_source_sala
+        variables:
+          source: '{{ source }}'
   attributes:
     volume_level: input_number.vol_tv_sala
     state: binary_sensor.tv_sala
+    source_list: input_select.source_tv_sala
