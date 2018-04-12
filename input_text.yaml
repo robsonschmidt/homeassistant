@@ -17,7 +17,7 @@ quarto_isabelle_player:
   initial: TV Quarto Isabelle
 churrasqueira_player:
   name: Churrasqueira Player
-  initial: Churrasqueira
+  initial: Som
 saudacao_texto:
   name: Texto da saudacao
   max: 300

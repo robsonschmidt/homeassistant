@@ -76,8 +76,9 @@ version: 20180129.2
 
       <template is='dom-if' if='[[!playerObj.isOff]]'>
         <div class='info horizontal justified layout'>
-          <paper-icon-button icon='mdi:volume-off' on-tap='handleVolumeTap' hidden='[[!playerObj.isMuted]]'></paper-icon-button>
-          <paper-icon-button icon='mdi:volume-high' on-tap='handleVolumeTap' hidden='[[playerObj.isMuted]]'></paper-icon-button>
+          <paper-icon-button icon='mdi:volume-off' on-tap='handleVolumeTap'></paper-icon-button>
+          <paper-icon-button icon='mdi:volume-low' on-tap='handleVolumeDown'></paper-icon-button>
+          <paper-icon-button icon='mdi:volume-high' on-tap='handleVolumeUp'></paper-icon-button>
           <paper-slider disabled='[[playerObj.isMuted]]'
             min='0' max='100' value='[[playerObj.volumeSliderValue]]'
             on-change='volumeSliderChanged' class='flex'>
@@ -154,7 +155,7 @@ class StateCardMiniMediaPlayer extends Polymer.Element {
         }
       }
       playerObj.isMuted = playerObj.attributes.is_volume_muted;
-      playerObj.volumeSliderValue = playerObj.attributes.volume_level * 100;
+      playerObj.volumeSliderValue = playerObj.attributes.volume_level;
       return playerObj;
     }
     return null;
@@ -194,6 +195,14 @@ class StateCardMiniMediaPlayer extends Polymer.Element {
 
   handleVolumeTap() {
     this.hass.callService('media_player', 'volume_mute', { 'entity_id': this.playerObj.entity_id, 'is_volume_muted': !this.playerObj.isMuted });
+  }
+
+  handleVolumeUp() {
+    this.hass.callService('media_player', 'volume_up', { 'entity_id': this.playerObj.entity_id });
+  }
+
+  handleVolumeDown() {
+    this.hass.callService('media_player', 'volume_down', { 'entity_id': this.playerObj.entity_id });
   }
  
   volumeSliderChanged(ev) {

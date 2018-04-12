@@ -10,7 +10,7 @@
     - /local/custom_ui/state-card-table.html
     - /local/custom_ui/state-card-mini-media-player.html
     - /local/custom_ui/custom-weather-card.html
-     - /local/custom_ui/state-card-hline.html
+    - /local/custom_ui/state-card-hline.html
      
   extra_html_url_es5:
     - /local/custom_ui/state-card-custom-ui-es5.html
@@ -24,7 +24,6 @@
     green:
       primary-color: "#006437"
       paper-toggle-button-checked-button-color: "#006437"
-      #ha-label-badge-size: 4
       ha-label-badge-color: "#006437"
       label-badge-background-color: white
       label-badge-text-color: black
@@ -32,15 +31,8 @@
       label-badge-green: "#006437"
       label-badge-blue: "#006437"
       label-badge-border-color: "#006437"
-      #label-badge-font-size: 0.5
-      #ha-label-badge-title-font-size: 1
-      #ha-label-badge-font-size: 1
     # Sliders
       paper-slider-knob-color:  "#006437"
       paper-slider-knob-start-color: "#006437"
       paper-slider-pin-color:  "#006437"
       paper-slider-active-color:  "#006437"
-      #paper-slider-container-color: "#006437"
-      #paper-slider-secondary-color: 'hsl(var(--huesat) 10%)'
-      #paper-slider-disabled-active-color: 'hsl(var(--huesat) 75%)'
-      #paper-slider-disabled-secondary-color: 'hsl(var(--huesat) 75%)'      

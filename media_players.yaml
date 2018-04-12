@@ -6,7 +6,6 @@
     0568d8d6a4f06465d3f1cc0921ce5f0f: 'Quarto'
     7f53f138d32720396167f6e706667479: 'Sala'
     d8853bdab4078fbd52b122fbd80c83e1: 'Churrasqueira'
-    9655b4bbcd738dab6d6457a5ae80d56e105a64db: 'iPhone de Robson'
 - platform: universal
   name: TV Quarto
   children:
@@ -27,9 +26,12 @@
     volume_mute:
       service: switch.toggle
       entity_id: switch.mute_tv_quarto
-    select_source:
-      service: switch.toggle
-      entity_id: switch.source_tv_quarto
+    volume_set:
+      service: script.turn_on
+      data_template:
+        entity_id: script.set_vol_quarto
+        variables:
+          vol: '{{ volume_level * 100 | int }}'
   attributes:
     volume_level: input_number.vol_tv_quarto
     state: binary_sensor.tv_quarto
@@ -58,7 +60,7 @@
       data_template:
         entity_id: script.set_vol_sala
         variables:
-          vol: '{{ volume }}'
+          vol: '{{ volume_level * 100 | int }}'
     select_source:
       service: script.turn_on
       data_template:
@@ -68,4 +70,5 @@
   attributes:
     volume_level: input_number.vol_tv_sala
     state: binary_sensor.tv_sala
-    source_list: input_select.source_tv_sala
+    source_list: input_select.source_tv_sala | options
+    source: input_select.source_tv_sala | state

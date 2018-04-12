@@ -160,10 +160,6 @@ input_text.tv_sala_tiles:
         image: /local/net_source.png
         column: 2
         row: 1
-      - entity: switch.power_tv_sala
-        image: /local/tv.png
-        column: 1
-        row: 2
       - entity: switch.source_chromecast_sala
         image: /local/chromecast.png
         column: 2
@@ -184,18 +180,6 @@ input_text.tv_sala_tiles:
         image: /local/CHMenos.png
         column: 2
         row: 4
-      - entity: switch.vol_cima_tv_sala
-        image: /local/VolMais.png
-        column: 1
-        row: 5
-      - entity: switch.vol_baixo_tv_sala
-        image: /local/VolMenos.png
-        column: 2
-        row: 5
-      - entity: switch.mute_tv_sala
-        image: /local/mute.png
-        column: 3
-        row: 5
       - entity: switch.cima_tv_sala
         image: /local/cima.png
         column: 1
@@ -341,7 +325,7 @@ input_text.tv_quarto_tiles:
 input_text.churrasqueira_player:
   icon: mdi:cast
   custom_ui_state_card: state-card-mini-media-player
-  friendly_name: Chromecast Churrasqueira
+  friendly_name: Som
   config:
     player: media_player.churrasqueira
     buttons:
@@ -366,59 +350,36 @@ input_text.churrasqueira_player:
 input_text.sala_player:
   icon: mdi:cast
   custom_ui_state_card: state-card-mini-media-player
-  friendly_name: Chromecast Sala
+  friendly_name: TV Sala
   config:
-    player: media_player.sala
+    player: media_player.tv_sala
     buttons:
-      - name: Rock
-        icon: mdi:music-note
-        script: script.play_spotify_rock
-        variables:
-          data:
-            media_player: Sala
-      - name: Susse
-        icon: mdi:music-note
-        script: script.play_spotify_susse
-        variables:
-          data:
-            media_player: media_player.sala
-      - name: Isabelle
-        icon: mdi:music-note
-        script: script.play_spotify_isabelle
-        variables:
-          data:
-            media_player: Sala
+      - name: Discovery
+        script: script.tv_sala_discovery
+      - name: Globo
+        script: script.tv_sala_globo
+      - name: SBT
+        script: script.tv_sala_sbt
+      - name: Record
+        script: script.tv_sala_record
+      - name: Chromecast
+        script: script.source_chromecast_sala
+      - name: Net
+        script: script.source_net_sala
+      - name: DVD
+        script: script.source_dvd_sala
 input_text.quarto_player:
   icon: mdi:cast
   custom_ui_state_card: state-card-mini-media-player
-  friendly_name: Chromecast Quarto
+  friendly_name: TV Quarto
   config:
-    player: media_player.quarto
-    buttons:
-      - name: Rock
-        icon: mdi:music-note
-        script: script.play_spotify_rock
-        variables:
-          data:
-            media_player: Quarto
-      - name: Susse
-        icon: mdi:music-note
-        script: script.play_spotify_susse
-        variables:
-          data:
-            media_player: Quarto
-      - name: Isabelle
-        icon: mdi:music-note
-        script: script.play_spotify_isabelle
-        variables:
-          data:
-            media_player: Quarto
+    player: media_player.tv_quarto
 input_text.quarto_isabelle_player:
   icon: mdi:cast
   custom_ui_state_card: state-card-mini-media-player
-  friendly_name: Chromecast Quarto Isabelle
+  friendly_name: TV Quarto Isabelle
   config:
-    player: media_player.quarto_isabelle
+    player: media_player.tv_quarto_isabelle
     buttons:
       - name: Rock
         icon: mdi:music-note
@@ -600,7 +561,32 @@ group.humidade_quarto:
 sensor.hline_1:
  custom_ui_state_card: state-card-hline
  config:
-   width: 90 --> in percents
-   height: 1 --> in pixels, adds to bordertop
+   width: 85
+   height: 1
    backgroundcolor: white
-   bordertop: '1px solid black'
+   bordertop: none
+   backgroundimage: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 100, 55, 1), rgba(0, 0, 0, 0))
+sensor.hline_2:
+ custom_ui_state_card: state-card-hline
+ config:
+   width: 85
+   height: 1
+   backgroundcolor: white
+   bordertop: none
+   backgroundimage: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 100, 55, 1), rgba(0, 0, 0, 0))
+sensor.hline_3:
+ custom_ui_state_card: state-card-hline
+ config:
+   width: 85
+   height: 1
+   backgroundcolor: white
+   bordertop: none
+   backgroundimage: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 100, 55, 1), rgba(0, 0, 0, 0))
+sensor.hline_4:
+ custom_ui_state_card: state-card-hline
+ config:
+   width: 85
+   height: 1
+   backgroundcolor: white
+   bordertop: none
+   backgroundimage: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 100, 55, 1), rgba(0, 0, 0, 0))

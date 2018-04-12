@@ -254,7 +254,7 @@ aumenta_vol_quarto:
       variables:
         vol: "{{ vol }}"
 aumenta_vol_quarto_pause:
-  alias: Aumenta Volume Quarto Pause
+  alias: Aumenta Volume do Quarto Pause
   sequence:
   - service: switch.toggle
     entity_id: switch.vol_cima_tv_quarto
@@ -265,6 +265,23 @@ aumenta_vol_quarto_pause:
        {% endif %}
     entity_id: script.aumenta_vol_quarto
     data_template:
+      variables:
+        vol: "{{ vol }}"
+
+set_vol_quarto:
+  alias: Set Volume do Quarto
+  sequence:
+  - service_template: >
+       {% if states.input_number.vol_tv_quarto.state|int != vol|int %}
+         script.turn_on
+       {% endif %}
+    data_template: 
+      entity_id: >
+       {% if states.input_number.vol_tv_quarto.state|int > vol|int %}
+         script.reduz_vol_quarto
+       {% else %}
+         script.aumenta_vol_quarto
+       {% endif%}
       variables:
         vol: "{{ vol }}"
 
@@ -473,7 +490,7 @@ reduz_vol_sala:
       variables:
         vol: "{{ vol }}"
 reduz_vol_sala_pause:
-  alias: Reduz Volume do Quarto Pause
+  alias: Reduz Volume do Sala Pause
   sequence:
   - service: switch.toggle
     entity_id: switch.vol_baixo_tv_sala
@@ -501,7 +518,7 @@ aumenta_vol_sala:
       variables:
         vol: "{{ vol }}"
 aumenta_vol_sala_pause:
-  alias: Aumenta Volume do Quarto Pause
+  alias: Aumenta Volume do Sala Pause
   sequence:
   - service: switch.toggle
     entity_id: switch.vol_cima_tv_sala

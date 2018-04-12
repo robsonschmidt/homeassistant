@@ -41,7 +41,7 @@ garagem:
   - group.portao
 # Card portão
 portao:
-  name: Portão
+  name: Frente
   entities:
   - switch.portao
 
@@ -51,18 +51,14 @@ sala:
   view: yes
   icon: mdi:sofa
   entities:
-  - group.tv_sala
   - group.tv_sala_tiles
   - camera.interna
-# Card Controle TV Sala
-tv_sala:
-  name: 'TV Sala'
-  entities:
-  - media_player.tv_sala
 # Card Controle TV Sala
 tv_sala_tiles:
   name: 'TV Sala'
   entities:
+  - input_text.sala_player
+  - sensor.hline_1
   - input_text.tv_sala_tiles
 
 # Menu Churrasqueira
@@ -72,27 +68,27 @@ churrasqueira:
   icon: mdi:radiator
   entities:
   - group.churrasqueira_luz
-  - group.churrasqueira_cervejeira
+#  - group.churrasqueira_cervejeira
   - camera.fundos
-  - group.chromecast_churrasqueira
+#  - group.chromecast_churrasqueira
 # Card Luz Churrasqueira
 churrasqueira_luz:
-  name: 'Iluminação'
+  name: 'Fundos'
   entities:
   - switch.display
   - switch.garden_light
+  - sensor.hline_1
   - light.luz_esquerda
   - light.luz_central
   - light.luz_direita
-churrasqueira_cervejeira:
-  name: 'Cervejeira'
-  entities:
+  - sensor.hline_2
   - switch.cervejeira
-# Card Chromecast Churrasqueira
-chromecast_churrasqueira:
-  name: Chromecast
-  entities:
+  - sensor.hline_3
   - input_text.churrasqueira_player
+#churrasqueira_cervejeira:
+#  name: 'Cervejeira'
+#  entities:
+# Card Chromecast Churrasqueira
 
 # Menu Quarto
 quarto:
@@ -100,35 +96,32 @@ quarto:
   view: yes
   icon: mdi:hotel
   entities:
-  - group.tv_quarto
   - group.tv_quarto_tiles
   - group.luz_quarto
-  - group.humidade_quarto
+#  - group.humidade_quarto
 # Card Controle  
-tv_quarto:
-  name: 'TV Quarto'
-  entities:
-  - media_player.tv_quarto
 # Card Controle  
 tv_quarto_tiles:
   name: 'TV Quarto'
   entities:
-  - input_text.tv_quarto_tiles
+  - input_text.quarto_player
+#  - sensor.hline_1
+#  - input_text.tv_quarto_tiles
 # Card Humidade Quarto Robson
-humidade_quarto:
-  name: Humidade Quarto
-  entities:
-  - switch.onoff_desumidificador_robson
-  - sensor.hline_1
-  - switch.onoff_desumidificador_flavia
+#humidade_quarto:
+#  name: Humidade Quarto
+#  entities:
 # Card Iluminação Quarto
 luz_quarto:
-  name: Iluminação
+  name: Quarto
   entities:
   - switch.luz_corredor
   - switch.luz_quarto
   - switch.luz_painel_quarto
   - switch.luz_sacada_frente
+  - sensor.hline_1
+  - switch.onoff_desumidificador_robson
+  - switch.onoff_desumidificador_flavia
 # Menu Quarto Isabelle
 quarto_isabelle:
   name: Quarto Isabelle
