@@ -70,5 +70,5 @@
   attributes:
     volume_level: input_number.vol_tv_sala
     state: binary_sensor.tv_sala
-    source_list: input_select.source_tv_sala | options
-    source: input_select.source_tv_sala | state
+    source_list: input_select.source_tv_sala|options
+    source: input_select.source_tv_sala|state

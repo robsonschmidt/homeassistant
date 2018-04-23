@@ -90,12 +90,12 @@ tv_quarto_globo:
       entity_id: switch.5_net_quarto
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.1_net_quarto
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.2_net_quarto
     service: switch.turn_on
@@ -106,12 +106,12 @@ tv_quarto_discovery:
       entity_id: switch.6_net_quarto
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.0_net_quarto
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.0_net_quarto
     service: switch.turn_on
@@ -122,12 +122,12 @@ tv_quarto_sbt:
       entity_id: switch.5_net_quarto
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.0_net_quarto
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.4_net_quarto
     service: switch.turn_on
@@ -138,12 +138,12 @@ tv_quarto_record:
       entity_id: switch.5_net_quarto
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.0_net_quarto
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.7_net_quarto
     service: switch.turn_on
@@ -303,22 +303,22 @@ tv_sala_discovery:
       entity_id: switch.source_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.sair_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.6_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.0_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.0_net_sala
     service: switch.turn_on
@@ -329,22 +329,22 @@ tv_sala_globo:
       entity_id: switch.source_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.sair_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.5_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.1_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.2_net_sala
     service: switch.turn_on
@@ -355,22 +355,22 @@ tv_sala_sbt:
       entity_id: switch.source_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.sair_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.5_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.0_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.4_net_sala
     service: switch.turn_on
@@ -381,24 +381,50 @@ tv_sala_record:
       entity_id: switch.source_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.sair_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.5_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.0_net_sala
     service: switch.turn_on
   - delay:
-      seconds: 1
+      milliseconds: 500
   - data:
       entity_id: switch.7_net_sala
+    service: switch.turn_on
+tv_sala_band:
+  alias: TV Sala Band
+  sequence:
+  - data:
+      entity_id: switch.source_net_sala
+    service: switch.turn_on
+  - delay:
+      milliseconds: 500
+  - data:
+      entity_id: switch.sair_net_sala
+    service: switch.turn_on
+  - delay:
+      milliseconds: 500
+  - data:
+      entity_id: switch.5_net_sala
+    service: switch.turn_on
+  - delay:
+      milliseconds: 500
+  - data:
+      entity_id: switch.0_net_sala
+    service: switch.turn_on
+  - delay:
+      milliseconds: 500
+  - data:
+      entity_id: switch.2_net_sala
     service: switch.turn_on
 liga_tv_sala_discovery:
   alias: Liga TV Sala Discovery
@@ -535,6 +561,9 @@ aumenta_vol_sala_pause:
 set_vol_sala:
   alias: Set Volume do Sala
   sequence:
+  - service: notify.telegram_bot
+    data:
+      message: "{{ vol }}"
   - service_template: >
        {% if states.input_number.vol_tv_sala.state|int != vol|int %}
          script.turn_on
@@ -871,6 +900,25 @@ select_source_sala:
          switch.source_net_sala
         {% elif source == 'Chromecast'%}
          switch.source_chromecast_sala
-        {% elif source == 'Chromecast'%}
+        {% elif source == 'DVD'%}
          switch.source_dvd_sala
         {% endif %}
+        
+select_channel_sala:
+  alias: Select Source Sala
+  sequence:
+  - service: script.toggle
+    data_template:
+      entity_id: >
+        {% if channel == 'Globo'%}
+         script.tv_sala_globo
+        {% elif channel == 'SBT'%}
+         script.tv_sala_sbt
+        {% elif channel == 'Band'%}
+         script.tv_sala_band
+        {% elif channel == 'Discovery Kids'%}
+         script.tv_sala_discovery
+        {% elif channel == 'Record'%}
+         script.tv_sala_record
+        {% endif %}
+        

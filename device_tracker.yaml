@@ -5,3 +5,6 @@
   consider_home: 900
 - platform: gpslogger
   password: !secret gpslogger_password
+#- platform: google_maps
+#  username: robsonschmidt@gmail.com
+#  password: !secret google_maps_password

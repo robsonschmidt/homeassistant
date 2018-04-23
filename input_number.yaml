@@ -15,7 +15,7 @@ valor_bitcoin_meianoite_ontem:
   unit_of_measurement: USD
   icon: mdi:currency-btc
 tempo_timer:
-  name: Tempo
+  name: Timer Desligar TV
   min: 0
   max: 59
   step: 1

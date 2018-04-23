@@ -120,26 +120,21 @@ switch.onoff_desumidificador_robson:
   friendly_name: Desum. Robson
   icon: mdi:water-off
   extra_badge:
-  - entity_id: sensor.armario_robson_humidade
-    unit: '%'
   - entity_id: sensor.armario_robson_temperatura
     unit: °C
+  - entity_id: sensor.armario_robson_humidade
+    unit: '%'
 switch.onoff_desumidificador_flavia:
   friendly_name: Desum. Flavia
   icon: mdi:water-off
   extra_badge:
-  - entity_id: sensor.armario_flavia_humidade
-    unit: '%'
   - entity_id: sensor.armario_flavia_temperatura
     unit: °C
+  - entity_id: sensor.armario_flavia_humidade
+    unit: '%'
 switch.onoff_aquecedor_isabelle:
   friendly_name: Aquecedor
   icon: mdi:hot-tub
-  extra_badge:
-  - entity_id: sensor.humidade_quarto_isabelle
-    unit: '%'
-  - entity_id: sensor.temperatura_quarto_isabelle
-    unit: °C
 
 # State Cards TV Sala
 input_text.tv_sala_tiles:
@@ -183,19 +178,19 @@ input_text.tv_sala_tiles:
       - entity: switch.cima_tv_sala
         image: /local/cima.png
         column: 1
-        row: 6
+        row: 5
       - entity: switch.baixo_tv_sala
         image: /local/baixo.png
         column: 2
-        row: 6
+        row: 5
       - entity: switch.ok_tv_sala
         image: /local/ok.png
         column: 1
-        row: 7
+        row: 6
       - entity: switch.source_tv_sala
         image: /local/source.png
         column: 2
-        row: 7
+        row: 6
       - entity: switch.1_net_sala
         image: /local/1.png
         column: 3
@@ -353,21 +348,80 @@ input_text.sala_player:
   friendly_name: TV Sala
   config:
     player: media_player.tv_sala
+    set_up_box:
+      show: true
+      power: switch.power_net_sala 
+    sources:
+    - name: Chromecast
+    - name: Net
+    - name: DVD
+    select_channel: script.select_channel_sala
+    channels:
+    - name: Band
+      channel: 502
+    - name: SBT
+      channel: 504
+    - name: Record
+      channel: 507
+    - name: Globo
+      channel: 512
+    - name: Discovery Kids
+      channel: 600
     buttons:
-      - name: Discovery
-        script: script.tv_sala_discovery
-      - name: Globo
-        script: script.tv_sala_globo
-      - name: SBT
-        script: script.tv_sala_sbt
-      - name: Record
-        script: script.tv_sala_record
-      - name: Chromecast
-        script: script.source_chromecast_sala
-      - name: Net
-        script: script.source_net_sala
-      - name: DVD
-        script: script.source_dvd_sala
+    - name: um
+      icon: mdi:numeric-1-box
+      switch: switch.1_net_sala
+    - name: dois
+      icon: mdi:numeric-2-box
+      switch: switch.2_net_sala
+    - name: tres
+      icon: mdi:numeric-3-box
+      switch: switch.3_net_sala
+    - name: quatro
+      icon: mdi:numeric-4-box
+      switch: switch.4_net_sala
+    - name: cinco
+      icon: mdi:numeric-5-box
+      switch: switch.5_net_sala
+    - name: seis
+      icon: mdi:numeric-6-box
+      switch: switch.6_net_sala
+    - name: sete
+      icon: mdi:numeric-7-box
+      switch: switch.7_net_sala
+    - name: oito
+      icon: mdi:numeric-8-box
+      switch: switch.8_net_sala
+    - name: nove
+      icon: mdi:numeric-9-box
+      switch: switch.9_net_sala
+    - name: space
+      is_space: true
+    - name: zero
+      icon: mdi:numeric-0-box
+      switch: switch.0_net_sala
+    - name: space
+      is_space: true
+    - name: CH
+      icon: mdi:plus-box
+      switch: switch.canal_cima_net_sala
+      show_name: true
+    - name: Source
+      switch: switch.source_tv_sala
+      show_name: true
+    - name: Cima
+      icon: mdi:arrow-up-bold-box
+      switch: switch.cima_tv_sala
+    - name: CH
+      icon: mdi:minus-box
+      switch: switch.canal_baixo_net_sala
+      show_name: true
+    - name: OK
+      switch: switch.ok_tv_sala
+      show_name: true
+    - name: Baixo
+      icon: mdi:arrow-down-bold-box
+      switch: switch.baixo_tv_sala
 input_text.quarto_player:
   icon: mdi:cast
   custom_ui_state_card: state-card-mini-media-player
@@ -402,6 +456,7 @@ input_text.quarto_isabelle_player:
 
 # Portão
 switch.portao:
+#  custom_ui_state_card: state-badge-custom
   homebridge_visible: true
   homebridge_name: Portão
   confirm_controls_show_lock: true
@@ -559,34 +614,40 @@ group.humidade_quarto:
   order: 7
 
 sensor.hline_1:
- custom_ui_state_card: state-card-hline
- config:
-   width: 85
-   height: 1
-   backgroundcolor: white
-   bordertop: none
-   backgroundimage: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 100, 55, 1), rgba(0, 0, 0, 0))
+  custom_ui_state_card: state-card-hline
+  config:
+    width: 85
+    height: 1
+    backgroundcolor: white
+    bordertop: none
+    backgroundimage: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 100, 55, 1), rgba(0, 0, 0, 0))
 sensor.hline_2:
- custom_ui_state_card: state-card-hline
- config:
-   width: 85
-   height: 1
-   backgroundcolor: white
-   bordertop: none
-   backgroundimage: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 100, 55, 1), rgba(0, 0, 0, 0))
+  custom_ui_state_card: state-card-hline
+  config:
+    width: 85
+    height: 1
+    backgroundcolor: white
+    bordertop: none
+    backgroundimage: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 100, 55, 1), rgba(0, 0, 0, 0))
 sensor.hline_3:
- custom_ui_state_card: state-card-hline
- config:
-   width: 85
-   height: 1
-   backgroundcolor: white
-   bordertop: none
-   backgroundimage: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 100, 55, 1), rgba(0, 0, 0, 0))
+  custom_ui_state_card: state-card-hline
+  config:
+    width: 85
+    height: 1
+    backgroundcolor: white
+    bordertop: none
+    backgroundimage: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 100, 55, 1), rgba(0, 0, 0, 0))
 sensor.hline_4:
- custom_ui_state_card: state-card-hline
- config:
-   width: 85
-   height: 1
-   backgroundcolor: white
-   bordertop: none
-   backgroundimage: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 100, 55, 1), rgba(0, 0, 0, 0))
+  custom_ui_state_card: state-card-hline
+  config:
+    width: 85
+    height: 1
+    backgroundcolor: white
+    bordertop: none
+    backgroundimage: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 100, 55, 1), rgba(0, 0, 0, 0))
+
+#binary_sensor.portao_template:
+#  custom_ui_state_card: state-badge-custom
+
+#switch.portao_template:
+#  custom_ui_state_card: state-badge-custom

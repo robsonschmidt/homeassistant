@@ -39,7 +39,7 @@ version: 20180129.2
       }
       paper-button-group {
         display: grid;
-        grid-template-columns: repeat(3, 120px);
+        grid-template-columns: repeat(3, 33%);
         grid-gap: 4px;
         margin-top: 8px;
         padding: 0;
@@ -71,40 +71,81 @@ version: 20180129.2
         </div>
         <div class='horizontal layout'>
           <paper-icon-button icon='mdi:power' on-tap='handlePowerTap'></paper-icon-button>
+          <template is='dom-if' if='[[config.set_up_box.show]]'>
+            <paper-icon-button icon='mdi:file-presentation-box' on-tap='handlePowerNetTap'></paper-icon-button>
+          </template>
         </div>
       </div>
 
-      <template is='dom-if' if='[[!playerObj.isOff]]'>
-        <div class='info horizontal justified layout'>
-          <paper-icon-button icon='mdi:volume-off' on-tap='handleVolumeTap'></paper-icon-button>
-          <paper-icon-button icon='mdi:volume-low' on-tap='handleVolumeDown'></paper-icon-button>
-          <paper-icon-button icon='mdi:volume-high' on-tap='handleVolumeUp'></paper-icon-button>
+<!--      <template is='dom-if' if='[[!playerObj.isOff]]'> -->
+        <div class='controls layout horizontal justified'>
+          <template is='dom-if' if='[[config.buttons]]'>
+            <paper-icon-button icon='mdi:format-list-numbers' on-tap='handleShowControl'></paper-icon-button>
+          </template>
+          <paper-icon-button icon='mdi:volume-mute' on-tap='handleVolumeTap'></paper-icon-button>
+          <paper-icon-button icon='mdi:volume-minus' on-tap='handleVolumeDown'></paper-icon-button>
+          <paper-icon-button icon='mdi:volume-plus' on-tap='handleVolumeUp'></paper-icon-button>
           <paper-slider disabled='[[playerObj.isMuted]]'
             min='0' max='100' value='[[playerObj.volumeSliderValue]]'
             on-change='volumeSliderChanged' class='flex'>
           </paper-slider>
           <div class='horizontal layout'>
-            <paper-icon-button icon='mdi:skip-backward' on-tap='handlePreviousTap'></paper-icon-button>
-            <paper-icon-button icon='mdi:play' on-tap='handlePlayPauseTap' hidden='[[playerObj.isPlaying]]'></paper-icon-button>
-            <paper-icon-button icon='mdi:pause' on-tap='handlePlayPauseTap' hidden='[[!playerObj.isPlaying]]'></paper-icon-button>
-            <paper-icon-button icon='mdi:skip-forward' on-tap='handleNextTap'></paper-icon-button>
+            <template is='dom-if' if='[[playerObj.hasMediaInfo]]'>
+              <paper-icon-button icon='mdi:skip-backward' on-tap='handlePreviousTap'></paper-icon-button>
+              <paper-icon-button icon='mdi:play' on-tap='handlePlayPauseTap' hidden='[[playerObj.isPlaying]]'></paper-icon-button>
+              <paper-icon-button icon='mdi:pause' on-tap='handlePlayPauseTap' hidden='[[!playerObj.isPlaying]]'></paper-icon-button>
+              <paper-icon-button icon='mdi:skip-forward' on-tap='handleNextTap'></paper-icon-button>
+            </template>
           </div>
         </div>
-      </template>      
-      <paper-dialog id='infoCard'>
-        <template is='dom-if' if='[[config.buttons]]'>
-          Choose a playlist for [[computeStateName(playerObj)]]:        
-          <paper-button-group>
-            <template is='dom-repeat' items='[[config.buttons]]'>
-              <paper-button raised on-tap='fireScript'>
-                <template is='dom-if' if='[[config.buttons]]'>
-                  <iron-icon icon='[[item.icon]]'></iron-icon>
-                </template>                
-                [[item.name]]
-              </paper-button>
+        <div class="horizontal layout">
+          <template is='dom-if' if='[[config.sources]]'>
+            <paper-dropdown-menu class="flex source-input" dynamic-align="" label-float="" label="Source" role="combobox" aria-autocomplete="none" aria-haspopup="true" aria-disabled="false">
+              <paper-listbox slot="dropdown-content" aria-expanded="true" role="listbox" tabindex="0" on-selected-item-changed="handleSelectSource">
+                <template is='dom-repeat' items='[[config.sources]]'>
+                  <paper-item role="option" tabindex="-1" aria-disabled="false">[[item.name]]</paper-item>
+                </template>
+              </paper-listbox>
+            </paper-dropdown-menu>
+          </template>
+        </div> 
+        <div class="horizontal layout">
+          <template is='dom-if' if='[[config.channels]]'>
+            <paper-dropdown-menu class="flex source-input" dynamic-align="" label-float="" label="Canais" role="combobox" aria-autocomplete="none" aria-haspopup="true" aria-disabled="false">
+                <paper-listbox slot="dropdown-content" aria-expanded="true" role="listbox" tabindex="0" on-selected-item-changed="handleSelectChannel">
+                  <template is='dom-repeat' items='[[config.channels]]'>
+                    <paper-item role="option" tabindex="-1" aria-disabled="false">[[item.name]]</paper-item>
+                  </template>
+                </paper-listbox>
+            </paper-dropdown-menu>
+          </template>
+        </div>
+        <div>
+          <template is='dom-if' if='[[showControl]]'>
+            <template is='dom-if' if='[[config.buttons]]'>
+              <paper-button-group>
+                <template is='dom-repeat' items='[[config.buttons]]'>
+                  <template is='dom-if' if='[[item.is_space]]'>
+                    &nbsp;
+                  </template> 
+                  <template is='dom-if' if='[[!item.is_space]]'>
+                    <paper-button raised on-tap='callCommand'>
+                      <template is='dom-if' if='[[item.icon]]'>
+                        <iron-icon icon='[[item.icon]]'></iron-icon>
+                      </template>
+                      <template is='dom-if' if='[[item.show_name]]'>
+                        [[item.name]]
+                      </template>
+                    </paper-button>
+                  </template>
+                </template>
+              </paper-button-group>
             </template>
-          </paper-button-group>
-        </template>
+          </template>
+        </div>
+
+<!--      </template>      -->
+      <paper-dialog id='infoCard'>
         <more-info-media_player
           hass='[[hass]]'
           state-obj='[[playerObj]]'
@@ -122,6 +163,10 @@ class StateCardMiniMediaPlayer extends Polymer.Element {
     return {
       hass: Object,
       stateObj: Object,
+      showControl: {
+        type: Boolean,
+        value: false,
+      },
       config: {
         type: Object,
         computed: 'computeConfig(stateObj)',
@@ -185,12 +230,20 @@ class StateCardMiniMediaPlayer extends Polymer.Element {
     this.callService('toggle');
   }
 
+  handlePowerNetTap(ev) {
+    ev.stopPropagation();
+    this.hass.callService('switch', 'toggle', { 'entity_id': this.config.set_up_box.power} );
+  }
+
   callService(service) {
     this.hass.callService('media_player', service, { 'entity_id': this.playerObj.entity_id });
   }
 
-  fireScript(ev) {      
-    this.hass.callService('script', ev.model.item.script.split('.')[1], { 'entity_id': this.playerObj.entity_id });
+  callCommand(ev) {
+    if (ev.model.item.script != null)
+        this.hass.callService('script', ev.model.item.script.split('.')[1], { 'entity_id': this.playerObj.entity_id });
+    else if (ev.model.item.switch != null)
+        this.hass.callService('switch', 'toggle', { 'entity_id': ev.model.item.switch });
   }
 
   handleVolumeTap() {
@@ -209,6 +262,18 @@ class StateCardMiniMediaPlayer extends Polymer.Element {
     var volPercentage = parseFloat(ev.target.value);
     var vol = volPercentage > 0 ? volPercentage / 100 : 0;
     this.hass.callService('media_player', 'volume_set', { 'entity_id': this.playerObj.entity_id, 'volume_level': vol });
+  }
+  
+  handleShowControl(ev){
+    this.showControl = !this.showControl;
+  }
+  
+  handleSelectSource(ev) {
+    this.hass.callService('media_player', 'select_source', {'entity_id': this.playerObj.entity_id, 'source': ev.detail.value.innerText });
+  }
+
+  handleSelectChannel(ev) {
+    this.hass.callService('script', this.config.select_channel.split('.')[1], {'channel': ev.detail.value.innerText });
   }
 
   openInfoCard() {

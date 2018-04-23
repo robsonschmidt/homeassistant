@@ -4,10 +4,11 @@ default_view:
   entities:
   - device_tracker.52008849ec808451
   - device_tracker.iphonedeflavialan
-  - sun.sun
   - sensor.fases_lua
   - alarm_control_panel.ha_alarm
   - binary_sensor.portao_template
+  - switch.portao
+  - switch.portao_template
   - group.previsao_tempo
   - group.aspirador
   name: 'Tela Inicial'
@@ -58,8 +59,6 @@ tv_sala_tiles:
   name: 'TV Sala'
   entities:
   - input_text.sala_player
-  - sensor.hline_1
-  - input_text.tv_sala_tiles
 
 # Menu Churrasqueira
 churrasqueira:
@@ -68,9 +67,7 @@ churrasqueira:
   icon: mdi:radiator
   entities:
   - group.churrasqueira_luz
-#  - group.churrasqueira_cervejeira
   - camera.fundos
-#  - group.chromecast_churrasqueira
 # Card Luz Churrasqueira
 churrasqueira_luz:
   name: 'Fundos'
@@ -96,61 +93,42 @@ quarto:
   view: yes
   icon: mdi:hotel
   entities:
-  - group.tv_quarto_tiles
-  - group.luz_quarto
-#  - group.humidade_quarto
-# Card Controle  
-# Card Controle  
-tv_quarto_tiles:
-  name: 'TV Quarto'
+  - group.quarto_suite
+  - group.corredor
+  - group.quarto_isabelle
+# Card Quarto
+quarto_suite:
+  name: 'Suíte'
   entities:
   - input_text.quarto_player
-#  - sensor.hline_1
-#  - input_text.tv_quarto_tiles
-# Card Humidade Quarto Robson
-#humidade_quarto:
-#  name: Humidade Quarto
-#  entities:
-# Card Iluminação Quarto
-luz_quarto:
-  name: Quarto
-  entities:
-  - switch.luz_corredor
+  - sensor.hline_1
   - switch.luz_quarto
   - switch.luz_painel_quarto
   - switch.luz_sacada_frente
-  - sensor.hline_1
+  - sensor.hline_2
   - switch.onoff_desumidificador_robson
   - switch.onoff_desumidificador_flavia
-# Menu Quarto Isabelle
+# Card Quarto
+corredor:
+  name: 'Corredor'
+  entities:
+  - switch.luz_corredor
+
+# Card Quarto Isabelle
 quarto_isabelle:
   name: Quarto Isabelle
-  view: yes
-  icon: mdi:human-child
   entities:
-  - sensor.humidade_quarto_isabelle
   - sensor.temperatura_quarto_isabelle
-  - group.chromecast_quarto_isabelle
-  - group.timer_tv_dormir
-  - group.aquecedor_isabelle
-# Card Timer TV Dormir
-timer_tv_dormir:
-  name: Timer TV Dormir
-  entities:
+  - sensor.humidade_quarto_isabelle
+  - sensor.hline_1
+  - input_text.quarto_isabelle_player
+  - sensor.hline_2
+  - switch.onoff_aquecedor_isabelle
+  - sensor.hline_3
   - input_number.tempo_timer
   - input_boolean.ativa_timer_tv_dormir
   - input_select.media_player
   - input_select.mensagem_voz_tv
-# Card Aquecedor Isabelle
-aquecedor_isabelle:
-  name: Aquecedor
-  entities:
-  - switch.onoff_aquecedor_isabelle
-# Card Chromecast Quarto Isabelle 
-chromecast_quarto_isabelle:
-  name: Chromecast
-  entities:
-  - input_text.quarto_isabelle_player
 
 fundos_tiles:
   name: Térreo
@@ -199,6 +177,7 @@ boletim:
   - input_datetime.boletim_1
   - input_datetime.boletim_2
   - input_datetime.boletim_3
+  - sensor.hline_1
   - input_boolean.enviar_texto
   - input_boolean.enviar_voz
   - input_boolean.enviar_saudacao
@@ -217,12 +196,16 @@ alertas_admin_telegram:
   entities:
   - input_boolean.enviar_on_hassio
   - input_boolean.enviar_off_hassio
+  - sensor.hline_1
   - input_boolean.enviar_velocidade_internet_baixa
+  - sensor.hline_2
   - input_boolean.enviar_cpu_temp_alta
   - input_number.temp_cpu_alta
   - input_number.temp_cpu_muito_alta
+  - sensor.hline_3
   - input_boolean.enviar_localizacao_flavia
   - input_boolean.enviar_localizacao_robson
+  - sensor.hline_4
   - input_boolean.enviar_acionamento_portao
 # Card Automacao Flavia
 automacao_flavia:
@@ -237,10 +220,13 @@ agenda_humidade_quarto:
   name: Desumidificação
   entities:
   - input_boolean.ligar_desumidificador
+  - sensor.hline_1
   - input_number.min_humidade_quarto
   - input_number.max_humidade_quarto
+  - sensor.hline_2
   - input_datetime.ligar_desumidificador_inicio
   - input_datetime.ligar_desumidificador_fim
+  - sensor.hline_3
   - input_datetime.horario_desumidificador_inicio
   - input_datetime.horario_desumidificador_fim
 # Card Mensagens na TV
@@ -299,7 +285,9 @@ sonoff:
   entities:
   - script.check_sonoffs_version
   - script.update_sonoffs
+  - sensor.hline_1
   - sensor.ultima_versao_sonoff
+  - sensor.hline_2
   - sensor.versao_aquecedor_isabelle
   - sensor.versao_armario_flavua
   - sensor.versao_armario_robson

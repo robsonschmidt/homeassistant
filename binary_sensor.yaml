@@ -28,7 +28,7 @@
   value_template: '{{ value_json["Switch2"] }}'
 - platform: ping
   name: tv_sala
-  host: 192.168.86.165
+  host: 192.168.86.1
   count: 5
   scan_interval: 30
 - platform: ping

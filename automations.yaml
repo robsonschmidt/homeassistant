@@ -48,26 +48,39 @@
     condition: state
     entity_id: input_boolean.enviar_acionamento_portao
     state: 'on'
-  action:
-  - data:
-      message: '*Portão* acionado.'
-    service: notify.telegram_bot
   trigger:
   - entity_id: switch.portao
     from: 'off'
     platform: state
     to: 'on'
+  action:
+  - data:
+      message: '*Portão* acionado.'
+    service: notify.telegram_bot
 - alias: Portao aberto muito tempo
   trigger:
   - entity_id: sensor.portao
     platform: state
-    to: 'ON'
+    to: 'on'
     for:
       minutes: 10
   action:
   - service: notify.telegram_bot
     data:
       message: '*Portão* aberto por muito tempo.'
+- alias: Portao aberto sem ninguem em casa
+  condition:
+    - condition: state
+      entity_id: sensor.alguem_em_casa
+      state: 'False'
+  trigger:
+  - entity_id: sensor.portao
+    platform: state
+    to: 'on'
+  action:
+  - service: notify.telegram_bot
+    data:
+      message: '*Portão* foi aberto sem ninguem em casa.'
 - alias: Broadlink Always OFF
   trigger:
   - entity_id: switch.0_net_quarto
@@ -268,25 +281,6 @@
       entity: '{{ trigger.entity_id }}'
       state: 'off'
     service: python_script.set_state
-- alias: Placa carro
-  trigger:
-  - event_data:
-      entity_id: image_processing.openalpr_frente
-      plate: ASC8060
-    event_type: image_processing.found_plate
-    platform: event
-  - event_data:
-      entity_id: image_processing.openalpr_frente
-      plate: OXI5924
-    event_type: image_processing.found_plate
-    platform: event
-  - event_data: {}
-    event_type: image_processing.found_plate
-    platform: event
-  action:
-  - service: notify.telegram_bot
-    data:
-      message: Placa encontrada.
 - alias: FRIS Start
   condition:
     condition: state
@@ -395,16 +389,22 @@
         '
 - alias: Robson chegou em casa
   condition:
-    condition: state
+  - condition: state
     entity_id: input_boolean.enviar_localizacao_robson
     state: 'on'
   trigger:
   - platform: state
     entity_id: device_tracker.52008849ec808451
+    from: not_home
     to: home_arriving
   - platform: state
     entity_id: device_tracker.52008849ec808451
+    from: not_home
     to: home_arriving2
+  - platform: state
+    entity_id: device_tracker.52008849ec808451
+    from: not_home
+    to: home
   action:
   - service: notify.telegram_bot
     data:
@@ -413,6 +413,7 @@
       data:
         inline_keyboard:
         - Portão:/portao
+        - Desarmar Alarme:/desarma_alarme
         - Liga TV SBT:/ligasbtsala, Canal SBT:/canalsbtsala
         - Liga TV Record:/ligarecordsala, Canal Record:/canalrecordsala
         - Liga TV Globo:/ligaglobosala, Canal Globo:/canalglobosala
@@ -426,21 +427,19 @@
       state: 'on'
     - condition: template
       value_template: '{{ trigger.to_state.state != trigger.from_state.state }}'
+    - condition: template
+      value_template: '{{ not (trigger.from_state.state == "not_home" and (trigger.to_state.state == "home_arriving" or trigger.to_state.state == "home_arriving2")) }}'
   trigger:
   - platform: state
     entity_id: device_tracker.52008849ec808451
   action:
   - service: notify.telegram_bot
     data_template:
-      message: '*Robson* {% if trigger.from_state.state != ''not_home'' %} saiu de
-        *{{trigger.from_state.state| replace("home_arriving", "proximidade de casa")
-        | replace("home","casa")}}* {% endif %} {% if trigger.from_state.state !=
-        ''not_home'' and trigger.to_state.state != ''not_home'' %} e {% endif %} {%
-        if trigger.to_state.state != ''not_home'' %} chegou em *{{trigger.to_state.state|
-        replace("home_arriving", "proximidade de casa") | replace("home","casa")}}*
-        {% endif %} .
-
-        '
+      message: >
+       *Robson*
+       {%if trigger.from_state.state != 'not_home'%}saiu de *{{trigger.from_state.state|replace("home_arriving", "proximidade de casa")|replace("home","casa")}}*{%endif%}
+       {%if trigger.from_state.state != 'not_home' and trigger.to_state.state != 'not_home'%}e{%endif%}
+       {%if trigger.to_state.state != 'not_home'%}chegou em *{{trigger.to_state.state|replace("home_arriving","proximidade de casa")|replace("home","casa")}}*{%endif%}.
 - alias: Liga Globo Flavia Chegou
   condition:
     condition: and
@@ -685,6 +684,34 @@
   - service: switch.toggle
     data:
       entity_id: switch.portao
+- alias: Comando Telegram Arma Alarme
+  condition:
+    condition: state
+    entity_id: alarm_control_panel.ha_alarm
+    state: 'disarmed'
+  trigger:
+    platform: event
+    event_type: telegram_callback
+    event_data:
+      data: /arma_alarme
+  action:
+  - service: alarm_control_panel.alarm_arm_away
+    data:
+      entity_id: alarm_control_panel.ha_alarm
+- alias: Comando Telegram desarma Alarme
+  condition:
+    condition: state
+    entity_id: alarm_control_panel.ha_alarm
+    state: 'armed_away'
+  trigger:
+    platform: event
+    event_type: telegram_callback
+    event_data:
+      data: /desarma_alarme
+  action:
+  - service: alarm_control_panel.alarm_disarm
+    data:
+      entity_id: alarm_control_panel.ha_alarm
 - alias: Comando Telegram TV Sala
   hide_entity: true
   trigger:
@@ -735,6 +762,7 @@
       data:
         inline_keyboard:
         - Portão:/portao
+        - Alarme:/arma_alarme
         - Waze BRF ({{ states.sensor.para_brf.attributes.duration }}):/wazebrf, Waze
           Sogro ({{ states.sensor.para_sogro.attributes.duration }}):/wazesogro
         - Waze Pai ({{ states.sensor.para_pai.attributes.duration }}):/wazepai, Waze
@@ -885,7 +913,7 @@
     data_template:
       message: '*Timer* iniciado para *TV {{ states.input_select.media_player.state
         }}*, fim em {{ states(''input_number.tempo_timer'')|int }} minutos.'
-  - delay: 00:{{ states('input_number.tempo_timer')|int }}:00
+  - delay: "00:{{ states('input_number.tempo_timer')|int }}:00"
   - service: script.mensagem_tv
   - wait_template: '{{ is_state(''sensor.state_media_player'', ''idle'') }}'
   - service: notify.telegram_bot
@@ -1037,6 +1065,12 @@
   action:
   - service: alarm_control_panel.alarm_arm_away
     entity_id: alarm_control_panel.ha_alarm
+  - service: notify.telegram_bot
+    data:
+      message: 'Olá *Robson*, está saindo de casa?'
+      data:
+        inline_keyboard:
+        - Portão:/portao
 - alias: Alarme desligado
   condition:
     condition: state
@@ -1049,7 +1083,7 @@
   action:
   - service: alarm_control_panel.alarm_disarm
     entity_id: alarm_control_panel.ha_alarm
-- alias: Ativa alarme
+- alias: Arma alarme
   condition:
     condition: state
     entity_id: binary_sensor.ativado
@@ -1064,7 +1098,7 @@
   action:
   - service: switch.toggle
     entity_id: switch.alarme
-- alias: Desativa alarme
+- alias: Desarma alarme
   condition:
     condition: state
     entity_id: binary_sensor.ativado
@@ -1104,13 +1138,11 @@
   action:
   - service: input_number.increment
     entity_id: input_number.vol_tv_quarto
-- action:
-  - data:
-      name: green
-    service: frontend.set_theme
-  alias: Frontend
-  condition: []
-  id: '1523300969050'
+- alias: Frontend
   trigger:
-  - event: start
-    platform: homeassistant
+  - platform: homeassistant
+    event: start
+  action:
+  - service: frontend.set_theme
+    data:
+      name: green
