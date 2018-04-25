@@ -83,195 +83,159 @@
       message: '*Portão* foi aberto sem ninguem em casa.'
 - alias: Broadlink Always OFF
   trigger:
-  - entity_id: switch.0_net_quarto
+  - entity_id: switch.zero_net_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.0_net_sala
+  - entity_id: switch.um_net_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.1_net_quarto
+  - entity_id: switch.dois_net_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.1_net_sala
+  - entity_id: switch.tres_net_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.2_net_quarto
+  - entity_id: switch.quatro_net_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.2_net_sala
+  - entity_id: switch.cinco_net_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.3_net_quarto
+  - entity_id: switch.seis_net_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.3_net_sala
+  - entity_id: switch.sete_net_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.4_net_quarto
+  - entity_id: switch.oito_net_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.4_net_sala
+  - entity_id: switch.nove_net_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.5_net_quarto
+  - entity_id: switch.baixo_tv_q
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.5_net_sala
+  - entity_id: switch.baixo_tv_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.6_net_quarto
+  - entity_id: switch.ch_baixo_net_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.6_net_sala
+  - entity_id: switch.ch_cima_net_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.7_net_quarto
+  - entity_id: switch.cima_tv_q
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.7_net_sala
+  - entity_id: switch.cima_tv_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.8_net_quarto
+  - entity_id: switch.direita_tv_q
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.8_net_sala
+  - entity_id: switch.direita_tv_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.9_net_quarto
+  - entity_id: switch.esquerda_tv_q
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.9_net_sala
+  - entity_id: switch.esquerda_tv_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.baixo_tv_quarto
+  - entity_id: switch.mute_tv_q
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.baixo_tv_sala
+  - entity_id: switch.mute_tv_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.canal_baixo_net_quarto
+  - entity_id: switch.ok_tv_q
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.canal_baixo_net_sala
+  - entity_id: switch.ok_tv_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.canal_cima_net_quarto
+  - entity_id: switch.power_net_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.canal_cima_net_sala
+  - entity_id: switch.power_tv_q
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.cima_tv_quarto
+  - entity_id: switch.power_tv_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.cima_tv_sala
+  - entity_id: switch.source_tv_q
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.direita_tv_quarto
+  - entity_id: switch.source_tv_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.direita_tv_sala
+  - entity_id: switch.source_chromecast_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.esquerda_tv_quarto
+  - entity_id: switch.source_net_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.esquerda_tv_sala
+  - entity_id: switch.source_dvd_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.mute_tv_quarto
+  - entity_id: switch.power_dvd_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.mute_tv_sala
+  - entity_id: switch.vol_cima_tv_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.ok_tv_quarto
+  - entity_id: switch.vol_baixo_tv_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.ok_tv_sala
+  - entity_id: switch.vol_cima_tv_q
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.power_net_quarto
+  - entity_id: switch.vol_baixo_tv_q
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.power_net_sala
+  - entity_id: switch.sair_net_s
     from: 'off'
     platform: state
     to: 'on'
-  - entity_id: switch.power_tv_quarto
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: switch.power_tv_sala
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: switch.source_tv_quarto
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: switch.source_tv_sala
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: switch.source_chromecast_sala
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: switch.source_net_sala
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: switch.source_dvd_sala
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: switch.power_dvd_sala
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: script.source_chromecast_quarto
-    from: 'off'
-    platform: state
-    to: 'on'
-  - entity_id: script.source_net_quarto
+  - entity_id: switch.portao
     from: 'off'
     platform: state
     to: 'on'
@@ -339,11 +303,11 @@
     value_template: '{{ states.sensor.time.state == (states.input_datetime.hora_backup.attributes.timestamp
       | int | timestamp_custom(''%H:%M'', false)) }}'
   action:
-  - service: rest_command.delete_backup_old
-  - delay: 00:00:10
-  - service: rest_command.move_backup_old
-  - delay: 00:00:10
-  - service: rest_command.cria_pasta_backup
+#  - service: rest_command.delete_backup_old
+#  - delay: 00:00:30
+#  - service: rest_command.move_backup_old
+#  - delay: 00:00:30
+#  - service: rest_command.cria_pasta_backup
   - service: hassio.snapshot_full
     data_template:
       name: FRIS {{ now().strftime('%Y-%m-%d') }}
@@ -356,21 +320,20 @@
       addon: 7be23ff5_dropbox_sync
       input:
         command: upload
-- alias: Novo arquivo backup
-  condition:
-    condition: state
-    entity_id: input_boolean.fazer_backup
-    state: 'on'
-  trigger:
-    platform: state
-    entity_id: sensor.count_snap_files
+  - service: notify.telegram_bot
+    data_template:
+      message: Iniciando upload do arquivo para o Dropbox
+
+- alias: Novo backup
+  trigger: 
+  - platform: state
+    entity_id: sensor.dropbox_espaco_usado
   action:
   - service: notify.telegram_bot
     data_template:
-      message: 'Número de arquivos de backups {{ states.sensor.count_snap_files.state
-        }}
-
-        '
+      message: >
+       Espaço em uso de {%if trigger.from_state.state != 'unavaiable'%}{{trigger.from_state.state|float/1024/1024}}{%endif%}
+       para {%if trigger.to_state.state != 'unavaiable'%}{{ trigger.to_state.state |float / 1024/1024}}{%endif%}.
 - alias: Velocidade Internet Baixa
   condition:
     condition: state
@@ -436,10 +399,7 @@
   - service: notify.telegram_bot
     data_template:
       message: >
-       *Robson*
-       {%if trigger.from_state.state != 'not_home'%}saiu de *{{trigger.from_state.state|replace("home_arriving", "proximidade de casa")|replace("home","casa")}}*{%endif%}
-       {%if trigger.from_state.state != 'not_home' and trigger.to_state.state != 'not_home'%}e{%endif%}
-       {%if trigger.to_state.state != 'not_home'%}chegou em *{{trigger.to_state.state|replace("home_arriving","proximidade de casa")|replace("home","casa")}}*{%endif%}.
+       *Robson*{%if trigger.from_state.state != 'not_home'%}saiu de *{{trigger.from_state.state|replace("home_arriving", "proximidade de casa")|replace("home","casa")}}*{%endif%}{%if trigger.from_state.state != 'not_home' and trigger.to_state.state != 'not_home'%}e{%endif%}{%if trigger.to_state.state != 'not_home'%}chegou em *{{trigger.to_state.state|replace("home_arriving","proximidade de casa")|replace("home","casa")}}*{%endif%}.
 - alias: Liga Globo Flavia Chegou
   condition:
     condition: and
@@ -687,31 +647,29 @@
 - alias: Comando Telegram Arma Alarme
   condition:
     condition: state
-    entity_id: alarm_control_panel.ha_alarm
-    state: 'disarmed'
+    entity_id: binary_sensor.ativado
+    state: 'off'
   trigger:
     platform: event
     event_type: telegram_callback
     event_data:
       data: /arma_alarme
   action:
-  - service: alarm_control_panel.alarm_arm_away
-    data:
-      entity_id: alarm_control_panel.ha_alarm
+  - service: switch.toggle
+    entity_id: switch.alarme
 - alias: Comando Telegram desarma Alarme
   condition:
     condition: state
-    entity_id: alarm_control_panel.ha_alarm
-    state: 'armed_away'
+    entity_id: binary_sensor.ativado
+    state: 'on'
   trigger:
     platform: event
     event_type: telegram_callback
     event_data:
       data: /desarma_alarme
   action:
-  - service: alarm_control_panel.alarm_disarm
-    data:
-      entity_id: alarm_control_panel.ha_alarm
+  - service: switch.toggle
+    entity_id: switch.alarme
 - alias: Comando Telegram TV Sala
   hide_entity: true
   trigger:
@@ -733,7 +691,7 @@
   action:
   - service: switch.toggle
     data:
-      entity_id: switch.source_net_sala
+      entity_id: switch.source_net_s
 - alias: Comando Telegram Source Chromecast Sala
   hide_entity: true
   trigger:
@@ -744,7 +702,7 @@
   action:
   - service: switch.toggle
     data:
-      entity_id: switch.source_chromecast_sala
+      entity_id: switch.source_chromecast_s
 - alias: Robson saindo de casa
   trigger:
   - platform: event
@@ -1041,7 +999,7 @@
   action:
   - service: notify.telegram_bot
     data:
-      message: '*Atenção!* Não encontrei ninguém em casa e o alarme está desligado.'
+      message: '*Atenção!* Não encontrei *ninguém* em casa e o *alarme* está desligado.'
 - alias: Alarme acionado
   trigger:
   - platform: state
@@ -1050,7 +1008,7 @@
   action:
   - service: notify.telegram_bot
     data:
-      message: '*Atenção! Atenção! Alarme tocando.'
+      message: '*Atenção! Atenção! Alarme tocando.*'
   - service: alarm_control_panel.alarm_trigger
     entity_id: alarm_control_panel.ha_alarm
 - alias: Alarme ligado
@@ -1065,6 +1023,28 @@
   action:
   - service: alarm_control_panel.alarm_arm_away
     entity_id: alarm_control_panel.ha_alarm
+  - service: notify.telegram_bot
+    data:
+      message: '*Alarme* ativado.'
+- alias: Alarme ligado - Robson saindo de casa
+  condition:
+  - condition: state
+    entity_id: device_tracker.52008849ec808451
+    state: 'home'
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.ha_alarm
+    to: 'armed_away'
+  - platform: state
+    entity_id: alarm_control_panel.ha_alarm
+    to: 'armed_home'
+  - platform: state
+    entity_id: alarm_control_panel.ha_alarm
+    to: 'armed_night'
+  - platform: state
+    entity_id: alarm_control_panel.ha_alarm
+    to: 'armed_custom_bypass'
+  action:
   - service: notify.telegram_bot
     data:
       message: 'Olá *Robson*, está saindo de casa?'
@@ -1083,6 +1063,9 @@
   action:
   - service: alarm_control_panel.alarm_disarm
     entity_id: alarm_control_panel.ha_alarm
+  - service: notify.telegram_bot
+    data:
+      message: '*Alarme* desativado.'
 - alias: Arma alarme
   condition:
     condition: state
@@ -1113,28 +1096,28 @@
 - alias: Volume Sala Baixo
   trigger:
   - platform: state
-    entity_id: switch.vol_baixo_tv_sala
+    entity_id: switch.vol_baixo_tv_s
   action:
   - service: input_number.decrement
     entity_id: input_number.vol_tv_sala
 - alias: Volume Sala Cima
   trigger:
   - platform: state
-    entity_id: switch.vol_cima_tv_sala
+    entity_id: switch.vol_cima_tv_s
   action:
   - service: input_number.increment
     entity_id: input_number.vol_tv_sala
 - alias: Volume Quarto Baixo
   trigger:
   - platform: state
-    entity_id: switch.vol_baixo_tv_quarto
+    entity_id: switch.vol_baixo_tv_q
   action:
   - service: input_number.decrement
     entity_id: input_number.vol_tv_quarto
 - alias: Volume Quarto Cima
   trigger:
   - platform: state
-    entity_id: switch.vol_cima_tv_quarto
+    entity_id: switch.vol_cima_tv_q
   action:
   - service: input_number.increment
     entity_id: input_number.vol_tv_quarto

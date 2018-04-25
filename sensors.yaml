@@ -427,7 +427,7 @@
     fases_lua:
       entity_id: sensor.moon
       value_template: '{{{"New moon": "Lua Nova", "Waxing crescent": "Lua Crescente", "First quarter": "Minguante", "Waxing gibbous": "Minguante", "Full moon":"Lua Cheia", "Waning gibbous":"Lua Minguante", "Last quarter": "Lua Minguante", "Waning crescent": "Lua Crescente"} [states.sensor.moon.state] }}'
-      friendly_name_template: '{{{"New moon": "Lua Nova", "Waxing crescent": "Lua Crescente", "First quarter": "Minguante", "Waxing gibbous": "Minguante", "Full moon":"Lua Cheia", "Waning gibbous":"Lua Minguante", "Last quarter": "Lua Minguante", "Waning crescent": "Lua Crescente"} [states.sensor.moon.state] }}'
+      friendly_name_template: Fase da Lua # '{{{"New moon": "Lua Nova", "Waxing crescent": "Lua Crescente", "First quarter": "Minguante", "Waxing gibbous": "Minguante", "Full moon":"Lua Cheia", "Waning gibbous":"Lua Minguante", "Last quarter": "Lua Minguante", "Waning crescent": "Lua Crescente"} [states.sensor.moon.state] }}'
       entity_picture_template: >
        {% if is_state('sensor.moon', 'New moon') %}
        /local/FasesLua/NNewMoon.jpg

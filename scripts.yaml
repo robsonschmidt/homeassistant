@@ -43,155 +43,7 @@ play_spotify_isabelle:
       entity_id: media_player.spotify
       media_content_id: spotify:user:12175389811:playlist:5AY8U80s1JcmuCTk16LbCe
       media_content_type: playlist
-      
-## Controle Quarto
-
-liga_tv_net_quarto:
-  alias: Liga TV Net Quarto
-  sequence:
-  - data:
-      entity_id: switch.power_net_quarto
-    service: switch.turn_on
-  - data:
-      entity_id: switch.power_tv_quarto
-    service: switch.turn_on
-source_chromecast_quarto:
-  alias: Source Chromecast Quarto
-  sequence:
-  - data:
-      entity_id: switch.source_tv_quarto
-    service: switch.turn_on
-  - data:
-      entity_id: switch.cima_tv_quarto
-    service: switch.turn_on
-  - delay:
-      milliseconds: 500
-  - data:
-      entity_id: switch.ok_tv_quarto
-    service: switch.turn_on
-source_net_quarto:
-  alias: Source Net Quarto
-  sequence:
-  - data:
-      entity_id: switch.source_tv_quarto
-    service: switch.turn_on
-  - data:
-      entity_id: switch.baixo_tv_quarto
-    service: switch.turn_on
-  - delay:
-      milliseconds: 500
-  - data:
-      entity_id: switch.ok_tv_quarto
-    service: switch.turn_on
-tv_quarto_globo:
-  alias: TV Quarto Globo
-  sequence:
-  - data:
-      entity_id: switch.5_net_quarto
-    service: switch.turn_on
-  - delay:
-      milliseconds: 500
-  - data:
-      entity_id: switch.1_net_quarto
-    service: switch.turn_on
-  - delay:
-      milliseconds: 500
-  - data:
-      entity_id: switch.2_net_quarto
-    service: switch.turn_on
-tv_quarto_discovery:
-  alias: TV Quarto Discovery
-  sequence:
-  - data:
-      entity_id: switch.6_net_quarto
-    service: switch.turn_on
-  - delay:
-      milliseconds: 500
-  - data:
-      entity_id: switch.0_net_quarto
-    service: switch.turn_on
-  - delay:
-      milliseconds: 500
-  - data:
-      entity_id: switch.0_net_quarto
-    service: switch.turn_on
-tv_quarto_sbt:
-  alias: TV Quarto SBT
-  sequence:
-  - data:
-      entity_id: switch.5_net_quarto
-    service: switch.turn_on
-  - delay:
-      milliseconds: 500
-  - data:
-      entity_id: switch.0_net_quarto
-    service: switch.turn_on
-  - delay:
-      milliseconds: 500
-  - data:
-      entity_id: switch.4_net_quarto
-    service: switch.turn_on
-tv_quarto_record:
-  alias: TV Quarto Record
-  sequence:
-  - data:
-      entity_id: switch.5_net_quarto
-    service: switch.turn_on
-  - delay:
-      milliseconds: 500
-  - data:
-      entity_id: switch.0_net_quarto
-    service: switch.turn_on
-  - delay:
-      milliseconds: 500
-  - data:
-      entity_id: switch.7_net_quarto
-    service: switch.turn_on
-liga_tv_quarto_globo:
-  alias: Liga TV Quarto Globo
-  sequence:
-  - data:
-      entity_id: script.liga_tv_net_quarto
-    service: script.turn_on
-  - delay:
-      seconds: 80
-  - data:
-      entity_id: script.tv_quarto_globo
-    service: script.turn_on
-liga_tv_quarto_discovery:
-  alias: Liga TV Quarto Discovery
-  sequence:
-  - data:
-      entity_id: script.liga_tv_net_quarto
-    service: script.turn_on
-  - delay:
-      seconds: 80
-  - data:
-      entity_id: script.tv_quarto_discovery
-    service: script.turn_on
-liga_tv_quarto_sbt:
-  alias: Liga TV Quarto SBT
-  sequence:
-  - data:
-      entity_id: script.liga_tv_net_quarto
-    service: script.turn_on
-  - delay:
-      seconds: 80
-  - data:
-      entity_id: script.tv_quarto_sbt
-    service: script.turn_on
-liga_tv_quarto_record:
-  alias: Liga TV Quarto Record
-  sequence:
-  - data:
-      entity_id: script.liga_tv_net_quarto
-    service: script.turn_on
-  - delay:
-      seconds: 80
-  - data:
-      entity_id: script.tv_quarto_record
-    service: script.turn_on
-
+  
 ## Volume TV Quarto
 
 # Executa scripts para sincronizar volume para 10
@@ -215,7 +67,7 @@ reduz_vol_quarto:
   alias: Reduz Volume do Quarto
   sequence:
   - service: switch.toggle
-    entity_id: switch.vol_baixo_tv_quarto
+    entity_id: switch.vol_baixo_tv_q
   - wait_template: "{{ is_state('script.reduz_vol_quarto_pause', 'off') }}"
   - service_template: >
        {% if states.input_number.vol_tv_quarto.state|int > vol|int %}
@@ -229,7 +81,7 @@ reduz_vol_quarto_pause:
   alias: Reduz Volume do Quarto Pause
   sequence:
   - service: switch.toggle
-    entity_id: switch.vol_baixo_tv_quarto
+    entity_id: switch.vol_baixo_tv_q
   - wait_template: "{{ is_state('script.reduz_vol_quarto', 'off') }}"
   - service_template: >
        {% if states.input_number.vol_tv_quarto.state|int > vol|int %}
@@ -243,7 +95,7 @@ aumenta_vol_quarto:
   alias: Aumenta Volume Quarto
   sequence:
   - service: switch.toggle
-    entity_id: switch.vol_cima_tv_quarto
+    entity_id: switch.vol_cima_tv_q
   - wait_template: "{{ is_state('script.aumenta_vol_quarto_pause', 'off') }}"
   - service_template: >
        {% if states.input_number.vol_tv_quarto.state|int < (vol | int) %}
@@ -257,7 +109,7 @@ aumenta_vol_quarto_pause:
   alias: Aumenta Volume do Quarto Pause
   sequence:
   - service: switch.toggle
-    entity_id: switch.vol_cima_tv_quarto
+    entity_id: switch.vol_cima_tv_q
   - wait_template: "{{ is_state('script.aumenta_vol_quarto', 'off') }}"
   - service_template: >
        {% if states.input_number.vol_tv_quarto.state|int < vol|int %}
@@ -291,140 +143,140 @@ liga_tv_net_sala:
   alias: Liga TV Net Sala
   sequence:
   - data:
-      entity_id: switch.power_net_sala
+      entity_id: switch.power_net_s
     service: switch.turn_on
   - data:
-      entity_id: switch.power_tv_sala
+      entity_id: switch.power_tv_s
     service: switch.turn_on
 tv_sala_discovery:
   alias: TV Sala Discovery
   sequence:
   - data:
-      entity_id: switch.source_net_sala
+      entity_id: switch.source_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.sair_net_sala
+      entity_id: switch.sair_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.6_net_sala
+      entity_id: switch.seis_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.0_net_sala
+      entity_id: switch.zero_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.0_net_sala
+      entity_id: switch.zero_net_s
     service: switch.turn_on
 tv_sala_globo:
   alias: TV Sala Globo
   sequence:
   - data:
-      entity_id: switch.source_net_sala
+      entity_id: switch.source_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.sair_net_sala
+      entity_id: switch.sair_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.5_net_sala
+      entity_id: switch.cinco_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.1_net_sala
+      entity_id: switch.um_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.2_net_sala
+      entity_id: switch.dois_net_s
     service: switch.turn_on
 tv_sala_sbt:
   alias: TV Sala SBT
   sequence:
   - data:
-      entity_id: switch.source_net_sala
+      entity_id: switch.source_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.sair_net_sala
+      entity_id: switch.sair_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.5_net_sala
+      entity_id: switch.cinco_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.0_net_sala
+      entity_id: switch.zero_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.4_net_sala
+      entity_id: switch.quatro_net_s
     service: switch.turn_on
 tv_sala_record:
   alias: TV Sala Record
   sequence:
   - data:
-      entity_id: switch.source_net_sala
+      entity_id: switch.source_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.sair_net_sala
+      entity_id: switch.sair_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.5_net_sala
+      entity_id: switch.cinco_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.0_net_sala
+      entity_id: switch.zero_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.7_net_sala
+      entity_id: switch.sete_net_s
     service: switch.turn_on
 tv_sala_band:
   alias: TV Sala Band
   sequence:
   - data:
-      entity_id: switch.source_net_sala
+      entity_id: switch.source_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.sair_net_sala
+      entity_id: switch.sair_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.5_net_sala
+      entity_id: switch.cinco_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.0_net_sala
+      entity_id: switch.zero_net_s
     service: switch.turn_on
   - delay:
       milliseconds: 500
   - data:
-      entity_id: switch.2_net_sala
+      entity_id: switch.dois_net_s
     service: switch.turn_on
 liga_tv_sala_discovery:
   alias: Liga TV Sala Discovery
@@ -479,7 +331,7 @@ liga_chromecast_sala:
   - delay:
       seconds: 10
   - data:
-      entity_id: switch.source_chromecast_sala
+      entity_id: switch.source_chromecast_s
     service: switch.turn_on
 
 ## Volume TV Sala
@@ -505,7 +357,7 @@ reduz_vol_sala:
   alias: Reduz Volume do Sala
   sequence:
   - service: switch.toggle
-    entity_id: switch.vol_baixo_tv_sala
+    entity_id: switch.vol_baixo_tv_s
   - wait_template: "{{ is_state('script.reduz_vol_sala_pause', 'off') }}"
   - service_template: >
        {% if states.input_number.vol_tv_sala.state|int > vol|int %}
@@ -519,7 +371,7 @@ reduz_vol_sala_pause:
   alias: Reduz Volume do Sala Pause
   sequence:
   - service: switch.toggle
-    entity_id: switch.vol_baixo_tv_sala
+    entity_id: switch.vol_baixo_tv_s
   - wait_template: "{{ is_state('script.reduz_vol_sala', 'off') }}"
   - service_template: >
        {% if states.input_number.vol_tv_sala.state|int > vol|int %}
@@ -533,7 +385,7 @@ aumenta_vol_sala:
   alias: Aumenta Volume Sala
   sequence:
   - service: switch.toggle
-    entity_id: switch.vol_cima_tv_sala
+    entity_id: switch.vol_cima_tv_s
   - wait_template: "{{ is_state('script.aumenta_vol_sala_pause', 'off') }}"
   - service_template: >
        {% if states.input_number.vol_tv_sala.state|int < (vol | int) %}
@@ -547,7 +399,7 @@ aumenta_vol_sala_pause:
   alias: Aumenta Volume do Sala Pause
   sequence:
   - service: switch.toggle
-    entity_id: switch.vol_cima_tv_sala
+    entity_id: switch.vol_cima_tv_s
   - wait_template: "{{ is_state('script.aumenta_vol_sala', 'off') }}"
   - service_template: >
        {% if states.input_number.vol_tv_sala.state|int < vol|int %}
@@ -897,11 +749,11 @@ select_source_sala:
     data_template:
       entity_id: >
         {% if source == 'Net'%}
-         switch.source_net_sala
+         switch.source_net_s
         {% elif source == 'Chromecast'%}
-         switch.source_chromecast_sala
+         switch.source_chromecast_s
         {% elif source == 'DVD'%}
-         switch.source_dvd_sala
+         switch.source_dvd_s
         {% endif %}
         
 select_channel_sala:

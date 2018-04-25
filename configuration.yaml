@@ -41,8 +41,8 @@ config:
 #        - light
 #        - switch
 
-#customizer:
-#  custom_ui: local
+customizer:
+  custom_ui: local
 
 http:
   # Secrets are defined in the file secrets.yaml
@@ -141,10 +141,33 @@ google_assistant:
   exposed_domains:
     - switch
     - light
-
+    - media_player
+    - script
+  entity_config:
+    switch.luz_esquerda:
+      name: Left Light
+    switch.luz_direita:
+      name: Right Light
+    switch.luz_central:
+      name: Central Light
+    switch.power_tv_s:
+      name: Room TV
+    switch.power_tv_1:
+      name: Bedroom TV
+    switch.power_net_s:
+      name: Room Setup box
+    switch.mute_tv_s:
+      name: Mute Room TV
+    switch.cervejeira:
+      name: Beer fridge
+    script.tv_sala_globo:
+      name: Room TV Globo
+    script.tv_sala_sbt:
+      name: Room TV SBT
+    switch.portao:
+      name: gate
 mqtt:
   broker: 192.168.86.139
-
 #image_processing:
 #  - platform: openalpr_local
 #    region: br

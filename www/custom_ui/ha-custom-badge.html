@@ -1,0 +1,44 @@
+<link rel='import' href='../../bowser_components/polymer/polymer-element.html'>
+
+<link rel='import' href='./ha-custom-label-badge.html'>
+
+<dom-module id='ha-custom-badge'>
+  <template>
+    <style>
+      :host {
+        --ha-label-badge-color: #dac90d;
+      }
+    </style>
+    <ha-custom-label-badge
+      icon=[[icon]]
+      label=[[stateObj.state]]
+      description=[[stateObj.entity_id]]
+    ></ha-custom-label-badge>
+  </template>
+</dom-module>
+
+<script>
+class HaCustomBadge extends Polymer.Element {
+  static get is() { return 'ha-custom-badge'; }
+  static get properties() {
+    return {
+      hass: {
+        type: Object,
+      },
+      stateObj: {
+        type: Object,
+      },
+      value: String,
+      icon: String,
+      label: String,
+      description: String,
+      image: {
+        type: String,
+        observer: 'imageChanged',
+      },
+    };
+  }
+
+}
+customElements.define(HaCustomBadge.is, HaCustomBadge);
+</script>

@@ -147,87 +147,87 @@ input_text.tv_sala_tiles:
     column_width: 75px  # optional
     row_height: 75px    # optional
     entities:
-      - entity: switch.power_net_sala
+      - entity: switch.power_net_s
         image: /local/net.png
         column: 1
         row: 1
-      - entity: switch.source_net_sala
+      - entity: switch.source_net_s
         image: /local/net_source.png
         column: 2
         row: 1
-      - entity: switch.source_chromecast_sala
+      - entity: switch.source_chromecast_s
         image: /local/chromecast.png
         column: 2
         row: 2
-      - entity: switch.power_dvd_sala
+      - entity: switch.power_dvd_s
         image: /local/dvd.png
         column: 1
         row: 3
-      - entity: switch.source_dvd_sala
+      - entity: switch.source_dvd_s
         image: /local/dvd_source.png
         column: 2
         row: 3
-      - entity: switch.canal_cima_net_sala
+      - entity: switch.ch_cima_net_s
         image: /local/CHMais.png
         column: 1
         row: 4
-      - entity: switch.canal_baixo_net_sala
+      - entity: switch.ch_baixo_net_s
         image: /local/CHMenos.png
         column: 2
         row: 4
-      - entity: switch.cima_tv_sala
+      - entity: switch.cima_tv_s
         image: /local/cima.png
         column: 1
         row: 5
-      - entity: switch.baixo_tv_sala
+      - entity: switch.baixo_tv_s
         image: /local/baixo.png
         column: 2
         row: 5
-      - entity: switch.ok_tv_sala
+      - entity: switch.ok_tv_s
         image: /local/ok.png
         column: 1
         row: 6
-      - entity: switch.source_tv_sala
+      - entity: switch.source_tv_s
         image: /local/source.png
         column: 2
         row: 6
-      - entity: switch.1_net_sala
+      - entity: switch.um_net_s
         image: /local/1.png
         column: 3
         row: 1
-      - entity: switch.2_net_sala
+      - entity: switch.dois_net_s
         image: /local/2.png
         column: 4
         row: 1
-      - entity: switch.3_net_sala
+      - entity: switch.tres_net_s
         image: /local/3.png
         column: 5
         row: 1
-      - entity: switch.4_net_sala
+      - entity: switch.quatro_net_s
         image: /local/4.png
         column: 3
         row: 2
-      - entity: switch.5_net_sala
+      - entity: switch.cima_net_s
         image: /local/5.png
         column: 4
         row: 2
-      - entity: switch.6_net_sala
+      - entity: switch.seis_net_s
         image: /local/6.png
         column: 5
         row: 2
-      - entity: switch.7_net_sala
+      - entity: switch.sete_net_s
         image: /local/7.png
         column: 3
         row: 3
-      - entity: switch.8_net_sala
+      - entity: switch.oito_net_s
         image: /local/8.png
         column: 4
         row: 3
-      - entity: switch.9_net_sala
+      - entity: switch.nove_net_s
         image: /local/9.png
         column: 5
         row: 3
-      - entity: switch.0_net_sala
+      - entity: switch.zero_net_s
         image: /local/0.png
         column: 4
         row: 4    
@@ -251,70 +251,22 @@ input_text.tv_quarto_tiles:
         image: /local/chromecast.png
         column: 2
         row: 1
-      - entity: switch.canal_cima_net_quarto
-        image: /local/CHMais.png
-        column: 1
-        row: 2
-      - entity: switch.canal_baixo_net_quarto
-        image: /local/CHMenos.png
-        column: 2
-        row: 2
-      - entity: switch.cima_tv_quarto
+      - entity: switch.cima_tv_q
         image: /local/cima.png
         column: 1
         row: 3
-      - entity: switch.baixo_tv_quarto
+      - entity: switch.baixo_tv_q
         image: /local/baixo.png
         column: 2
         row: 3
-      - entity: switch.ok_tv_quarto
+      - entity: switch.ok_tv_q
         image: /local/ok.png
         column: 1
         row: 4
-      - entity: switch.source_tv_quarto
+      - entity: switch.source_tv_q
         image: /local/source.png
         column: 2
         row: 4
-      - entity: switch.1_net_quarto
-        image: /local/1.png
-        column: 3
-        row: 1
-      - entity: switch.2_net_quarto
-        image: /local/2.png
-        column: 4
-        row: 1
-      - entity: switch.3_net_quarto
-        image: /local/3.png
-        column: 5
-        row: 1
-      - entity: switch.4_net_quarto
-        image: /local/4.png
-        column: 3
-        row: 2
-      - entity: switch.5_net_quarto
-        image: /local/5.png
-        column: 4
-        row: 2
-      - entity: switch.6_net_quarto
-        image: /local/6.png
-        column: 5
-        row: 2
-      - entity: switch.7_net_quarto
-        image: /local/7.png
-        column: 3
-        row: 3
-      - entity: switch.8_net_quarto
-        image: /local/8.png
-        column: 4
-        row: 3
-      - entity: switch.9_net_quarto
-        image: /local/9.png
-        column: 5
-        row: 3
-      - entity: switch.0_net_quarto
-        image: /local/0.png
-        column: 4
-        row: 4    
 
 # State Cards Spotify
 input_text.churrasqueira_player:
@@ -350,7 +302,7 @@ input_text.sala_player:
     player: media_player.tv_sala
     set_up_box:
       show: true
-      power: switch.power_net_sala 
+      power: switch.power_net_s 
     sources:
     - name: Chromecast
     - name: Net
@@ -370,58 +322,58 @@ input_text.sala_player:
     buttons:
     - name: um
       icon: mdi:numeric-1-box
-      switch: switch.1_net_sala
+      switch: switch.um_net_s
     - name: dois
       icon: mdi:numeric-2-box
-      switch: switch.2_net_sala
+      switch: switch.dois_net_s
     - name: tres
       icon: mdi:numeric-3-box
-      switch: switch.3_net_sala
+      switch: switch.tres_net_s
     - name: quatro
       icon: mdi:numeric-4-box
-      switch: switch.4_net_sala
+      switch: switch.quatro_net_s
     - name: cinco
       icon: mdi:numeric-5-box
-      switch: switch.5_net_sala
+      switch: switch.cinco_net_s
     - name: seis
       icon: mdi:numeric-6-box
-      switch: switch.6_net_sala
+      switch: switch.seis_net_s
     - name: sete
       icon: mdi:numeric-7-box
-      switch: switch.7_net_sala
+      switch: switch.sete_net_s
     - name: oito
       icon: mdi:numeric-8-box
-      switch: switch.8_net_sala
+      switch: switch.oito_net_s
     - name: nove
       icon: mdi:numeric-9-box
-      switch: switch.9_net_sala
+      switch: switch.nove_net_s
     - name: space
       is_space: true
     - name: zero
       icon: mdi:numeric-0-box
-      switch: switch.0_net_sala
+      switch: switch.zero_net_s
     - name: space
       is_space: true
     - name: CH
       icon: mdi:plus-box
-      switch: switch.canal_cima_net_sala
+      switch: switch.ch_cima_net_s
       show_name: true
     - name: Source
-      switch: switch.source_tv_sala
+      switch: switch.source_tv_s
       show_name: true
     - name: Cima
       icon: mdi:arrow-up-bold-box
-      switch: switch.cima_tv_sala
+      switch: switch.cima_tv_s
     - name: CH
       icon: mdi:minus-box
-      switch: switch.canal_baixo_net_sala
+      switch: switch.ch_baixo_net_s
       show_name: true
     - name: OK
-      switch: switch.ok_tv_sala
+      switch: switch.ok_tv_s
       show_name: true
     - name: Baixo
       icon: mdi:arrow-down-bold-box
-      switch: switch.baixo_tv_sala
+      switch: switch.baixo_tv_s
 input_text.quarto_player:
   icon: mdi:cast
   custom_ui_state_card: state-card-mini-media-player
@@ -480,25 +432,23 @@ sensor.google_wifi_uptime:
 # Device Tracker
 device_tracker.iphonedeflavialan:
   friendly_name: Flavia
+#  custom_ui_state_card: custom-cover-badge
 device_tracker.iphonederobsonlan:
   friendly_name: Robson
 device_tracker.52008849ec808451:
   friendly_name: Robson
+#  custom_ui_state_card: custom-cover-badge
 
 # Controle Quarto
-switch.power_net_quarto:
-  friendly_name: NET
-  homebridge_visible: true
-  homebridge_name: Net Quarto
-switch.power_tv_quarto:
+switch.power_tv_q:
   friendly_name: TV
   homebridge_visible: true
   homebridge_name: TV Quarto
-switch.mute_tv_quarto:
+switch.mute_tv_q:
   friendly_name: Mute
   homebridge_visible: true
   homebridge_name: Mute TV Quarto
-switch.ok_tv_quarto:
+switch.ok_tv_q:
   friendly_name: OK
 script.source_chromecast_quarto:
   homebridge_visible: true
@@ -506,10 +456,10 @@ script.source_chromecast_quarto:
 script.source_net_quarto:
   homebridge_visible: true
   homebridge_name: Source Net Quarto
-script._tv_quarto_globo:
+script.tv_quarto_globo:
   homebridge_visible: true
   homebridge_name: TV Quarto Globo
-script._tv_quarto_discovery:
+script.tv_quarto_discovery:
   homebridge_visible: true
   homebridge_name: TV Quarto Discovery
 script.tv_quarto_sbt:
@@ -526,19 +476,19 @@ script.liga_tv_quarto_sbt:
   homebridge_name: Liga TV Quarto SBT
 
 # Controle Sala
-switch.power_net_sala:
+switch.power_net_s:
   friendly_name: NET
   homebridge_visible: true
   homebridge_name: Net Sala
-switch.power_tv_sala:
+switch.power_tv_s:
   friendly_name: TV
   homebridge_visible: true
   homebridge_name: TV Sala
-switch.mute_tv_sala:
+switch.mute_tv_s:
   friendly_name: Mute
   homebridge_visible: true
   homebridge_name: Mute TV Sala
-switch.ok_tv_sala:
+switch.ok_tv_s:
   friendly_name: OK
 script.tv_net_sala:
   homebridge_visible: true
@@ -562,13 +512,13 @@ script.liga_tv_sala_globo:
 script.liga_tv_sala_sbt:
   homebridge_visible: true
   homebridge_name: Liga TV Sala SBT
-switch.source_chromecast_sala:
+switch.source_chromecast_s:
   homebridge_visible: true
   homebridge_name: Source Chromecast Sala
 script.liga_chromecast_sala:
   homebridge_visible: true
   homebridge_name: Liga Chromecast Sala
-switch.source_net_sala:
+switch.source_net_s:
   homebridge_visible: true
   homebridge_name: Source Net Sala
 
@@ -576,7 +526,7 @@ input_boolean.weather:
   custom_ui_state_card: custom-weather-card
   config:
     weather: weather.yweather
-    
+
 zone.home:
   friendly_name: Casa
   
@@ -588,16 +538,15 @@ binary_sensor.acionado:
   icon: mdi:home-alert
 binary_sensor.ativado:
   icon: mdi:lock
-binary_sensor.portao:
-  icon: mdi:garage
-  
+
 sensor.portao:
   friendly_name_template: >
    Portão {{ {"ON": "Aberto", "OFF", "Fechado"}[states.sensor.portao.state] }}
 
 alarm_control_panel.ha_alarm:
   friendly_name: Alarme
-  
+#  custom_ui_state_card: custom-cover-badge
+
 group.tv_sala: 
   order: 1
 group.tv_sala_tiles:
@@ -646,8 +595,9 @@ sensor.hline_4:
     bordertop: none
     backgroundimage: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 100, 55, 1), rgba(0, 0, 0, 0))
 
-#binary_sensor.portao_template:
-#  custom_ui_state_card: state-badge-custom
+cover.portao:
+#  custom_ui_state_card: custom-cover-badge
+  friendly_name: Portão
 
-#switch.portao_template:
-#  custom_ui_state_card: state-badge-custom
+#sensor.fases_lua:
+#  custom_ui_state_card: custom-cover-badge

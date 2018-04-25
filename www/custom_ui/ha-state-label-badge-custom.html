@@ -1,24 +1,17 @@
-<link rel='import' href='../../../bower_components/polymer/polymer-element.html'>
-
-<link rel='import' href='../../../src/util/hass-mixins.html'>
-<link rel="import" href="../../../src/util/hass-util.html">
-
-<link rel='import' href='https://fris.duckdns.org:8123/local/custom_ui/label-badge-custom.html'>
-
-<dom-module id='state-label-badge-custom'>
+<dom-module id='ha-state-label-badge-custom'>
   <template>
     <style>
       :host {
         cursor: pointer;
       }
-      label-badge-custom {
+      ha-label-badge {
         --ha-label-badge-color: var(--label-badge-red, #DF4C1E);
       }
-      label-badge-custom.has-unit_of_measurement {
+      ha-label-badge.has-unit_of_measurement {
         --ha-label-badge-label-text-transform: none;
       }
-      label-badge-custom.binary_sensor,
-      label-badge-custom.updater {
+      ha-label-badge.binary_sensor,
+      ha-label-badge.updater {
         --ha-label-badge-color: var(--label-badge-blue, #039be5);
       }
       .red {
@@ -38,13 +31,13 @@
       }
     </style>
 
-    <label-badge-custom class$='[[computeClassNames(state)]]'
+    <ha-label-badge class$='[[computeClassNames(state)]]'
       value='[[computeValue(localize, state)]]'
       icon='[[computeIcon(state)]]'
       image='[[computeImage(state)]]'
       label='[[computeLabel(localize, state, timerTimeRemaining)]]'
       description='[[computeDescription(state)]]'
-    ></label-badge-custom>
+    ></ha-label-badge>
   </template>
 </dom-module>
 
@@ -53,9 +46,9 @@
  * @appliesMixin window.hassMixins.LocalizeMixin
  * @appliesMixin window.hassMixins.EventsMixin
  */
-class StateLabelBadgeCustom extends
+class HaStateLabelBadgeCustom extends
   window.hassMixins.LocalizeMixin(window.hassMixins.EventsMixin(Polymer.Element)) {
-  static get is() { return 'state-label-badge-custom'; }
+  static get is() { return 'ha-state-label-badge-custom'; }
   static get properties() {
     return {
       hass: Object,
@@ -99,8 +92,10 @@ class StateLabelBadgeCustom extends
       case 'sun':
       case 'alarm_control_panel':
       case 'timer':
-        return null;
+      case 'cover':
       case 'sensor':
+      case 'vacuum':
+        return null;
       default:
         return state.state === 'unknown' ? '-' : (
           localize(`component.${domain}.state.${state.state}`)
@@ -118,20 +113,24 @@ class StateLabelBadgeCustom extends
         if (state.state === 'pending') {
           return 'mdi:clock-fast';
         } else if (state.state === 'armed_away') {
-          return 'mdi:nature';
+          return 'mdi:bell-plus';
         } else if (state.state === 'armed_home') {
-          return 'mdi:home-variant';
+          return 'mdi:bell-plus';
         } else if (state.state === 'armed_night') {
-          return 'mdi:weather-night';
+          return 'mdi:bell-plus';
         } else if (state.state === 'armed_custom_bypass') {
-          return 'mdi:security-home';
+          return 'mdi:bell-plus';
         } else if (state.state === 'triggered') {
-          return 'mdi:alert-circle';
+          return 'mdi:bell-ring';
+        } else if (state.state === 'disarmed'){
+            return 'mdi:bell-off';        
         }
-        // state == 'disarmed'
         return window.hassUtil.domainIcon(domain, state.state);
       case 'binary_sensor':
       case 'device_tracker':
+      case 'cover':
+      case 'vacuum':
+      case 'sensor':
       case 'updater':
         return window.hassUtil.stateIcon(state);
       case 'sun':
@@ -149,7 +148,7 @@ class StateLabelBadgeCustom extends
   computeLabel(localize, state, timerTimeRemaining) {
     const domain = window.hassUtil.computeDomain(state);
     if (state.state === 'unavailable' ||
-        ['device_tracker', 'alarm_control_panel'].includes(domain)) {
+        ['device_tracker', 'alarm_control_panel','cover','sensor','vacuum'].includes(domain)) {
       // Localize the state with a special state_badge namespace, which has variations of
       // the state translations that are truncated to fit within the badge label. Translations
       // are only added for device_tracker and alarm_control_panel.
@@ -186,5 +185,5 @@ class StateLabelBadgeCustom extends
     this.timerTimeRemaining = window.hassUtil.timerTimeRemaining(stateObj);
   }
 }
-customElements.define(StateLabelBadgeCustom.is, StateLabelBadgeCustom);
+customElements.define(HaStateLabelBadgeCustom.is, HaStateLabelBadgeCustom);
 </script>

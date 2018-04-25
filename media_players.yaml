@@ -13,19 +13,19 @@
   commands:
     turn_on:
       service: switch.toggle
-      entity_id: switch.power_tv_quarto
+      entity_id: switch.power_tv_q
     turn_off:
       service: switch.toggle
-      entity_id: switch.power_tv_quarto
+      entity_id: switch.power_tv_q
     volume_up:
       service: switch.toggle
-      entity_id: switch.vol_cima_tv_quarto
+      entity_id: switch.vol_cima_tv_q
     volume_down:
       service: switch.toggle
-      entity_id: switch.vol_baixo_tv_quarto
+      entity_id: switch.vol_baixo_tv_q
     volume_mute:
       service: switch.toggle
-      entity_id: switch.mute_tv_quarto
+      entity_id: switch.mute_tv_q
     volume_set:
       service: script.turn_on
       data_template:
@@ -42,19 +42,19 @@
   commands:
     turn_on:
       service: switch.toggle
-      entity_id: switch.power_tv_sala
+      entity_id: switch.power_tv_s
     turn_off:
       service: switch.toggle
-      entity_id: switch.power_tv_sala
+      entity_id: switch.power_tv_s
     volume_up:
       service: switch.toggle
-      entity_id: switch.vol_cima_tv_sala
+      entity_id: switch.vol_cima_tv_s
     volume_down:
       service: switch.toggle
-      entity_id: switch.vol_baixo_tv_sala
+      entity_id: switch.vol_baixo_tv_s
     volume_mute:
       service: switch.toggle
-      entity_id: switch.mute_tv_sala
+      entity_id: switch.mute_tv_s
     volume_set:
       service: script.turn_on
       data_template:

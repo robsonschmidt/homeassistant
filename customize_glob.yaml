@@ -28,5 +28,27 @@ sensor.humidade_quarto_isabelle:
   state_card_mode: badges
 sensor.temperatura_quarto_isabelle:
   state_card_mode: badges
+sensor.dark_sky_icon:
+  state_card_mode: badges
+sensor.dark_sky_icon_1:
+  state_card_mode: badges
+device_tracker.52008849ec808451:
+  state_card_mode: badges
+device_tracker.iphonedeflavialan:
+  state_card_mode: badges
+sensor.fases_lua:
+  state_card_mode: badges
+alarm_control_panel.ha_alarm:
+  state_card_mode: badges
+cover.portao:
+  state_card_mode: badges
+vacuum.fritz:
+  state_card_mode: badges
+
+group.teste:
+  state_card_mode: badges
+  badges_list:
+  - sensor.dark_sky_icon
+  - sensor.dark_sky_icon_1
 sensor.hline_*:
  custom_ui_state_card: state-card-hline

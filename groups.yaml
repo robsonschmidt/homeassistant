@@ -2,33 +2,27 @@ default_view:
   view: yes
   icon: mdi:home
   entities:
-  - device_tracker.52008849ec808451
-  - device_tracker.iphonedeflavialan
-  - sensor.fases_lua
-  - alarm_control_panel.ha_alarm
-  - binary_sensor.portao_template
-  - switch.portao
-  - switch.portao_template
+  - group.badges
   - group.previsao_tempo
   - group.aspirador
   name: 'Tela Inicial'
 
-# Card Aspirador
-aspirador:
-  name: Aspirador
+# Card Badges
+badges:
+  name: ' '
+  control: hidden
   entities:
+  - device_tracker.52008849ec808451
+  - device_tracker.iphonedeflavialan
+  - sensor.fases_lua
+  - alarm_control_panel.ha_alarm
+  - cover.portao
   - vacuum.fritz
-
-# Card Alarme  
-alarme:
-  name: Alarme
-  entities:
-  - binary_sensor.acionado
-  - binary_sensor.ativado
 
 # Card Previsão de Tempo
 previsao_tempo:
-  name: Previsão de Tempo
+  name: ' '
+  control: hidden
   entities:
   - input_boolean.weather
     
@@ -42,7 +36,8 @@ garagem:
   - group.portao
 # Card portão
 portao:
-  name: Frente
+  name: ' '
+  control: hidden
   entities:
   - switch.portao
 
@@ -56,7 +51,8 @@ sala:
   - camera.interna
 # Card Controle TV Sala
 tv_sala_tiles:
-  name: 'TV Sala'
+  name: ' '
+  control: hidden
   entities:
   - input_text.sala_player
 
@@ -70,7 +66,8 @@ churrasqueira:
   - camera.fundos
 # Card Luz Churrasqueira
 churrasqueira_luz:
-  name: 'Fundos'
+  name: ' '
+  control: hidden
   entities:
   - switch.display
   - switch.garden_light
@@ -137,7 +134,6 @@ fundos_tiles:
   - camera.frente
   - camera.fundos
   - camera.interna
-  - switch.rest_power_net_sala
 quartos_tiles:
   name: Quarto
   entities:

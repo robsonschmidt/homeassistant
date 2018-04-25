@@ -1,0 +1,31 @@
+<link rel="import" href="/local/custom_ui/ha-state-label-badge-custom" async="">
+
+<dom-module id='ha-badges-card-custom'>
+  <template>
+    <style>
+      ha-state-label-badge {
+        display: inline-block;
+        margin-bottom: var(--ha-state-label-badge-margin-bottom, 16px);
+      }
+    </style>
+    <template is='dom-repeat' items='[[states]]'>
+      <ha-state-label-badge-custom hass='[[hass]]' state='[[item]]'></ha-state-label-badge-custom>
+    </template>
+  </template>
+</dom-module>
+
+<script>
+class HaBadgesCardCustom extends Polymer.Element {
+  static get is() { return 'ha-badges-card-custom'; }
+  static get properties() {
+    return {
+      hass: Object,
+      states: Array,
+    };
+  }
+  ready() {
+    super.ready();
+  }
+}
+customElements.define(HaBadgesCardCustom.is, HaBadgesCardCustom);
+</script>

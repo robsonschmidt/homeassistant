@@ -1,18 +1,21 @@
-<link rel='import' href='../../bower_components/polymer/polymer-element.html'>
-<link rel='import' href='../../bower_components/iron-icon/iron-icon.html'>
-
-<dom-module id='label-badge-custom'>
+<dom-module id='ha-custom-label-badge'>
   <template>
     <style>
+    state more-info {
+      background-color: var(--paper-card-background-color, inherit);
+      display: inline-block;
+      width: var(--ha-badges-card-width, initial);
+      text-align: var(--ha-badges-card-text-align, initial);
+    }
     .badge-container {
       display: inline-block;
       text-align: center;
       vertical-align: top;
     }
-    .label-badge-custom {
+    .label-badge {
       position: relative;
       display: block;
-      margin: 0 auto;
+      margin: -1px auto;
       width: var(--ha-label-badge-size, 2.5em);
       text-align: center;
       height: var(--ha-label-badge-size, 2.5em);
@@ -26,31 +29,30 @@
       background-size: cover;
       transition: border .3s ease-in-out;
     }
-    .label-badge-custom .value {
+    .label-badge .value {
       font-size: 90%;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .label-badge-custom .value.big {
+    .label-badge .value.big {
       font-size: 70%;
     }
-    .label-badge-custom .label {
+    .label-badge .label {
       position: absolute;
       bottom: -1em;
       /* Make the label as wide as container+border. (parent_borderwidth / font-size) */
-      left: -0.2em;
-      right: -0.2em;
+      left: -0.1em;
+      right: -0.1em;
       line-height: 1em;
       font-size: 0.5em;
     }
-    .label-badge-custom .label span {
-      box-sizing: border-box;
-      max-width: 100%;
+    .label-badge .label span {
+      max-width: 68%;
       display: inline-block;
       background-color: var(--ha-label-badge-color, var(--primary-color));
       color: var(--ha-label-badge-label-color, white);
       border-radius: 1em;
-      padding: 9% 16% 8% 16%; /* mostly apitalized text, not much descenders => bit more top margin */
+      padding: 8% 16% 8% 16%; /* mostly apitalized text, not much descenders => bit more top margin */
       font-weight: 500;
       overflow: hidden;
       text-transform: uppercase;
@@ -58,15 +60,14 @@
       transition: background-color .3s ease-in-out;
       text-transform: var(--ha-label-badge-label-text-transform, uppercase);
     }
-    .label-badge-custom .label.big span {
+    .label-badge .label.big span {
       font-size: 90%;
-      padding: 10% 12% 7% 12%; /* push smaller text a bit down to center vertically */
     }
     .badge-container .title {
       margin-top: 1em;
       font-size: var(--ha-label-badge-title-font-size, .9em);
       width: var(--ha-label-badge-title-width, 5em);
-      font-weight: 300;
+      font-weight: var(--ha-label-badge-title-font-weight, 400);
       overflow: hidden;
       text-overflow: ellipsis;
       line-height: normal;
@@ -75,36 +76,66 @@
       display: none !important;
     }
     </style>
-
-    <div class='badge-container'>
-      <div class='label-badge-custom' id='badge'>
-        <div class$='[[computeValueClasses(value)]]'>
-          <iron-icon icon='[[icon]]' hidden$='[[computeHideIcon(icon, value, image)]]'></iron-icon>
-          <span hidden$='[[computeHideValue(value, image)]]'>[[value]]</span>
+    <template is='dom-if' if='[[!inDialog]]'>
+      <div class='badge-container' style='font-size: 85%;'>
+        <div class='label-badge' id='badge'>
+          <div class$='[[computeValueClasses(value)]]' on-tap='openInfoCard'>
+            <iron-icon icon='[[icon]]' hidden$='[[computeHideIcon(icon, value, image)]]'></iron-icon>
+            <span hidden$='[[computeHideValue(value, image)]]'>[[value]]</span>
+          </div>
+          <div hidden$='[[computeHideLabel(label)]]' class$='[[computeLabelClasses(label)]]'>
+            <span>[[label]]</span>
+          </div>
         </div>
-        <div hidden$='[[computeHideLabel(label)]]' class$='[[computeLabelClasses(label)]]'>
-          <span>[[label]]</span>
-        </div>
+        <div class='title' hidden$='[[!description]]'>[[description]]</div>
       </div>
-      <div class='title' hidden$='[[!description]]'>[[description]]</div>
-    </div>
+    </template>
+    <template is='dom-if' if='[[inDialog]]'>
+      <div>
+        <more-info-content style="display: block;">
+          <more-info-badge>
+            <paper-button raised on-tap='callCommand'>
+              <iron-icon icon='mdi:power'></iron-icon>
+            </paper-button>
+          </more-info-badge>
+        </more-info-content>
+      </div>
+    </template>
   </template>
 </dom-module>
 
 <script>
-class LabelBadgeCustom extends Polymer.Element {
-  static get is() { return 'label-badge-custom'; }
+class HaCustomLabelBadge extends Polymer.Element {
+  static get is() { return 'ha-custom-label-badge'; }
   static get properties() {
     return {
+      hass: {
+        type: Object,
+      },
+      stateObj: {
+        type: Object,
+      },
       value: String,
-      icon: String,
+      icon: {
+        type: String,
+        observer: 'iconChanged',
+      },
       label: String,
       description: String,
       image: {
         type: String,
         observer: 'imageChanged',
       },
+      showExtraInfo: Boolean,
     };
+  }
+  ready() {
+    super.ready();
+    this.label = this.stateObj.state == 'closed' ? 'Fechado' : 'Aberto';
+    this.icon = this.stateObj.attributes.icon;
+    this.description = this.stateObj.attributes.friendly_name;
+    this.image = this.stateObj.attributes.image;
+    this.showExtraInfo = false;
   }
   computeValueClasses(value) {
     return value && value.length > 4 ? 'value big' : 'value';
@@ -121,9 +152,15 @@ class LabelBadgeCustom extends Polymer.Element {
   computeHideValue(value, image) {
     return !value || image;
   }
+  iconChanged(newVal) {
+    this.$.badge.style.icon = newVal ? newVal : '';
+  }
   imageChanged(newVal) {
     this.$.badge.style.backgroundImage = newVal ? 'url(' + newVal + ')' : '';
   }
+  callCommand(t) {
+    this.hass.callService('cover', 'open_cover', { 'entity_id': this.stateObj.entity_id });
+  }
 }
-customElements.define(LabelBadgeCustom.is, LabelBadgeCustom);
+customElements.define(HaCustomLabelBadge.is, HaCustomLabelBadge);
 </script>
