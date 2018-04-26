@@ -118,6 +118,9 @@
           <template is="dom-if" if="[[weatherObj.attributes.visibility]]">
               <li><iron-icon icon="mdi:weather-fog"></iron-icon> Visibilidade [[weatherObj.attributes.visibility]]<span class="unit">m</span></li>
           </template>
+          <template is="dom-if" if="[[moonObj.state]]">
+              <li><iron-icon icon="mdi:weather-night"></iron-icon> Lua [[moonObj.state]]</li>
+          </template>
         </ul>
       </span>
 
@@ -208,10 +211,18 @@
         observer: 'checkRequirements',
         computed: 'comptuteWeatherObj(hass, stateObj)',
       },
+      moonObj: {
+        type: Object,
+        computed: 'comptuteMoonObj(hass, stateObj)',
+      },
     },
 
     comptuteWeatherObj: function (hass, stateObj) {
       return stateObj && stateObj.attributes && stateObj.attributes.config && stateObj.attributes.config.weather ? hass.states[stateObj.attributes.config.weather] : null;
+    },
+
+    comptuteMoonObj: function (hass, stateObj) {
+      return stateObj && stateObj.attributes && stateObj.attributes.config && stateObj.attributes.config.moon ? hass.states[stateObj.attributes.config.moon] : null;
     },
 
     getForecastArray: function () {

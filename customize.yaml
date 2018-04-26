@@ -526,6 +526,7 @@ input_boolean.weather:
   custom_ui_state_card: custom-weather-card
   config:
     weather: weather.yweather
+    moon: sensor.fases_lua
 
 zone.home:
   friendly_name: Casa

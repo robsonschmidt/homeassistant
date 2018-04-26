@@ -36,13 +36,21 @@
         '
 - alias: Portao aberto/fechado
   trigger:
-  - entity_id: sensor.portao
+  - entity_id: binary_sensor.portao
     platform: state
   action:
   - service: python_script.set_state
     data_template:
       entity: switch.portao
       state: '{{ trigger.to_state.state }}'
+  - service: notify.telegram_bot
+    data_template:
+      message: >
+       {% if trigger.to_state.state == 'on'  %}
+       Portão abrindo.
+       {% else %}
+       Portão fechado.
+       {% endif%}
 - alias: Portão ON/OFF
   condition:
     condition: state
@@ -303,18 +311,16 @@
     value_template: '{{ states.sensor.time.state == (states.input_datetime.hora_backup.attributes.timestamp
       | int | timestamp_custom(''%H:%M'', false)) }}'
   action:
-#  - service: rest_command.delete_backup_old
-#  - delay: 00:00:30
-#  - service: rest_command.move_backup_old
-#  - delay: 00:00:30
-#  - service: rest_command.cria_pasta_backup
+  - service: rest_command.delete_backup_dropbox
   - service: hassio.snapshot_full
     data_template:
       name: FRIS {{ now().strftime('%Y-%m-%d') }}
   - service: notify.telegram_bot
     data_template:
       message: Criando Snapshot "FRIS {{ now().strftime('%Y-%m-%d') }}"
-  - delay: 03:00:00
+  - delay: 00:00:30
+  - service: rest_command.cria_pasta_backup_dropbox
+  - delay: 02:00:00
   - service: hassio.addon_stdin
     data:
       addon: 7be23ff5_dropbox_sync
@@ -399,7 +405,7 @@
   - service: notify.telegram_bot
     data_template:
       message: >
-       *Robson*{%if trigger.from_state.state != 'not_home'%}saiu de *{{trigger.from_state.state|replace("home_arriving", "proximidade de casa")|replace("home","casa")}}*{%endif%}{%if trigger.from_state.state != 'not_home' and trigger.to_state.state != 'not_home'%}e{%endif%}{%if trigger.to_state.state != 'not_home'%}chegou em *{{trigger.to_state.state|replace("home_arriving","proximidade de casa")|replace("home","casa")}}*{%endif%}.
+       *Robson*{%if trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') %} saiu de *{{trigger.from_state.state|replace("home","casa")}}*{%endif%}{%if trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') and trigger.to_state.state not in ('not_home','home_arriving','home_arriving2')%} e{%endif%}{%if trigger.to_state.state not in ('not_home','home_arriving','home_arriving2')%} chegou em *{{trigger.to_state.state|replace("home","casa")}}*{%endif%}.
 - alias: Liga Globo Flavia Chegou
   condition:
     condition: and

@@ -14,7 +14,6 @@ badges:
   entities:
   - device_tracker.52008849ec808451
   - device_tracker.iphonedeflavialan
-  - sensor.fases_lua
   - alarm_control_panel.ha_alarm
   - cover.portao
   - vacuum.fritz

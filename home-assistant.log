@@ -1,52 +1,19 @@
-2018-04-25 18:07:21 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of platform ping is taking over 10 seconds.
-2018-04-25 18:07:22 WARNING (MainThread) [homeassistant.setup] Setup of config is taking over 10 seconds.
-2018-04-25 18:08:35 ERROR (SyncWorker_8) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
-2018-04-25 18:11:37 ERROR (MainThread) [frontend.js.latest.201804040] https://fris.duckdns.org:8123/states:6:10 Uncaught SyntaxError: Unexpected token else
-2018-04-25 18:12:27 ERROR (MainThread) [frontend.js.latest.201804040] https://fris.duckdns.org:8123/states:6:10 Uncaught SyntaxError: Unexpected token else
-2018-04-25 18:12:29 ERROR (MainThread) [frontend.js.latest.201804040] https://fris.duckdns.org:8123/states:6:10 Uncaught SyntaxError: Unexpected token else
-2018-04-25 18:12:57 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-04-25 18:13:07 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-04-25 18:13:17 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-04-25 18:13:39 ERROR (MainThread) [homeassistant.helpers.entity] Update for sensor.para_compromisso fails
+2018-04-26 14:09:47 ERROR (MainThread) [homeassistant.config] Invalid config for [automation]: required key not provided @ data['trigger'][0]['platform']. Got None. (See /config/configuration.yaml, line 99). Please check the docs at https://home-assistant.io/components/automation/
+2018-04-26 14:10:03 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of platform ping is taking over 10 seconds.
+2018-04-26 14:10:03 WARNING (MainThread) [homeassistant.setup] Setup of config is taking over 10 seconds.
+2018-04-26 14:11:17 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-04-26 14:11:23 ERROR (SyncWorker_12) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-04-26 14:12:19 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-04-26 14:12:23 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-04-26 14:18:14 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify is taking over 10 seconds
+2018-04-26 14:18:35 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-04-26 14:25:08 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-04-26 14:27:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-04-26 14:32:40 ERROR (MainThread) [homeassistant.components.hassio.handler] Timeout on /snapshots/new/full request
+2018-04-26 14:32:40 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall hassio.snapshot_full: name=FRIS 2018-04-26>
 Traceback (most recent call last):
-  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 204, in async_update_ha_state
-    yield from self.async_device_update()
-  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 327, in async_device_update
-    yield from self.hass.async_add_job(self.update)
-  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/usr/lib/python3.6/site-packages/homeassistant/util/__init__.py", line 319, in wrapper
-    result = method(*args, **kwargs)
-  File "/usr/lib/python3.6/site-packages/homeassistant/components/sensor/google_travel_time.py", line 228, in update
-    self._origin, self._destination, **options_copy)
-  File "/usr/lib/python3.6/site-packages/googlemaps/client.py", line 356, in wrapper
-    result = func(*args, **kwargs)
-  File "/usr/lib/python3.6/site-packages/googlemaps/distance_matrix.py", line 130, in distance_matrix
-    return client._request("/maps/api/distancematrix/json", params)
-  File "/usr/lib/python3.6/site-packages/googlemaps/client.py", line 253, in _request
-    result = self._get_body(response)
-  File "/usr/lib/python3.6/site-packages/googlemaps/client.py", line 282, in _get_body
-    raise googlemaps.exceptions.ApiError(api_status)
-googlemaps.exceptions.ApiError: INVALID_REQUEST
-2018-04-25 18:13:52 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-04-25 18:14:06 ERROR (MainThread) [homeassistant.helpers.entity] Update for sensor.para_compromisso fails
-Traceback (most recent call last):
-  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 204, in async_update_ha_state
-    yield from self.async_device_update()
-  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 327, in async_device_update
-    yield from self.hass.async_add_job(self.update)
-  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/usr/lib/python3.6/site-packages/homeassistant/util/__init__.py", line 319, in wrapper
-    result = method(*args, **kwargs)
-  File "/usr/lib/python3.6/site-packages/homeassistant/components/sensor/google_travel_time.py", line 228, in update
-    self._origin, self._destination, **options_copy)
-  File "/usr/lib/python3.6/site-packages/googlemaps/client.py", line 356, in wrapper
-    result = func(*args, **kwargs)
-  File "/usr/lib/python3.6/site-packages/googlemaps/distance_matrix.py", line 130, in distance_matrix
-    return client._request("/maps/api/distancematrix/json", params)
-  File "/usr/lib/python3.6/site-packages/googlemaps/client.py", line 253, in _request
-    result = self._get_body(response)
-  File "/usr/lib/python3.6/site-packages/googlemaps/client.py", line 282, in _get_body
-    raise googlemaps.exceptions.ApiError(api_status)
-googlemaps.exceptions.ApiError: INVALID_REQUEST
+  File "/usr/lib/python3.6/site-packages/homeassistant/core.py", line 1002, in _event_to_service_call
+    await service_handler.func(service_call)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/hassio/__init__.py", line 189, in async_service_handler
+    _LOGGER.error("Error on Hass.io API: %s", ret['message'])
+TypeError: 'NoneType' object is not subscriptable
