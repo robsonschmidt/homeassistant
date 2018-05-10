@@ -53,7 +53,7 @@ reset_vol_quarto:
   - service: input_number.set_value
     entity_id: input_number.vol_tv_quarto
     data:
-      value: 50
+      value: 30
   - service: script.reduz_vol_quarto
     data:
       vol: 0
@@ -83,6 +83,8 @@ reduz_vol_quarto_pause:
   - service: switch.toggle
     entity_id: switch.vol_baixo_tv_q
   - wait_template: "{{ is_state('script.reduz_vol_quarto', 'off') }}"
+  - delay:
+      milliseconds: 100
   - service_template: >
        {% if states.input_number.vol_tv_quarto.state|int > vol|int %}
          script.turn_on
@@ -111,6 +113,8 @@ aumenta_vol_quarto_pause:
   - service: switch.toggle
     entity_id: switch.vol_cima_tv_q
   - wait_template: "{{ is_state('script.aumenta_vol_quarto', 'off') }}"
+  - delay:
+      milliseconds: 100
   - service_template: >
        {% if states.input_number.vol_tv_quarto.state|int < vol|int %}
          script.turn_on
@@ -155,22 +159,22 @@ tv_sala_discovery:
       entity_id: switch.source_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.sair_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.seis_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.zero_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.zero_net_s
     service: switch.turn_on
@@ -181,22 +185,22 @@ tv_sala_globo:
       entity_id: switch.source_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.sair_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.cinco_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.um_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.dois_net_s
     service: switch.turn_on
@@ -207,22 +211,22 @@ tv_sala_sbt:
       entity_id: switch.source_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.sair_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.cinco_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.zero_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.quatro_net_s
     service: switch.turn_on
@@ -233,22 +237,22 @@ tv_sala_record:
       entity_id: switch.source_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.sair_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.cinco_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.zero_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.sete_net_s
     service: switch.turn_on
@@ -259,22 +263,22 @@ tv_sala_band:
       entity_id: switch.source_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.sair_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.cinco_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.zero_net_s
     service: switch.turn_on
   - delay:
-      milliseconds: 500
+      milliseconds: 200
   - data:
       entity_id: switch.dois_net_s
     service: switch.turn_on
@@ -343,7 +347,7 @@ reset_vol_sala:
   - service: input_number.set_value
     entity_id: input_number.vol_tv_sala
     data:
-      value: 50
+      value: 30
   - service: script.reduz_vol_sala
     data:
       vol: 0
@@ -373,6 +377,8 @@ reduz_vol_sala_pause:
   - service: switch.toggle
     entity_id: switch.vol_baixo_tv_s
   - wait_template: "{{ is_state('script.reduz_vol_sala', 'off') }}"
+  - delay:
+      milliseconds: 100
   - service_template: >
        {% if states.input_number.vol_tv_sala.state|int > vol|int %}
          script.turn_on
@@ -401,6 +407,8 @@ aumenta_vol_sala_pause:
   - service: switch.toggle
     entity_id: switch.vol_cima_tv_s
   - wait_template: "{{ is_state('script.aumenta_vol_sala', 'off') }}"
+  - delay:
+      milliseconds: 100
   - service_template: >
        {% if states.input_number.vol_tv_sala.state|int < vol|int %}
          script.turn_on

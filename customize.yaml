@@ -2,6 +2,7 @@
 switch.cervejeira:
   icon: mdi:glass-mug
   show_last_changed: true
+  assumed_state: false
   homebridge_visible: true
   homebridge_name: Cervejeira
   extra_badge:
@@ -35,9 +36,7 @@ light.luz_central:
     report_when_not_changed: false
   extra_badge:
     entity_id: sensor.luz_central_watts  # Will take precedence over attribute and unit below.
-    attribute: power_consumption 
     unit: kW
-    blacklist_states: 0
   homebridge_visible: true
   homebridge_name: Luz Central
 light.luz_esquerda:
@@ -56,9 +55,7 @@ light.luz_esquerda:
     report_when_not_changed: false
   extra_badge:
     entity_id: sensor.luz_esquerda_watts  # Will take precedence over attribute and unit below.
-    attribute: power_consumption
     unit: kW
-    blacklist_states: 0
   homebridge_visible: true
   homebridge_name: Luz Esquerda
 light.luz_direita:
@@ -77,9 +74,7 @@ light.luz_direita:
     report_when_not_changed: false
   extra_badge:
     entity_id: sensor.luz_direita_watts  # Will take precedence over attribute and unit below.
-    attribute: power_consumption
     unit: kW
-    blacklist_states: 0
   homebridge_visible: true
   homebridge_name: Luz Direita
 
@@ -87,21 +82,25 @@ light.luz_direita:
 switch.luz_corredor:
   icon: mdi:lightbulb-outline
   show_last_changed: true
+  assumed_state: false
   homebridge_visible: true
   homebridge_name: Luz Corredor
 switch.luz_quarto:
   icon: mdi:lightbulb-outline
   show_last_changed: true
+  assumed_state: false
   homebridge_visible: true
   homebridge_name: Luz Quarto
 switch.luz_painel_quarto:
   icon: mdi:window-maximize
   show_last_changed: true
+  assumed_state: false
   homebridge_visible: true
   homebridge_name: Luz Painel Quarto
 switch.luz_sacada_frente:
   icon: mdi:lightbulb-outline
   show_last_changed: true
+  assumed_state: false
   homebridge_visible: true
   homebridge_name: Luz sacada Frente
 sensor.armario_robson_humidade:
@@ -119,6 +118,7 @@ sensor.temperatura_quarto_isabelle:
 switch.onoff_desumidificador_robson:
   friendly_name: Desum. Robson
   icon: mdi:water-off
+  assumed_state: false
   extra_badge:
   - entity_id: sensor.armario_robson_temperatura
     unit: °C
@@ -127,6 +127,7 @@ switch.onoff_desumidificador_robson:
 switch.onoff_desumidificador_flavia:
   friendly_name: Desum. Flavia
   icon: mdi:water-off
+  assumed_state: false
   extra_badge:
   - entity_id: sensor.armario_flavia_temperatura
     unit: °C
@@ -135,6 +136,11 @@ switch.onoff_desumidificador_flavia:
 switch.onoff_aquecedor_isabelle:
   friendly_name: Aquecedor
   icon: mdi:hot-tub
+  assumed_state: false
+switch.luz_sala_jantar:
+  assumed_state: false
+  show_last_changed: true
+  icon: mdi:lightbulb-outline
 
 # State Cards TV Sala
 input_text.tv_sala_tiles:
@@ -385,30 +391,10 @@ input_text.quarto_isabelle_player:
   custom_ui_state_card: state-card-mini-media-player
   friendly_name: TV Quarto Isabelle
   config:
-    player: media_player.tv_quarto_isabelle
-    buttons:
-      - name: Rock
-        icon: mdi:music-note
-        script: script.play_spotify_rock
-        variables:
-          data:
-            media_player: Quarto Isabelle
-      - name: Susse
-        icon: mdi:music-note
-        script: script.play_spotify_susse
-        variables:
-          data:
-            media_player: Quarto Isabelle
-      - name: Isabelle
-        icon: mdi:music-note
-        script: script.play_spotify_isabelle
-        variables:
-          data:
-            media_player: Quarto Isabelle
+    player: media_player.quarto_isabelle
 
 # Portão
 switch.portao:
-#  custom_ui_state_card: state-badge-custom
   homebridge_visible: true
   homebridge_name: Portão
   confirm_controls_show_lock: true

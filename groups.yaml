@@ -38,7 +38,7 @@ portao:
   name: ' '
   control: hidden
   entities:
-  - switch.portao
+  - switch.portao_template
 
 # Menu Sala
 sala:
@@ -48,6 +48,14 @@ sala:
   entities:
   - group.tv_sala_tiles
   - camera.interna
+  - group.luz_sala
+# Card Luz sala
+luz_sala:
+  name: ' '
+  control: hidden
+  entities:
+  - switch.luz_sala_jantar
+
 # Card Controle TV Sala
 tv_sala_tiles:
   name: ' '
@@ -291,3 +299,5 @@ sonoff:
   - sensor.versao_luz_painel_quarto
   - sensor.versao_luz_quarto
   - sensor.versao_luz_sacada_frente
+  - sensor.versao_portao
+  - sensor.versao_luz_sala_de_jantar

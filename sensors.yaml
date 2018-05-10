@@ -18,42 +18,35 @@
 - platform: google_wifi
 - platform: template
   sensors:
-    luz_central_amps:
-      value_template: '{{ states.light.luz_central.attributes["current"] | replace(" A", "") | float }}'
+    luz_central_daily_kwh:
+      value_template: '{{ states.light.luz_central.attributes["daily_energy_kwh"] | replace(" kWh", "") | float }}'
       unit_of_measurement: 'A'
     luz_central_watts:
-      value_template: '{{ states.light.luz_central.attributes["current_consumption"] | replace(" W", "") | float * 0.001 }}'
+      value_template: '{{ states.light.luz_central.attributes["current_power_w"] | replace(" kW", "") | float * 0.001 }}'
       unit_of_measurement: 'kW'
-    luz_central_kwy:
-      value_template: '{{ states.light.luz_central.attributes["total_consumption"] | replace(" kW", "") | float }}'
+    luz_central_monthly_kwh:
+      value_template: '{{ states.light.luz_central.attributes["monthly_energy_kwh"] | replace(" kWh", "") | float }}'
       unit_of_measurement: 'kW'
-    luz_central_volts:
-      value_template: '{{ states.light.luz_central.attributes["voltage"] | replace(" V", "") | float }}'
-      unit_of_measurement: 'V'
-    luz_esquerda_amps:
-      value_template: '{{ states.light.luz_esquerda.attributes["current"] | replace(" A", "") | float }}'
+    luz_esquerda_daily_kwh:
+      value_template: '{{ states.light.luz_esquerda.attributes["daily_energy_kwh"] | replace(" kWh", "") | float }}'
       unit_of_measurement: 'A'
     luz_esquerda_watts:
-      value_template: '{{ states.light.luz_esquerda.attributes["current_consumption"] | replace(" W", "") | float * 0.001  }}'
+      value_template: '{{ states.light.luz_esquerda.attributes["current_power_w"] | replace(" kW", "") | float * 0.001 }}'
       unit_of_measurement: 'kW'
-    luz_esquerda_kwy:
-      value_template: '{{ states.light.luz_esquerda.attributes["total_consumption"] | replace(" kW", "") | float }}'
+    luz_esquerda_monthly_kwh:
+      value_template: '{{ states.light.luz_esquerda.attributes["monthly_energy_kwh"] | replace(" kWh", "") | float }}'
       unit_of_measurement: 'kW'
-    luz_esquerda_volts:
-      value_template: '{{ states.light.luz_esquerda.attributes["voltage"] | replace(" V", "") | float }}'
-      unit_of_measurement: 'V'
-    luz_direita_amps:
-      value_template: '{{ states.light.luz_direita.attributes["current"] | replace(" A", "") | float }}'
+    luz_direita_daily_kwh:
+      value_template: '{{ states.light.luz_direita.attributes["daily_energy_kwh"] | replace(" kWh", "") | float }}'
       unit_of_measurement: 'A'
     luz_direita_watts:
-      value_template: '{{ states.light.luz_direita.attributes["current_consumption"] | replace(" W", "") | float * 0.001 }}'
+      value_template: '{{ states.light.luz_direita.attributes["current_power_w"] | replace(" kW", "") | float * 0.001 }}'
       unit_of_measurement: 'kW'
-    luz_direita_kwy:
-      value_template: '{{ states.light.luz_direita.attributes["total_consumption"] | replace(" kW", "") | float }}'
+    luz_direita_monthly_kwh:
+      value_template: '{{ states.light.luz_direita.attributes["monthly_energy_kwh"] | replace(" kWh", "") | float }}'
       unit_of_measurement: 'kW'
-    luz_direita_volts:
-      value_template: '{{ states.light.luz_direita.attributes["voltage"] | replace(" V", "") | float }}'
-      unit_of_measurement: 'V'
+    garden_light_a:
+      value_template: '{{ states.switch.garden_light.attributes["current_a"] | replace(" A", "") | float }}'
 - platform: command_line
   name: CPU Temperature
   command: "cat /sys/class/thermal/thermal_zone0/temp"
@@ -335,7 +328,7 @@
 
 # Versão Luz Sacada Frente
 - platform: mqtt
-  name: Versão Sonoff Luz Sacada Frente
+  name: Versão Luz Sacada Frente
   state_topic: "stat/sonoff2343/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
   
@@ -343,6 +336,12 @@
 - platform: mqtt
   name: Versão Luz Corredor
   state_topic: "stat/sonoff6590/STATUS2"
+  value_template: "{{ value_json['StatusFWR'].Version }}"
+
+# Versão Luz Sala de Jantar
+- platform: mqtt
+  name: Versão Luz Sala de Jantar
+  state_topic: "stat/sonoff0430/STATUS2"
   value_template: "{{ value_json['StatusFWR'].Version }}"
 
 # IP Luz Corredor
@@ -426,7 +425,7 @@
   sensors:
     fases_lua:
       entity_id: sensor.moon
-      value_template: '{{{"New moon": "Lua Nova", "Waxing crescent": "Lua Crescente", "First quarter": "Minguante", "Waxing gibbous": "Minguante", "Full moon":"Lua Cheia", "Waning gibbous":"Lua Minguante", "Last quarter": "Lua Minguante", "Waning crescent": "Lua Crescente"} [states.sensor.moon.state] }}'
+      value_template: '{{{"New moon": "Lua Nova", "Waxing crescent": "Lua Crescente", "First quarter": "Lua Minguante", "Waxing gibbous": "Lua Minguante", "Full moon":"Lua Cheia", "Waning gibbous":"Lua Minguante", "Last quarter": "Lua Minguante", "Waning crescent": "Lua Crescente"} [states.sensor.moon.state] }}'
       friendly_name_template: Fase da Lua # '{{{"New moon": "Lua Nova", "Waxing crescent": "Lua Crescente", "First quarter": "Minguante", "Waxing gibbous": "Minguante", "Full moon":"Lua Cheia", "Waning gibbous":"Lua Minguante", "Last quarter": "Lua Minguante", "Waning crescent": "Lua Crescente"} [states.sensor.moon.state] }}'
       entity_picture_template: >
        {% if is_state('sensor.moon', 'New moon') %}

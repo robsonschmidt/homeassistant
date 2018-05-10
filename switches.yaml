@@ -1,13 +1,9 @@
 - platform: tplink
   host: 192.168.86.27
   name: 'display'
-  username: robsonschmidt@gmail.com
-  password: !secret http_password
 - platform: tplink
   host: 192.168.86.41
   name: 'garden_light'
-  username: robsonschmidt@gmail.com
-  password: !secret http_password
 - platform: broadlink
   host: 192.168.86.43
   mac: '34:EA:34:B3:00:CB'
@@ -190,6 +186,7 @@
   payload_off: "OFF"
   payload_available: "Online"
   payload_not_available: "Offline"
+  optimistic: true
   retain: true
   
 # Armario Flavia
@@ -203,6 +200,7 @@
   payload_off: "OFF"
   payload_available: "Online"
   payload_not_available: "Offline"
+  optimistic: true
   retain: true
   
 # Aquecedor Isabelle
@@ -216,6 +214,7 @@
   payload_off: "OFF"
   payload_available: "Online"
   payload_not_available: "Offline"
+  optimistic: true
   retain: true
   
 # Luz corredor
@@ -229,7 +228,8 @@
   payload_off: "OFF"
   payload_available: "Online"
   payload_not_available: "Offline"
-  retain: true  
+  optimistic: true
+  retain: true
 
 # Luz quarto
 - platform: mqtt
@@ -242,6 +242,7 @@
   payload_off: "OFF"
   payload_available: "Online"
   payload_not_available: "Offline"
+  optimistic: true
   retain: true
 
 # Luz painel quarto
@@ -255,6 +256,7 @@
   payload_off: "OFF"
   payload_available: "Online"
   payload_not_available: "Offline"
+  optimistic: true
   retain: true
 
 # Luz sacada frente
@@ -268,6 +270,7 @@
   payload_off: "OFF"
   payload_available: "Online"
   payload_not_available: "Offline"
+  optimistic: true
   retain: true
 
 # Cervejeira
@@ -281,6 +284,7 @@
   payload_off: "OFF"
   payload_available: "Online"
   payload_not_available: "Offline"
+  optimistic: true
   retain: true
 
 # Portao
@@ -294,8 +298,23 @@
   payload_off: "OFF"
   payload_available: "Online"
   payload_not_available: "Offline"
+  optimistic: true
   retain: true
-  
+
+# Luz Sala Jantar
+- platform: mqtt
+  name: "Luz Sala Jantar"
+  state_topic: "tele/sonoff0430/STATE"
+  value_template: '{{ value_json["POWER"] }}'
+  command_topic: "cmnd/sonoff0430/POWER"
+  availability_topic: "tele/sonoff0430/LWT"
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  optimistic: true
+  retain: true
+
 # Transmissor RF
 - platform: rpi_rf
   gpio: 17

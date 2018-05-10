@@ -93,7 +93,6 @@ class HaStateLabelBadgeCustom extends
       case 'alarm_control_panel':
       case 'timer':
       case 'cover':
-      case 'sensor':
       case 'vacuum':
         return null;
       default:
@@ -130,7 +129,6 @@ class HaStateLabelBadgeCustom extends
       case 'device_tracker':
       case 'cover':
       case 'vacuum':
-      case 'sensor':
       case 'updater':
         return window.hassUtil.stateIcon(state);
       case 'sun':
@@ -148,11 +146,11 @@ class HaStateLabelBadgeCustom extends
   computeLabel(localize, state, timerTimeRemaining) {
     const domain = window.hassUtil.computeDomain(state);
     if (state.state === 'unavailable' ||
-        ['device_tracker', 'alarm_control_panel','cover','sensor','vacuum'].includes(domain)) {
+        ['device_tracker', 'alarm_control_panel','cover','vacuum'].includes(domain)) {
       // Localize the state with a special state_badge namespace, which has variations of
       // the state translations that are truncated to fit within the badge label. Translations
       // are only added for device_tracker and alarm_control_panel.
-      return localize(`state_badge.${domain}.${state.state}`) || localize(`state_badge.default.${state.state}`) || state.state;
+      return localize(`state_badge.${domain}.${state.state}`) || localize(`state_badge.default.${state.state}`) || localize(`state.${domain}.${state.state}`) || localize(`state.default.${state.state}`) || state.state;
     }
     if (domain === 'timer') {
       return window.hassUtil.secondsToDuration(timerTimeRemaining);

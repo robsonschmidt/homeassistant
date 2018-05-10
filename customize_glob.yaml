@@ -44,11 +44,5 @@ cover.portao:
   state_card_mode: badges
 vacuum.fritz:
   state_card_mode: badges
-
-group.teste:
-  state_card_mode: badges
-  badges_list:
-  - sensor.dark_sky_icon
-  - sensor.dark_sky_icon_1
 sensor.hline_*:
  custom_ui_state_card: state-card-hline

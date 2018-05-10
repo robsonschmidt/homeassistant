@@ -5,17 +5,15 @@
     state: 'on'
   trigger:
   - platform: template
-    value_template: '{{ states.sensor.cpu_temperature.state >= states.input_number.temp_cpu_alta.state
-      and  states.sensor.cpu_temperature.state < states.input_number.temp_cpu_muito_alta.state
-      }}
-
-      '
+    value_template: >
+     {{ states.sensor.cpu_temperature.state >= states.input_number.temp_cpu_alta.state
+     and  states.sensor.cpu_temperature.state < states.input_number.temp_cpu_muito_alta.state
+     }}
   action:
   - service: notify.telegram_bot
-    data:
-      message: '*Temp. CPU Alta* - {{ states.sensor.cpu_temperature.state }} ºC
-
-        '
+    data_template:
+      message: >
+       *Monitoramento Raspberry*{{- '\n' -}}Temperatura do _CPU_ está _alta_ em {{ states.sensor.cpu_temperature.state }} ºC
 - alias: CPU Muito Alta
   condition:
     condition: state
@@ -23,17 +21,13 @@
     state: 'on'
   trigger:
   - platform: template
-    value_template: '{{ states.sensor.cpu_temperature.state >= states.input_number.temp_cpu_muito_alta.state
-      }}
-
-      '
+    value_template: >
+     {{ states.sensor.cpu_temperature.state >= states.input_number.temp_cpu_muito_alta.state}}
   action:
   - service: notify.telegram_bot
-    data:
-      message: '*Temp. CPU Multo Alta* - {{ states.sensor.cpu_temperature.state }}
-        ºC
-
-        '
+    data_template:
+      message: >
+        *Monitoramento Raspberry*{{- '\n' -}}Temperatura do _CPU_ está _muito alta_ em {{ states.sensor.cpu_temperature.state }} ºC
 - alias: Portao aberto/fechado
   trigger:
   - entity_id: binary_sensor.portao
@@ -46,49 +40,40 @@
   - service: notify.telegram_bot
     data_template:
       message: >
+       *Portão da Casa*{{- '\n' -}}
        {% if trigger.to_state.state == 'on'  %}
-       Portão abrindo.
+       O _portão_ está _abrindo_.
        {% else %}
-       Portão fechado.
+       O _portão_ está _fechado_.
        {% endif%}
-- alias: Portão ON/OFF
-  condition:
-    condition: state
-    entity_id: input_boolean.enviar_acionamento_portao
-    state: 'on'
-  trigger:
-  - entity_id: switch.portao
-    from: 'off'
-    platform: state
-    to: 'on'
-  action:
-  - data:
-      message: '*Portão* acionado.'
-    service: notify.telegram_bot
 - alias: Portao aberto muito tempo
   trigger:
-  - entity_id: sensor.portao
+  - entity_id: binary_sensor.portao
     platform: state
     to: 'on'
     for:
       minutes: 10
   action:
   - service: notify.telegram_bot
-    data:
-      message: '*Portão* aberto por muito tempo.'
+    data_template:
+      message: >
+       *Portão da Casa*{{- '\n' -}}
+       _Portão_ aberto por _muito tempo_.
 - alias: Portao aberto sem ninguem em casa
   condition:
     - condition: state
       entity_id: sensor.alguem_em_casa
       state: 'False'
   trigger:
-  - entity_id: sensor.portao
+  - entity_id: binary_sensor.portao
     platform: state
     to: 'on'
   action:
   - service: notify.telegram_bot
-    data:
-      message: '*Portão* foi aberto sem ninguem em casa.'
+    data_template:
+      message: >
+       *Portão da Casa*{{- '\n' -}}
+       _Portão_ foi aberto sem _ninguém em casa_.
 - alias: Broadlink Always OFF
   trigger:
   - entity_id: switch.zero_net_s
@@ -261,7 +246,9 @@
   action:
   - service: notify.telegram_bot
     data_template:
-      message: '*FRIS Automação* iniciado.'
+      message: >
+       *Home Assistant*{{- '\n' -}}
+       Serviço _iniciado_.
   - service: script.check_sonoffs_version
   trigger:
   - event: start
@@ -274,7 +261,9 @@
   action:
   - service: notify.telegram_bot
     data_template:
-      message: '*FRIS Automação* desligado.'
+      message: >
+       *Home Assistant*{{- '\n' -}}
+       Serviço _parado_.
   trigger:
   - event: shutdown
     platform: homeassistant
@@ -317,7 +306,9 @@
       name: FRIS {{ now().strftime('%Y-%m-%d') }}
   - service: notify.telegram_bot
     data_template:
-      message: Criando Snapshot "FRIS {{ now().strftime('%Y-%m-%d') }}"
+      message: >
+       *Backup do servidor*{{- '\n' -}}
+       Criando _Snapshot_ "FRIS {{ now().strftime('%Y-%m-%d') }}"
   - delay: 00:00:30
   - service: rest_command.cria_pasta_backup_dropbox
   - delay: 02:00:00
@@ -328,9 +319,13 @@
         command: upload
   - service: notify.telegram_bot
     data_template:
-      message: Iniciando upload do arquivo para o Dropbox
-
+      message: >
+       *Backup do servidor*{{- '\n' -}}
+       Iniciando upload do _Snapshot_ para o _Dropbox_.
 - alias: Novo backup
+  condition:
+  - condition: template
+    value_template: '{{ trigger.to_state.state != trigger.from_state.state }}'
   trigger: 
   - platform: state
     entity_id: sensor.dropbox_espaco_usado
@@ -338,8 +333,9 @@
   - service: notify.telegram_bot
     data_template:
       message: >
-       Espaço em uso de {%if trigger.from_state.state != 'unavaiable'%}{{trigger.from_state.state|float/1024/1024}}{%endif%}
-       para {%if trigger.to_state.state != 'unavaiable'%}{{ trigger.to_state.state |float / 1024/1024}}{%endif%}.
+       *Backup do servidor*{{- '\n' -}}
+       _Espaço em uso_ no _Dropbox_ de {%if trigger.from_state.state != 'unavaiable'%}{{ (trigger.from_state.state|float/1024/1024)|int}}Mb{%endif%}
+       para {%if trigger.to_state.state != 'unavaiable'%}{{ (trigger.to_state.state|float/1024/1024)| int}}Mb{%endif%}.
 - alias: Velocidade Internet Baixa
   condition:
     condition: state
@@ -352,10 +348,9 @@
   action:
   - service: notify.telegram_bot
     data_template:
-      message: '*Velocidade Internet Baixa* - Download {{ states(''sensor.speedtest_download'')
-        }} Mbit/s
-
-        '
+      message: >
+       *Monitoramento da Internet*{{- '\n' -}}
+       _Velocidade Internet Baixa_ - Download {{ states('sensor.speedtest_download')}} Mbit/s
 - alias: Robson chegou em casa
   condition:
   - condition: state
@@ -397,7 +392,8 @@
     - condition: template
       value_template: '{{ trigger.to_state.state != trigger.from_state.state }}'
     - condition: template
-      value_template: '{{ not (trigger.from_state.state == "not_home" and (trigger.to_state.state == "home_arriving" or trigger.to_state.state == "home_arriving2")) }}'
+      value_template: >
+       {{ trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') or trigger.to_state.state not in ('not_home','home_arriving','home_arriving2') }}
   trigger:
   - platform: state
     entity_id: device_tracker.52008849ec808451
@@ -405,7 +401,8 @@
   - service: notify.telegram_bot
     data_template:
       message: >
-       *Robson*{%if trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') %} saiu de *{{trigger.from_state.state|replace("home","casa")}}*{%endif%}{%if trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') and trigger.to_state.state not in ('not_home','home_arriving','home_arriving2')%} e{%endif%}{%if trigger.to_state.state not in ('not_home','home_arriving','home_arriving2')%} chegou em *{{trigger.to_state.state|replace("home","casa")}}*{%endif%}.
+       *Controle de Presença*{{- '\n' -}}
+       _Robson_{%if trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') %} saiu de _{{trigger.from_state.state|replace("home","casa")}}_{%endif%}{%if trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') and trigger.to_state.state not in ('not_home','home_arriving','home_arriving2')%} e{%endif%}{%if trigger.to_state.state not in ('not_home','home_arriving','home_arriving2')%} chegou em _{{trigger.to_state.state|replace("home","casa")}}_{%endif%}.
 - alias: Liga Globo Flavia Chegou
   condition:
     condition: and
@@ -860,13 +857,10 @@
   action:
   - service: notify.telegram_bot
     data_template:
-      title: '{{ states.persistent_notification.invalid_config.attributes.title }}
-
-        '
-      message: '{{ states.persistent_notification.invalid_config.attributes.message
-        }}
-
-        '
+      title: >
+       *{{ states.persistent_notification.invalid_config.attributes.title }}*
+      message: >
+       {{ states.persistent_notification.invalid_config.attributes.message }}
 - alias: Ativa Timer TV
   trigger:
   - entity_id: input_boolean.ativa_timer_tv_dormir
@@ -879,6 +873,7 @@
         }}*, fim em {{ states(''input_number.tempo_timer'')|int }} minutos.'
   - delay: "00:{{ states('input_number.tempo_timer')|int }}:00"
   - service: script.mensagem_tv
+  - delay: 00:00:10
   - wait_template: '{{ is_state(''sensor.state_media_player'', ''idle'') }}'
   - service: notify.telegram_bot
     data_template:
@@ -894,7 +889,9 @@
   action:
   - service: notify.telegram_bot
     data:
-      message: Sem *energia* em *casa*.
+      message: >
+       *Controle de Energia*
+       Sem energia em casa.
 - alias: Voltou energia
   trigger:
   - entity_id: switch.onoff_desumidificador_robson
@@ -908,7 +905,9 @@
   action:
   - service: notify.telegram_bot
     data:
-      message: '*Energia* voltou em *casa*.'
+      message: >
+       *Controle de Energia*
+       Sem energia em casa.
 - alias: Liga Desumidificador Horario
   condition:
     condition: state
@@ -1004,8 +1003,10 @@
     to: 'off'
   action:
   - service: notify.telegram_bot
-    data:
-      message: '*Atenção!* Não encontrei *ninguém* em casa e o *alarme* está desligado.'
+    data_template:
+      message: >
+       *Segurança Residencial*{{- '\n' -}}
+       _Atenção!_ Não encontrei _ninguém_ em casa e o _alarme_ está desligado.
 - alias: Alarme acionado
   trigger:
   - platform: state
@@ -1013,15 +1014,13 @@
     to: 'on'
   action:
   - service: notify.telegram_bot
-    data:
-      message: '*Atenção! Atenção! Alarme tocando.*'
+    data_template:
+      message: >
+       *Segurança Residencial*{{- '\n' -}}
+       {{- '\U0001F6A8' -}} {{- '\U0001F6A8' -}} {{- '\U0001F6A8' -}} _Atenção! Atenção! Alarme tocando._
   - service: alarm_control_panel.alarm_trigger
     entity_id: alarm_control_panel.ha_alarm
 - alias: Alarme ligado
-  condition:
-    condition: state
-    entity_id: binary_sensor.acionado
-    state: 'off'
   trigger:
   - platform: state
     entity_id: binary_sensor.ativado
@@ -1030,8 +1029,10 @@
   - service: alarm_control_panel.alarm_arm_away
     entity_id: alarm_control_panel.ha_alarm
   - service: notify.telegram_bot
-    data:
-      message: '*Alarme* ativado.'
+    data_template:
+      message: >
+       *Segurança Residencial*{{- '\n' -}}
+       _Alarme_ ativado.
 - alias: Alarme ligado - Robson saindo de casa
   condition:
   - condition: state
@@ -1058,10 +1059,6 @@
         inline_keyboard:
         - Portão:/portao
 - alias: Alarme desligado
-  condition:
-    condition: state
-    entity_id: binary_sensor.acionado
-    state: 'off'
   trigger:
   - platform: state
     entity_id: binary_sensor.ativado
@@ -1070,8 +1067,10 @@
   - service: alarm_control_panel.alarm_disarm
     entity_id: alarm_control_panel.ha_alarm
   - service: notify.telegram_bot
-    data:
-      message: '*Alarme* desativado.'
+    data_template:
+      message: >
+       *Segurança Residencial*{{- '\n' -}}
+       _Alarme_ desativado.
 - alias: Arma alarme
   condition:
     condition: state
