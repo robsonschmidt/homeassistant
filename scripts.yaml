@@ -534,12 +534,12 @@ mercado_financeiro_texto:
     data_template:
       entity_id: input_text.mercado_financeiro_texto
       value: >
-       *Dolar:*{{- '\n' -}}
+       *Dólar (US$):*{{- '\n' -}}
        *- Atual:* {{ (states.sensor.exchange_rate_sensor.state|round(2))|replace('.', ',') }}{{- '\n' -}}
-       *Bitcoin:*{{- '\n' -}}
+       *Bitcoin (₿):*{{- '\n' -}}
        *- D-1:* {{ ((states.input_number.valor_bitcoin_meianoite.state) | round(2))|replace('.', ',') }}({{ (((((states.input_number.valor_bitcoin_meianoite.state | float) / (states.input_number.valor_bitcoin_meianoite_ontem.state | float)) -1) * 100) | round(2))|replace('.', ',') }}%){{- '\n' -}}
        *- Atual:* {{((states.sensor.btc.state | float) | round(2))|replace('.', ',') }}({{ (((((states.sensor.btc.state | float) / (states.input_number.valor_bitcoin_meianoite.state | float)) -1) * 100) | round(2))|replace('.', ',') }}%){{- '\n' -}}
-       *- Valor Carteira:* USD {{ (((states.sensor.btc.state | float) * 0.028924) | round(2))|replace('.', ',') }} | BRL {{ (((states.sensor.btc.state | float) * 0.028924 * (states.sensor.exchange_rate_sensor.state | float)) | round(2))|replace('.', ',') }}
+       *- Valor Carteira:* US$ {{ (((states.sensor.btc.state | float) * 0.028924) | round(2))|replace('.', ',') }} | R$ {{ (((states.sensor.btc.state | float) * 0.028924 * (states.sensor.exchange_rate_sensor.state | float)) | round(2))|replace('.', ',') }}
 mercado_financeiro_voz:
   alias: Mercado Financeiro Voz
   sequence:
@@ -547,7 +547,7 @@ mercado_financeiro_voz:
     data_template:
       entity_id: input_text.mercado_financeiro_voz
       value: >
-       A cotação do dolar está em {{ (states.sensor.exchange_rate_sensor.state|round(2))|replace('.', ' e ') }}
+       A cotação do dólar está em {{ (states.sensor.exchange_rate_sensor.state|round(2))|replace('.', ' e ') }}
        , e o bitcoin em {{ (states.sensor.btc.state|round(0)) }}
        , com uma variação de {{ (((((states.sensor.btc.state | float) / (states.input_number.valor_bitcoin_meianoite.state | float)) -1) * 100) | round(2))|replace('.', ' virgula ') }} %.
 # Proximo Compromisso
@@ -782,3 +782,18 @@ select_channel_sala:
          script.tv_sala_record
         {% endif %}
         
+sair_casa:
+  alias: Sair de casa
+  sequence:
+  - service: notify.telegram_bot
+    data_template:
+      message: 'Olá *Robson*, você está saindo de casa, seguem seus atalhos :'
+      data:
+        inline_keyboard:
+        - Portão:/portao
+        - Alarme:/arma_alarme
+        - Waze BRF ({{ states.sensor.para_brf.attributes.duration }}):/wazebrf, Waze
+          Sogro ({{ states.sensor.para_sogro.attributes.duration }}):/wazesogro
+        - Waze Pai ({{ states.sensor.para_pai.attributes.duration }}):/wazepai, Waze
+          Escola ({{ states.sensor.para_escola_isabelle.attributes.duration }}):/wazeescola
+        - Waze Comprimisso ({{ states.sensor.para_compromisso.attributes.duration}}):/wazecompromisso

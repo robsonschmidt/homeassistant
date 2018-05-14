@@ -21,15 +21,15 @@ tempo_timer:
   step: 1
   unit_of_measurement: min
   mode: box
-min_humidade_quarto:
-  name: Hum. Mínima
+ind_mofo_min:
+  name: Ind. Mofo Mínima
   min: 0
   max: 100
   step: 1
   unit_of_measurement: '%'
   mode: box
-max_humidade_quarto:
-  name: Hum. Máxima
+ind_mofo_max:
+  name: Ind. Mofo Máxima
   min: 0
   max: 100
   step: 1

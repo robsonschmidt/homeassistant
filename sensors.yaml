@@ -454,3 +454,20 @@
       value_template: >-
           {{is_state('device_tracker.52008849ec808451', 'home')
             or is_state('device_tracker.iphonedeflavialan', 'home') }}
+            
+# Sensor de mofo
+- platform: mold_indicator
+  indoor_temp_sensor: sensor.armario_flavia_temperatura
+  indoor_humidity_sensor: sensor.armario_flavia_humidade
+  outdoor_temp_sensor: sensor.dark_sky_temperature
+  calibration_factor: 2.0
+- platform: mold_indicator
+  indoor_temp_sensor: sensor.armario_robson_temperatura
+  indoor_humidity_sensor: sensor.armario_robson_humidade
+  outdoor_temp_sensor: sensor.dark_sky_temperature
+  calibration_factor: 2.0
+- platform: mold_indicator
+  indoor_temp_sensor: sensor.temperatura_quarto_isabelle
+  indoor_humidity_sensor: sensor.humidade_quarto_isabelle
+  outdoor_temp_sensor: sensor.dark_sky_temperature
+  calibration_factor: 1.0

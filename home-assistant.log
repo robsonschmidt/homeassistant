@@ -1,473 +1,601 @@
-2018-05-10 16:32:45 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of platform ping is taking over 10 seconds.
-2018-05-10 16:32:45 WARNING (MainThread) [homeassistant.setup] Setup of config is taking over 10 seconds.
-2018-05-10 16:33:53 ERROR (SyncWorker_15) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
-2018-05-10 16:36:33 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:36:43 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:36:53 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:37:03 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:37:13 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:37:23 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:37:33 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:37:43 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:37:53 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:38:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:38:04 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:38:13 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:38:23 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:38:33 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:38:43 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:38:53 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:39:03 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:39:13 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:39:23 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:39:33 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:39:43 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:39:53 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:40:03 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:41:20 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:44:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:47:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:47:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:47:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:48:03 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:48:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:48:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:48:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:48:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:48:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:48:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:49:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:49:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:49:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:49:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:49:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:49:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:50:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:50:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:50:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:50:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:50:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:50:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:51:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:51:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:51:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:51:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:51:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:51:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:52:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:52:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:52:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:52:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:52:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:52:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:53:04 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:53:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:53:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:53:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:53:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:53:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:53:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:54:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:54:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:54:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:54:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:54:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:54:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:55:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:55:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:55:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:55:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:55:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:55:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:56:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:56:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:56:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:56:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:56:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:56:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:57:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:57:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:57:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:57:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:57:47 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:57:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:58:04 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:58:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:58:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:58:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:58:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:58:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:58:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:59:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:59:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:59:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:59:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:59:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 16:59:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:00:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:00:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:00:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:00:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:00:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:00:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:01:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:01:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:01:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:01:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:01:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:01:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:02:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:02:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:02:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:02:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:02:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:02:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:03:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:03:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:03:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:03:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:03:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:03:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:03:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:04:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:04:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:04:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:04:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:04:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:04:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:04:59 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-05-10 17:05:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:05:10 WARNING (SyncWorker_13) [homeassistant.components.python_script.set_state.py] switch.power_tv_s
-2018-05-10 17:05:11 WARNING (SyncWorker_18) [homeassistant.components.python_script.set_state.py] switch.power_net_s
-2018-05-10 17:05:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:05:20 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:05:27 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:05:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:05:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:05:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:05:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:05:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:06:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:06:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:06:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:06:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:06:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:06:27 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:06:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:06:40 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:06:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:06:50 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:06:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:07:00 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:07:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:07:10 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:07:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:07:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:07:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:07:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:07:37 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:07:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:07:47 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:07:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:08:03 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:08:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:08:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:08:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:08:13 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:08:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:08:24 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:08:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:08:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:08:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:08:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:08:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:08:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:08:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:09:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:09:07 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:09:12 WARNING (SyncWorker_0) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
-2018-05-10 17:09:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:09:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:09:27 WARNING (SyncWorker_2) [homeassistant.components.python_script.set_state.py] switch.portao
-2018-05-10 17:09:27 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:09:27 WARNING (SyncWorker_15) [homeassistant.components.python_script.set_state.py] switch.portao
-2018-05-10 17:09:30 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:09:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:09:40 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:09:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:09:50 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:09:54 WARNING (SyncWorker_18) [homeassistant.components.python_script.set_state.py] switch.portao
-2018-05-10 17:09:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:09:56 WARNING (SyncWorker_8) [homeassistant.components.python_script.set_state.py] switch.portao
-2018-05-10 17:10:00 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:10:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:10:10 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:10:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:10:20 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:10:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:10:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:10:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:10:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:10:50 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:10:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:11:00 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:11:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:11:10 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:11:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:11:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:11:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:11:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:11:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:12:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:12:07 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:12:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:12:17 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:12:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:12:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:12:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:12:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:13:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:13:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:13:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:13:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:13:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:13:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:13:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:14:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:14:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:14:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:14:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:14:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:14:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:15:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:15:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:15:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:15:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:15:44 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:15:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:15:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:15:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:16:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:16:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:16:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:16:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:16:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:16:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:16:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:16:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:16:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:16:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:16:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:16:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:17:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:17:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:17:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:17:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:17:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:17:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:17:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:17:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:17:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:17:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:17:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:17:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:18:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:18:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:18:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:18:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:18:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:18:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:18:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:18:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:18:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:18:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:18:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:18:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:18:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:18:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:19:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:19:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:19:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:19:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:19:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:19:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:19:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:19:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:19:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:19:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:19:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:19:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:20:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:20:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:20:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:20:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:20:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:20:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:20:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:20:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:20:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:20:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:20:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:20:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:21:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:21:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:21:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:21:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:21:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:21:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:21:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:21:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:21:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:21:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:21:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:21:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:22:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:22:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:22:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:22:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:22:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:22:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:22:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:22:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:22:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:22:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:22:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:22:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:23:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:23:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:23:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:23:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:23:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:23:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:23:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:23:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:23:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:23:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:23:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:23:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:23:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:24:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:24:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:24:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:24:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:24:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:24:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:24:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:24:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:24:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:24:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:24:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:24:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:25:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:25:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:25:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:25:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:25:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:25:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:25:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:25:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:25:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:25:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:25:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:25:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:26:01 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1914362320: Client exceeded max pending messages [2]: 512
-2018-05-10 17:26:01 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1914362320: Client exceeded max pending messages [2]: 512
-2018-05-10 17:26:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:26:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:26:11 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+2018-05-13 18:52:03 ERROR (SyncWorker_5) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
+2018-05-13 18:52:03 ERROR (SyncWorker_2) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
+2018-05-13 18:52:03 ERROR (SyncWorker_12) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
+2018-05-13 18:52:03 ERROR (SyncWorker_19) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
+2018-05-13 18:52:03 ERROR (SyncWorker_2) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
+2018-05-13 18:52:03 ERROR (SyncWorker_9) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
+2018-05-13 18:52:12 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of platform ping is taking over 10 seconds.
+2018-05-13 18:52:12 WARNING (MainThread) [homeassistant.setup] Setup of config is taking over 10 seconds.
+2018-05-13 18:53:24 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 18:53:30 ERROR (Recorder) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-13 18:53:45 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 18:53:52 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 18:53:57 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 19:02:18 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 19:04:32 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:550 Uncaught SyntaxError: Identifier 'HassErrorScreen' has already been declared
+2018-05-13 19:04:32 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:1811 Uncaught SyntaxError: Identifier 'HaConfigSection' has already been declared
+2018-05-13 19:04:32 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:3405 Uncaught NotSupportedError: Failed to execute 'define' on 'CustomElementRegistry': this name has already been used with this registry
+2018-05-13 19:04:32 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:3998 Uncaught SyntaxError: Identifier 'HaConfigCloudMenu' has already been declared
+2018-05-13 19:04:32 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:4761 Uncaught SyntaxError: Identifier 'HaConfigEntriesMenu' has already been declared
+2018-05-13 19:04:32 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:6165 Uncaught SyntaxError: Identifier 'HaConfigDashboard' has already been declared
+2018-05-13 19:04:32 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:10072 Uncaught SyntaxError: Identifier 'HaConfigSectionCore' has already been declared
+2018-05-13 19:04:32 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/frontend-f9c85492ac8ddd09005dd3c9153053a5.html:1:82687 Uncaught NotSupportedError: Failed to execute 'define' on 'CustomElementRegistry': this name has already been used with this registry
+2018-05-13 19:04:32 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:12355 Uncaught SyntaxError: Identifier 'HaPushNotificationsToggle' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:15033 Uncaught SyntaxError: Identifier 'HaConfigSectionPushNotifications' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:16199 Uncaught SyntaxError: Identifier 'HaConfigSectionTranslation' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:17765 Uncaught SyntaxError: Identifier 'HaConfigSectionThemes' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:20039 Uncaught SyntaxError: Identifier 'HaConfigCore' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:21097 Uncaught SyntaxError: Identifier 'HassSubpage' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:23545 Uncaught SyntaxError: Identifier 'HaConfigCloudLogin' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:27338 Uncaught SyntaxError: Identifier 'HaConfigCloudRegister' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:30025 Uncaught SyntaxError: Identifier 'HaConfigCloudForgotPassword' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:31300 Uncaught SyntaxError: Identifier 'HaCallApiButton' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:35074 Uncaught SyntaxError: Identifier 'HaConfigCloudAccount' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:37982 Uncaught NotSupportedError: Failed to execute 'define' on 'CustomElementRegistry': this name has already been used with this registry
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/frontend-f9c85492ac8ddd09005dd3c9153053a5.html:1:82687 Uncaught NotSupportedError: Failed to execute 'define' on 'CustomElementRegistry': this name has already been used with this registry
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:1:41722 Uncaught SyntaxError: Identifier 'HaAutomationPicker' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/frontend-f9c85492ac8ddd09005dd3c9153053a5.html:1:82687 Uncaught NotSupportedError: Failed to execute 'define' on 'CustomElementRegistry': this name has already been used with this registry
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/frontend-f9c85492ac8ddd09005dd3c9153053a5.html:1:82687 Uncaught NotSupportedError: Failed to execute 'define' on 'CustomElementRegistry': this name has already been used with this registry
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/frontend-f9c85492ac8ddd09005dd3c9153053a5.html:1:82687 Uncaught NotSupportedError: Failed to execute 'define' on 'CustomElementRegistry': this name has already been used with this registry
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:3:1069 Uncaught SyntaxError: Identifier 'HaAutomationEditor' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:4:726 Uncaught SyntaxError: Identifier 'HaConfigAutomation' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:4:3390 Uncaught SyntaxError: Identifier 'HaScriptPicker' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:6:1022 Uncaught SyntaxError: Identifier 'HaScriptEditor' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:674 Uncaught SyntaxError: Identifier 'HaConfigScript' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:1830 Uncaught SyntaxError: Identifier 'HaServiceDescription' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:3264 Uncaught SyntaxError: Identifier 'OzwLog' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:6916 Uncaught SyntaxError: Identifier 'ZwaveNetwork' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:7930 Uncaught SyntaxError: Identifier 'ZwaveNodeInformation' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:9716 Uncaught SyntaxError: Identifier 'ZwaveValues' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:13397 Uncaught SyntaxError: Identifier 'ZwaveGroups' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:19008 Uncaught SyntaxError: Identifier 'ZwaveNodeConfig' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:24318 Uncaught SyntaxError: Identifier 'ZwaveUsercodes' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:33104 Uncaught SyntaxError: Identifier 'HaConfigZwave' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:38126 Uncaught SyntaxError: Identifier 'HaCustomizeArray' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:38800 Uncaught SyntaxError: Identifier 'HaCustomizeBoolean' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:39500 Uncaught SyntaxError: Identifier 'HaCustomizeIcon' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:40161 Uncaught SyntaxError: Identifier 'HaCustomizeKeyValue' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:40612 Uncaught SyntaxError: Identifier 'HaCustomizeString' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:41328 Uncaught SyntaxError: Identifier 'HaCustomizeAttribute' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:42514 Uncaught SyntaxError: Identifier 'HaFormCustomizeAttributes' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:44713 Uncaught SyntaxError: Identifier 'HaFormCustomize' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:50769 Uncaught SyntaxError: Identifier 'HaEntityConfig' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:53276 Uncaught SyntaxError: Identifier 'HaConfigCustomize' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:55950 Uncaught SyntaxError: Identifier 'HaForm' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:58601 Uncaught SyntaxError: Identifier 'HaConfigFlow' has already been declared
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:63926 Uncaught NotSupportedError: Failed to execute 'define' on 'CustomElementRegistry': this name has already been used with this registry
+2018-05-13 19:04:33 ERROR (MainThread) [frontend.js.latest.201804260] https://fris.duckdns.org:8123/frontend_latest/panels/ha-panel-config-2abc068b2c2c33fd8d00144982f28ac8.html:7:65996 Uncaught SyntaxError: Identifier 'HaPanelConfig' has already been declared
+2018-05-13 19:11:01 WARNING (SyncWorker_5) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
+2018-05-13 19:11:54 WARNING (SyncWorker_13) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-13 19:11:54 WARNING (SyncWorker_15) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-13 19:12:23 WARNING (SyncWorker_10) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-13 19:14:22 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1790413648: Client exceeded max pending messages [2]: 512
+2018-05-13 19:14:23 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1790466992: Client exceeded max pending messages [2]: 512
+2018-05-13 19:16:21 WARNING (SyncWorker_14) [homeassistant.components.python_script.set_state.py] switch.power_tv_q
+2018-05-13 19:16:39 WARNING (Thread-6) [pychromecast.socket_client] Heartbeat timeout, resetting connection
+2018-05-13 19:17:09 ERROR (Thread-6) [pychromecast.socket_client] Failed to connect, retrying in 5.0s
+2018-05-13 19:20:49 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
 OSError: [Errno 113] Host is unreachable
-2018-05-10 17:26:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:26:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:26:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:26:25 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+2018-05-13 19:20:49 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
 OSError: [Errno 113] Host is unreachable
-2018-05-10 17:26:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:26:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:26:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:26:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:26:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:26:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:26:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:27:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:27:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:27:12 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+2018-05-13 19:21:17 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
 OSError: [Errno 113] Host is unreachable
-2018-05-10 17:27:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:27:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:27:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:27:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:27:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:27:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:27:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:27:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:27:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:27:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:28:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:28:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:28:07 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:28:07 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:28:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:28:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:28:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:28:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:28:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:28:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:28:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:28:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:28:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:28:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:29:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:29:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:29:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:29:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:29:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:29:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:29:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:29:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:29:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:29:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:29:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:29:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:30:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:30:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:30:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:30:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:30:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:30:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:30:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:30:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:30:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:30:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:30:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:30:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:31:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:31:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:31:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:31:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:31:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:31:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:31:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:31:36 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:31:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:31:46 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:31:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:31:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:32:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:32:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:32:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:32:37 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:32:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:32:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:33:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:33:08 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:33:16 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:33:25 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:33:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:33:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:33:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:34:06 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:34:15 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:34:20 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+2018-05-13 19:27:55 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+OSError: [Errno 113] Host is unreachable
+2018-05-13 21:10:23 WARNING (SyncWorker_16) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-13 21:10:24 WARNING (SyncWorker_13) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-13 21:10:43 WARNING (SyncWorker_19) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-13 21:14:45 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 21:15:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-13 21:16:07 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+TimeoutError: [Errno 110] Operation timed out
+2018-05-13 21:43:49 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 21:45:54 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 21:45:54 ERROR (MainThread) [homeassistant.core] Invalid service data for tts.google_say: Entity ID  is an invalid entity id for dictionary value @ data['entity_id']. Got ''
+2018-05-13 21:46:28 ERROR (SyncWorker_3) [pychromecast.socket_client] Failed to connect, retrying in 5.0s
+2018-05-13 21:47:26 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 21:48:25 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 21:49:29 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 21:56:54 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 21:56:58 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 30 seconds.
+2018-05-13 21:57:03 WARNING (SyncWorker_2) [homeassistant.components.python_script.set_state.py] switch.vol_cima_tv_q
+2018-05-13 21:57:04 WARNING (SyncWorker_1) [homeassistant.components.python_script.set_state.py] switch.vol_cima_tv_q
+2018-05-13 21:57:08 WARNING (SyncWorker_4) [homeassistant.components.python_script.set_state.py] switch.vol_cima_tv_q
+2018-05-13 22:22:40 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+TimeoutError: [Errno 110] Operation timed out
+2018-05-13 22:23:10 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 22:26:04 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 22:32:23 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 22:34:59 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 22:35:06 ERROR (MainThread) [homeassistant.helpers.entity] Update for sensor.para_escola_isabelle fails
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/usr/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.6/site-packages/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x727f14b0>: Failed to establish a new connection: [Errno 101] Network unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='maps.googleapis.com', port=443): Max retries exceeded with url: /maps/api/distancematrix/json?departure_time=now&destinations=R.+Prof.+Ulisses+Vieira%2C+2809+-+Santa+Quiteria%2C+Curitiba+-+PR%2C+80310-120&mode=driving&origins=-25.4517359%2C-49.3433726&units=metric&key=AIzaSyDqHMdgfqGyEvYvke640j5BF2ejRrLOMCM (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x727f14b0>: Failed to establish a new connection: [Errno 101] Network unreachable',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/googlemaps/client.py", line 229, in _request
+    **final_requests_kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/sessions.py", line 521, in get
+    return self.request('GET', url, **kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='maps.googleapis.com', port=443): Max retries exceeded with url: /maps/api/distancematrix/json?departure_time=now&destinations=R.+Prof.+Ulisses+Vieira%2C+2809+-+Santa+Quiteria%2C+Curitiba+-+PR%2C+80310-120&mode=driving&origins=-25.4517359%2C-49.3433726&units=metric&key=AIzaSyDqHMdgfqGyEvYvke640j5BF2ejRrLOMCM (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x727f14b0>: Failed to establish a new connection: [Errno 101] Network unreachable',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 204, in async_update_ha_state
+    yield from self.async_device_update()
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 327, in async_device_update
+    yield from self.hass.async_add_job(self.update)
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.6/site-packages/homeassistant/util/__init__.py", line 319, in wrapper
+    result = method(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/sensor/google_travel_time.py", line 228, in update
+    self._origin, self._destination, **options_copy)
+  File "/usr/lib/python3.6/site-packages/googlemaps/client.py", line 356, in wrapper
+    result = func(*args, **kwargs)
+  File "/usr/lib/python3.6/site-packages/googlemaps/distance_matrix.py", line 130, in distance_matrix
+    return client._request("/maps/api/distancematrix/json", params)
+  File "/usr/lib/python3.6/site-packages/googlemaps/client.py", line 233, in _request
+    raise googlemaps.exceptions.TransportError(e)
+googlemaps.exceptions.TransportError: HTTPSConnectionPool(host='maps.googleapis.com', port=443): Max retries exceeded with url: /maps/api/distancematrix/json?departure_time=now&destinations=R.+Prof.+Ulisses+Vieira%2C+2809+-+Santa+Quiteria%2C+Curitiba+-+PR%2C+80310-120&mode=driving&origins=-25.4517359%2C-49.3433726&units=metric&key=AIzaSyDqHMdgfqGyEvYvke640j5BF2ejRrLOMCM (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x727f14b0>: Failed to establish a new connection: [Errno 101] Network unreachable',))
+2018-05-13 22:42:21 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 22:55:44 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-13 22:55:52 WARNING (SyncWorker_17) [homeassistant.components.python_script.set_state.py] switch.vol_baixo_tv_q
+2018-05-13 22:55:53 WARNING (SyncWorker_0) [homeassistant.components.python_script.set_state.py] switch.vol_baixo_tv_q
+2018-05-13 22:55:53 WARNING (SyncWorker_1) [homeassistant.components.python_script.set_state.py] switch.vol_baixo_tv_q
+2018-05-13 22:55:55 WARNING (SyncWorker_9) [homeassistant.components.python_script.set_state.py] switch.vol_baixo_tv_q
+2018-05-13 22:55:56 WARNING (SyncWorker_3) [homeassistant.components.python_script.set_state.py] switch.vol_baixo_tv_q
+2018-05-13 23:58:36 WARNING (SyncWorker_13) [homeassistant.components.python_script.set_state.py] switch.power_tv_q
+2018-05-13 23:58:55 WARNING (Thread-6) [pychromecast.socket_client] Heartbeat timeout, resetting connection
+2018-05-13 23:59:25 ERROR (Thread-6) [pychromecast.socket_client] Failed to connect, retrying in 5.0s
+2018-05-13 23:59:32 WARNING (Thread-292) [pychromecast.socket_client] Heartbeat timeout, resetting connection
+2018-05-14 00:00:02 ERROR (Thread-292) [pychromecast.socket_client] Failed to connect, retrying in 5.0s
+2018-05-14 01:02:21 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-14 01:05:03 ERROR (MainThread) [homeassistant.components.hassio.handler] Timeout on /snapshots/new/full request
+2018-05-14 01:05:04 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall hassio.snapshot_full: name=FRIS 2018-05-14>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/homeassistant/core.py", line 1002, in _event_to_service_call
+    await service_handler.func(service_call)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/hassio/__init__.py", line 189, in async_service_handler
+    _LOGGER.error("Error on Hass.io API: %s", ret['message'])
+TypeError: 'NoneType' object is not subscriptable
+2018-05-14 03:04:08 WARNING (Thread-5) [pychromecast.socket_client] Heartbeat timeout, resetting connection
+2018-05-14 03:06:41 WARNING (Thread-4) [pychromecast.socket_client] Heartbeat timeout, resetting connection
+2018-05-14 03:06:45 ERROR (Thread-4) [pychromecast.socket_client] Failed to connect, retrying in 5.0s
+2018-05-14 03:09:02 ERROR (SyncWorker_14) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-05-14 03:14:06 ERROR (SyncWorker_10) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-05-14 03:53:18 ERROR (SyncWorker_9) [yahooweather] Fetch no weather data Yahoo!
+2018-05-14 03:53:19 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 215, in async_update_ha_state
+    state = self.state
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/weather/__init__.py", line 166, in state
+    return self.condition
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/weather/yweather.py", line 110, in condition
+    self._data.yahoo.Now['code'])]
+TypeError: 'NoneType' object is not subscriptable
+2018-05-14 04:01:52 ERROR (SyncWorker_15) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-05-14 04:01:53 ERROR (SyncWorker_3) [homeassistant.components.sensor.command_line] Command failed: curl --data "key=trnsl.1.1.20180312T184049Z.25ec68dcb8cdd93c.e8313f4eb494259e59ca6a6efd1c03e42e81d8a6&lang=en-pt&text=Light rain on Wednesday through Saturday, with high temperatures falling to 14°C on Sunday." https://translate.yandex.net/api/v1.5/tr.json/translate
+2018-05-14 04:04:55 ERROR (SyncWorker_18) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-05-14 04:06:57 ERROR (SyncWorker_16) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-05-14 05:02:24 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-14 07:00:55 WARNING (SyncWorker_14) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
+2018-05-14 07:00:55 WARNING (SyncWorker_10) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
+2018-05-14 07:00:55 WARNING (SyncWorker_3) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
+2018-05-14 07:00:57 WARNING (SyncWorker_0) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
+2018-05-14 07:36:38 WARNING (SyncWorker_6) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-14 07:36:43 WARNING (SyncWorker_14) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-14 07:36:44 WARNING (SyncWorker_7) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-14 07:41:15 WARNING (SyncWorker_3) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-14 07:41:23 WARNING (SyncWorker_1) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-14 07:42:23 WARNING (SyncWorker_13) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-14 07:42:24 WARNING (SyncWorker_3) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-14 07:43:03 WARNING (SyncWorker_15) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-14 07:43:11 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-14 07:43:15 WARNING (SyncWorker_6) [homeassistant.components.python_script.set_state.py] switch.vol_cima_tv_s
+2018-05-14 07:43:17 WARNING (SyncWorker_8) [homeassistant.components.python_script.set_state.py] switch.vol_cima_tv_s
+2018-05-14 07:43:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:43:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:43:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:43:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:44:10 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:44:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:44:30 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:44:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:44:47 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:44:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:45:00 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:45:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:45:09 WARNING (MainThread) [homeassistant.components.media_player] Platform cast not ready yet. Retrying in 30 seconds.
+2018-05-14 07:45:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:45:30 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:45:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:45:50 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:46:00 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:46:10 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:46:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:46:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:46:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:46:50 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:47:00 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:47:10 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:47:20 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:47:30 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:47:40 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:47:50 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:47:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:48:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:48:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:48:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:48:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:48:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:48:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:49:10 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:49:20 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:49:30 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:49:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:49:47 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:49:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:49:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:50:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:50:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:50:30 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:50:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:50:50 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:51:00 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:51:10 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:51:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:51:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:51:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:51:50 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:51:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:52:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:52:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:52:30 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:52:40 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:52:50 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:52:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:53:10 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:53:20 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:53:30 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:53:40 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:53:50 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:54:00 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:54:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:54:20 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:54:30 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:54:40 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:54:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:54:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:55:00 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:55:10 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:55:15 ERROR (Recorder) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) disk I/O error (Background on this error at: http://sqlalche.me/e/e3q8)
+2018-05-14 07:55:15 ERROR (Recorder) [homeassistant.components.recorder] Error in database connectivity: (sqlite3.OperationalError) disk I/O error (Background on this error at: http://sqlalche.me/e/e3q8). (retrying in 3 seconds)
+2018-05-14 07:55:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:55:30 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:55:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:55:50 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:56:00 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:56:10 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:56:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:56:30 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:56:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:56:47 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:57:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:57:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:57:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:57:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:57:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:57:42 WARNING (SyncWorker_13) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-05-14 07:57:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:57:59 WARNING (SyncWorker_5) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
+2018-05-14 07:58:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:58:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:58:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:58:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:58:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:58:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:59:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:59:02 ERROR (MainThread) [haffmpeg.core] FFmpeg fails [Errno 9] Bad file descriptor
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/haffmpeg/core.py", line 114, in open
+    stderr=stderr
+  File "/usr/lib/python3.6/asyncio/subprocess.py", line 225, in create_subprocess_exec
+    stderr=stderr, **kwds)
+  File "uvloop/loop.pyx", line 2368, in __subprocess_run
+  File "uvloop/handles/process.pyx", line 564, in uvloop.loop.UVProcessTransport.new
+  File "uvloop/handles/process.pyx", line 123, in uvloop.loop.UVProcess._init
+OSError: [Errno 9] Bad file descriptor
+2018-05-14 07:59:02 WARNING (MainThread) [haffmpeg.tools] Error starting FFmpeg.
+2018-05-14 07:59:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:59:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:59:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:59:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:59:50 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 07:59:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:00:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:00:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:00:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:00:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:00:32 WARNING (SyncWorker_3) [homeassistant.components.sensor.google_wifi] Unable to fetch data from Google Wifi
+2018-05-14 08:00:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:00:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:01:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:01:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:01:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:01:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:01:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:01:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:02:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:02:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:02:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:02:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:02:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:02:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:03:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:03:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:03:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:03:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:03:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:03:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:04:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:04:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:04:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:04:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:04:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:04:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:04:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:05:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:05:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:05:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:05:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:05:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:05:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:06:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:06:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:06:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:06:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:06:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:06:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:07:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:07:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:07:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:07:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:07:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:07:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:08:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:08:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:08:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:08:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:08:32 WARNING (SyncWorker_10) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-05-14 08:08:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:08:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:09:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:09:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:09:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:09:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:09:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:09:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:09:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:10:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:10:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:10:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:10:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:10:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:10:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:11:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:11:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:11:12 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/netdisco/ssdp.py", line 240, in scan
+    sock.sendto(req, SSDP_TARGET)
+OSError: [Errno 9] Bad file descriptor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/discovery.py", line 162, in scan_devices
+    results = await hass.async_add_job(_discover, netdisco)
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/discovery.py", line 188, in _discover
+    netdisco.scan()
+  File "/usr/lib/python3.6/site-packages/netdisco/discovery.py", line 57, in scan
+    self.ssdp.scan()
+  File "/usr/lib/python3.6/site-packages/netdisco/ssdp.py", line 40, in scan
+    self.update()
+  File "/usr/lib/python3.6/site-packages/netdisco/ssdp.py", line 88, in update
+    entry for entry in scan()
+  File "/usr/lib/python3.6/site-packages/netdisco/ssdp.py", line 244, in scan
+    sock.close()
+  File "/usr/lib/python3.6/socket.py", line 417, in close
+    self._real_close()
+  File "/usr/lib/python3.6/socket.py", line 411, in _real_close
+    _ss.close(self)
+OSError: [Errno 9] Bad file descriptor
+2018-05-14 08:11:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:11:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:11:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:11:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:12:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:12:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:12:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:12:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:12:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:12:49 WARNING (SyncWorker_3) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
+2018-05-14 08:12:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:13:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:13:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:13:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:13:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:13:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:13:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:14:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:14:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:14:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:14:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:14:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:14:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:14:53 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:15:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:15:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:15:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:15:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:15:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:15:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:16:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:16:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:16:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:16:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:16:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:16:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:17:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:17:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:17:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:17:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:17:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:17:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:18:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:18:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:18:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:18:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:18:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:18:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:19:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:19:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:19:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:19:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:19:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:19:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:19:54 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:20:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:20:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:20:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:20:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:20:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:20:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:21:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:21:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:21:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:21:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:21:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:21:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:22:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:22:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:22:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:22:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:22:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:22:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:23:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:23:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:23:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:23:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:23:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:23:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:24:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:24:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:24:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:24:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:24:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:24:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:24:55 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:24:57 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:25:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:25:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:25:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:25:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:25:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:25:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:26:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:26:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:26:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:26:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:26:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:26:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:27:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:27:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:27:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:27:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:27:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:27:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:28:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:28:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:28:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:28:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:28:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:28:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:29:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:29:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:29:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:29:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:29:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:29:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:29:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:29:57 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:30:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:30:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:30:12 WARNING (SyncWorker_15) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-05-14 08:30:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:30:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:30:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:30:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:31:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:31:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:31:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:31:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:31:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:31:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:32:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:32:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:32:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:32:32 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:32:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:32:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:33:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:33:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:33:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:33:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:33:37 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
 Traceback (most recent call last):
   File "/usr/lib/python3.6/site-packages/homeassistant/components/device_tracker/__init__.py", line 695, in async_device_tracker_scan
     found_devices = yield from scanner.async_scan_devices()
@@ -477,54 +605,278 @@ Traceback (most recent call last):
     self._update_info()
   File "/usr/lib/python3.6/site-packages/homeassistant/components/device_tracker/nmap_tracker.py", line 132, in _update_info
     arguments=options)
-  File "/usr/lib/python3.6/site-packages/nmap/nmap.py", line 231, in scan
-    stderr=subprocess.PIPE)
-  File "/usr/lib/python3.6/subprocess.py", line 709, in __init__
-    restore_signals, start_new_session)
-  File "/usr/lib/python3.6/subprocess.py", line 1288, in _execute_child
-    os.close(errwrite)
+  File "/usr/lib/python3.6/site-packages/nmap/nmap.py", line 235, in scan
+    (self._nmap_last_output, nmap_err) = p.communicate()
+  File "/usr/lib/python3.6/subprocess.py", line 843, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 1534, in _communicate
+    data = os.read(key.fd, 32768)
 OSError: [Errno 9] Bad file descriptor
-2018-05-10 17:34:26 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:34:35 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:34:45 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:34:56 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:35:05 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-10 17:46:57 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1837424848: Client exceeded max pending messages [2]: 512
-2018-05-10 17:47:35 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
-OSError: [Errno 113] Host is unreachable
-2018-05-10 17:47:51 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
-OSError: [Errno 113] Host is unreachable
-2018-05-10 18:00:49 WARNING (SyncWorker_8) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
-2018-05-10 18:00:49 WARNING (SyncWorker_2) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
-2018-05-10 18:00:49 WARNING (SyncWorker_4) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
-2018-05-10 18:00:51 WARNING (SyncWorker_11) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
-2018-05-10 19:00:26 WARNING (SyncWorker_15) [homeassistant.components.python_script.set_state.py] switch.portao
-2018-05-10 19:00:27 WARNING (SyncWorker_5) [homeassistant.components.python_script.set_state.py] switch.portao
-2018-05-10 19:01:07 WARNING (SyncWorker_6) [homeassistant.components.python_script.set_state.py] switch.portao
-2018-05-10 19:03:00 WARNING (SyncWorker_3) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
-2018-05-10 19:20:20 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
-TimeoutError: [Errno 110] Operation timed out
-2018-05-10 20:05:25 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
-TimeoutError: [Errno 110] Operation timed out
-2018-05-10 20:13:43 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-05-10 20:17:33 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
-2018-05-10 20:17:52 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.86.158
-2018-05-10 20:17:52 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1774766448: Message incorrectly formatted: extra keys not allowed @ data['event_type']. Got 'state_changed'
-extra keys not allowed @ data['id']. Got 1
-not a valid value for dictionary value @ data['type']. Got 'subscribe_events'
-required key not provided @ data['api_password']. Got None 
-2018-05-10 20:17:59 ERROR (Recorder) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
-2018-05-10 20:17:59 ERROR (Recorder) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
-2018-05-10 20:17:59 ERROR (Recorder) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
-2018-05-10 20:17:59 ERROR (Recorder) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
-2018-05-10 20:18:15 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.86.158
-2018-05-10 20:18:25 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1775144144: Message incorrectly formatted: extra keys not allowed @ data['event_type']. Got 'state_changed'
-extra keys not allowed @ data['id']. Got 1
-not a valid value for dictionary value @ data['type']. Got 'subscribe_events'
-required key not provided @ data['api_password']. Got None 
-2018-05-10 20:19:14 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.86.158
-2018-05-10 20:19:16 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1769083344: Message incorrectly formatted: extra keys not allowed @ data['event_type']. Got 'state_changed'
-extra keys not allowed @ data['id']. Got 1
-not a valid value for dictionary value @ data['type']. Got 'subscribe_events'
-required key not provided @ data['api_password']. Got None 
-2018-05-10 20:32:18 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-14 08:33:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:33:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:34:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:34:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:34:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:34:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:34:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:34:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:34:57 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:34:57 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:35:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:35:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:35:12 ERROR (MainThread) [homeassistant.helpers.entity] Update for media_player.spotify fails
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.6/site-packages/urllib3/connection.py", line 326, in connect
+    ssl_context=context)
+  File "/usr/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/lib/python3.6/ssl.py", line 760, in __init__
+    if sock.getsockopt(SOL_SOCKET, SO_TYPE) != SOCK_STREAM:
+OSError: [Errno 9] Bad file descriptor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3.6/site-packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3.6/site-packages/urllib3/connection.py", line 326, in connect
+    ssl_context=context)
+  File "/usr/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/lib/python3.6/ssl.py", line 760, in __init__
+    if sock.getsockopt(SOL_SOCKET, SO_TYPE) != SOCK_STREAM:
+urllib3.exceptions.ProtocolError: ('Connection aborted.', OSError(9, 'Bad file descriptor'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 204, in async_update_ha_state
+    yield from self.async_device_update()
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 327, in async_device_update
+    yield from self.hass.async_add_job(self.update)
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/media_player/spotify.py", line 186, in update
+    current = self._player.current_playback()
+  File "/usr/lib/python3.6/site-packages/spotipy/client.py", line 856, in current_playback
+    return self._get("me/player", market = market)
+  File "/usr/lib/python3.6/site-packages/spotipy/client.py", line 148, in _get
+    return self._internal_call('GET', url, payload, kwargs)
+  File "/usr/lib/python3.6/site-packages/spotipy/client.py", line 110, in _internal_call
+    r = self._session.request(method, url, headers=headers, proxies=self.proxies, **args)
+  File "/usr/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/adapters.py", line 490, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', OSError(9, 'Bad file descriptor'))
+2018-05-14 08:35:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:35:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:35:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:35:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:36:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:36:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:36:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:36:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:36:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:36:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:37:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:37:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:37:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:37:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:37:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:37:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:38:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:38:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:38:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:38:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:38:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:38:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:39:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:39:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:39:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:39:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:39:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:39:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:39:57 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:39:57 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:40:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:40:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:40:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:40:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:40:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:40:42 ERROR (Recorder) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) disk I/O error (Background on this error at: http://sqlalche.me/e/e3q8)
+2018-05-14 08:40:42 ERROR (Recorder) [homeassistant.components.recorder] Error in database connectivity: (sqlite3.OperationalError) disk I/O error (Background on this error at: http://sqlalche.me/e/e3q8). (retrying in 3 seconds)
+2018-05-14 08:40:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:41:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:41:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:41:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:41:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:41:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:41:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:42:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:42:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:42:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:42:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:42:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:42:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:43:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:43:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:43:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:43:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:43:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:43:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:44:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:44:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:44:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:44:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:44:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:44:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:44:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:44:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:45:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:45:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:45:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:45:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:45:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:45:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:46:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:46:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:46:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:46:22 ERROR (Recorder) [homeassistant.components.recorder.util] Error executing query: (sqlite3.OperationalError) disk I/O error [SQL: 'INSERT INTO events (event_type, event_data, origin, time_fired, created) VALUES (?, ?, ?, ?, ?)'] [parameters: ('state_changed', '{"entity_id": "group.alarme", "old_state": {"entity_id": "group.alarme", "state": "on", "attributes": {"entity_id": ["alarm_control_panel.ha_alarm",  ... (512 characters truncated) ... tom_ui_state_card": "state-card-custom-ui"}, "last_changed": "2018-05-14T11:46:22.109958+00:00", "last_updated": "2018-05-14T11:46:22.109958+00:00"}}', 'LOCAL', '2018-05-14 11:46:22.110166', '2018-05-14 11:46:22.427302')] (Background on this error at: http://sqlalche.me/e/e3q8)
+2018-05-14 08:46:22 ERROR (Recorder) [homeassistant.components.recorder] Error in database connectivity: (sqlite3.OperationalError) disk I/O error [SQL: 'INSERT INTO events (event_type, event_data, origin, time_fired, created) VALUES (?, ?, ?, ?, ?)'] [parameters: ('state_changed', '{"entity_id": "group.alarme", "old_state": {"entity_id": "group.alarme", "state": "on", "attributes": {"entity_id": ["alarm_control_panel.ha_alarm",  ... (512 characters truncated) ... tom_ui_state_card": "state-card-custom-ui"}, "last_changed": "2018-05-14T11:46:22.109958+00:00", "last_updated": "2018-05-14T11:46:22.109958+00:00"}}', 'LOCAL', '2018-05-14 11:46:22.110166', '2018-05-14 11:46:22.427302')] (Background on this error at: http://sqlalche.me/e/e3q8). (retrying in 3 seconds)
+2018-05-14 08:46:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:46:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:46:42 WARNING (SyncWorker_12) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-05-14 08:46:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:47:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:47:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:47:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:47:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:47:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:47:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:48:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:48:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:48:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:48:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:48:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:48:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:49:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:49:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:49:16 WARNING (SyncWorker_16) [homeassistant.components.python_script.set_state.py] switch.vol_baixo_tv_s
+2018-05-14 08:49:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:49:30 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:49:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:49:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:49:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:49:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:50:00 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:50:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:50:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:50:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:50:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:50:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:50:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:51:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:51:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:51:20 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:51:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:51:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:51:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:52:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:52:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:52:20 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:52:30 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:52:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:52:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:53:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:53:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:53:20 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:53:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:53:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:53:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:54:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:54:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:54:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:54:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:54:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 08:54:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+2018-05-14 09:13:03 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-14 09:13:08 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-14 09:13:10 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-14 09:13:21 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:13:21 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:13:22 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:13:22 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:13:35 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:13:35 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:13:41 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:13:41 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:13:55 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:13:55 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:14:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:14:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:14:41 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:14:41 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:15:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:15:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:15:15 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:15:15 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:15:16 WARNING (MainThread) [aiohttp.websocket] websocket connection is closing.
+2018-05-14 09:15:21 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:15:21 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:15:55 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:15:55 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:16:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:16:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:16:15 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:16:15 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:16:35 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:16:35 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:16:41 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:16:41 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:17:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:17:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:17:15 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:17:15 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:17:21 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:17:21 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:17:41 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:17:41 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:18:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:18:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:18:15 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:18:15 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:18:35 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:18:35 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:18:41 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:18:41 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:19:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:19:01 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:19:15 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:19:15 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:19:21 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'
+2018-05-14 09:19:21 ERROR (MainThread) [homeassistant.helpers.condition] Error during template condition: UndefinedError: 'None' has no attribute 'state'

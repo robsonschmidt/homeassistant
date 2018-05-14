@@ -24,21 +24,6 @@ previsao_tempo:
   control: hidden
   entities:
   - input_boolean.weather
-    
-# Menu Garagem
-garagem:
-  name: Garagem
-  view: yes
-  icon: mdi:garage
-  entities:
-  - camera.frente
-  - group.portao
-# Card portão
-portao:
-  name: ' '
-  control: hidden
-  entities:
-  - switch.portao_template
 
 # Menu Sala
 sala:
@@ -111,7 +96,9 @@ quarto_suite:
   - switch.luz_sacada_frente
   - sensor.hline_2
   - switch.onoff_desumidificador_robson
+  - sensor.mold_indicator_2
   - switch.onoff_desumidificador_flavia
+  - sensor.mold_indicator
 # Card Quarto
 corredor:
   name: 'Corredor'
@@ -128,11 +115,13 @@ quarto_isabelle:
   - input_text.quarto_isabelle_player
   - sensor.hline_2
   - switch.onoff_aquecedor_isabelle
+  - sensor.mold_indicator_3
   - sensor.hline_3
   - input_number.tempo_timer
   - input_boolean.ativa_timer_tv_dormir
   - input_select.media_player
   - input_select.mensagem_voz_tv
+  - climate.quarto_isabelle
 
 fundos_tiles:
   name: Térreo
@@ -150,6 +139,37 @@ conf_weblinks:
   entities:
   - weblink.terminal
   - weblink.file_editor
+
+# Menu Garagem
+garagem:
+  name: Garagem
+  view: yes
+  icon: mdi:garage
+  entities:
+  - camera.frente
+  - group.portao
+# Card portão
+portao:
+  name: ' '
+  control: hidden
+  entities:
+  - switch.portao_template
+
+# Menu Alarme
+alarme:
+  name: Alarme
+  view: yes
+  icon: mdi:alarm-light
+  entities:
+  - alarm_control_panel.ha_alarm
+  - group.movimento
+
+movimento:
+  name: Sensor Movimento
+  entities:
+  - binary_sensor.camera_interna
+  - binary_sensor.camera_fundos
+  - binary_sensor.camera_frente  
 
 # Menu Camera
 camera:
@@ -224,8 +244,8 @@ agenda_humidade_quarto:
   entities:
   - input_boolean.ligar_desumidificador
   - sensor.hline_1
-  - input_number.min_humidade_quarto
-  - input_number.max_humidade_quarto
+  - input_number.ind_mofo_max
+  - input_number.ind_mofo_min
   - sensor.hline_2
   - input_datetime.ligar_desumidificador_inicio
   - input_datetime.ligar_desumidificador_fim

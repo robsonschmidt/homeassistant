@@ -51,10 +51,10 @@
   entities:
   - device_id: holidays_in_brazil
     name: Holidays in Brazil
-    track: true
+    track: false
 
 - cal_id: utco5lr5bvlknjh869u50p2cg1v6apae@import.calendar.google.com
   entities:
   - device_id: startse__events
     name: Startse  Events
-    track: true
+    track: false

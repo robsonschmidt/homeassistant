@@ -577,8 +577,8 @@ sensor.hline_4:
   custom_ui_state_card: state-card-hline
   config:
     width: 85
-    height: 1
     backgroundcolor: white
+    height: 1
     bordertop: none
     backgroundimage: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 100, 55, 1), rgba(0, 0, 0, 0))
 
@@ -588,3 +588,16 @@ cover.portao:
 
 #sensor.fases_lua:
 #  custom_ui_state_card: custom-cover-badge
+
+binary_sensor.camera_interna:
+  friendly_name: Térreo Interno
+binary_sensor.camera_fundos:
+  friendly_name: Fundos
+binary_sensor.camera_frente:
+  friendly_name: Frente
+sensor.mold_indicator:
+  friendly_name: Indicador Mofo Armário Flávia
+sensor.mold_indicator_2:
+  friendly_name: Indicador Mofo Armário Robson
+sensor.mold_indicator_3:
+  friendly_name: Indicador Mofo Quarto Isabelle

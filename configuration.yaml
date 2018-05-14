@@ -121,6 +121,7 @@ binary_sensor: !include binary_sensor.yaml
 zone: !include zone.yaml
 telegram_bot: !include telegram_bot.yaml
 notify: !include notify.yaml
+climate: !include climate.yaml
 
 ifttt:
   key: !secret ifttt
@@ -168,6 +169,11 @@ google_assistant:
       name: gate
 mqtt:
   broker: 192.168.86.139
+  
+#microsoft_face:
+#  api_key: f58276501ad74262b5560217ecabfc89
+#  azure_region: westcentralus
+  
 #image_processing:
 #  - platform: openalpr_local
 #    region: br

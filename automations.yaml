@@ -350,7 +350,7 @@
     data_template:
       message: >
        *Monitoramento da Internet*{{- '\n' -}}
-       _Velocidade Internet Baixa_ - Download {{ states('sensor.speedtest_download')}} Mbit/s
+       _Velocidade Baixa_ - Download {{ states('sensor.speedtest_download')}} Mbit/s
 - alias: Robson chegou em casa
   condition:
   - condition: state
@@ -717,20 +717,7 @@
     event_data:
       data: /sair_casa
   action:
-  - service: notify.telegram_bot
-    data_template:
-      message: 'Olá *Robson*, você está saindo de casa, seguem seus atalhos :'
-      data:
-        inline_keyboard:
-        - Portão:/portao
-        - Alarme:/arma_alarme
-        - Waze BRF ({{ states.sensor.para_brf.attributes.duration }}):/wazebrf, Waze
-          Sogro ({{ states.sensor.para_sogro.attributes.duration }}):/wazesogro
-        - Waze Pai ({{ states.sensor.para_pai.attributes.duration }}):/wazepai, Waze
-          Escola ({{ states.sensor.para_escola_isabelle.attributes.duration }}):/wazeescola
-        - Waze Comprimisso ({{ states.sensor.para_compromisso.attributes.duration
-          }}):/wazecompromisso
-        - Musica Rock:/musicarock, Musica Familia:/musicafamilia
+  - service: script.sair_casa
 - alias: Comando Waze BRF
   trigger:
     platform: event
@@ -915,8 +902,8 @@
     state: 'on'
   trigger:
   - platform: template
-    value_template: '{{ states.sensor.time.state == (states.input_datetime.ligar_desumidificador_inicio.attributes.timestamp
-      | int | timestamp_custom(''%H:%M'', false)) }}'
+    value_template: >
+     {{ states.sensor.time.state == (states.input_datetime.ligar_desumidificador_inicio.attributes.timestamp|int|timestamp_custom('%H:%M', false)) }}
   action:
   - service: switch.turn_on
     entity_id: switch.onoff_desumidificador_robson
@@ -930,27 +917,35 @@
       entity_id: input_boolean.ligar_desumidificador
       state: 'on'
     - condition: template
-      value_template: '{{ states.sensor.time.state >= (states.input_datetime.horario_desumidificador_inicio.attributes.timestamp
-        | int | timestamp_custom(''%H:%M'', false)) }}'
+      value_template: >
+       {{ states.sensor.time.state >= (states.input_datetime.horario_desumidificador_inicio.attributes.timestamp| int | timestamp_custom('%H:%M', false)) }}
     - condition: template
-      value_template: '{{ states.sensor.time.state <= (states.input_datetime.horario_desumidificador_fim.attributes.timestamp
-        | int | timestamp_custom(''%H:%M'', false)) }}'
+      value_template: >
+       {{ states.sensor.time.state <= (states.input_datetime.horario_desumidificador_fim.attributes.timestamp| int | timestamp_custom('%H:%M', false)) }}
   trigger:
   - platform: template
-    value_template: '{{ states.sensor.armario_robson_humidade.state > states.input_number.max_humidade_quarto.state
-      }}'
+    value_template: >
+      {{ states.sensor.mold_indicator_2.state > states.input_number.ind_mofo_max.state}}
   action:
   - service: switch.turn_on
     entity_id: switch.onoff_desumidificador_robson
 - alias: Liga Desumidificador Humidade Flavia
   condition:
-    condition: state
-    entity_id: input_boolean.ligar_desumidificador
-    state: 'on'
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: input_boolean.ligar_desumidificador
+      state: 'on'
+    - condition: template
+      value_template: >
+       {{ states.sensor.time.state >= (states.input_datetime.horario_desumidificador_inicio.attributes.timestamp| int | timestamp_custom('%H:%M', false)) }}
+    - condition: template
+      value_template: >
+       {{ states.sensor.time.state <= (states.input_datetime.horario_desumidificador_fim.attributes.timestamp| int | timestamp_custom('%H:%M', false)) }}
   trigger:
   - platform: template
-    value_template: '{{ states.sensor.armario_robson_humidade.state > states.input_number.max_humidade_quarto.state
-      }}'
+    value_template: >
+     {{ states.sensor.mold_indicator.state > states.input_number.ind_mofo_max.state}}
   action:
   - service: switch.turn_on
     entity_id: switch.onoff_desumidificador_flavia
@@ -961,8 +956,11 @@
     state: 'on'
   trigger:
   - platform: template
-    value_template: '{{ states.sensor.time.state == (states.input_datetime.ligar_desumidificador_fim.attributes.timestamp
-      | int | timestamp_custom(''%H:%M'', false)) }}'
+    value_template: >
+     {{ states.sensor.time.state == (states.input_datetime.ligar_desumidificador_fim.attributes.timestamp| int | timestamp_custom('%H:%M', false)) }}
+  - platform: template
+    value_template: >
+     {{ states.sensor.time.state == (states.input_datetime.horario_desumidificador_fim.attributes.timestamp| int | timestamp_custom('%H:%M', false)) }}
   action:
   - service: switch.turn_off
     entity_id: switch.onoff_desumidificador_robson
@@ -970,25 +968,41 @@
     entity_id: switch.onoff_desumidificador_flavia
 - alias: Desliga Desumidificador Humidade Robson
   condition:
-    condition: state
-    entity_id: input_boolean.ligar_desumidificador
-    state: 'on'
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: input_boolean.ligar_desumidificador
+      state: 'on'
+    - condition: template
+      value_template: >
+       {{ states.sensor.time.state >= (states.input_datetime.horario_desumidificador_inicio.attributes.timestamp| int | timestamp_custom('%H:%M', false)) }}
+    - condition: template
+      value_template: >
+       {{ states.sensor.time.state <= (states.input_datetime.horario_desumidificador_fim.attributes.timestamp| int | timestamp_custom('%H:%M', false)) }}
   trigger:
   - platform: template
-    value_template: '{{ states.sensor.armario_robson_humidade.state < states.input_number.min_humidade_quarto.state
-      }}'
+    value_template: >
+     {{ states.sensor.mold_indicator_2.state < states.input_number.ind_mofo_min.state}}
   action:
   - service: switch.turn_off
     entity_id: switch.onoff_desumidificador_robson
 - alias: Desliga Desumidificador Humidade Flavia
   condition:
-    condition: state
-    entity_id: input_boolean.ligar_desumidificador
-    state: 'on'
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: input_boolean.ligar_desumidificador
+      state: 'on'
+    - condition: template
+      value_template: >
+       {{ states.sensor.time.state >= (states.input_datetime.horario_desumidificador_inicio.attributes.timestamp| int | timestamp_custom('%H:%M', false)) }}
+    - condition: template
+      value_template: >
+       {{ states.sensor.time.state <= (states.input_datetime.horario_desumidificador_fim.attributes.timestamp| int | timestamp_custom('%H:%M', false)) }}
   trigger:
   - platform: template
-    value_template: '{{ states.sensor.armario_robson_humidade.state < states.input_number.min_humidade_quarto.state
-      }}'
+    value_template: >
+     {{ states.sensor.mold_indicator.state < states.input_number.ind_mofo_min.state}}
   action:
   - service: switch.turn_off
     entity_id: switch.onoff_desumidificador_flavia
@@ -1052,12 +1066,7 @@
     entity_id: alarm_control_panel.ha_alarm
     to: 'armed_custom_bypass'
   action:
-  - service: notify.telegram_bot
-    data:
-      message: 'Olá *Robson*, está saindo de casa?'
-      data:
-        inline_keyboard:
-        - Portão:/portao
+  - service: script.sair_casa
 - alias: Alarme desligado
   trigger:
   - platform: state
@@ -1098,6 +1107,31 @@
   action:
   - service: switch.toggle
     entity_id: switch.alarme
+- alias: Detectado movimento
+  condition:
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: alarm_control_panel.ha_alarm
+      state: 'armed_away'
+    - condition: state
+      entity_id: alarm_control_panel.ha_alarm
+      state: 'armed_home'
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.camera_interna
+    to: 'on'
+  - platform: state
+    entity_id: binary_sensor.camera_frente
+    to: 'on'
+  - platform: state
+    entity_id: binary_sensor.camera_fundos
+    to: 'on'
+  action:
+  - service: notify.telegram_bot
+    data_template:
+      message: >
+       *Segurança Residencial*{{- '\n' -}}Detectado movimento em casa no {{ trigger.to_state.attributes.friendly_name }}.
 - alias: Volume Sala Baixo
   trigger:
   - platform: state

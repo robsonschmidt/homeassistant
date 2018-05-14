@@ -1,0 +1,6 @@
+- platform: generic_thermostat
+  name: Quarto Isabelle
+  heater: switch.onoff_aquecedor_isabelle
+  target_sensor: sensor.temperatura_quarto_isabelle
+  min_temp: 17
+  max_temp: 25
