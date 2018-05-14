@@ -7,8 +7,7 @@
   - platform: template
     value_template: >
      {{ states.sensor.cpu_temperature.state >= states.input_number.temp_cpu_alta.state
-     and  states.sensor.cpu_temperature.state < states.input_number.temp_cpu_muito_alta.state
-     }}
+     and  states.sensor.cpu_temperature.state < states.input_number.temp_cpu_muito_alta.state}}
   action:
   - service: notify.telegram_bot
     data_template:
@@ -62,8 +61,8 @@
 - alias: Portao aberto sem ninguem em casa
   condition:
     - condition: state
-      entity_id: sensor.alguem_em_casa
-      state: 'False'
+      entity_id: binary_sensor.alguem_em_casa
+      state: 'off'
   trigger:
   - entity_id: binary_sensor.portao
     platform: state
@@ -829,13 +828,13 @@
   - service: input_number.set_value
     data_template:
       entity_id: input_number.valor_bitcoin_meianoite_ontem
-      value: '{{ states.input_number.valor_bitcoin_meianoite.state }}
-
-        '
+      value: >
+       {{ states.input_number.valor_bitcoin_meianoite.state }}
   - service: input_number.set_value
     data_template:
       entity_id: input_number.valor_bitcoin_meianoite
-      value: '{{ 1 / (states.sensor.exchange_rate_sensor.attributes.BTC | float)}}'
+      value: >
+       {{ 1 / (states.sensor.exchange_rate_sensor.attributes.BTC | float)}}
 - alias: Envio invalid configuration
   trigger:
   - platform: state
@@ -856,8 +855,8 @@
   action:
   - service: notify.telegram_bot
     data_template:
-      message: '*Timer* iniciado para *TV {{ states.input_select.media_player.state
-        }}*, fim em {{ states(''input_number.tempo_timer'')|int }} minutos.'
+      message: >
+       *Timer* iniciado para *TV {{ states.input_select.media_player.state }}*, fim em {{ states('input_number.tempo_timer')|int }} minutos.
   - delay: "00:{{ states('input_number.tempo_timer')|int }}:00"
   - service: script.mensagem_tv
   - delay: 00:00:10
@@ -895,6 +894,27 @@
       message: >
        *Controle de Energia*
        Sem energia em casa.
+- alias: Esqueceu algo ligado em casa
+  condition:
+  - condition: state
+    entity_id: binary_sensor.alguem_em_casa
+    state: 'off'
+  - condition: state
+    entity_id: binary_sensor.algo_ligado
+    state: 'on'
+  trigger:
+  - entity_id: binary_sensor.alguem_em_casa
+    platform: state
+    to: 'off'
+  - entity_id: binary_sensor.algo_ligado
+    platform: state
+    to: 'on'
+  action:
+  - service: notify.telegram_bot
+    data_template:
+      message: >
+       *Controle de Energia*{{- '\n' -}}
+       Você saiu de casa e deixou algo ligado.
 - alias: Liga Desumidificador Horario
   condition:
     condition: state
@@ -1013,7 +1033,7 @@
     state: 'off'
   trigger:
   - platform: state
-    entity_id: binary_sensor.people_home
+    entity_id: binary_sensor.alguem_em_casa
     to: 'off'
   action:
   - service: notify.telegram_bot

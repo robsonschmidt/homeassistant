@@ -51,12 +51,15 @@ version: 20180129.2
         width: 100%;
         margin: 0;
       }
+      paper-icon-button[highlight] {
+        color: var(--accent-color);
+      }
     </style>
 
     <template is='dom-if' if='[[!playerObj]]'>
       <div class='horizontal justified layout'>
         <state-info state-obj='[[stateObj]]' in-dialog='[[dialog]]'></state-info>
-        <div class='state'>Offline</div>
+        <div class='state'>Desligado</div>
       </div>
     </template>
 
@@ -70,21 +73,26 @@ version: 20180129.2
           </div>
         </div>
         <div class='horizontal layout'>
-          <paper-icon-button icon='mdi:power' on-tap='handlePowerTap'></paper-icon-button>
-          <template is='dom-if' if='[[config.set_up_box.show]]'>
-            <paper-icon-button icon='mdi:file-presentation-box' on-tap='handlePowerNetTap'></paper-icon-button>
+          <template is='dom-if' if='[[!config.set_up_box.show]]'>
+             <paper-icon-button icon='mdi:power' on-tap='handlePowerTap' highlight$='[[!playerObj.isOff]]'></paper-icon-button>
           </template>
+          <template is='dom-if' if='[[config.set_up_box.show]]'>
+             <paper-icon-button icon='mdi:power' on-tap='handlePowerAllTap' highlight$='[[!playerObj.isOff]]'></paper-icon-button>
+             <paper-icon-button icon='mdi:television' on-tap='handlePowerTap'></paper-icon-button>
+            <paper-icon-button src="/local/setup-box.png" on-tap='handlePowerNetTap'></paper-icon-button>
+          </template>
+          <paper-icon-button icon='[[showPlayerIcon]]' on-tap='handleShowPlayerTap'></paper-icon-button>
         </div>
       </div>
 
-<!--      <template is='dom-if' if='[[!playerObj.isOff]]'> -->
+      <template is='dom-if' if='[[showPlayer]]'>
         <div class='controls layout horizontal justified'>
           <template is='dom-if' if='[[config.buttons]]'>
             <paper-icon-button icon='mdi:format-list-numbers' on-tap='handleShowControl'></paper-icon-button>
           </template>
-          <paper-icon-button icon='mdi:volume-mute' on-tap='handleVolumeTap'></paper-icon-button>
-          <paper-icon-button icon='mdi:volume-minus' on-tap='handleVolumeDown'></paper-icon-button>
-          <paper-icon-button icon='mdi:volume-plus' on-tap='handleVolumeUp'></paper-icon-button>
+          <paper-icon-button icon='mdi:volume-off' on-tap='handleVolumeTap'></paper-icon-button>
+          <paper-icon-button icon='mdi:volume-medium' on-tap='handleVolumeDown'></paper-icon-button>
+          <paper-icon-button icon='mdi:volume-high' on-tap='handleVolumeUp'></paper-icon-button>
           <paper-slider disabled='[[playerObj.isMuted]]'
             min='0' max='100' value='[[playerObj.volumeSliderValue]]'
             on-change='volumeSliderChanged' class='flex'>
@@ -120,37 +128,36 @@ version: 20180129.2
             </paper-dropdown-menu>
           </template>
         </div>
-        <div>
-          <template is='dom-if' if='[[showControl]]'>
-            <template is='dom-if' if='[[config.buttons]]'>
-              <paper-button-group>
-                <template is='dom-repeat' items='[[config.buttons]]'>
-                  <template is='dom-if' if='[[item.is_space]]'>
-                    &nbsp;
-                  </template> 
-                  <template is='dom-if' if='[[!item.is_space]]'>
-                    <paper-button raised on-tap='callCommand'>
-                      <template is='dom-if' if='[[item.icon]]'>
-                        <iron-icon icon='[[item.icon]]'></iron-icon>
-                      </template>
-                      <template is='dom-if' if='[[item.show_name]]'>
-                        [[item.name]]
-                      </template>
-                    </paper-button>
-                  </template>
+      </template>
+      <div>
+        <template is='dom-if' if='[[showControl]]'>
+          <template is='dom-if' if='[[config.buttons]]'>
+            <paper-button-group>
+              <template is='dom-repeat' items='[[config.buttons]]'>
+                <template is='dom-if' if='[[item.is_space]]'>
+                  &nbsp;
+                </template> 
+                <template is='dom-if' if='[[!item.is_space]]'>
+                  <paper-button raised on-tap='callCommand'>
+                    <template is='dom-if' if='[[item.icon]]'>
+                      <iron-icon icon='[[item.icon]]'></iron-icon>
+                    </template>
+                    <template is='dom-if' if='[[item.show_name]]'>
+                      [[item.name]]
+                    </template>
+                  </paper-button>
                 </template>
-              </paper-button-group>
-            </template>
+              </template>
+            </paper-button-group>
           </template>
-        </div>
-
-<!--      </template>      -->
-      <paper-dialog id='infoCard'>
+        </template>
+      </div>
+<!--      <paper-dialog id='infoCard'>
         <more-info-media_player
           hass='[[hass]]'
           state-obj='[[playerObj]]'
         ></more-info-media_player>
-      </paper-dialog>
+      </paper-dialog>-->
     </template>
   </template>
 </dom-module>
@@ -166,6 +173,14 @@ class StateCardMiniMediaPlayer extends Polymer.Element {
       showControl: {
         type: Boolean,
         value: false,
+      },
+      showPlayer: {
+        type: Boolean,
+        value: false,
+      },
+      showPlayerIcon: {
+        type: Text,
+        value: 'mdi:chevron-down',
       },
       config: {
         type: Object,
@@ -235,6 +250,11 @@ class StateCardMiniMediaPlayer extends Polymer.Element {
     this.hass.callService('switch', 'toggle', { 'entity_id': this.config.set_up_box.power} );
   }
 
+  handlePowerAllTap(ev){
+    this.handlePowerTap(ev);
+    this.handlePowerNetTap(ev);
+  }
+
   callService(service) {
     this.hass.callService('media_player', service, { 'entity_id': this.playerObj.entity_id });
   }
@@ -266,6 +286,12 @@ class StateCardMiniMediaPlayer extends Polymer.Element {
   
   handleShowControl(ev){
     this.showControl = !this.showControl;
+  }
+  
+  handleShowPlayerTap(ev){
+    ev.stopPropagation();
+    this.showPlayer = !this.showPlayer;
+    this.showPlayerIcon = this.showPlayer ? 'mdi:chevron-up' : 'mdi:chevron-down';
   }
   
   handleSelectSource(ev) {

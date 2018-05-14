@@ -499,6 +499,7 @@ clima_texto:
     data_template:
       entity_id: input_text.clima_texto
       value: >
+       *{{-'\U0001F321'-}} Previsão de Tempo:*{{- '\n' -}}
        *Temperatura Atual:*{{- '\n' -}}
        *- *{{ states.sensor.dark_sky_temperature.state|replace('.', ',') }} {{ states.sensor.dark_sky_temperature.attributes.unit_of_measurement }} {{ states.sensor.dark_sky_summary_pt.state }}{{- '\n' -}}
        *Previsão de tempo de hoje:*{{- '\n' -}}
@@ -534,12 +535,13 @@ mercado_financeiro_texto:
     data_template:
       entity_id: input_text.mercado_financeiro_texto
       value: >
+       *{{- '\U0001F4B1' -}} Mercado Financeiro:*{{- '\n' -}}
        *Dólar (US$):*{{- '\n' -}}
-       *- Atual:* {{ (states.sensor.exchange_rate_sensor.state|round(2))|replace('.', ',') }}{{- '\n' -}}
-       *Bitcoin (₿):*{{- '\n' -}}
-       *- D-1:* {{ ((states.input_number.valor_bitcoin_meianoite.state) | round(2))|replace('.', ',') }}({{ (((((states.input_number.valor_bitcoin_meianoite.state | float) / (states.input_number.valor_bitcoin_meianoite_ontem.state | float)) -1) * 100) | round(2))|replace('.', ',') }}%){{- '\n' -}}
-       *- Atual:* {{((states.sensor.btc.state | float) | round(2))|replace('.', ',') }}({{ (((((states.sensor.btc.state | float) / (states.input_number.valor_bitcoin_meianoite.state | float)) -1) * 100) | round(2))|replace('.', ',') }}%){{- '\n' -}}
-       *- Valor Carteira:* US$ {{ (((states.sensor.btc.state | float) * 0.028924) | round(2))|replace('.', ',') }} | R$ {{ (((states.sensor.btc.state | float) * 0.028924 * (states.sensor.exchange_rate_sensor.state | float)) | round(2))|replace('.', ',') }}
+       *- Atual:* R$ {{ ('%0.2f' % states.sensor.exchange_rate_sensor.state|float|round(2))|replace('.', ',') }}{{- '\n' -}}
+       *Bitcoin ({{- '\U000020BF' -}}):*{{- '\n' -}}
+       *- D-1:* {{ ('%0.2f' %(states.input_number.valor_bitcoin_meianoite.state) | round(2))|replace('.', ',') }}({{ (((((states.input_number.valor_bitcoin_meianoite.state | float) / (states.input_number.valor_bitcoin_meianoite_ontem.state | float)) -1) * 100) | round(2))|replace('.', ',') }}%){{- '\n' -}}
+       *- Atual:* {{('%0.2f' % (states.sensor.btc.state | float) | round(2))|replace('.', ',') }}({{ (((((states.sensor.btc.state | float) / (states.input_number.valor_bitcoin_meianoite.state | float)) -1) * 100) | round(2))|replace('.', ',') }}%){{- '\n' -}}
+       *- Valor Carteira:* US$ {{ ('%0.2f' % ((states.sensor.btc.state | float) * 0.028924) | round(2))|replace('.', ',') }} | R$ {{ ('%0.2f' % ((states.sensor.btc.state | float) * 0.028924 * (states.sensor.exchange_rate_sensor.state | float)) | round(2))|replace('.', ',') }}
 mercado_financeiro_voz:
   alias: Mercado Financeiro Voz
   sequence:
@@ -558,7 +560,7 @@ proximo_compromisso_texto:
     data_template:
       entity_id: input_text.proximo_compromisso_texto
       value: >
-       *Próximo compromisso:*{{- '\n' -}}
+       *{{- '\U0001F4C5' -}} Próximo compromisso:*{{- '\n' -}}
        *- Título:* {{ states.calendar.robson.attributes.message }} {{- '\n' -}}
        *- Horário:* {{ as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%d-%m-%Y %H:%M') }}
        até{% if as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%d') == as_timestamp(states.calendar.robson.attributes.end_time) | timestamp_custom('%d') %}
@@ -703,7 +705,6 @@ mensagem_tv:
        {% for device in states if (device.attributes.friendly_name == states.input_select.mensagem_voz_tv.state and device.domain == 'input_text') -%}
          {{ device.state }}
        {%- endfor %}
-       .
       language: pt
       
 # Video de Ninar

@@ -5,13 +5,15 @@
   invert_logic: true
 - platform: template
   sensors:
-    people_home:
+    alguem_em_casa:
+      entity_id: device_tracker.52008849ec808451, device_tracker.iphonedeflavialan
       value_template: >-
         {{ is_state('device_tracker.52008849ec808451', 'home')
            or is_state('device_tracker.iphonedeflavialan', 'home') }}
     portao_template:
       friendly_name: "Portão"
       device_class: opening
+      entity_id: binary_sensor.portao
       value_template: "{{ is_state('binary_sensor.portao', 'on') }}"
       icon_template: >-
           {% if is_state('binary_sensor.portao', 'off') %}
@@ -19,6 +21,22 @@
           {% else %}
             mdi:garage-open
           {% endif %}
+    algo_ligado:
+      entity_id: switch.luz_sala_jantar,switch.display,switch.garden_light,light.luz_esquerda,light.luz_central,light.luz_direita,switch.luz_quarto,switch.luz_painel_quarto,switch.luz_sacada_frente,switch.luz_corredor, binary_sensor.tv_isabelle, binary_sensor.tv_quarto, binary_sensor.tv_sala
+      value_template: >-
+        {{ is_state('switch.luz_sala_jantar', 'on')
+           or is_state('switch.display', 'on')
+           or is_state('switch.garden_light', 'on')
+           or is_state('light.luz_esquerda', 'on')
+           or is_state('light.luz_central', 'on')
+           or is_state('light.luz_direita', 'on')
+           or is_state('switch.luz_quarto', 'on')
+           or is_state('switch.luz_painel_quarto', 'on')
+           or is_state('switch.luz_sacada_frente', 'on')
+           or is_state('switch.luz_corredor', 'on')
+           or is_state('binary_sensor.tv_isabelle','on')
+           or is_state('binary_sensor.tv_sala','on')
+           or is_state('binary_sensor.tv_quarto','on')}}
 - platform: mqtt
   name: Portão
   state_topic: "tele/sonoff6075/SENSOR"
@@ -43,13 +61,13 @@
   scan_interval: 30
 - platform: ffmpeg_motion
   name: camera_fundos
-  changes: 10
+  changes: 50
   input: !secret input_camera_fundos
 - platform: ffmpeg_motion
   name: camera_frente
-  changes: 10
+  changes: 50
   input: !secret input_camera_frente
 - platform: ffmpeg_motion
   name: camera_interna
-  changes: 10
+  changes: 50
   input: !secret input_camera_interna

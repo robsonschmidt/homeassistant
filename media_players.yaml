@@ -36,6 +36,10 @@
     volume_level: input_number.vol_tv_quarto
     state: binary_sensor.tv_quarto
 - platform: universal
+  name: TV Quarto Isabelle
+  children:
+  - media_player.quarto_isabelle
+- platform: universal
   name: TV Sala
   children:
   - media_player.Sala
