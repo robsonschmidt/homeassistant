@@ -92,7 +92,7 @@ switch.luz_quarto:
   homebridge_visible: true
   homebridge_name: Luz Quarto
 switch.luz_painel_quarto:
-  icon: mdi:window-maximize
+  icon: mdi:wall-sconce-flat
   show_last_changed: true
   assumed_state: false
   homebridge_visible: true
@@ -391,7 +391,7 @@ input_text.quarto_isabelle_player:
   custom_ui_state_card: state-card-mini-media-player
   friendly_name: TV Quarto Isabelle
   config:
-    player: media_player.quarto_isabelle
+    player: media_player.tv_quarto_isabelle
 
 # Portão
 switch.portao:
@@ -597,7 +597,104 @@ binary_sensor.camera_frente:
   friendly_name: Frente
 sensor.mold_indicator:
   friendly_name: Indicador Mofo Armário Flávia
+  icon: mdi:water-percent
 sensor.mold_indicator_2:
   friendly_name: Indicador Mofo Armário Robson
+  icon: mdi:water-percent
 sensor.mold_indicator_3:
   friendly_name: Indicador Mofo Quarto Isabelle
+  icon: mdi:water-percent
+  
+automation.backup_diario:
+  icon: mdi:cloud-upload
+  
+automation.fris_start:
+  icon: mdi:play-network
+automation.fris_stop:
+  icon: mdi:close-network
+automation.velocidade_internet_baixa:
+  icon: mdi:network-strength-1-alert
+automation.cpu_alta:
+  icon: mdi:fire
+automation.cpu_muito_alta:
+  icon: mdi:fire
+automation.robson_chegou_em_casa:
+  icon: mdi:transit-transfer
+automation.robson_chegou_e_saiu:
+  icon: mdi:transit-transfer
+automation.robson_saindo_de_casa:
+  icon: mdi:transit-transfer
+input_boolean.enviar_texto:
+  icon: mdi:message-text-outline
+input_boolean.enviar_voz:
+  icon: mdi:text-to-speech
+input_boolean.enviar_saudacao:
+  icon: mdi:human-greeting
+input_boolean.enviar_clima:
+  icon: mdi:weather-partlycloudy
+input_boolean.enviar_mercado_financeiro:
+  icon: mdi:finance
+input_boolean.enviar_proximo_compromisso:
+  icon: mdi:calendar-clock
+input_datetime.ligar_flavia_inicio:
+  icon: mdi:clock-start
+input_datetime.ligar_flavia_fim:
+  icon: mdi:clock-end
+input_datetime.horario_desumidificador_inicio:
+  icon: mdi:clock-start
+input_datetime.horario_desumidificador_fim:
+  icon: mdi:clock-end
+input_datetime.ligar_desumidificador_inicio:
+  icon: mdi:clock-start
+input_datetime.ligar_desumidificador_fim:
+  icon: mdi:clock-end
+input_boolean.ligar_desumidificador:
+  icon: mdi:water-percent
+automation.Liga_tv_flavia_chegou:
+  icon: mdi:youtube-tv
+input_number.ind_mofo_max:
+  icon: mdi:arrow-collapse-up
+input_number.ind_mofo_min:
+  icon: mdi:arrow-collapse-down
+input_number.temp_cpu_alta:
+  icon: mdi:upload
+input_number.temp_cpu_muito_alta:
+  icon: mdi:upload-multiple
+input_datetime.boletim_1:
+  icon: mdi:cellphone-text
+input_datetime.boletim_2:
+  icon: mdi:cellphone-text
+input_datetime.boletim_3:
+  icon: mdi:cellphone-text
+input_number.tempo_timer:
+  icon: mdi:timer
+input_boolean.ativa_timer_tv_dormir:
+  icon: mdi:power
+input_select.mensagem_voz_tv:
+  icon: mdi:text-to-speech
+switch.geladeira:
+  icon: mdi:fridge
+  show_last_changed: true
+  assumed_state: false
+  homebridge_visible: true
+  homebridge_name: Geladeira
+  extra_badge:
+  - entity_id: sensor.energia_geladeira
+    unit: 'W'
+  - entity_id: sensor.energia_hoje_geladeira
+    unit: 'kWh'
+  - entity_id: sensor.energia_ontem_geladeira
+    unit: 'kWh'
+switch.maquina_de_lavar_roupa:
+  icon: mdi:washing-machine
+  show_last_changed: true
+  assumed_state: false
+  homebridge_visible: true
+  homebridge_name: Maquina de Lavar Roupa
+  extra_badge:
+  - entity_id: sensor.energia_maquina_de_lavar_roupa
+    unit: 'W'
+  - entity_id: sensor.energia_hoje_maquina_de_lavar_roupa
+    unit: 'kWh'
+  - entity_id: sensor.energia_ontem_maquina_de_lavar_roupa
+    unit: 'kWh'

@@ -438,6 +438,35 @@ set_vol_sala:
       variables:
         vol: "{{ vol }}"
 
+#Flavia chegou
+
+#Ligar na globo
+flavia_chegou_globo:
+  alias: Flavia Chegou, ligar TV na Globo
+  sequence:
+  - condition: state
+    entity_id: input_select.canal
+    state: Globo
+  - service: script.liga_tv_sala_globo
+
+#Ligar no SBT
+flavia_chegou_sbt:
+  alias: Flavia Chegou, ligar TV na SBT
+  sequence:
+  - condition: state
+    entity_id: input_select.canal
+    state: Globo
+  - service: script.liga_tv_sala_sbt
+
+#Ligar no Record
+flavia_chegou_record:
+  alias: Flavia Chegou, ligar TV na Record
+  sequence:
+  - condition: state
+    entity_id: input_select.canal
+    state: Globo
+  - service: script.liga_tv_sala_record
+
 ## Atualização Texto e Voz Briefing
 
 # Atualizar todos textos e voz
@@ -499,7 +528,7 @@ clima_texto:
     data_template:
       entity_id: input_text.clima_texto
       value: >
-       *{{-'\U0001F321'-}} Previsão de Tempo:*{{- '\n' -}}
+       {{-'\U0001F321'-}}* Previsão de Tempo:*{{- '\n' -}}
        *Temperatura Atual:*{{- '\n' -}}
        *- *{{ states.sensor.dark_sky_temperature.state|replace('.', ',') }} {{ states.sensor.dark_sky_temperature.attributes.unit_of_measurement }} {{ states.sensor.dark_sky_summary_pt.state }}{{- '\n' -}}
        *Previsão de tempo de hoje:*{{- '\n' -}}
@@ -535,7 +564,7 @@ mercado_financeiro_texto:
     data_template:
       entity_id: input_text.mercado_financeiro_texto
       value: >
-       *{{- '\U0001F4B1' -}} Mercado Financeiro:*{{- '\n' -}}
+       {{- '\U0001F4B1' -}}* Mercado Financeiro:*{{- '\n' -}}
        *Dólar (US$):*{{- '\n' -}}
        *- Atual:* R$ {{ ('%0.2f' % states.sensor.exchange_rate_sensor.state|float|round(2))|replace('.', ',') }}{{- '\n' -}}
        *Bitcoin ({{- '\U000020BF' -}}):*{{- '\n' -}}
@@ -560,7 +589,7 @@ proximo_compromisso_texto:
     data_template:
       entity_id: input_text.proximo_compromisso_texto
       value: >
-       *{{- '\U0001F4C5' -}} Próximo compromisso:*{{- '\n' -}}
+       {{- '\U0001F4C5' -}}* Próximo compromisso:*{{- '\n' -}}
        *- Título:* {{ states.calendar.robson.attributes.message }} {{- '\n' -}}
        *- Horário:* {{ as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%d-%m-%Y %H:%M') }}
        até{% if as_timestamp(states.calendar.robson.attributes.start_time) | timestamp_custom('%d') == as_timestamp(states.calendar.robson.attributes.end_time) | timestamp_custom('%d') %}

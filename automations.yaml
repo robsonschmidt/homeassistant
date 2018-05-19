@@ -1,8 +1,4 @@
 - alias: CPU Alta
-  condition:
-    condition: state
-    entity_id: input_boolean.enviar_cpu_temp_alta
-    state: 'on'
   trigger:
   - platform: template
     value_template: >
@@ -14,10 +10,6 @@
       message: >
        *Monitoramento Raspberry*{{- '\n' -}}Temperatura do _CPU_ está _alta_ em {{ states.sensor.cpu_temperature.state }} ºC
 - alias: CPU Muito Alta
-  condition:
-    condition: state
-    entity_id: input_boolean.enviar_cpu_temp_alta
-    state: 'on'
   trigger:
   - platform: template
     value_template: >
@@ -238,10 +230,6 @@
       state: 'off'
     service: python_script.set_state
 - alias: FRIS Start
-  condition:
-    condition: state
-    entity_id: input_boolean.enviar_on_hassio
-    state: 'on'
   action:
   - service: notify.telegram_bot
     data_template:
@@ -253,10 +241,6 @@
   - event: start
     platform: homeassistant
 - alias: FRIS Stop
-  condition:
-    condition: state
-    entity_id: input_boolean.enviar_off_hassio
-    state: 'on'
   action:
   - service: notify.telegram_bot
     data_template:
@@ -290,10 +274,6 @@
       entityid: '{{trigger.entity_id}}'
     service: python_script.dark_sky_friendly_names
 - alias: Backup diário
-  condition:
-    condition: state
-    entity_id: input_boolean.fazer_backup
-    state: 'on'
   trigger:
   - platform: template
     value_template: '{{ states.sensor.time.state == (states.input_datetime.hora_backup.attributes.timestamp
@@ -324,7 +304,7 @@
 - alias: Novo backup
   condition:
   - condition: template
-    value_template: '{{ trigger.to_state.state != trigger.from_state.state }}'
+    value_template: '{{ ((trigger.to_state.state|float/1024/1024)| int) != ((trigger.from_state.state|float/1024/1024)|int) }}'
   trigger: 
   - platform: state
     entity_id: sensor.dropbox_espaco_usado
@@ -336,10 +316,6 @@
        _Espaço em uso_ no _Dropbox_ de {%if trigger.from_state.state != 'unavaiable'%}{{ (trigger.from_state.state|float/1024/1024)|int}}Mb{%endif%}
        para {%if trigger.to_state.state != 'unavaiable'%}{{ (trigger.to_state.state|float/1024/1024)| int}}Mb{%endif%}.
 - alias: Velocidade Internet Baixa
-  condition:
-    condition: state
-    entity_id: input_boolean.enviar_velocidade_internet_baixa
-    state: 'on'
   trigger:
   - below: '30'
     entity_id: sensor.speedtest_download
@@ -351,10 +327,6 @@
        *Monitoramento da Internet*{{- '\n' -}}
        _Velocidade Baixa_ - Download {{ states('sensor.speedtest_download')}} Mbit/s
 - alias: Robson chegou em casa
-  condition:
-  - condition: state
-    entity_id: input_boolean.enviar_localizacao_robson
-    state: 'on'
   trigger:
   - platform: state
     entity_id: device_tracker.52008849ec808451
@@ -385,9 +357,6 @@
   condition:
     condition: and
     conditions:
-    - condition: state
-      entity_id: input_boolean.enviar_localizacao_robson
-      state: 'on'
     - condition: template
       value_template: '{{ trigger.to_state.state != trigger.from_state.state }}'
     - condition: template
@@ -402,7 +371,7 @@
       message: >
        *Controle de Presença*{{- '\n' -}}
        _Robson_{%if trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') %} saiu de _{{trigger.from_state.state|replace("home","casa")}}_{%endif%}{%if trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') and trigger.to_state.state not in ('not_home','home_arriving','home_arriving2')%} e{%endif%}{%if trigger.to_state.state not in ('not_home','home_arriving','home_arriving2')%} chegou em _{{trigger.to_state.state|replace("home","casa")}}_{%endif%}.
-- alias: Liga Globo Flavia Chegou
+- alias: Liga TV Flavia Chegou       
   condition:
     condition: and
     conditions:
@@ -415,71 +384,16 @@
       - wed
       - thu
       - fri
-    - condition: state
-      entity_id: input_select.canal
-      state: Globo
-    - condition: state
-      entity_id: input_boolean.automacao_flavia_ativada
-      state: 'on'
   trigger:
   - platform: state
     entity_id: device_tracker.iphonedeflavialan
     from: not_home
     to: home
   action:
-  - service: script.liga_tv_sala_globo
-- alias: Liga SBT Flavia Chegou
-  condition:
-    condition: and
-    conditions:
-    - condition: time
-      after: '18:00:00'
-      before: '19:00:00'
-      weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
-    - condition: state
-      entity_id: input_select.canal
-      state: SBT
-    - condition: state
-      entity_id: input_boolean.automacao_flavia_ativada
-      state: 'on'
-  trigger:
-  - platform: state
-    entity_id: device_tracker.iphonedeflavialan
-    from: not_home
-    to: home
-  action:
-  - service: script.liga_tv_sala_sbt
-- alias: Liga Record Flavia Chegou
-  condition:
-    condition: and
-    conditions:
-    - condition: time
-      after: '18:00:00'
-      before: '19:00:00'
-      weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
-    - condition: state
-      entity_id: input_select.canal
-      state: Record
-    - condition: state
-      entity_id: input_boolean.automacao_flavia_ativada
-      state: 'on'
-  trigger:
-  - platform: state
-    entity_id: device_tracker.iphonedeflavialan
-    from: not_home
-    to: home
-  action:
-  - service: script.liga_tv_sala_record
+  - service: script.flavia_chegou_globo
+  - service: script.flavia_chegou_sbt
+  - service: script.flavia_chegou_record
+
 - alias: Lista de Comandos Telegram
   trigger:
   - platform: event
@@ -861,6 +775,7 @@
   - service: script.mensagem_tv
   - delay: 00:00:10
   - wait_template: '{{ is_state(''sensor.state_media_player'', ''idle'') }}'
+    timeout: '00:01:00'
   - service: notify.telegram_bot
     data_template:
       message: '*Timer* da *TV {{ states.input_select.media_player.state }}* foi *finalizado.*'

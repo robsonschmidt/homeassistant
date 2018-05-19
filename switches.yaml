@@ -315,6 +315,35 @@
   optimistic: true
   retain: true
 
+# Luz Geladeira
+- platform: mqtt
+  name: "Geladeira"
+  state_topic: "tele/sonoff1908/STATE"
+  value_template: '{{ value_json["POWER"] }}'
+  command_topic: "cmnd/sonoff1908/POWER"
+  availability_topic: "tele/sonoff1908/LWT"
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  optimistic: true
+  retain: true
+
+# Luz Maquina de Lavar Roupa
+- platform: mqtt
+  name: "Maquina de Lavar Roupa"
+  state_topic: "tele/sonoff4477/STATE"
+  value_template: '{{ value_json["POWER"] }}'
+  command_topic: "cmnd/sonoff4477/POWER"
+  availability_topic: "tele/sonoff4477/LWT"
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  optimistic: true
+  retain: true
+
+
 # Transmissor RF
 - platform: rpi_rf
   gpio: 17

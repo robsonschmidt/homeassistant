@@ -34,12 +34,24 @@ sala:
   - group.tv_sala_tiles
   - camera.interna
   - group.luz_sala
+  - group.cozinha
+  - group.lavanderia
 # Card Luz sala
 luz_sala:
   name: ' '
   control: hidden
   entities:
   - switch.luz_sala_jantar
+cozinha:
+  name: ' '
+  control: hidden
+  entities:
+  - switch.geladeira
+lavanderia:
+  name: ' '
+  control: hidden
+  entities:
+  - switch.maquina_de_lavar_roupa
 
 # Card Controle TV Sala
 tv_sala_tiles:
@@ -211,30 +223,31 @@ boletim:
 backup:
   name: Backup
   entities:
-  - input_boolean.fazer_backup
+  - automation.backup_diario
   - input_datetime.hora_backup
 # Card Alertas Admin
 alertas_admin_telegram:
   name: Alertas Admin
+  icon: mdi:send
   entities:
-  - input_boolean.enviar_on_hassio
-  - input_boolean.enviar_off_hassio
+  - automation.fris_start
+  - automation.fris_stop
   - sensor.hline_1
-  - input_boolean.enviar_velocidade_internet_baixa
+  - automation.velocidade_internet_baixa
   - sensor.hline_2
-  - input_boolean.enviar_cpu_temp_alta
+  - automation.cpu_alta
   - input_number.temp_cpu_alta
+  - automation.cpu_muito_alta
   - input_number.temp_cpu_muito_alta
   - sensor.hline_3
-  - input_boolean.enviar_localizacao_flavia
-  - input_boolean.enviar_localizacao_robson
-  - sensor.hline_4
-  - input_boolean.enviar_acionamento_portao
+  - automation.robson_chegou_em_casa
+  - automation.robson_chegou_e_saiu
+  - automation.robson_saindo_de_casa
 # Card Automacao Flavia
 automacao_flavia:
   name: Automação Flavia
   entities:
-  - input_boolean.automacao_flavia_ativada
+  - automation.Liga_tv_flavia_chegou
   - input_select.canal
   - input_datetime.ligar_flavia_inicio
   - input_datetime.ligar_flavia_fim
@@ -321,3 +334,5 @@ sonoff:
   - sensor.versao_luz_sacada_frente
   - sensor.versao_portao
   - sensor.versao_luz_sala_de_jantar
+  - sensor.versao_geladeira
+  - sensor.versao_maquina_de_lavar_roupa

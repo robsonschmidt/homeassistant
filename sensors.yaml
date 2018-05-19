@@ -350,6 +350,114 @@
   state_topic: "tele/sonoff4569/INFO2"
   value_template: "{{ value_json['IPAddress'] }}"
 
+## Geladeira
+# Versão
+- platform: mqtt
+  name: Versão Geladeira
+  state_topic: "stat/sonoff1908/STATUS2"
+  value_template: "{{ value_json['StatusFWR'].Version }}"
+# Energia Total
+- platform: mqtt
+  name: Energia Total Geladeira
+  state_topic: "tele/sonoff1908/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Total }}"
+  unit_of_measurement: kWh
+# Energia Ontem
+- platform: mqtt
+  name: Energia Ontem Geladeira
+  state_topic: "tele/sonoff1908/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Yesterday }}"
+  unit_of_measurement: kWh
+# Energia Hoje
+- platform: mqtt
+  name: Energia Hoje Geladeira
+  state_topic: "tele/sonoff1908/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Today }}"
+  unit_of_measurement: kWh
+# Energia Periodo
+- platform: mqtt
+  name: Energia Periodo Geladeira
+  state_topic: "tele/sonoff1908/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Period }}"
+  unit_of_measurement: kWh
+# Energia
+- platform: mqtt
+  name: Energia Geladeira
+  state_topic: "tele/sonoff1908/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Power }}"
+  unit_of_measurement: W
+# Energia Fator
+- platform: mqtt
+  name: Energia Fator Geladeira
+  state_topic: "tele/sonoff1908/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Factor }}"
+# Energia Voltagem
+- platform: mqtt
+  name: Energia Voltagem Geladeira
+  state_topic: "tele/sonoff1908/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Voltage }}"
+  unit_of_measurement: V
+# Energia Corrente
+- platform: mqtt
+  name: Energia Corrente Geladeira
+  state_topic: "tele/sonoff1908/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Current }}"
+  unit_of_measurement: A
+
+## Geladeira
+# Versão
+- platform: mqtt
+  name: Versão Maquina de Lavar Roupa
+  state_topic: "stat/sonoff4477/STATUS2"
+  value_template: "{{ value_json['StatusFWR'].Version }}"
+# Energia Total
+- platform: mqtt
+  name: Energia Total Maquina de Lavar Roupa
+  state_topic: "tele/sonoff4477/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Total }}"
+  unit_of_measurement: kWh
+# Energia Ontem
+- platform: mqtt
+  name: Energia Ontem Maquina de Lavar Roupa
+  state_topic: "tele/sonoff4477/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Yesterday }}"
+  unit_of_measurement: kWh
+# Energia Hoje
+- platform: mqtt
+  name: Energia Hoje Maquina de Lavar Roupa
+  state_topic: "tele/sonoff4477/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Today }}"
+  unit_of_measurement: kWh
+# Energia Periodo
+- platform: mqtt
+  name: Energia Periodo Maquina de Lavar Roupa
+  state_topic: "tele/sonoff4477/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Period }}"
+  unit_of_measurement: kWh
+# Energia
+- platform: mqtt
+  name: Energia Maquina de Lavar Roupa
+  state_topic: "tele/sonoff4477/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Power }}"
+  unit_of_measurement: W
+# Energia Fator
+- platform: mqtt
+  name: Energia Fator Maquina de Lavar Roupa
+  state_topic: "tele/sonoff4477/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Factor }}"
+# Energia Voltagem
+- platform: mqtt
+  name: Energia Voltagem Maquina de Lavar Roupa
+  state_topic: "tele/sonoff4477/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Voltage }}"
+  unit_of_measurement: V
+# Energia Corrente
+- platform: mqtt
+  name: Energia Corrente Maquina de Lavar Roupa
+  state_topic: "tele/sonoff4477/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Current }}"
+  unit_of_measurement: A
+
 # Ultima versão Sonoff Tasmota
 - platform: rest
   name: Ultima Versão Sonoff

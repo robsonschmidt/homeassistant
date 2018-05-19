@@ -46,7 +46,7 @@
   value_template: '{{ value_json["Switch2"] }}'
 - platform: ping
   name: tv_sala
-  host: 192.168.86.165
+  host: 192.168.86.30
   count: 5
   scan_interval: 30
 - platform: ping
@@ -61,13 +61,13 @@
   scan_interval: 30
 - platform: ffmpeg_motion
   name: camera_fundos
-  changes: 50
+  changes: 60
   input: !secret input_camera_fundos
 - platform: ffmpeg_motion
   name: camera_frente
-  changes: 50
+  changes: 60
   input: !secret input_camera_frente
 - platform: ffmpeg_motion
   name: camera_interna
-  changes: 50
+  changes: 60
   input: !secret input_camera_interna

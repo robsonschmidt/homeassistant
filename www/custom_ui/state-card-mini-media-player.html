@@ -193,7 +193,7 @@ class StateCardMiniMediaPlayer extends Polymer.Element {
       dialog: {
         type: Boolean,
         value: false,
-      },
+      }
     };
   }
 
@@ -205,6 +205,9 @@ class StateCardMiniMediaPlayer extends Polymer.Element {
     if (config && config.player && hass.states[this.config.player]) {
       var playerObj = hass.states[this.config.player];
       playerObj.isOff = playerObj.state === 'off';
+      if (!this.playerObj || this.playerObj.isOff == !playerObj.isOff){
+        this.showPlayer = !playerObj.isOff;
+      }
       playerObj.isPlaying = playerObj.state === 'playing';
       playerObj.hasMediaInfo = (playerObj.attributes.media_title || playerObj.attributes.app_name) ? true : false;
       if (playerObj.hasMediaInfo) {
