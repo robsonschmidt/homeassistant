@@ -192,6 +192,15 @@ camera:
   - camera.interna
   - camera.frente
   - camera.fundos
+  - sensor.frente_events
+  - sensor.frente_status
+  - switch.frente_state
+  - sensor.fundos_events
+  - sensor.fundos_status
+  - switch.fundos_state
+  - sensor.interna_events
+  - sensor.interna_status
+  - switch.interna_state
 
 # Menu Parametros
 parametro:
@@ -282,6 +291,7 @@ configuracao:
   icon: mdi:switch
   entities:
   - group.servidor
+  - group.servidor_nvr
   - group.teste_velocidade
   - group.google_wifi
   - group.sonoff
@@ -298,6 +308,13 @@ servidor:
   - sensor.processor_use
   - sensor.last_boot
   - sensor.cpu_temperature
+servidor_nvr:
+  name: Servidor Cameras
+  entities:
+  - sensor.nvr_ram_used
+  - sensor.nvr_disk_used_2
+  - sensor.nvr_swap_used_2
+  - sensor.nvr_cpu_load
 # Card Teste de Velocidade
 teste_velocidade:
   name: 'Teste de Velocidade'

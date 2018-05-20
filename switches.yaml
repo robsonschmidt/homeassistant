@@ -373,3 +373,7 @@
         service: switch.toggle
         data:
           entity_id: switch.portao
+          
+- platform: zoneminder
+  command_on: Mocord
+  command_off: Record

@@ -1,9 +1,10 @@
-  - platform: ffmpeg
-    name: Fundos
-    input: !secret camera_fundos
-  - platform: ffmpeg
-    name: Frente
-    input: !secret camera_frente
-  - platform: ffmpeg
-    name: Interna
-    input: !secret camera_interna
+#- platform: ffmpeg
+#  name: Fundos
+#  input: !secret camera_fundos
+#- platform: ffmpeg
+#  name: Frente
+#  input: !secret camera_frente
+#- platform: ffmpeg
+#  name: Interna
+#  input: !secret camera_interna
+- platform: zoneminder

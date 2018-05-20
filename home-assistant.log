@@ -1,101 +1,15 @@
-2018-05-18 22:21:14 ERROR (SyncWorker_7) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
-2018-05-18 22:21:14 ERROR (SyncWorker_15) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
-2018-05-18 22:21:14 ERROR (SyncWorker_13) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
-2018-05-18 22:21:15 ERROR (SyncWorker_19) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
-2018-05-18 22:21:15 ERROR (SyncWorker_3) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
-2018-05-18 22:21:15 ERROR (SyncWorker_0) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
-2018-05-18 22:21:16 WARNING (MainThread) [homeassistant.setup] Setup of input_boolean is taking over 10 seconds.
-2018-05-18 22:21:19 WARNING (MainThread) [homeassistant.setup] Setup of input_number is taking over 10 seconds.
-2018-05-18 22:21:23 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of platform ping is taking over 10 seconds.
-2018-05-18 22:21:23 WARNING (MainThread) [homeassistant.setup] Setup of config is taking over 10 seconds.
-2018-05-18 22:22:41 ERROR (Recorder) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
-2018-05-18 22:23:01 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-05-18 22:42:08 WARNING (SyncWorker_2) [homeassistant.components.python_script.set_state.py] switch.power_net_s
-2018-05-18 22:42:09 WARNING (SyncWorker_19) [homeassistant.components.python_script.set_state.py] switch.power_tv_s
-2018-05-18 22:42:18 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:42:28 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:42:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:42:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:42:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:43:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:43:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:43:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:43:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:43:48 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:43:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:44:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:44:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:44:31 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:44:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:44:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:44:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:45:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:45:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:45:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:45:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:45:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:45:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:46:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:46:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:46:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:46:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:46:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:46:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:46:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:47:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:47:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:47:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:47:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:47:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:47:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:48:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:48:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:48:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:48:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:48:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:48:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:49:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:49:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:49:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:49:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:49:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:49:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:50:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:50:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:50:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:50:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:50:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:50:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:51:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:51:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:51:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:51:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:51:40 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:51:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:51:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:52:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:52:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:52:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:52:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:52:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:52:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:53:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:53:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:53:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:53:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:53:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:53:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:54:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:54:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:54:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:54:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:54:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:54:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:55:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:55:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:55:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:55:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:55:39 ERROR (MainThread) [homeassistant.helpers.entity] Update for media_player.spotify fails
+2018-05-19 18:25:14 ERROR (SyncWorker_9) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
+2018-05-19 18:25:14 ERROR (SyncWorker_3) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
+2018-05-19 18:25:15 ERROR (SyncWorker_12) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
+2018-05-19 18:25:15 ERROR (SyncWorker_19) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
+2018-05-19 18:25:15 ERROR (SyncWorker_15) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
+2018-05-19 18:25:15 ERROR (SyncWorker_2) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
+2018-05-19 18:25:21 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of platform ping is taking over 10 seconds.
+2018-05-19 18:25:21 WARNING (MainThread) [homeassistant.setup] Setup of config is taking over 10 seconds.
+2018-05-19 18:26:34 ERROR (SyncWorker_1) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 18:26:53 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-19 18:44:06 WARNING (SyncWorker_15) [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Connection pool is full, discarding connection: api.telegram.org
+2018-05-19 18:56:59 ERROR (MainThread) [homeassistant.helpers.entity] Update for media_player.spotify fails
 Traceback (most recent call last):
   File "/usr/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
     (self.host, self.port), self.timeout, **extra_kw)
@@ -118,7 +32,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File "/usr/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
     self, "Failed to establish a new connection: %s" % e)
-urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x6b6877b0>: Failed to establish a new connection: [Errno -3] Try again
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x6d716b90>: Failed to establish a new connection: [Errno -3] Try again
 
 During handling of the above exception, another exception occurred:
 
@@ -129,7 +43,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File "/usr/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.spotify.com', port=443): Max retries exceeded with url: /v1/me/player/devices (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x6b6877b0>: Failed to establish a new connection: [Errno -3] Try again',))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.spotify.com', port=443): Max retries exceeded with url: /v1/me/player/devices (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x6d716b90>: Failed to establish a new connection: [Errno -3] Try again',))
 
 During handling of the above exception, another exception occurred:
 
@@ -154,32 +68,88 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File "/usr/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.spotify.com', port=443): Max retries exceeded with url: /v1/me/player/devices (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x6b6877b0>: Failed to establish a new connection: [Errno -3] Try again',))
-2018-05-18 22:55:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:55:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:56:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:56:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:56:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:56:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:56:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:56:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:56:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:57:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:57:19 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:57:29 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:57:39 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:57:49 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:57:59 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:58:09 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 22:58:11 WARNING (SyncWorker_17) [homeassistant.components.python_script.set_state.py] switch.vol_baixo_tv_q
-2018-05-18 22:58:12 WARNING (SyncWorker_6) [homeassistant.components.python_script.set_state.py] switch.vol_baixo_tv_q
-2018-05-18 22:58:18 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 23:09:57 WARNING (SyncWorker_5) [homeassistant.components.python_script.set_state.py] switch.power_tv_q
-2018-05-18 23:10:19 WARNING (Thread-5) [pychromecast.socket_client] Heartbeat timeout, resetting connection
-2018-05-18 23:10:49 ERROR (Thread-5) [pychromecast.socket_client] Failed to connect, retrying in 5.0s
-2018-05-18 23:27:26 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-05-18 23:27:41 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 23:27:51 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 23:28:01 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 23:28:11 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
-2018-05-18 23:28:21 WARNING (MainThread) [haffmpeg.tools] Timeout reading image.
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.spotify.com', port=443): Max retries exceeded with url: /v1/me/player/devices (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x6d716b90>: Failed to establish a new connection: [Errno -3] Try again',))
+2018-05-19 18:57:00 ERROR (SyncWorker_19) [homeassistant.components.sensor.rest] Error fetching data: <PreparedRequest [GET]>
+2018-05-19 18:57:01 ERROR (SyncWorker_1) [homeassistant.components.sensor.command_line] Command failed: curl --data "key=trnsl.1.1.20180312T184049Z.25ec68dcb8cdd93c.e8313f4eb494259e59ca6a6efd1c03e42e81d8a6&lang=en-pt&text=Breezy later this evening and partly cloudy throughout the day." https://translate.yandex.net/api/v1.5/tr.json/translate
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:08 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:09 ERROR (SyncWorker_16) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:09 ERROR (SyncWorker_16) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:09 ERROR (SyncWorker_16) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:09 ERROR (SyncWorker_16) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:09 ERROR (SyncWorker_16) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:09 ERROR (SyncWorker_16) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:09 ERROR (SyncWorker_16) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:09:09 ERROR (SyncWorker_16) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-19 19:11:02 WARNING (SyncWorker_0) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-19 19:11:09 WARNING (SyncWorker_17) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-19 19:11:09 WARNING (SyncWorker_11) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-19 19:11:39 WARNING (SyncWorker_16) [homeassistant.components.python_script.set_state.py] switch.portao
+2018-05-19 19:13:17 WARNING (SyncWorker_4) [homeassistant.components.python_script.set_state.py] switch.source_net_s
+2018-05-19 19:43:43 WARNING (SyncWorker_0) [homeassistant.components.python_script.set_state.py] switch.source_net_s
+2018-05-19 19:43:45 WARNING (SyncWorker_7) [homeassistant.components.python_script.set_state.py] switch.sair_net_s
+2018-05-19 19:43:46 WARNING (SyncWorker_17) [homeassistant.components.python_script.set_state.py] switch.cinco_net_s
+2018-05-19 19:43:47 WARNING (SyncWorker_10) [homeassistant.components.python_script.set_state.py] switch.zero_net_s
+2018-05-19 19:43:48 WARNING (SyncWorker_16) [homeassistant.components.python_script.set_state.py] switch.sete_net_s
+2018-05-19 19:43:55 ERROR (MainThread) [frontend.js.latest.201805090] https://fris.duckdns.org:8123/local/custom_ui/state-card-mini-media-player.html:302:107 Uncaught TypeError: Cannot read property 'innerText' of null
+2018-05-19 19:43:56 WARNING (SyncWorker_15) [homeassistant.components.python_script.set_state.py] switch.source_net_s
+2018-05-19 19:43:57 WARNING (SyncWorker_16) [homeassistant.components.python_script.set_state.py] switch.sair_net_s
+2018-05-19 19:43:58 WARNING (SyncWorker_9) [homeassistant.components.python_script.set_state.py] switch.cinco_net_s
+2018-05-19 19:43:59 WARNING (SyncWorker_18) [homeassistant.components.python_script.set_state.py] switch.zero_net_s
+2018-05-19 19:44:00 WARNING (SyncWorker_0) [homeassistant.components.python_script.set_state.py] switch.dois_net_s
+2018-05-19 19:44:14 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-19 19:47:35 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1836891760: Client exceeded max pending messages [2]: 512
+2018-05-19 19:47:49 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1836190352: Client exceeded max pending messages [2]: 512
+2018-05-19 19:47:49 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1836190352: Client exceeded max pending messages [2]: 512
+2018-05-19 19:56:34 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+OSError: [Errno 113] Host is unreachable
+2018-05-19 19:56:44 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+OSError: [Errno 113] Host is unreachable
+2018-05-19 20:35:06 WARNING (SyncWorker_8) [homeassistant.components.python_script.set_state.py] switch.power_tv_q
+2018-05-19 20:35:13 WARNING (Thread-4) [pychromecast.socket_client] Heartbeat timeout, resetting connection
+2018-05-19 20:35:43 ERROR (Thread-4) [pychromecast.socket_client] Failed to connect, retrying in 5.0s
+2018-05-19 20:43:04 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1920717488: Client exceeded max pending messages [2]: 512
+2018-05-19 20:43:04 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1920717488: Client exceeded max pending messages [2]: 512
+2018-05-19 20:43:04 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1920717488: Client exceeded max pending messages [2]: 512
+2018-05-19 20:43:48 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1796582512: Client exceeded max pending messages [2]: 512
+2018-05-19 20:53:06 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+OSError: [Errno 113] Host is unreachable
+2018-05-19 20:53:06 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+OSError: [Errno 113] Host is unreachable
+2018-05-19 20:53:22 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+OSError: [Errno 113] Host is unreachable
+2018-05-19 21:10:30 WARNING (SyncWorker_15) [homeassistant.components.python_script.set_state.py] switch.vol_cima_tv_q
+2018-05-19 21:38:58 WARNING (SyncWorker_4) [homeassistant.components.python_script.set_state.py] switch.vol_baixo_tv_q
+2018-05-19 21:51:01 WARNING (SyncWorker_13) [homeassistant.components.python_script.set_state.py] switch.vol_baixo_tv_q
+2018-05-19 21:51:05 WARNING (SyncWorker_12) [homeassistant.components.python_script.set_state.py] switch.vol_baixo_tv_q
+2018-05-19 21:51:12 WARNING (MainThread) [homeassistant.components.input_number] Invalid value: -1.0 (range 0.0 - 100.0)
+2018-05-19 21:51:14 WARNING (MainThread) [homeassistant.components.input_number] Invalid value: -1.0 (range 0.0 - 100.0)
+2018-05-19 21:51:14 WARNING (SyncWorker_7) [homeassistant.components.python_script.set_state.py] switch.vol_baixo_tv_q
+2018-05-19 21:51:14 WARNING (MainThread) [homeassistant.components.input_number] Invalid value: -1.0 (range 0.0 - 100.0)
+2018-05-19 21:51:25 WARNING (MainThread) [homeassistant.components.input_number] Invalid value: -1.0 (range 0.0 - 100.0)
+2018-05-19 21:53:56 WARNING (MainThread) [homeassistant.components.input_number] Invalid value: -1.0 (range 0.0 - 100.0)
+2018-05-19 21:53:56 WARNING (SyncWorker_16) [homeassistant.components.python_script.set_state.py] switch.vol_baixo_tv_q
+2018-05-19 21:53:57 WARNING (MainThread) [homeassistant.components.input_number] Invalid value: -1.0 (range 0.0 - 100.0)
+2018-05-19 21:57:11 ERROR (MainThread) [homeassistant.components.websocket_api] WS 1837314768: Client exceeded max pending messages [2]: 512

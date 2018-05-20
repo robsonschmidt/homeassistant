@@ -170,6 +170,11 @@ google_assistant:
 mqtt:
   broker: 192.168.86.139
   
+zoneminder:
+  host: 192.168.86.174
+  username: admin
+  password: !secret zm_password
+  
 #microsoft_face:
 #  api_key: f58276501ad74262b5560217ecabfc89
 #  azure_region: westcentralus
