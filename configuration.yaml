@@ -175,6 +175,13 @@ zoneminder:
   username: admin
   password: !secret zm_password
   
+panel_custom:
+  - name: camera
+    sidebar_title: Camera
+    sidebar_icon: mdi:cctv
+    url_path: camera
+    config:
+      title: Camera
 #microsoft_face:
 #  api_key: f58276501ad74262b5560217ecabfc89
 #  azure_region: westcentralus

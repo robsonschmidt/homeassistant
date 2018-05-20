@@ -375,5 +375,5 @@
           entity_id: switch.portao
           
 - platform: zoneminder
-  command_on: Mocord
+  command_on: Modect
   command_off: Record

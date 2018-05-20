@@ -570,6 +570,8 @@
   indoor_humidity_sensor: sensor.humidade_quarto_isabelle
   outdoor_temp_sensor: sensor.dark_sky_temperature
   calibration_factor: 1.0
+
+#NVR
 - platform: zoneminder
 - platform: glances
   name: NVR
@@ -591,3 +593,4 @@
     - 'process_thread'
     - 'process_sleeping'
     - 'cpu_temp'
+

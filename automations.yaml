@@ -371,7 +371,7 @@
       message: >
        *Controle de Presença*{{- '\n' -}}
        _Robson_{%if trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') %} saiu de _{{trigger.from_state.state|replace("home","casa")}}_{%endif%}{%if trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') and trigger.to_state.state not in ('not_home','home_arriving','home_arriving2')%} e{%endif%}{%if trigger.to_state.state not in ('not_home','home_arriving','home_arriving2')%} chegou em _{{trigger.to_state.state|replace("home","casa")}}_{%endif%}.
-- alias: Liga TV Flavia Chegou       
+- alias: Liga TV Flavia Chegou
   condition:
     condition: and
     conditions:
@@ -393,7 +393,6 @@
   - service: script.flavia_chegou_globo
   - service: script.flavia_chegou_sbt
   - service: script.flavia_chegou_record
-
 - alias: Lista de Comandos Telegram
   trigger:
   - platform: event
@@ -977,6 +976,12 @@
   action:
   - service: alarm_control_panel.alarm_arm_away
     entity_id: alarm_control_panel.ha_alarm
+  - service: switch.turn_on
+    entity_id: switch.fundos_state
+  - service: switch.turn_on
+    entity_id: switch.frente_state
+  - service: switch.turn_on
+    entity_id: switch.interna_state
   - service: notify.telegram_bot
     data_template:
       message: >
@@ -1010,6 +1015,12 @@
   action:
   - service: alarm_control_panel.alarm_disarm
     entity_id: alarm_control_panel.ha_alarm
+  - service: switch.turn_off
+    entity_id: switch.fundos_state
+  - service: switch.turn_off
+    entity_id: switch.frente_state
+  - service: switch.turn_off
+    entity_id: switch.interna_state
   - service: notify.telegram_bot
     data_template:
       message: >
@@ -1054,14 +1065,11 @@
       state: 'armed_home'
   trigger:
   - platform: state
-    entity_id: binary_sensor.camera_interna
-    to: 'on'
+    entity_id: sensor.frente_events
   - platform: state
-    entity_id: binary_sensor.camera_frente
-    to: 'on'
+    entity_id: sensor.fundos_events
   - platform: state
-    entity_id: binary_sensor.camera_fundos
-    to: 'on'
+    entity_id: sensor.interna_events
   action:
   - service: notify.telegram_bot
     data_template:

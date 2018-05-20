@@ -685,6 +685,7 @@ switch.geladeira:
     unit: 'kWh'
   - entity_id: sensor.energia_ontem_geladeira
     unit: 'kWh'
+
 switch.maquina_de_lavar_roupa:
   icon: mdi:washing-machine
   show_last_changed: true
@@ -698,3 +699,36 @@ switch.maquina_de_lavar_roupa:
     unit: 'kWh'
   - entity_id: sensor.energia_ontem_maquina_de_lavar_roupa
     unit: 'kWh'
+    
+switch.frente_state:
+  icon: mdi:run-fast
+  show_last_changed: true
+  assumed_state: false
+  extra_badge:
+  - entity_id: sensor.frente_events
+    unit: #
+  - entity_id: sensor.frente_status
+    unit: status
+
+switch.fundos_state:
+  icon: mdi:run-fast
+  show_last_changed: true
+  assumed_state: false
+  extra_badge:
+  - entity_id: sensor.fundos_events
+    unit: #
+  - entity_id: sensor.fundos_status
+    unit: status
+
+switch.interna_state:
+  icon: mdi:run-fast
+  show_last_changed: true
+  assumed_state: false
+  extra_badge:
+  - entity_id: sensor.interna_events
+    unit: #
+  - entity_id: sensor.interna_status
+    unit: status
+
+binary_sensor.maquina_de_lavar_roupa:
+  icon: mdi:washing-machine

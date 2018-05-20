@@ -59,6 +59,19 @@
   host: 192.168.86.31
   count: 5
   scan_interval: 30
+
+# Maquina de Lavar    
+- platform: template
+  sensors:
+    maquina_de_lavar_roupa:
+      friendly_name: Maquina de Lavar Roupa
+      entity_id: sensor.energia_maquina_de_lavar_roupa
+      value_template: >-
+       {% if states('sensor.energia_maquina_de_lavar_roupa')|int > 10 %}
+        on
+       {% else %}
+        off
+       {% endif %}
 #- platform: ffmpeg_motion
 #  name: camera_fundos
 #  changes: 60

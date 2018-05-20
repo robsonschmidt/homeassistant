@@ -32,7 +32,6 @@ sala:
   icon: mdi:sofa
   entities:
   - group.tv_sala_tiles
-  - camera.interna
   - group.luz_sala
   - group.cozinha
   - group.lavanderia
@@ -52,6 +51,7 @@ lavanderia:
   control: hidden
   entities:
   - switch.maquina_de_lavar_roupa
+  - binary_sensor.maquina_de_lavar_roupa
 
 # Card Controle TV Sala
 tv_sala_tiles:
@@ -67,7 +67,6 @@ churrasqueira:
   icon: mdi:radiator
   entities:
   - group.churrasqueira_luz
-  - camera.fundos
 # Card Luz Churrasqueira
 churrasqueira_luz:
   name: ' '
@@ -139,9 +138,6 @@ fundos_tiles:
   name: Térreo
   entities:
   - input_text.fundos_tiles
-  - camera.frente
-  - camera.fundos
-  - camera.interna
 quartos_tiles:
   name: Quarto
   entities:
@@ -158,7 +154,6 @@ garagem:
   view: yes
   icon: mdi:garage
   entities:
-  - camera.frente
   - group.portao
 # Card portão
 portao:
@@ -179,28 +174,19 @@ alarme:
 movimento:
   name: Sensor Movimento
   entities:
-  - binary_sensor.camera_interna
-  - binary_sensor.camera_fundos
-  - binary_sensor.camera_frente  
+  - switch.frente_state
+  - switch.fundos_state
+  - switch.interna_state
 
 # Menu Camera
-camera:
-  name: Cameras
-  view: yes
-  icon: mdi:cctv
-  entities:
-  - camera.interna
-  - camera.frente
-  - camera.fundos
-  - sensor.frente_events
-  - sensor.frente_status
-  - switch.frente_state
-  - sensor.fundos_events
-  - sensor.fundos_status
-  - switch.fundos_state
-  - sensor.interna_events
-  - sensor.interna_status
-  - switch.interna_state
+#camera:
+#  name: Cameras
+#  view: yes
+#  icon: mdi:cctv
+#  entities:
+#  - camera.interna
+#  - camera.frente
+#  - camera.fundos
 
 # Menu Parametros
 parametro:
