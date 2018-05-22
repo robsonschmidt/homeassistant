@@ -1,9 +1,26 @@
-2018-05-20 17:33:53 ERROR (SyncWorker_4) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
-2018-05-20 17:33:54 ERROR (SyncWorker_1) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
-2018-05-20 17:33:54 ERROR (SyncWorker_7) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
-2018-05-20 17:33:54 ERROR (SyncWorker_6) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
-2018-05-20 17:33:54 ERROR (SyncWorker_13) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
-2018-05-20 17:33:54 ERROR (SyncWorker_7) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
-2018-05-20 17:34:03 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of platform ping is taking over 10 seconds.
-2018-05-20 17:34:03 WARNING (MainThread) [homeassistant.setup] Setup of config is taking over 10 seconds.
-2018-05-20 17:35:11 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-21 23:51:48 ERROR (MainThread) [homeassistant.config] Invalid config for [sensor.template]: invalid template (TemplateSyntaxError: expected token 'end of print statement', got 'ec808451') for dictionary value @ data['sensors']['robson_tracker']['value_template']. Got "{% if is_state('device_tracker.52008849ec808451', 'home')\n   or is_state('device_tracker.galaxya72017lan', 'home') %}\n Home\n{% else %}\n {{ states.device_tracker.52008849ec808451.state}}\n{% endif %}". (See ?, line ?). Please check the docs at https://home-assistant.io/components/sensor.template/
+2018-05-21 23:51:52 ERROR (SyncWorker_5) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
+2018-05-21 23:51:53 ERROR (SyncWorker_4) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
+2018-05-21 23:51:53 ERROR (SyncWorker_17) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
+2018-05-21 23:51:53 ERROR (SyncWorker_15) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
+2018-05-21 23:51:53 ERROR (SyncWorker_8) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
+2018-05-21 23:51:53 ERROR (SyncWorker_7) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
+2018-05-21 23:52:01 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of platform ping is taking over 10 seconds.
+2018-05-21 23:52:01 WARNING (MainThread) [homeassistant.setup] Setup of config is taking over 10 seconds.
+2018-05-21 23:53:00 WARNING (SyncWorker_0) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-05-21 23:53:04 WARNING (SyncWorker_1) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-05-21 23:53:07 WARNING (SyncWorker_14) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-05-21 23:53:13 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-21 23:53:14 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-21 23:53:34 WARNING (SyncWorker_6) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-05-21 23:53:37 WARNING (SyncWorker_16) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-05-21 23:53:40 WARNING (SyncWorker_15) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-05-21 23:54:05 WARNING (SyncWorker_7) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-05-21 23:54:08 WARNING (SyncWorker_15) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-05-21 23:54:11 WARNING (SyncWorker_4) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-05-21 23:54:36 WARNING (SyncWorker_19) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-05-21 23:54:39 WARNING (SyncWorker_16) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-05-21 23:54:42 WARNING (SyncWorker_18) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-05-21 23:55:07 WARNING (SyncWorker_11) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
+2018-05-21 23:55:10 WARNING (SyncWorker_16) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
+2018-05-21 23:55:13 WARNING (SyncWorker_5) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error

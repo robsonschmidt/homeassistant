@@ -14,6 +14,8 @@ badges:
   entities:
   - device_tracker.52008849ec808451
   - device_tracker.iphonedeflavialan
+  - device_tracker.androidedd111010c0c32e5lan
+  - sensor.robson_tracker
   - alarm_control_panel.ha_alarm
   - cover.portao
   - vacuum.fritz

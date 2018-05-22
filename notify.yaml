@@ -1,6 +1,9 @@
 - name: telegram_bot
   platform: telegram
   chat_id: 328083280
+- name: telegram_admin
+  platform: telegram
+  chat_id: -301349283
 #- name: telegram_group
 #  platform: telegram
 #  chat_id: 328083280

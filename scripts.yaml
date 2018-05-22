@@ -47,6 +47,27 @@ play_spotify_isabelle:
 ## Volume TV Quarto
 
 # Executa scripts para sincronizar volume para 10
+liga_tv_net_quarto:
+  alias: Liga TV Net Quarto
+  sequence:
+  - condition: state
+    entity_id: binary_sensor.tv_quarto
+    state: 'off'
+  - data:
+      entity_id: switch.power_tv_q
+    service: switch.toggle
+  - delay:
+      seconds: 10
+desliga_tv_net_quarto:
+  alias: Desliga TV Net Quarto
+  sequence:
+  - condition: state
+    entity_id: binary_sensor.tv_quarto
+    state: 'on'
+  - service: switch.toggle
+    data:
+      entity_id: switch.power_tv_q
+
 reset_vol_quarto:
   alias: Reset Volume da Quarto
   sequence:
@@ -151,12 +172,24 @@ liga_tv_net_sala:
     state: 'off'
   - data:
       entity_id: switch.power_net_s
-    service: switch.turn_on
+    service: switch.toggle
   - data:
       entity_id: switch.power_tv_s
-    service: switch.turn_on
+    service: switch.toggle
   - delay:
       seconds: 10
+desliga_tv_net_sala:
+  alias: Desliga TV Net Sala
+  sequence:
+  - condition: state
+    entity_id: binary_sensor.tv_sala
+    state: 'on'
+  - service: switch.toggle
+    data:
+      entity_id: switch.power_net_s
+  - service: switch.toggle
+    data:
+      entity_id: switch.power_tv_s
 liga_tv_net_sala_60:
   alias: Liga TV Net Sala
   sequence:
@@ -312,8 +345,6 @@ chromecast_sala:
   - service: switch.turn_on
     data:
       entity_id: switch.source_chromecast_s
-    
-
 select_source_sala:
   alias: Select Source Sala
   sequence:
@@ -329,7 +360,6 @@ select_source_sala:
         {% elif source == 'DVD'%}
          switch.source_dvd_s
         {% endif %}
-        
 select_channel_sala:
   alias: Select Channel Sala
   sequence:
@@ -349,7 +379,6 @@ select_channel_sala:
         {% elif channel == 'Record'%}
          script.tv_sala_record
         {% endif %}
-
 
 ## Volume TV Sala
 
@@ -434,9 +463,6 @@ aumenta_vol_sala_pause:
 set_vol_sala:
   alias: Set Volume do Sala
   sequence:
-  - service: notify.telegram_bot
-    data:
-      message: "{{ vol }}"
   - service_template: >
        {% if states.input_number.vol_tv_sala.state|int != vol|int %}
          script.turn_on
@@ -803,8 +829,35 @@ sair_casa:
         inline_keyboard:
         - Portão:/portao
         - Alarme:/arma_alarme
+        - Desliga tudo:/desligar_tudo
         - Waze BRF ({{ states.sensor.para_brf.attributes.duration }}):/wazebrf, Waze
           Sogro ({{ states.sensor.para_sogro.attributes.duration }}):/wazesogro
         - Waze Pai ({{ states.sensor.para_pai.attributes.duration }}):/wazepai, Waze
           Escola ({{ states.sensor.para_escola_isabelle.attributes.duration }}):/wazeescola
         - Waze Comprimisso ({{ states.sensor.para_compromisso.attributes.duration}}):/wazecompromisso
+
+desligar_tudo:
+  alias: Desligar tudo
+  sequence:
+  - service: switch.turn_off
+    entity_id: switch.luz_sala_jantar
+  - service: switch.turn_off
+    entity_id: switch.display
+  - service: switch.turn_off
+    entity_id: switch.garden_light
+  - service: switch.turn_off
+    entity_id: light.luz_esquerda
+  - service: switch.turn_off
+    entity_id: light.luz_central
+  - service: switch.turn_off
+    entity_id: light.luz_direita
+  - service: switch.turn_off
+    entity_id: switch.luz_quarto
+  - service: switch.turn_off
+    entity_id: switch.luz_painel_quarto
+  - service: switch.turn_off
+    entity_id: switch.luz_sacada_frente
+  - service: switch.turn_off
+    entity_id: switch.luz_corredor
+  - service: script.desliga_tv_net_quarto
+  - service: script.desliga_tv_net_sala

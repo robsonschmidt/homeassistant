@@ -36,6 +36,10 @@ device_tracker.52008849ec808451:
   state_card_mode: badges
 device_tracker.iphonedeflavialan:
   state_card_mode: badges
+device_tracker.androidedd111010c0c32e5lan:
+  state_card_mode: badges
+sensor.robson_tracker:
+  state_card_mode: badges
 sensor.fases_lua:
   state_card_mode: badges
 alarm_control_panel.ha_alarm:

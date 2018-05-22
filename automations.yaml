@@ -5,7 +5,7 @@
      {{ states.sensor.cpu_temperature.state >= states.input_number.temp_cpu_alta.state
      and  states.sensor.cpu_temperature.state < states.input_number.temp_cpu_muito_alta.state}}
   action:
-  - service: notify.telegram_bot
+  - service: notify.telegram_admin
     data_template:
       message: >
        *Monitoramento Raspberry*{{- '\n' -}}Temperatura do _CPU_ está _alta_ em {{ states.sensor.cpu_temperature.state }} ºC
@@ -15,7 +15,7 @@
     value_template: >
      {{ states.sensor.cpu_temperature.state >= states.input_number.temp_cpu_muito_alta.state}}
   action:
-  - service: notify.telegram_bot
+  - service: notify.telegram_admin
     data_template:
       message: >
         *Monitoramento Raspberry*{{- '\n' -}}Temperatura do _CPU_ está _muito alta_ em {{ states.sensor.cpu_temperature.state }} ºC
@@ -231,7 +231,7 @@
     service: python_script.set_state
 - alias: FRIS Start
   action:
-  - service: notify.telegram_bot
+  - service: notify.telegram_admin
     data_template:
       message: >
        *Home Assistant*{{- '\n' -}}
@@ -242,7 +242,7 @@
     platform: homeassistant
 - alias: FRIS Stop
   action:
-  - service: notify.telegram_bot
+  - service: notify.telegram_admin
     data_template:
       message: >
        *Home Assistant*{{- '\n' -}}
@@ -283,7 +283,7 @@
   - service: hassio.snapshot_full
     data_template:
       name: FRIS {{ now().strftime('%Y-%m-%d') }}
-  - service: notify.telegram_bot
+  - service: notify.telegram_admin
     data_template:
       message: >
        *Backup do servidor*{{- '\n' -}}
@@ -296,7 +296,7 @@
       addon: 7be23ff5_dropbox_sync
       input:
         command: upload
-  - service: notify.telegram_bot
+  - service: notify.telegram_admin
     data_template:
       message: >
        *Backup do servidor*{{- '\n' -}}
@@ -309,7 +309,7 @@
   - platform: state
     entity_id: sensor.dropbox_espaco_usado
   action:
-  - service: notify.telegram_bot
+  - service: notify.telegram_admin
     data_template:
       message: >
        *Backup do servidor*{{- '\n' -}}
@@ -321,11 +321,68 @@
     entity_id: sensor.speedtest_download
     platform: numeric_state
   action:
-  - service: notify.telegram_bot
+  - service: notify.telegram_admin
     data_template:
       message: >
        *Monitoramento da Internet*{{- '\n' -}}
        _Velocidade Baixa_ - Download {{ states('sensor.speedtest_download')}} Mbit/s
+
+- alias: Vanda chegou e saiu
+  condition:
+    condition: and
+    conditions:
+    - condition: template
+      value_template: '{{ trigger.to_state.state != trigger.from_state.state }}'
+    - condition: template
+      value_template: >
+       {{ trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') or trigger.to_state.state not in ('not_home','home_arriving','home_arriving2') }}
+  trigger:
+  - platform: state
+    entity_id: device_tracker.androidedd111010c0c32e5lan
+  action:
+  - service: notify.telegram_bot
+    data_template:
+      message: >
+       *Controle de Presença*{{- '\n' -}}
+       _Vanda_{%if trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') %} saiu de _{{trigger.from_state.state|replace("home","casa")}}_{%endif%}{%if trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') and trigger.to_state.state not in ('not_home','home_arriving','home_arriving2')%} e{%endif%}{%if trigger.to_state.state not in ('not_home','home_arriving','home_arriving2')%} chegou em _{{trigger.to_state.state|replace("home","casa")}}_{%endif%}.
+- alias: Vanda chegou, desligar alarme
+  condition:
+  - condition: time
+    after: '06:00:00'
+    before: '12:00:00'
+    weekday:
+    - mon
+  trigger:
+  - platform: state
+    entity_id: device_tracker.androidedd111010c0c32e5lan
+    from: 'not_home' 
+    to: 'home'
+  action:
+  - service: alarm_control_panel.alarm_disarm
+    entity_id: alarm_control_panel.ha_alarm
+  - service: notify.telegram_bot
+    data_template:
+      message: >
+       *Segurança Residencial*{{- '\n' -}}
+       _Vanda_ chegou, alarme desligado.
+- alias: Vanda saiu, ligar alarme
+  trigger:
+  - platform: state
+    entity_id: device_tracker.androidedd111010c0c32e5lan
+    from: 'home'
+    to: 'not_home'
+  action:
+  - service: alarm_control_panel.alarm_arm_away
+    entity_id: alarm_control_panel.ha_alarm
+  - service: notify.telegram_bot
+    data_template:
+      message: >
+       *Segurança Residencial*{{- '\n' -}}
+       _Vanda_ saiu de casa, deseja ligar o alarme?
+      inline_keyboard:
+      - Alarme:/arma_alarme
+      - Desliga tudo:/desligar_tudo
+
 - alias: Robson chegou em casa
   trigger:
   - platform: state
@@ -373,17 +430,15 @@
        _Robson_{%if trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') %} saiu de _{{trigger.from_state.state|replace("home","casa")}}_{%endif%}{%if trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') and trigger.to_state.state not in ('not_home','home_arriving','home_arriving2')%} e{%endif%}{%if trigger.to_state.state not in ('not_home','home_arriving','home_arriving2')%} chegou em _{{trigger.to_state.state|replace("home","casa")}}_{%endif%}.
 - alias: Liga TV Flavia Chegou
   condition:
-    condition: and
-    conditions:
-    - condition: time
-      after: '18:00:00'
-      before: '19:00:00'
-      weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
+  - condition: time
+    after: '18:00:00'
+    before: '19:00:00'
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
   trigger:
   - platform: state
     entity_id: device_tracker.iphonedeflavialan
@@ -618,6 +673,19 @@
   - service: switch.toggle
     data:
       entity_id: switch.source_chromecast_s
+- alias: Comando Telegram Desligar Tudo
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /desligar_tudo
+  - platform: event
+    event_type: telegram_callback
+    event_data:
+      data: /desligar_tudo
+  action:
+  - service: script.desligar_tudo
+
 - alias: Robson saindo de casa
   trigger:
   - platform: event
@@ -754,7 +822,7 @@
     entity_id: persistent_notification.invalid_config
     to: notifying
   action:
-  - service: notify.telegram_bot
+  - service: notify.telegram_admin
     data_template:
       title: >
        *{{ states.persistent_notification.invalid_config.attributes.title }}*
@@ -829,6 +897,9 @@
       message: >
        *Controle de Energia*{{- '\n' -}}
        Você saiu de casa e deixou algo ligado.
+      inline_keyboard:
+      - Desliga tudo:/desligar_tudo
+
 - alias: Liga Desumidificador Horario
   condition:
     condition: state
@@ -994,17 +1065,8 @@
     state: 'home'
   trigger:
   - platform: state
-    entity_id: alarm_control_panel.ha_alarm
-    to: 'armed_away'
-  - platform: state
-    entity_id: alarm_control_panel.ha_alarm
-    to: 'armed_home'
-  - platform: state
-    entity_id: alarm_control_panel.ha_alarm
-    to: 'armed_night'
-  - platform: state
-    entity_id: alarm_control_panel.ha_alarm
-    to: 'armed_custom_bypass'
+    entity_id: binary_sensor.ativado
+    to: 'on'
   action:
   - service: script.sair_casa
 - alias: Alarme desligado
@@ -1055,14 +1117,9 @@
     entity_id: switch.alarme
 - alias: Detectado movimento
   condition:
-  - condition: or
-    conditions:
-    - condition: state
-      entity_id: alarm_control_panel.ha_alarm
-      state: 'armed_away'
-    - condition: state
-      entity_id: alarm_control_panel.ha_alarm
-      state: 'armed_home'
+    condition: state
+    entity_id: binary_sensor.ativado
+    state: 'on'
   trigger:
   - platform: state
     entity_id: sensor.frente_events
@@ -1111,3 +1168,12 @@
   - service: frontend.set_theme
     data:
       name: green
+- alias: Maquina Lavar Roupa
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.maquina_de_lavar_roupa
+  action:
+  - service: notify.telegram_bot
+    data_template:
+      message: >
+       *Maquina de Lavar Roupa*{{- '\n' -}}Maquina de lavar roupa está {{ {"on": "ligada","off": "desligada"}[trigger.to_state.state] }}.

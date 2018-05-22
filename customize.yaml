@@ -415,16 +415,6 @@ sensor.google_wifi_status:
 sensor.google_wifi_uptime:
   friendly_name: Tempo Ativo
   
-# Device Tracker
-device_tracker.iphonedeflavialan:
-  friendly_name: Flavia
-#  custom_ui_state_card: custom-cover-badge
-device_tracker.iphonederobsonlan:
-  friendly_name: Robson
-device_tracker.52008849ec808451:
-  friendly_name: Robson
-#  custom_ui_state_card: custom-cover-badge
-
 # Controle Quarto
 switch.power_tv_q:
   friendly_name: TV
@@ -732,3 +722,6 @@ switch.interna_state:
 
 binary_sensor.maquina_de_lavar_roupa:
   icon: mdi:washing-machine
+  
+sensor.robson_tracker:
+  friendly_name: Robson

@@ -6,10 +6,12 @@
 - platform: template
   sensors:
     alguem_em_casa:
-      entity_id: device_tracker.52008849ec808451, device_tracker.iphonedeflavialan
+      entity_id: device_tracker.52008849ec808451, device_tracker.iphonedeflavialan, device_tracker.androidedd111010c0c32e5lan, device_tracker.galaxya72017lan
       value_template: >-
         {{ is_state('device_tracker.52008849ec808451', 'home')
-           or is_state('device_tracker.iphonedeflavialan', 'home') }}
+           or is_state('device_tracker.iphonedeflavialan', 'home')
+           or is_state('device_tracker.androidedd111010c0c32e5lan', 'home')
+           or is_state('device_tracker.galaxya72017lan', 'home')}}
     portao_template:
       friendly_name: "Portão"
       device_class: opening
@@ -48,17 +50,17 @@
   name: tv_sala
   host: 192.168.86.30
   count: 5
-  scan_interval: 30
+  scan_interval: 20
 - platform: ping
   name: tv_quarto
   host: 192.168.86.86
   count: 5
-  scan_interval: 30
+  scan_interval: 20
 - platform: ping
   name: tv_isabelle
   host: 192.168.86.31
   count: 5
-  scan_interval: 30
+  scan_interval: 20
 
 # Maquina de Lavar    
 - platform: template
@@ -66,12 +68,16 @@
     maquina_de_lavar_roupa:
       friendly_name: Maquina de Lavar Roupa
       entity_id: sensor.energia_maquina_de_lavar_roupa
+      delay_on: '00:01:00'
+      delay_off: '00:01:00'
       value_template: >-
        {% if states('sensor.energia_maquina_de_lavar_roupa')|int > 10 %}
-        on
+        true
        {% else %}
-        off
+        false
        {% endif %}
+
+
 #- platform: ffmpeg_motion
 #  name: camera_fundos
 #  changes: 60

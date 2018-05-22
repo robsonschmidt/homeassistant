@@ -14,11 +14,3 @@ media_player.quarto_isabelle:
   name:
   platform: cast
   unique_id: 67f7d06f-bed1-63f6-e992-1664e19a6329
-sensor.iphone_de_robson_battery_state:
-  name:
-  platform: ios
-  unique_id: state_iphone_de_robson
-sensor.iphone_de_robson_battery_level:
-  name:
-  platform: ios
-  unique_id: level_iphone_de_robson

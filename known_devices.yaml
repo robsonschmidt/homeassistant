@@ -1,17 +1,24 @@
+
 iphonedeflavialan:
   hide_if_away: false
   icon:
   mac: 8C:8E:F2:E1:19:31
-  name: iphonedeflavia.lan
-  picture: /local/Flavia.jpg
+  name: Flavia
+  picture:
   track: true
-  vendor: Apple, Inc.
 
 52008849ec808451:
   hide_if_away: false
   icon:
   mac:
-  name: 52008849ec808451
-  picture: /local/Robson.jpg
+  name: Robson
+  picture:
   track: true
-  vendor:
+
+galaxya72017lan:
+  hide_if_away: false
+  icon:
+  mac: 50:92:B9:7B:E8:1C
+  name: Robson
+  picture:
+  track: true

@@ -1,8 +1,13 @@
 - platform: nmap_tracker
+  interval_seconds: 10
+  home_interval: 10
+  consider_home: 600
+  track_new_devices: yes
+  scan_options: " --privileged -sP "
   hosts:
-    - 192.168.86.102
-    - 192.168.86.144
-  consider_home: 900
+  - 192.168.86.144
+  - 192.168.86.163
+  - 192.168.86.158
 - platform: gpslogger
   password: !secret gpslogger_password
 #- platform: google_maps
