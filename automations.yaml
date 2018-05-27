@@ -386,15 +386,15 @@
 - alias: Robson chegou em casa
   trigger:
   - platform: state
-    entity_id: device_tracker.52008849ec808451
+    entity_id: sensor.robson_tracker
     from: not_home
     to: home_arriving
   - platform: state
-    entity_id: device_tracker.52008849ec808451
+    entity_id: sensor.robson_tracker
     from: not_home
     to: home_arriving2
   - platform: state
-    entity_id: device_tracker.52008849ec808451
+    entity_id: sensor.robson_tracker
     from: not_home
     to: home
   action:
@@ -421,7 +421,7 @@
        {{ trigger.from_state.state not in ('not_home','home_arriving','home_arriving2') or trigger.to_state.state not in ('not_home','home_arriving','home_arriving2') }}
   trigger:
   - platform: state
-    entity_id: device_tracker.52008849ec808451
+    entity_id: sensor.robson_tracker
   action:
   - service: notify.telegram_bot
     data_template:
@@ -1061,7 +1061,7 @@
 - alias: Alarme ligado - Robson saindo de casa
   condition:
   - condition: state
-    entity_id: device_tracker.52008849ec808451
+    entity_id: sensor.robson_tracker
     state: 'home'
   trigger:
   - platform: state
@@ -1176,4 +1176,4 @@
   - service: notify.telegram_bot
     data_template:
       message: >
-       *Maquina de Lavar Roupa*{{- '\n' -}}Maquina de lavar roupa está {{ {"on": "ligada","off": "desligada"}[trigger.to_state.state] }}.
+       *Maquina de Lavar Roupa*{{- '\n' -}}Lavagem {{ {"on": "iniciada","off": "finalizada"}[trigger.to_state.state] }}.

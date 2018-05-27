@@ -4,7 +4,7 @@ iphonedeflavialan:
   icon:
   mac: 8C:8E:F2:E1:19:31
   name: Flavia
-  picture:
+  picture: /local/Flavia.jpg
   track: true
 
 52008849ec808451:
@@ -12,7 +12,7 @@ iphonedeflavialan:
   icon:
   mac:
   name: Robson
-  picture:
+  picture: /local/Robson.jpg
   track: true
 
 galaxya72017lan:
@@ -20,5 +20,5 @@ galaxya72017lan:
   icon:
   mac: 50:92:B9:7B:E8:1C
   name: Robson
-  picture:
+  picture: /loca/Robson.jpg
   track: true

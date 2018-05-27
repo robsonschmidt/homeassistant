@@ -68,8 +68,8 @@
     maquina_de_lavar_roupa:
       friendly_name: Maquina de Lavar Roupa
       entity_id: sensor.energia_maquina_de_lavar_roupa
-      delay_on: '00:01:00'
-      delay_off: '00:01:00'
+      delay_on: '00:02:00'
+      delay_off: '00:02:00'
       value_template: >-
        {% if states('sensor.energia_maquina_de_lavar_roupa')|int > 10 %}
         true

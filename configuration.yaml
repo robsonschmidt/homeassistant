@@ -171,7 +171,7 @@ mqtt:
   broker: 192.168.86.139
   
 zoneminder:
-  host: 192.168.86.174
+  host: 192.168.86.174:8124
   username: admin
   password: !secret zm_password
   

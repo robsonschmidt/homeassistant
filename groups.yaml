@@ -12,10 +12,9 @@ badges:
   name: ' '
   control: hidden
   entities:
-  - device_tracker.52008849ec808451
+  - sensor.robson_tracker
   - device_tracker.iphonedeflavialan
   - device_tracker.androidedd111010c0c32e5lan
-  - sensor.robson_tracker
   - alarm_control_panel.ha_alarm
   - cover.portao
   - vacuum.fritz
@@ -240,6 +239,9 @@ alertas_admin_telegram:
   - automation.robson_chegou_em_casa
   - automation.robson_chegou_e_saiu
   - automation.robson_saindo_de_casa
+  - sensor.hline_4
+  - automation.portao_abertofechado
+  - automation.maquina_lavar_roupa
 # Card Automacao Flavia
 automacao_flavia:
   name: Automação Flavia

@@ -598,11 +598,11 @@
   sensors:
     robson_tracker:
       entity_id: device_tracker.52008849ec808451, device_tracker.galaxya72017lan
-      entity_picture_template: '/local/robson.png'
+      entity_picture_template: '/local/Robson.jpg'
       value_template: >-
         {% if is_state('device_tracker.52008849ec808451', 'home')
            or is_state('device_tracker.galaxya72017lan', 'home') %}
-         Home
+         home
         {% else %}
-         {{ states.device_tracker.52008849ec808451.state}}
+          states.device_tracker.52008849ec808451.state
         {% endif %}

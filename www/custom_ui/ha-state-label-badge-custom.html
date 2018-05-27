@@ -152,6 +152,10 @@ class HaStateLabelBadgeCustom extends
       // are only added for device_tracker and alarm_control_panel.
       return localize(`state_badge.${domain}.${state.state}`) || localize(`state_badge.default.${state.state}`) || localize(`state.${domain}.${state.state}`) || localize(`state.default.${state.state}`) || state.state;
     }
+    if (domain === 'sensor' && state.attributes.entity_picture)
+    {
+        return localize(`state_badge.${domain}.${state.state}`) || localize(`state_badge.default.${state.state}`) || localize(`state.${domain}.${state.state}`) || localize(`state.default.${state.state}`) || state.state;
+    }
     if (domain === 'timer') {
       return window.hassUtil.secondsToDuration(timerTimeRemaining);
     }

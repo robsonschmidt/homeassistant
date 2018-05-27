@@ -1,26 +1,278 @@
-2018-05-21 23:51:48 ERROR (MainThread) [homeassistant.config] Invalid config for [sensor.template]: invalid template (TemplateSyntaxError: expected token 'end of print statement', got 'ec808451') for dictionary value @ data['sensors']['robson_tracker']['value_template']. Got "{% if is_state('device_tracker.52008849ec808451', 'home')\n   or is_state('device_tracker.galaxya72017lan', 'home') %}\n Home\n{% else %}\n {{ states.device_tracker.52008849ec808451.state}}\n{% endif %}". (See ?, line ?). Please check the docs at https://home-assistant.io/components/sensor.template/
-2018-05-21 23:51:52 ERROR (SyncWorker_5) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
-2018-05-21 23:51:53 ERROR (SyncWorker_4) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
-2018-05-21 23:51:53 ERROR (SyncWorker_17) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
-2018-05-21 23:51:53 ERROR (SyncWorker_15) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
-2018-05-21 23:51:53 ERROR (SyncWorker_8) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
-2018-05-21 23:51:53 ERROR (SyncWorker_7) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
-2018-05-21 23:52:01 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of platform ping is taking over 10 seconds.
-2018-05-21 23:52:01 WARNING (MainThread) [homeassistant.setup] Setup of config is taking over 10 seconds.
-2018-05-21 23:53:00 WARNING (SyncWorker_0) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
-2018-05-21 23:53:04 WARNING (SyncWorker_1) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
-2018-05-21 23:53:07 WARNING (SyncWorker_14) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
-2018-05-21 23:53:13 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
-2018-05-21 23:53:14 ERROR (MainThread) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
-2018-05-21 23:53:34 WARNING (SyncWorker_6) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
-2018-05-21 23:53:37 WARNING (SyncWorker_16) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
-2018-05-21 23:53:40 WARNING (SyncWorker_15) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
-2018-05-21 23:54:05 WARNING (SyncWorker_7) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
-2018-05-21 23:54:08 WARNING (SyncWorker_15) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
-2018-05-21 23:54:11 WARNING (SyncWorker_4) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
-2018-05-21 23:54:36 WARNING (SyncWorker_19) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
-2018-05-21 23:54:39 WARNING (SyncWorker_16) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
-2018-05-21 23:54:42 WARNING (SyncWorker_18) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
-2018-05-21 23:55:07 WARNING (SyncWorker_11) [homeassistant.components.light.tplink] Could not read state for luz_central: Communication error
-2018-05-21 23:55:10 WARNING (SyncWorker_16) [homeassistant.components.light.tplink] Could not read state for luz_direita: Communication error
-2018-05-21 23:55:13 WARNING (SyncWorker_5) [homeassistant.components.light.tplink] Could not read state for luz_esquerda: Communication error
+2018-05-27 18:46:11 ERROR (SyncWorker_6) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
+2018-05-27 18:46:11 ERROR (SyncWorker_4) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
+2018-05-27 18:46:11 ERROR (SyncWorker_12) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
+2018-05-27 18:46:11 ERROR (SyncWorker_3) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
+2018-05-27 18:46:11 ERROR (SyncWorker_9) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor temperature: unknown
+2018-05-27 18:46:11 ERROR (SyncWorker_8) [homeassistant.components.sensor.mold_indicator] Unable to parse sensor humidity: unknown
+2018-05-27 18:46:13 WARNING (MainThread) [homeassistant.setup] Setup of input_datetime is taking over 10 seconds.
+2018-05-27 18:46:13 WARNING (MainThread) [homeassistant.setup] Setup of input_text is taking over 10 seconds.
+2018-05-27 18:46:14 WARNING (MainThread) [homeassistant.setup] Setup of input_boolean is taking over 10 seconds.
+2018-05-27 18:46:19 WARNING (MainThread) [homeassistant.components.binary_sensor] Setup of platform ping is taking over 10 seconds.
+2018-05-27 18:46:20 WARNING (MainThread) [homeassistant.setup] Setup of config is taking over 10 seconds.
+2018-05-27 18:47:33 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-27 18:47:43 ERROR (SyncWorker_14) [homeassistant.core] Error doing job: Task was destroyed but it is pending!
+2018-05-27 18:47:52 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-27 19:24:03 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-27 19:24:07 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting
+2018-05-27 19:31:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.fundos_status is taking over 10 seconds
+2018-05-27 19:31:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.fundos is taking over 10 seconds
+2018-05-27 19:31:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of camera.interna is taking over 10 seconds
+2018-05-27 19:31:01 ERROR (MainThread) [homeassistant.helpers.entity] Update for camera.interna fails
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/usr/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3.6/site-packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/lib/python3.6/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 389, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 309, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='192.168.86.174', port=8124): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 204, in async_update_ha_state
+    yield from self.async_device_update()
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 327, in async_device_update
+    yield from self.hass.async_add_job(self.update)
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/camera/zoneminder.py", line 102, in update
+    'api/monitors/alarm/id:%i/command:status.json' % self._monitor_id
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/zoneminder.py", line 124, in get_state
+    return _zm_request('get', api_url)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/zoneminder.py", line 104, in _zm_request
+    cookies=ZM['cookies'], timeout=DEFAULT_TIMEOUT)
+  File "/usr/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/adapters.py", line 521, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='192.168.86.174', port=8124): Read timed out. (read timeout=10)
+2018-05-27 19:31:01 ERROR (MainThread) [homeassistant.helpers.entity] Update for sensor.fundos_status fails
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/usr/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3.6/site-packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/lib/python3.6/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 389, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 309, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='192.168.86.174', port=8124): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 204, in async_update_ha_state
+    yield from self.async_device_update()
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 327, in async_device_update
+    yield from self.hass.async_add_job(self.update)
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/sensor/zoneminder.py", line 86, in update
+    'api/monitors/{}.json'.format(self._monitor_id)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/zoneminder.py", line 124, in get_state
+    return _zm_request('get', api_url)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/zoneminder.py", line 104, in _zm_request
+    cookies=ZM['cookies'], timeout=DEFAULT_TIMEOUT)
+  File "/usr/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/adapters.py", line 521, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='192.168.86.174', port=8124): Read timed out. (read timeout=10)
+2018-05-27 19:31:01 ERROR (MainThread) [homeassistant.helpers.entity] Update for camera.fundos fails
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/usr/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3.6/site-packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/lib/python3.6/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 389, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 309, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='192.168.86.174', port=8124): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 204, in async_update_ha_state
+    yield from self.async_device_update()
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 327, in async_device_update
+    yield from self.hass.async_add_job(self.update)
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/camera/zoneminder.py", line 102, in update
+    'api/monitors/alarm/id:%i/command:status.json' % self._monitor_id
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/zoneminder.py", line 124, in get_state
+    return _zm_request('get', api_url)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/zoneminder.py", line 104, in _zm_request
+    cookies=ZM['cookies'], timeout=DEFAULT_TIMEOUT)
+  File "/usr/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/adapters.py", line 521, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='192.168.86.174', port=8124): Read timed out. (read timeout=10)
+2018-05-27 19:31:01 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.interna_state is taking over 10 seconds
+2018-05-27 19:31:01 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.interna_state fails
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/usr/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3.6/site-packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/lib/python3.6/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 389, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/usr/lib/python3.6/site-packages/urllib3/connectionpool.py", line 309, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='192.168.86.174', port=8124): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 204, in async_update_ha_state
+    yield from self.async_device_update()
+  File "/usr/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 327, in async_device_update
+    yield from self.hass.async_add_job(self.update)
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/switch/zoneminder.py", line 68, in update
+    'api/monitors/%i.json' % self._monitor_id
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/zoneminder.py", line 124, in get_state
+    return _zm_request('get', api_url)
+  File "/usr/lib/python3.6/site-packages/homeassistant/components/zoneminder.py", line 104, in _zm_request
+    cookies=ZM['cookies'], timeout=DEFAULT_TIMEOUT)
+  File "/usr/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.6/site-packages/requests/adapters.py", line 521, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='192.168.86.174', port=8124): Read timed out. (read timeout=10)
+2018-05-27 19:35:01 ERROR (MainThread) [frontend.js.latest.201805090] https://fris.duckdns.org:8123/local/custom_ui/state-card-mini-media-player.html:305:107 Uncaught TypeError: Cannot read property 'innerText' of null
+2018-05-27 19:35:02 WARNING (SyncWorker_13) [homeassistant.components.python_script.set_state.py] switch.source_net_s
+2018-05-27 19:35:03 WARNING (SyncWorker_19) [homeassistant.components.python_script.set_state.py] switch.sair_net_s
+2018-05-27 19:35:04 WARNING (SyncWorker_12) [homeassistant.components.python_script.set_state.py] switch.cinco_net_s
+2018-05-27 19:35:05 WARNING (SyncWorker_6) [homeassistant.components.python_script.set_state.py] switch.um_net_s
+2018-05-27 19:35:06 WARNING (SyncWorker_9) [homeassistant.components.python_script.set_state.py] switch.dois_net_s
+2018-05-27 19:35:15 ERROR (MainThread) [frontend.js.latest.201805090] https://fris.duckdns.org:8123/local/custom_ui/state-card-mini-media-player.html:305:107 Uncaught TypeError: Cannot read property 'innerText' of null
+2018-05-27 19:35:16 WARNING (SyncWorker_9) [homeassistant.components.python_script.set_state.py] switch.source_net_s
+2018-05-27 19:35:17 WARNING (SyncWorker_3) [homeassistant.components.python_script.set_state.py] switch.sair_net_s
+2018-05-27 19:35:18 WARNING (SyncWorker_2) [homeassistant.components.python_script.set_state.py] switch.cinco_net_s
+2018-05-27 19:35:19 WARNING (SyncWorker_14) [homeassistant.components.python_script.set_state.py] switch.zero_net_s
+2018-05-27 19:35:20 WARNING (SyncWorker_8) [homeassistant.components.python_script.set_state.py] switch.sete_net_s
+2018-05-27 19:35:25 ERROR (MainThread) [frontend.js.latest.201805090] https://fris.duckdns.org:8123/local/custom_ui/state-card-mini-media-player.html:305:107 Uncaught TypeError: Cannot read property 'innerText' of null
+2018-05-27 19:35:26 WARNING (SyncWorker_0) [homeassistant.components.python_script.set_state.py] switch.source_net_s
+2018-05-27 19:35:27 WARNING (SyncWorker_7) [homeassistant.components.python_script.set_state.py] switch.sair_net_s
+2018-05-27 19:35:28 WARNING (SyncWorker_3) [homeassistant.components.python_script.set_state.py] switch.cinco_net_s
+2018-05-27 19:35:29 WARNING (SyncWorker_16) [homeassistant.components.python_script.set_state.py] switch.um_net_s
+2018-05-27 19:35:30 WARNING (SyncWorker_14) [homeassistant.components.python_script.set_state.py] switch.dois_net_s
